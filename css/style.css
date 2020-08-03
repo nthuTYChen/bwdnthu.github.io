@@ -38,6 +38,9 @@ body {
 }
 
 body > nav {
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 30%;
 	height: 100vh;
 	padding: 1vw;
@@ -50,18 +53,21 @@ body > nav a {
 }
 
 h1 {
+	margin-bottom: 2.4vh;
 	font-family: 'Mukta', sans-serif;
 	font-size: 4.8vh;
 	line-height: 4.8vh;
 }
 
 h2 {
+	margin-bottom: 2vh;
 	font-family: 'Dosis', sans-serif;
 	font-size: 4vh;
 	line-height: 4vh;
 }
 
 h3 {
+	margin-bottom: 1.6vh;
 	font-family: 'Thasadith', sans-serif;
 	font-size: 3.2vh;
 	line-height: 3.2vh;
@@ -83,7 +89,7 @@ a:hover {
 }
 
 p {
-	margin-bottom: 2.4vh;
+	margin-bottom: 1.2vh;
 }
 
 div.container {
