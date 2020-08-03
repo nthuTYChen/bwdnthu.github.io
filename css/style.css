@@ -99,13 +99,17 @@ a {
 }
 
 a:hover {
-	border: 2px solid black;
+	border-bottom: 2px solid black;
 	color: black;
 	transition: 0.5s all ease-out;
 }
 
 p, picture {
 	margin-bottom: 1.2vh;
+}
+
+picture {
+	display: block;
 }
 
 div.container {
