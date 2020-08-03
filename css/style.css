@@ -127,7 +127,7 @@ a:hover {
 }
 
 p, picture, section {
-	margin-bottom: 1.2vh;
+	margin: 1.2vh 0;
 }
 
 picture {
