@@ -42,6 +42,7 @@ body > nav {
 	height: 100vh;
 	padding: 1vw;
 	overflow-y: hidden;
+	font-weight: 700;
 }
 
 body > nav > a {
