@@ -40,6 +40,7 @@ body {
 body > nav {
 	width: 30%;
 	height: 100vh;
+	padding: 0 1vw;
 	overflow-y: hidden;
 }
 
@@ -49,14 +50,17 @@ body > nav > a {
 
 h1 {
 	font-family: 'Mukta', sans-serif;
+	font-size: 4.8vh;
 }
 
 h2 {
 	font-family: 'Dosis', sans-serif;
+	font-size: 4vh;
 }
 
 h3 {
 	font-family: 'Thasadith', sans-serif;
+	font-size: 3.2vh;
 }
 
 code {
@@ -77,4 +81,5 @@ a:hover {
 div.container {
 	width: 70%;
 	margin-left: 30%;
+	padding: 0 1vw;
 }
