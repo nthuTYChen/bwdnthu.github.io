@@ -40,7 +40,7 @@ body {
 body > nav {
 	width: 30%;
 	height: 100vh;
-	padding: 0 1vw;
+	padding: 1vw;
 	overflow-y: hidden;
 }
 
@@ -79,7 +79,7 @@ a:hover {
 }
 
 div.container {
-	width: 70%;
-	margin-left: 30%;
+	width: 80%;
+	margin-left: 20%;
 	padding: 0 1vw;
 }
