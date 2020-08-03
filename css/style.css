@@ -104,6 +104,10 @@ sub {
 	line-height: 2.4vh;
 }
 
+ol {
+	margin-left: 2vw;
+}
+
 code {
 	font-family: 'Lekton', sans-serif;
 }
