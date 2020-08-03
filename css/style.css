@@ -30,8 +30,8 @@ menu bg color: #b30000; (dark red)
 }
 
 body {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	overflow-x: hidden;
 	font-size: 2.4vh;
 	line-height: 2.4vh;
@@ -47,7 +47,6 @@ body > nav {
 	width: 20%;
 	height: 100vh;
 	padding: 1vw;
-	overflow-y: hidden;
 	background-color: #b30000;
 	font-weight: 700;
 }
@@ -55,6 +54,7 @@ body > nav {
 body > nav a {
 	display: block;
 	margin-bottom: 2vh;
+	padding: 0.5vh;
 	width: 100vh;
 	color: white;
 	transition: 0.5s all ease-out;
