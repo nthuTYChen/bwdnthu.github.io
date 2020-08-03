@@ -21,7 +21,7 @@ link hovered color: #000000; (black)
 menu bg color: #b30000; (dark red)
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Lekton&family=Mukta:wght@400;800&family=Thasadith:wght@400;700&family=Zilla+Slab:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Lekton&family=Mukta:wght@400;800&family=Thasadith:wght@400;700&family=Zilla+Slab:wght@300;700&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -86,7 +86,7 @@ h3 {
 
 em {
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 700;
 }
 
 sub {
