@@ -60,7 +60,7 @@ body > nav a {
 	transition: 0.5s all ease-out;
 }
 
-body > nav a:hover {
+body > nav a:hover, body > nav a.selected {
 	border: 0;
 	background-color: white;
 	color: #b30000;
