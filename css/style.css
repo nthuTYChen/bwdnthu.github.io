@@ -1,0 +1,44 @@
+/*
+Main Title: Mukta;
+First Layer Title: Dosis;
+Second Layer Title: Thasadith;
+Content: Zilla Slab;
+Code Font: Lekton;
+*/
+
+/*
+font-family: 'Dosis', sans-serif;
+font-family: 'Lekton', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Thasadith', sans-serif;
+font-family: 'Zilla Slab', serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Lekton&family=Mukta:wght@400;800&family=Thasadith:wght@400;700&family=Zilla+Slab:wght@300&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Zilla Slab', serif;
+}
+
+h1 {
+	font-family: 'Mukta', sans-serif;
+}
+
+h2 {
+	font-family: 'Dosis', sans-serif;
+}
+
+h3 {
+	font-family: 'Thasadith', sans-serif;
+}
+
+code {
+	font-family: 'Lekton', sans-serif;
+}
+
