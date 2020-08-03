@@ -52,16 +52,19 @@ body > nav > a {
 h1 {
 	font-family: 'Mukta', sans-serif;
 	font-size: 4.8vh;
+	line-height: 4.8vh;
 }
 
 h2 {
 	font-family: 'Dosis', sans-serif;
 	font-size: 4vh;
+	line-height: 4vh;
 }
 
 h3 {
 	font-family: 'Thasadith', sans-serif;
 	font-size: 3.2vh;
+	line-height: 3.2vh;
 }
 
 code {
