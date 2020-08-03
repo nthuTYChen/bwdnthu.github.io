@@ -126,7 +126,7 @@ a:hover {
 	transition: 0.3s all ease-out;
 }
 
-p, picture {
+p, picture, section {
 	margin-bottom: 1.2vh;
 }
 
