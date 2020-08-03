@@ -84,6 +84,11 @@ h3 {
 	line-height: 4.8vh;
 }
 
+sub {
+	font-size: 1.6vh;
+	line-height: 2.4vh;
+}
+
 code {
 	font-family: 'Lekton', sans-serif;
 }
