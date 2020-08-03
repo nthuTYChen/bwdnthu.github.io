@@ -16,7 +16,9 @@ font-family: 'Zilla Slab', serif;
 
 /*
 text color: #383838; (light grey)
-link color: #cccccc;
+link color: #cccccc; (super-light grey)
+link hovered color: #000000; (black)
+menu bg color: #b30000; (dark red)
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Lekton&family=Mukta:wght@400;800&family=Thasadith:wght@400;700&family=Zilla+Slab:wght@300&display=swap');
@@ -46,11 +48,21 @@ body > nav {
 	height: 100vh;
 	padding: 1vw;
 	overflow-y: hidden;
+	background-color: #b30000;
 	font-weight: 700;
 }
 
 body > nav a {
 	display: block;
+	margin-bottom: 2vh;
+	width: 100vh;
+	color: white;
+	transition: 0.5s all ease-out;
+}
+
+body > nav a:hover {
+	background-color: white;
+	color: #b30000;
 }
 
 h1 {
