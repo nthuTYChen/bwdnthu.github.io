@@ -61,6 +61,7 @@ body > nav a {
 }
 
 body > nav a:hover {
+	border: 0;
 	background-color: white;
 	color: #b30000;
 }
