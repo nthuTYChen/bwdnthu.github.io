@@ -92,16 +92,19 @@ code {
 
 a {
 	text-decoration: none;
+	padding-bottom: 1px;
+	border: 0;
 	color: #cccccc;
 	transition: 0.5s all ease-out;
 }
 
 a:hover {
+	border: 2px solid black;
 	color: black;
 	transition: 0.5s all ease-out;
 }
 
-p {
+p, picture {
 	margin-bottom: 1.2vh;
 }
 
