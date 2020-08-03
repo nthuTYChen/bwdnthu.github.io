@@ -45,7 +45,7 @@ body > nav {
 	font-weight: 700;
 }
 
-body > nav > a {
+body > nav a {
 	display: block;
 }
 
@@ -80,6 +80,10 @@ a {
 a:hover {
 	color: #1a1a1a;
 	transition: 0.5s all ease-out;
+}
+
+p {
+	margin-bottom: 2.4vh;
 }
 
 div.container {
