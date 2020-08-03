@@ -1,2 +1,2 @@
-# bwdnthu.github.io
+# Chen, Tsung-Ying
 Bilingual Web Design@NTHU
