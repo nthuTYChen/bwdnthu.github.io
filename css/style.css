@@ -147,6 +147,14 @@ picture {
 	background-color: white;
 }
 
+picture > sub {
+	position: absolute;
+	left: 22%;
+	padding: 0 1vw;
+	background-color: white;
+	opacity: 0.95;
+}
+
 img {
 	max-width: inherit;
 }
