@@ -20,6 +20,7 @@ link color: #cccccc; (super-light grey)
 link hovered color: #000000; (black)
 menu bg color: #b30000; (dark red)
 section bg color: #f2f2f2 (lighter grey);
+highlight color: #ff9900; (orange)
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Lekton&family=Mukta:wght@400;800&family=Thasadith:wght@400;700&family=Zilla+Slab:wght@300;700&display=swap');
@@ -57,13 +58,13 @@ body > nav a {
 	margin-bottom: 2vh;
 	padding: 0.5vh;
 	width: 100%;
-	border-right: 1vw solid #ff9900;
+	border-right: 0.5vw solid #ffcc80;
 	color: white;
 	transition: 0.5s all ease-out;
 }
 
 body > nav a:hover, body > nav a.selected {
-	border: 0 1vw 0 0 solid #ff9900;
+	border: 0 0.5vw 0 0 solid #ff9900;
 	background-color: white;
 	color: #b30000;
 }
@@ -101,7 +102,7 @@ em {
 }
 
 em.extra {
-	color: #b30000;
+	color: #ff9900;
 }
 
 sub {
