@@ -138,7 +138,7 @@ a:hover {
 
 button {
 	padding: 0.5vh;
-	border: 0;
+	border: 1px solid #b30000;
 	border-radius: 0.3vh;
 	background-color: #b30000;
 	color: white;
@@ -149,7 +149,6 @@ button {
 }
 
 button:hover {
-	border: 1px solid #b30000;
 	background-color: white;
 	color: #b30000;
 	transition: 0.3s all ease-out;
