@@ -136,6 +136,22 @@ a:hover {
 	transition: 0.3s all ease-out;
 }
 
+button {
+	padding: 0.3vh;
+	border-radius: 0.3vh;
+	background-color: #b30000;
+	color: white;
+	transition: 0.5s all ease-out;
+}
+
+button:hover {
+	border: 1px solid #b30000;
+	background-color: white;
+	color: #b30000;
+	font-weight: 700;
+	transition: 0.3s all ease-out;
+}
+
 p, picture {
 	margin: 1.2vh 0;
 }
