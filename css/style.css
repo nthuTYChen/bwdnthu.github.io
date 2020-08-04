@@ -116,7 +116,7 @@ ol, ul {
 	margin-left: 2vw;
 }
 
-code {
+span.code {
 	padding: 0 0.5vw;
 	font-family: 'Lekton', sans-serif;
 	background-color: black;
