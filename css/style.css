@@ -99,6 +99,10 @@ em {
 	font-weight: 700;
 }
 
+em.extra {
+	color: #b30000;
+}
+
 sub {
 	font-size: 1.6vh;
 	line-height: 2.4vh;
@@ -109,7 +113,10 @@ ol, ul {
 }
 
 code {
+	padding: 0 0.5vw;
 	font-family: 'Lekton', sans-serif;
+	background-color: black;
+	color: #cccccc;
 }
 
 a {
