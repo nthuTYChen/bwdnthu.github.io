@@ -33,14 +33,14 @@
 					</ul>
 				</section>
 				<section>
-					<h2>HTML tags</h2>
-					<p>Every webpage is composed of a bunch of HTML tags <em>translated</em> by your Web browser properly into the layout you see on a computer screen.</p>
-					<p>An HTML tag is like <code>&lt;html&gt;</code>, with the name of the tag enclosed in two angle brackets <code><</code> and <code>></code>. In an HTML file, you usually see two types of HTML tags. One marks up a <em class="extra">scope</em> of contents, which determines how these contents are represented in a webpage; for instance:</p>
+					<h2>HTML elements</h2>
+					<p>Every webpage is composed of a bunch of HTML elements <em>translated</em> by your Web browser properly into the layout you see on a computer screen.</p>
+					<p>An HTML element is like <code>&lt;html&gt;</code>, with the name of the element enclosed in two angle brackets <code><</code> and <code>></code>. In an HTML file, you usually see two types of HTML elements. One marks up a <em class="extra">scope</em> of contents, which determines how these contents are represented in a webpage; for instance:</p>
 					<p><code>&lt;html&gt;some contents&lt;/html&gt;</code></p>
-					<p>In the above example, you see the tag representing the beginning of the scope without a slash as well as the tag representing the end of the scope with a slash. The other HTML tag type is itself presented as a <em class="extra">single element</em> in a webpage; for instance:</p>
+					<p>In the above example, you see the tag representing the beginning of the element without a slash as well as the tag representing the end of the element with a slash. The other HTML element type is itself presented as a <em class="extra">single object</em> in a webpage; for instance:</p>
 					<p><code>&lt;br/&gt;</code></p>
-					<p>In the above example, you only see one tag that will be interpreted as a <em>line break</em> (thus its "br" name), which ends with a slash.</p>
-					<p>You will also see some other markups that are not HTML tags themselves but have some special meanings. For example, we will use <code>&lt;!DOCTYPE&gt;</code> to declare the document type for a webpage, and we also use <code>&lt;!-- Here's some note! --&gt;</code> to add some important notes just for our own reference.</p>
+					<p>In the above example, you only see one tag that will be interpreted as a <em>line break</em> element (thus its "br" name), which ends with a slash in it.</p>
+					<p>You will also see some other markups that are not HTML elements themselves but have some special meanings. For example, we will use <code>&lt;!DOCTYPE&gt;</code> to declare the document type for a webpage, and we also use <code>&lt;!-- Here's some note! --&gt;</code> to add some important notes just for our own reference.</p>
 				</section>
 				<section>
 					<h2 id="firstindexhtml">Your first index.html</h2>
@@ -50,24 +50,24 @@
 					</picture>
 					<p>As noted earlier, you need to tell your Web browser the type of the document it needs to present, we always have <code>&lt;!DOCTYPE&gt;</code> at the beginning of a document. But since we are composing an HTML file, we needs to specifically declare the document as HTML with:</p>
 					<p><code>&lt;!DOCTYPE HTML&gt;</code></p>
-					<p>Following the declaration of the document type, you would naturally see the <em>scope</em> of the HTML contents, which are enclosed with <code>&lt;html&gt;&lt;/html&gt;</code>.</p>
-					<p>Inside <code>&lt;html&gt;&lt;/html&gt;</code>, you then see <code>&lt;head&gt;&lt;/head&gt;</code>, where the <em>metadata</em> is located. The metadata is not part of the webpage itself; you can consider it to be the <em>description</em> of the webpage. That explains why you see <code>&lt;title&gt;&lt;/title&gt;</code> in this section; the title of a webpage is part of its metadata. When we incorporate some external files or codes into the webpage (we'll talk about it later), we put them here as well to make sure they are <em class="extra">loaded first</em>.</p>
-					<p>After <code>&lt;/head&gt;</code>, you would see <code>&lt;body&gt;&lt;/body&gt;</code>. This is where the contents that will be presented in a webpage go.</p>
+					<p>Following the declaration of the document type, you would naturally see the <em>element</em> representing the HTML document, which are represented with <code>&lt;html&gt;&lt;/html&gt;</code>.</p>
+					<p>Inside <code>&lt;html&gt;&lt;/html&gt;</code>, you then see the element <code>&lt;head&gt;&lt;/head&gt;</code>, where the <em>metadata</em> is located. The metadata is not part of the webpage itself; you can consider it to be the <em>description</em> of the webpage. That explains why you see the element <code>&lt;title&gt;&lt;/title&gt;</code> in this section; the title of a webpage is part of its metadata. When we incorporate some external files or codes into the webpage (we'll talk about it later), we put them here as well to make sure they are <em class="extra">loaded first</em>.</p>
+					<p>After <code>&lt;/head&gt;</code>, you would see the <code>&lt;body&gt;&lt;/body&gt;</code> element. This is where the contents that will be presented in a webpage go.</p>
 				</section>
 				<section>
 					<h2 id="addsomespice">Add some spices</h2>
 					<p>Now that we understand how HTML tags work in our first <em>index.html</em>, we have to make some additional tweaks to optimize the decoding of your HTML document in different Web browsers.</p>
 					<p>First, let's change <code>&lt;html&gt;</code> to:</p>
 					<p><code>&lt;html lang="en-us"&gt;</code></p>
-					<p>In this change, we add the <em class="extra">attribute</em> <em>lang</em> to the <code>&lt;html&gt;</code> tag. An attribute assigns a <em>property</em> to a specific tag for it (or its contents). In the above change, the value <em>en-us</em> of the <em>lang</em> attribute explicitly requires the browser to arrange texts following <em>US English</em>. When your webpage goes bilingual, then the value of this attribute for your Taiwan Mandarin webpages should be <em class="extra">zh-Hant-TW</em> (rather than just zh-tw).</p>
+					<p>In this change, we add the <em class="extra">attribute</em> <em>lang</em> to the <code>&lt;html&gt;</code> element. An attribute assigns a <em>property</em> to a specific element. In the above change, the value <em>en-us</em> of the <em>lang</em> attribute explicitly requires the browser to arrange texts following <em>US English</em>. When your webpage goes bilingual, then the value of this attribute for your Taiwan Mandarin webpages should be <em class="extra">zh-Hant-TW</em> (rather than just zh-tw).</p>
 					<p>Next, inside <code>&lt;head&gt;&lt;/head&gt;</code>, let's add the following line after <code>&lt;/title&gt;</code>:</p>
 					<p><code>&lt;meta charset="UTF-8"&gt;</code></p>
-					<p>This <em>meta</em> tag is obviously adding some metadata to our HTML document, and the attribute <em>charset</em> is specified with <em>UTF-8</em>, which tells a Web browser to treat the contents as Unicode texts, so texts could be encoded properly even if they are from different languages. You can't imagine how hard it was to get foreign websites encoded properly 20 years ago. Most of modern Web browsers set UTF-8 encoding as their default, but it doesn't hurt to always have this by default just in case.</p>
+					<p>This  <code>&lt;meta&gt;</code> element is obviously adding some metadata to our HTML document, and the attribute <em>charset</em> is specified with <em>UTF-8</em>, which tells a Web browser to treat the contents as Unicode texts, so texts could be encoded properly even if they are from different languages. You can't imagine how hard it was to get foreign websites encoded properly 20 years ago. Most of modern Web browsers set UTF-8 encoding as their default, but it doesn't hurt to always have this by default just in case.</p>
 				</section>
 				<section>
 					<h2 id="formattingsourcecodes">Formatting source codes</h2>
-					<p>In the source code, you can see that the lines of tags inside the scope defined by another tag are indented. This is a convenient way of understanding the relationship between tags in the so-called <em class="extra">Document Object Model (DOM)</em>. Tags that are aligned together are <em>sibilings</em>; the indented tags are <em>children</em> of the tags that enclose them; the tags that enclose indented tags are <em>parents</em> of the indented tags. This is the reason why a good text editor like Sublime Text indents lines of childrens of a tag automatically for you.</p>
-					<p>It is true that even if you remove all indentions, the webpage remains unchanged (<em>try it!</em>), because a Web browser does not parse the structure of your webpage based on indentions. However, you should always indent lines in your source codes when appropriate. It not only means you understand the structure of your webpage, it makes your codes easier to read for other. You'll also need a similar mindset when we get to the <em>JavaScript</em> parts.</p>
+					<p>In the source code, you can see that lines inside an element are indented. This is a convenient way of understanding the relationship between elements in the so-called <em class="extra">Document Object Model (DOM)</em>. Lines aligned together may represent elements that are <em>sibilings</em>; the indented lines would denote <em>child</em> elements of their <em>parent</em> elements that include them. This is the reason why a good text editor like Sublime Text indents lines of child elements automatically for you.</p>
+					<p>It is true that even if you remove all indentions, the webpage remains unchanged (<em>try it!</em>), because a Web browser does not understand the relationship between elements based on line indentions. However, you should always indent lines in your source codes whenever appropriate. It not only means you understand the structure of your webpage, it makes your codes easier to read for others. You'll also need a similar mindset when we get to the <em>JavaScript</em> tutorials.</p>
 				</section>
 				<section>
 					<h2 id="htmlw3c">HTML and W3C standards</h2>
@@ -81,7 +81,7 @@
 				</section>
 				<section>
 					<h2 id="thebuildingblocks">The Building Blocks</h2>
-					<p>Now it's about the time to introduce tags that are commonly used inside <code>&lt;body&gt;&lt;/body&gt;</code>, that is, the content of your webpage. Let's start with some <em>building blocks</em>.</p>
+					<p>Now it's about the time to introduce elements that are commonly used inside <code>&lt;body&gt;&lt;/body&gt;</code>, that is, the content of your webpage. Let's start with some <em>building blocks</em>.</p>
 					<ul>
 						<li><code>&lt;nav&gt;&lt;/nav&gt;</code> - This is a block for you to put your NAVigation pane into (just like the menu you see on the left of this website.</li>
 						<li><code>&lt;article&gt;&lt;/article&gt;</code> - If you have an article in a webpage, you probably want to put this article in this block.</li>
@@ -96,6 +96,8 @@
 						<li><code>&lt;div&gt;&lt;/div&gt;</code> - A block that represents one DIVision in your webpage.</li>
 					</ul>
 					<p>Let's try to find one extra short text paragraph, throw it into a <code>&lt;div&gt;</code> block, and append this block to the end of the body...and still, the texts are just like those in other building blocks we added earlier.</p>
+					<h3>Semantic vs. non-semantic elements</h3>
+					<p>While the <code>&lt;div&gt;</code> block seems to work in the same way as other blocks do, <code>&lt;div&gt;</code> is <em class="extra">non-semantic</em>, whereas other blocks are <em class="extra">semantic</em>. When you see the name of a semantic element, you know what the contents of this element could be (article, section, paragraph, and so on), which is not possible when you use a non-semantic one (unless you use some other attributes to make it special; we'll get there soon). In HTML5, you're encouraged to use semantic elements and avoid non-semantic ones. This strategy brings benefits to your design process - for example, you can choose to directly style a <code>&lt;section&gt;</code> element, rather than an <code>&lt;div&gt;</code> element that is specified as a section. Note that it is absolutely possible to achieve the same visual representation of a webpage even if you only use <code>&lt;div&gt;</code>, but its maintainence is going to be <em>difficult</em>.</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
