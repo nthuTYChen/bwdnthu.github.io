@@ -67,7 +67,7 @@
 				<section>
 					<h2 id="formattingsourcecodes">Formatting source codes</h2>
 					<p>In the source code, you can see that the lines of tags inside the scope defined by another tag are indented. This is a convenient way of understanding the relationship between tags in the so-called <em class="extra">Document Object Model (DOM)</em>. Tags that are aligned together are <em>sibilings</em>; the indented tags are <em>children</em> of the tags that enclose them; the tags that enclose indented tags are <em>parents</em> of the indented tags. This is the reason why a good text editor like Sublime Text indents lines of childrens of a tag automatically for you.</p>
-					<p>It is true that even if you remove all indentions, the webpage remains unchanged, because a Web browser does not parse the structure of your webpage based on indentions. However, you should always indent lines in your source codes when appropriate. It not only means you understand the structure of your webpage, it makes your codes easier to read for other. You'll also need a similar mindset when we get to the <em>JavaScript</em> parts.</p>
+					<p>It is true that even if you remove all indentions, the webpage remains unchanged (<em>try it!</em>), because a Web browser does not parse the structure of your webpage based on indentions. However, you should always indent lines in your source codes when appropriate. It not only means you understand the structure of your webpage, it makes your codes easier to read for other. You'll also need a similar mindset when we get to the <em>JavaScript</em> parts.</p>
 				</section>
 				<section>
 					<h2 id="htmlw3c">HTML and W3C standards</h2>
@@ -81,6 +81,13 @@
 				</section>
 				<section>
 					<h2 id="thebuildingblocks">The Building Blocks</h2>
+					<p>Now it's about the time to introduce tags that are commonly used inside <code>&lt;body&gt;&lt;/body&gt;</code>, that is, the content of your webpage. Let's start with some <em>building blocks</em>.</p>
+					<ol>
+						<li><code>&lt;nav&gt;&lt;/nav&gt;</code> - This is a block for you to put your NAVigation pane into (just like the menu you see on the left of this website.</li>
+						<li><code>&lt;article&gt;&lt;/article&gt;</code> - If you have an article in a webpage, you probably want to put this article in this block.</li>
+						<li><code>&lt;section&gt;&lt;/section&gt;</code> - Well, if you have multiple sections in an article, it's convenient for you to put each individual section in separate <code>&lt;section&gt;</code> blocks.</li>
+						<li><code>&lt;p&gt;&lt;/p&gt;</code> - It is natural that each section comes with multiple paragraphs, which should reside in separate <code>&lt;p&gt;</code> blocks.</li>
+					</ol>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
