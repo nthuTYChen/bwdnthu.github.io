@@ -145,6 +145,10 @@ picture {
 	height: auto;
 }
 
+img {
+	max-width: inherit;
+}
+
 div.container {
 	width: 80%;
 	margin-left: 20%;
