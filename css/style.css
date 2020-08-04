@@ -74,6 +74,7 @@ article {
 }
 
 section {
+	margin: 2.4vh 0;
 	padding: 0 0.5vw;
 	background-color: #f2f2f2;
 }
@@ -135,7 +136,7 @@ a:hover {
 	transition: 0.3s all ease-out;
 }
 
-p, picture, section {
+p, picture {
 	margin: 1.2vh 0;
 }
 
