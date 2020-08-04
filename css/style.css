@@ -63,7 +63,7 @@ body > nav a {
 }
 
 body > nav a:hover, body > nav a.selected {
-	border: 0;
+	border: 0 1vw 0 0 solid #ff9900;
 	background-color: white;
 	color: #b30000;
 }
