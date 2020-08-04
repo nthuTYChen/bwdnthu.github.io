@@ -24,7 +24,7 @@
 			<article>
 				<h1>HTML Basics</h1>
 				<p><em>HyperText Markup Language</em> - that's what HTML stands for. It builds the fundamental structure of a webpage for you, just like the bones in your body.</p>
-				<p><a href="#beforewestart">Before we start...</a> / <a href="#firstindexhtml">Your first index.html</a></p>
+				<p><a href="#beforewestart">Before we start...</a> / <a href="#firstindexhtml">Your first index.html</a> / <a href="#htmlw3c">HTML and W3C Standards</a></p>
 				<section>
 					<h2 id="#beforewestart">Before we start...</h2>
 					<ul>
@@ -47,11 +47,22 @@
 					<p>With the above overview, let's take a look at what you must have in your <em class="extra">index.html</em> for your Web browser to parse the structure of a webpage and then present it.</p>
 					<picture>
 						<img src="img/firsthtml.png"/>
+						<sub>The basic structure in an HTML document</sub>
 					</picture>
 					<p>As noted earlier, you need to tell your Web browser the type of the document it needs to present, we always have <code>&lt;!DOCTYPE&gt;</code> at the beginning of a document. But since we are composing an HTML file, we needs to specifically declare the document as HTML with:</p>
 					<p><code>&lt;!DOCTYPE HTML&gt;</code></p>
 					<p>Following the declaration of the document type, you would naturally see the <em>scope</em> of the HTML contents, which are enclosed with <code>&lt;html&gt;&lt;/html&gt;</code>.</p>
 					<p>Inside <code>&lt;html&gt;&lt;/html&gt;</code>, you then see <code>&lt;head&gt;&lt;/head&gt;</code>, where the <em>metadata</em> is located. The metadata is not part of the webpage itself; you can consider it to be the <em>description</em> of the webpage. That explains why you see <code>&lt;title&gt;&lt;/title&gt;</code> in this section; the title of a webpage is part of its metadata. When we incorporate some external files or codes into the webpage (we'll talk about it later), we put them here as well to make sure they are <em class="extra">loaded first</em>.</p>
+				</section>
+				<section>
+					<h2 id="htmlw3c">HTML and W3C standards</h2>
+					<p>The most updated version of HTML is HTML5, which has been developed following the W3C (World Wide Web Consortium) standards. With the standards, same HTML tags should be compatible to different browsers - but you have to be careful! Some older HTML tags might have become <em class="extra">deprecated</em>, while newly HTML tags might be more or less <em class="extra">experimental</em> and are thus not fully supported by all mainstream browsers.</p>
+					<p>If you want to use a tag that you have never seen before and it seems useful, check some reliable sources to see if it support the majority of Web browsers, such as <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="blank">MDN web docs.</a></p>
+					<p>In this course, we will try not to go wild, but use some common tags to construct our websites. Neither will I go through old and new <em>browser wars</em> - google it if you're interested.</p>
+					<picture>
+						<img src="img/browserwar.png"/>
+						<sub>The browser war by <a href="https://shoze.blogspot.com/2011/06/brorwser-wars.html" target="blank">Shoze</a></sub>
+					</picture>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
