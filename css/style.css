@@ -21,6 +21,7 @@ link hovered color: #000000; (black)
 menu bg color: #b30000; (dark red)
 section bg color: #f2f2f2 (lighter grey);
 highlight color: #e68a00; (dark orange)
+code color:#226d6d; (cyan)
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Lekton&family=Mukta:wght@400;800&family=Thasadith:wght@400;700&family=Zilla+Slab:wght@300;700&display=swap');
@@ -119,8 +120,7 @@ ol, ul {
 code {
 	padding: 0 0.5vw;
 	font-family: 'Lekton', sans-serif;
-	background-color: black;
-	color: #cccccc;
+	color: #226d6d;
 }
 
 a {
