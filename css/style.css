@@ -171,7 +171,13 @@ picture > sub {
 	left: 22%;
 	padding: 0 1vw;
 	background-color: white;
-	opacity: 0.95;
+	opacity: 0.5;
+	transition: 0.3s all ease-out;
+}
+
+picture > sub:hover {
+	opacity: 1;
+	transition: 1s all ease-out;
 }
 
 img {
