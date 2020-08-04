@@ -57,6 +57,7 @@ body > nav a {
 	margin-bottom: 2vh;
 	padding: 0.5vh;
 	width: 100%;
+	border-right: 1vw solid #ff9900;
 	color: white;
 	transition: 0.5s all ease-out;
 }
