@@ -68,7 +68,10 @@
 					<p>Now that we understand how HTML tags in our first <em>index.html</em>, we have to make some additional tweaks to optimize the decoding of your HTML document in different Web browsers.</p>
 					<p>First, let's change <code>&lt;html&gt;</code> to:</p>
 					<p><code>&lt;html lang="en-us"&gt;</code></p>
-					<p>In this change, we add the <em class="extra">attribute</em> <em>lang</em> to the <code>&lt;html&gt;</code> tag. An attribute assigns a property to a specific tag for it (or its contents) to be presented differently. In the above change, the value <em>en-us</em> of the <em>lang<em> attribute explicitly requires the browser to decode the HTML contents using US English.</p>
+					<p>In this change, we add the <em class="extra">attribute</em> <em>lang</em> to the <code>&lt;html&gt;</code> tag. An attribute assigns a <em>property</em> to a specific tag for it (or its contents). In the above change, the value <em>en-us</em> of the <em>lang</em> attribute explicitly requires the browser to arrange texts following <em>US English</em>. When your webpage goes bilingual, then the value of this attribute for your Taiwan Mandarin webpages should be <em class="extra">zh-Hant-TW</em> (rather than just zh-tw).</p>
+					<p>Next, inside <code>&lt;head&gt;&lt;/head&gt;</code>, let's add the following line after <code>&lt;/head&gt;</code>:</p>
+					<p>&lt;meta charset="UTF-8"&gt;</p>
+					<p>This <em>meta</em> tag is obviously adding some metadata to our HTML document, and the attribute <em>charset</em> is specified with <em>UTF-8</em>, which tells a Web browser to treat the contents as Unicode texts, so texts could be decoded properly even if they are from different languages. You can't imagine how hard it was to get foreign websites decoded properly 20 years ago.</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
