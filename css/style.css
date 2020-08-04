@@ -153,6 +153,7 @@ button:hover {
 	background-color: white;
 	color: #b30000;
 	transition: 0.3s all ease-out;
+	cursor: pointer;
 }
 
 p, picture {
