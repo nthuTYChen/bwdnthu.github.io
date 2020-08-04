@@ -138,9 +138,12 @@ a:hover {
 
 button {
 	padding: 0.3vh;
+	border: 0;
 	border-radius: 0.3vh;
 	background-color: #b30000;
 	color: white;
+	font-family: inherit;
+	font-size: inherit;
 	transition: 0.5s all ease-out;
 }
 
