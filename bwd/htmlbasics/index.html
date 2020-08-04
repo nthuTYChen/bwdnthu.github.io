@@ -24,7 +24,7 @@
 			<article>
 				<h1>HTML Basics</h1>
 				<p><em>HyperText Markup Language</em> - that's what HTML stands for. It builds the fundamental structure of a webpage for you, just like the bones in your body.</p>
-				<p><a href="#beforewestart">Before we start...</a> / <a href="#firstindexhtml">Your first index.html</a> / <a href="#formattingsourcecodes">Formatting source codes</a> / <a href="#htmlw3c">HTML and W3C Standards</a> / <a href="#addsomespice">Add some spices</a> / <a href="#thebuildingblocks">The building blocks</a></p>
+				<p><a href="#beforewestart">Before we start...</a> / <a href="#firstindexhtml">Your first index.html</a> / <a href="#addsomespice">Add some spices</a> / <a href="#formattingsourcecodes">Formatting source codes</a> / <a href="#htmlw3c">HTML and W3C Standards</a> / <a href="#thebuildingblocks">The building blocks</a></p>
 				<section>
 					<h2 id="#beforewestart">Before we start...</h2>
 					<ul>
@@ -55,6 +55,16 @@
 					<p>After <code>&lt;/head&gt;</code>, you would see <code>&lt;body&gt;&lt;/body&gt;</code>. This is where the contents that will be presented in a webpage go.</p>
 				</section>
 				<section>
+					<h2 id="addsomespice">Add some spices</h2>
+					<p>Now that we understand how HTML tags work in our first <em>index.html</em>, we have to make some additional tweaks to optimize the decoding of your HTML document in different Web browsers.</p>
+					<p>First, let's change <code>&lt;html&gt;</code> to:</p>
+					<p><code>&lt;html lang="en-us"&gt;</code></p>
+					<p>In this change, we add the <em class="extra">attribute</em> <em>lang</em> to the <code>&lt;html&gt;</code> tag. An attribute assigns a <em>property</em> to a specific tag for it (or its contents). In the above change, the value <em>en-us</em> of the <em>lang</em> attribute explicitly requires the browser to arrange texts following <em>US English</em>. When your webpage goes bilingual, then the value of this attribute for your Taiwan Mandarin webpages should be <em class="extra">zh-Hant-TW</em> (rather than just zh-tw).</p>
+					<p>Next, inside <code>&lt;head&gt;&lt;/head&gt;</code>, let's add the following line after <code>&lt;/title&gt;</code>:</p>
+					<p><code>&lt;meta charset="UTF-8"&gt;</code></p>
+					<p>This <em>meta</em> tag is obviously adding some metadata to our HTML document, and the attribute <em>charset</em> is specified with <em>UTF-8</em>, which tells a Web browser to treat the contents as Unicode texts, so texts could be encoded properly even if they are from different languages. You can't imagine how hard it was to get foreign websites encoded properly 20 years ago. Most of modern Web browsers set UTF-8 encoding as their default, but it doesn't hurt to always have this by default just in case.</p>
+				</section>
+				<section>
 					<h2 id="formattingsourcecodes">Formatting source codes</h2>
 				</section>
 				<section>
@@ -66,16 +76,6 @@
 						<img src="img/browserwar.png"/>
 						<sub>The browser war by <a href="https://shoze.blogspot.com/2011/06/brorwser-wars.html" target="blank">Shoze</a></sub>
 					</picture>
-				</section>
-				<section>
-					<h2 id="addsomespice">Add some spices</h2>
-					<p>Now that we understand how HTML tags in our first <em>index.html</em>, we have to make some additional tweaks to optimize the decoding of your HTML document in different Web browsers.</p>
-					<p>First, let's change <code>&lt;html&gt;</code> to:</p>
-					<p><code>&lt;html lang="en-us"&gt;</code></p>
-					<p>In this change, we add the <em class="extra">attribute</em> <em>lang</em> to the <code>&lt;html&gt;</code> tag. An attribute assigns a <em>property</em> to a specific tag for it (or its contents). In the above change, the value <em>en-us</em> of the <em>lang</em> attribute explicitly requires the browser to arrange texts following <em>US English</em>. When your webpage goes bilingual, then the value of this attribute for your Taiwan Mandarin webpages should be <em class="extra">zh-Hant-TW</em> (rather than just zh-tw).</p>
-					<p>Next, inside <code>&lt;head&gt;&lt;/head&gt;</code>, let's add the following line after <code>&lt;/title&gt;</code>:</p>
-					<p><code>&lt;meta charset="UTF-8"&gt;</code></p>
-					<p>This <em>meta</em> tag is obviously adding some metadata to our HTML document, and the attribute <em>charset</em> is specified with <em>UTF-8</em>, which tells a Web browser to treat the contents as Unicode texts, so texts could be encoded properly even if they are from different languages. You can't imagine how hard it was to get foreign websites encoded properly 20 years ago. Most of modern Web browsers set UTF-8 encoding as their default, but it doesn't hurt to always have this by default just in case.</p>
 				</section>
 				<section>
 					<h2 id="thebuildingblocks">The Building Blocks</h2>
