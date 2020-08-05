@@ -102,6 +102,9 @@
 					<ul>
 						<li><code>&lt;header&gt;&lt;/header&gt;</code> - Appear at the top of a webpage and is usually used as a navigation pane (thus include <code>&lt;nav&gt;</code>).</li>
 						<li><code>&lt;footer&gt;&lt;/footer&gt;</code> - Appear at the bottom of a webpage and is usually used to present copyright or contact information.</li>
+						<li><code>&lt;ol&gt;&lt;/ol&gt;</code> - An unordered list.</li>
+						<li><code>&lt;ul&gt;&lt;/ul&gt;</code> - An ordered list.</li>
+						<li><code>&lt;li&gt;&lt;/li&gt;</code> - A list item.</li>
 					</ul>
 					<p>Note that <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> cannot contain each other.</p>
 					<h3>A heading for each semantic block</h3>
@@ -109,11 +112,21 @@
 				</section>
 				<section>
 					<h2 id="inlineelements">Inline elements</h2>
-					<p>The elements introduced above are...<em>blocks</em>. It means that they all occupy a paragraph-like area that is separate from the contents before and after it. For instance, if you add the following line inside <code>&lt;body&gt;&lt;/body&gt;</code>, you will see that the texts inside <code>&lt;div&gt;&lt;/div&gt;</code> are forced to form an independent paragraph itself:</p>
+					<p>The elements introduced above are...<em>blocks</em>. It means that they all occupy a paragraph-like area that is separate from the texts before and after it. For instance, if you add the following line inside <code>&lt;body&gt;&lt;/body&gt;</code>, you will see that the texts inside <code>&lt;div&gt;&lt;/div&gt;</code> are forced to form an independent paragraph itself:</p>
 					<p><code>This sentence is going to be broken by &lt;div&gt;this block&lt;/div&gt; into three parts.</code></p>
-					<p>To the contrary, inline elements do not break the text flow, as the <code>&lt;em&gt;&lt;/em&gt;</code> element in the following line:</p>
+					<p>To the contrary, inline elements do not break the text flow, just like the following line that includes an <code>&lt;em&gt;</code> element:</p>
 					<p><code>This sentence won't be broken by &lt;em&gt;this inline element&lt;/em&gt; into different parts!</code></p>
-					<p>Note that this default <em>block</em> vs. <em>inline</em> contrast from the elements is not fixed. We'll learn how to change this property when it comes to CSS.</p>
+					<p>There are quite a number of frequently used inline elements listed below, most of which are for text decoration or represent an object in a webpage:</p>
+					<ol>
+						<li><code>&lt;a&gt;&lt;/a&gt;</code> - Marks up a hyperlink which is underlined by default.</li>
+						<li><code>&lt;b&gt;&lt;/b&gt;</code> - Marks up special but unimportant texts and make them bold by default.</li>
+						<li><code>&lt;em&gt;&lt;/em&gt;</code> - Marks up emphasized texts and make them italic by default.</li>
+						<li><code>&lt;sub&gt;&lt;/sub&gt;</code> - Marks up subscript texts</li>
+						<li><code>&lt;img/&gt;</code> - Insert an image.</li>
+						<li><code>&lt;br/&gt;</code> - Insert a line break.</li>
+						<li><code>&lt;input/&gt;</code> - Insert an input field.</li>
+					</ol>
+					<p>See this <a href="https://www.w3schools.com/htmL/html_blocks.asp" target="blank">W3CSchool page</a> for a more complete list of block-level and inline elements. Note that this default <em>block</em> vs. <em>inline</em> contrast from the elements is not absolute. We'll learn how to change this property when it comes to CSS.</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
