@@ -136,7 +136,28 @@
 						<sub>Credit: <a href="https://www.flickr.com/photos/knobil/4521285655" target="blank">Mark Knobil</a></sub>
 					</picture>
 					<p>First of all, the local folder for your website in your computer is called the <em class="extra">root directory</em>. The <em>index.html</em> file in this directory would be the default webpage loaded to a Web browser when someone visits your website at, for instance, https://xxxxxxx.github.io/ (which is thus in fact equivalent to https://xxxxxxx.github.io/index.html).</p>
-					<p>You may eventually include some images/videos in your website, and for this course you will certainly need a place for your CSS and JS files. Thus, let's create the following directories right inside your <em>root directory</em>: <em class="extra">img</em>, <em class="extra">js</em>, and <em class="extra">css</em>.</p>
+					<p>You may eventually include some images/videos in your website, and for this course you will certainly need a place for your CSS and JS files. Thus, let's create the following directories right inside your <em>root directory</em>: <em class="extra">img</em>, <em class="extra">js</em>, and <em class="extra">css</em>. Note that since the <em>js</em> and <em>css</em> are located in the <em>root</em> directory, the js and css files in these sub-directories are logically assumed to be <em class="extra">global</em> (namely, for the <em class="extra">entire</em> website), not just for the HTML documents in the root directory. We will get back to this in the next unit.</p>
+					<p>Sometimes your website is not just for one project, but two or three, just like what you need to do for this course. In this case, feel free to add different sub-directories in the root directory for individual projects. For example, in this website, I have this Bilingual Web Design course project, so I add a <em>bwd</em> directory in the root directory. Inside the <em>bwd</em> directory, I also create an <em>index.html</em> file, which is loaded into a Web browser by default when someone visits https://nthutychen.github.io/bwd/. I would also add an <em>img</em> directory inside the <em>bwd</em>, to which the images specifically used in this course project are uploaded. The file structure of my website is therefore like this:</p>
+					<table>
+						<tr>
+							<td>/ (root)</td><td>─ index.html (default homepage)</td><td></td>
+						</tr>
+						<tr>
+							<td></td><td>┕ /css (global css files)</td><td></td>
+						</tr>
+						<tr>
+							<td></td><td>┕ /js (global js files)</td><td></td>
+						</tr>
+						<tr>
+							<td></td><td>┕ /img (root image files)</td><td></td>
+						</tr>
+						<tr>
+							<td></td><td>┕ /bwd (course project folder)</td><td>─ index.html (course default homepage)</td>
+						</tr>
+						<tr>
+							<td></td><td></td><td>┕ /img (course project image files)</td>
+						</tr>
+					</table>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>

@@ -117,10 +117,13 @@ ol, ul {
 	margin-left: 2vw;
 }
 
-code {
-	padding: 0 0.5vw;
+code, table {
 	font-family: 'Lekton', sans-serif;
 	color: #226d6d;
+}
+
+code {
+	padding: 0 0.5vw;
 }
 
 a {
