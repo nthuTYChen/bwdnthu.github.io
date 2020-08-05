@@ -166,21 +166,21 @@
 				<section>
 					<h2 id="blueprint">Making a blueprint</h2>
 					<p>OK. I know you've been waiting for this moment. But let's do something real to help develop your personal website, and we would start with its layout. When you make slides for your presentation, you also need to choose a template, don't you?</p>
-					<p>We need to consider the layout of two basic <em>blocks</em> in your website: a <code>&lt;nav&gt;</code> block and a container of the main contents, perhaps inside an <code>&lt;article&lt;</code> block, and there are two options.</p>
+					<p>We need to consider the layout of two basic <em>blocks</em> in your website: a <code>&lt;nav&gt;</code> block and a container of the main contents, perhaps inside a <code>&lt;div&gt;</code> block, and there are two options.</p>
 					<p>The first common option is to put <code>&lt;nav&gt;</code> at the top:</p>
 					<table style="height: 10vw; width: 10vw; text-align: center;">
 						<tr style="height: 30%; width: 100%; background-color: red; color: white;">
 							<td>nav</td>
 						</tr>
 						<tr style="height: 70%; width: 100%; background-color: blue; color: white;">
-							<td>container</td>
+							<td>div</td>
 						</tr>
 					</table>
 					<p>In this layout, you will have the full page width at your disposal for rich contents, but you will have to think about how to present your <code>&lt;nav&gt;</code> block when you scroll down to the bottom of the page. Another common choice is to juxtapose <code>&lt;nav&gt;</code> with the main container (<code>&lt;nav&gt;</code> to the left in this example):</p>
 					<table style="width: 10vw; height: 10vw; text-align: center;">
 						<tr style="height: 100%;">
-							<td style="width: 20%; background-color: red; color: white;">nav</td>
-							<td style="width: 80%; background-color: blue; color: white;">container</td>
+							<td style="width: 30%; background-color: red; color: white;">nav</td>
+							<td style="width: 70%; background-color: blue; color: white;">div</td>
 						</tr>
 					</table>
 					<p>The benefit of this layout is rather obvious: The navigation pane would be more spacious for menu items (as if we have lots to say in our personal website!), and the presentation of the navigation pane do not interfere with that of the main contents. The drawback is also obvious; the space for the main contents would be much narrower.</p>
@@ -191,7 +191,8 @@
 					<p>Hold on! You just added the two blocks, but they were always presented vertically following their order in <code>&lt;body&gt;</code>! This is exactly the way how HTML elements are presented by default in a Web browser. We have not yet learned how to position an element, which will come next in the CSS tutorial. For now, we live with the default presentation.</p>
 					<p>Now, supposed that you already have some items in your navigation pane, how can someone use them to walk through your website? Easy - just mark up each individual item as a hyperlink using <code>&lt;a&gt;</code>, as if a item is linked to one of the webpages in the website. Crucially, we need the <em class="extra">href</em> attribute for this element to specify the <em class="extra">path</em> of the hyperlink, as in:</p>
 					<p><code>This is a &lt;a href="/somepath/"&gt;hyperlink&lt;/a&gt;!</code></p>
-					<p>With the path specified in the above example, the hyperlink will direct a Web browser to the <em>somepath</em> directory under the <em>root directory</em> (because the path begins with <code>/</code>). You can also specify a complete Web address for this attribute for an <em>external</em> link. Although you probably do not have the webpage that the individual menu items should be linked to, it's not a bad idea to think about the path to each webpage, and use the path as the name of the directory for each webpage.</p>
+					<p>With the path specified in the above example, the hyperlink will direct a Web browser to the <em>somepath</em> directory under the <em>root directory</em> (because the path begins with <code>/</code>). You can also specify a complete Web address for this attribute for an <em>external</em> link. Although you probably do not have the webpage that the individual menu items should be linked to, it's not a bad idea to think about the path to each webpage in advance, and then use the path as the name of the directory for each webpage later.</p>
+					<p>We have our menu ready, and it's time to add some general personal info to the container! We will need <code>&lt;article&gt;</code> (since it's an article about your personal info), <code>&lt;section&gt;</code> (since there could be different categories of your personal info), and <code>&lt;p&gt;</code> (since different entries of the same type of info may need an indepent paragraph). Remember, the Web browser expects a heading for every <code>&lt;article&gt;</code> and <code>&lt;section&gt;</code>!</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
