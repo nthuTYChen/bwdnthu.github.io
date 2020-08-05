@@ -195,7 +195,7 @@
 					<p>We have our menu ready, and it's time to add some general personal info to the container! We will need <code>&lt;article&gt;</code> (since it's an article about your personal info), <code>&lt;section&gt;</code> (since there could be different categories of your personal info), and <code>&lt;p&gt;</code> (since different entries of the same type of info may need an indepent paragraph). Remember, the Web browser expects a heading for every <code>&lt;article&gt;</code> and <code>&lt;section&gt;</code>!</p>
 					<h3>Text alignment using an invisible table</h3>
 					<p>At this point, we don't have many choices when trying to align out texts; we simply add <code>&lt;br/&gt;</code> to create a line break an thus align different lines of texts to the left edge of a page. But a <code>&lt;table&gt;</code>element would be a great choice if we want us to effeciently use the space in our webpage to organize our texts. The crucial elements relevant are as follows:</p>
-					<ol>
+					<ul>
 						<li><code>&lt;table&gt;&lt;/table&gt;</code> - A table <em>block</em>.</li>
 						<li><code>&lt;thead&gt;&lt;/thead&gt;</code> - A table header block.</li>
 						<li><code>&lt;tbody&gt;&lt;/tbody&gt;</code> - A table body block.</li>
@@ -203,16 +203,16 @@
 						<li><code>&lt;tr&gt;&lt;/tr&gt;</code> - A table row.</li>
 						<li><code>&lt;th&gt;&lt;/th&gt;</code> - A table header cell.</li>
 						<li><code>&lt;td&gt;&lt;/td&gt;</code> - A table value cell.</li>
-					</ol>
+					</ul>
 					<p>Supposed that our contact information includes both mobile number and e-mail, we can have a 2x2 table, in which the first row is the header of the info (such as <em>tel</em> and <em>e-mail</em>), and the second row contains the corresponding information. This way, the header will be align perfectly with their information to the on separate lines. The example below is not magic, and let's give it a try!</p>
 					<p>
 						<code>
 							<table>
-								<tr style="font-weight: 700;">
+								<tr style="font-weight: 700; text-align: left;">
 									<th>Mobile</th><th>E-mail</th>
 								</tr>
 								<tr>
-									<td>+886-936-123456</td><td>chen.ty@mx.nthu.edu.tw</td>	
+									<td style="margin-right: 1vw;">+886-936-123456</td><td>chen.ty@mx.nthu.edu.tw</td>	
 								</tr>
 							</table>
 						</code>
