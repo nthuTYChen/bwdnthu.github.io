@@ -109,7 +109,11 @@
 				</section>
 				<section>
 					<h2 id="inlineelements">Inline elements</h2>
-
+					<p>The elements introduced above are...<em>blocks</em>. It means that they all occupy a paragraph-like area that is separate from the contents before and after it. For instance, if you add the following line inside <code>&lt;body&gt;&lt;/body&gt;</code>, you will see that the texts inside <code>&lt;div&gt;&lt;/div&gt;</code> are forced to form an independent paragraph itself:</p>
+					<p><code>This sentence is going to be broken by &lt;div&gt;this block&lt;/div&gt; into three parts.</code></p>
+					<p>To the contrary, inline elements do not break the text flow, as the <code>&lt;em&gt;&lt;/em&gt;</code> element in the following line:</p>
+					<p><code>This sentence won't be broken by &lt;em&gt;this inline element&lt;/em&gt; into different parts!</code></p>
+					<p>Note that this default <em>block</em> vs. <em>inline</em> contrast from the elements is not fixed. We'll learn how to change this property when it comes to CSS.</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
