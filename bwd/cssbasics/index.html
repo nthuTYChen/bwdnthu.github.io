@@ -24,7 +24,7 @@
 			<article>
 				<h1>3. CSS Basics</h1>
 				<p><em>Cascading Style Sheet</em> - that's what CSS means, which is the flesh of your HTML document (or, the dress it wears). Most of simple website projects could be done with HTML and CSS alone, just like this course website. <em class="extra">Surprise!</em></p>
-				<p><a href="#beforewestart">Before we start...</a> / <a href="#cascading">Style sheet, understood. But "cascading"?</a> / <a href="#globalthinking">Global thinking, efficient execution</a> / <a href="#csssyntax">CSS syntax, a breakdown</a> / <a href="#htmlw3c">HTML and W3C Standards</a> / <a href="#thebuildingblocks">The building blocks</a> / <a href="#inlineelements">Inline elements</a> / <a href="#webstructure">The file structure of your website</a> / <a href="#blueprint">Making a blueprint</a> / <a href="#finalizethedraft">Finalize the draft</a> / <a href="#forthenextunit">For the next unit...</a></p>
+				<p><a href="#beforewestart">Before we start...</a> / <a href="#cascading">Style sheet, understood. But "cascading"?</a> / <a href="#globalthinking">Global thinking, efficient execution</a> / <a href="#csssyntax">CSS syntax, a breakdown</a> / <a href="#experimenting">Experimenting different styles</a> / <a href="#thebuildingblocks">The building blocks</a> / <a href="#inlineelements">Inline elements</a> / <a href="#webstructure">The file structure of your website</a> / <a href="#blueprint">Making a blueprint</a> / <a href="#finalizethedraft">Finalize the draft</a> / <a href="#forthenextunit">For the next unit...</a></p>
 				<section>
 					<h2 id="beforewestart">Before we start...</h2>
 					Let's take a look at some English writing issues I found in your autobiography, so you can keep improving the quality in the future.
@@ -157,7 +157,14 @@
 					<p>This would be useful when you have some styles that are only applicable to the elements in a webpage. But I personally wouldn't recommend it. If later you decide to extend these styles to other webpages, you still need to move them to a CSS file so you don't have to repeat these styles again and again in different HTML files.</p>
 					<p>Alternatively, you could put CSS properties in the value of the <em>style</em> attribute of an HTML element (namely, <em class="extra">inline styling</em>) to style that particular element, as in the following example:</p>
 					<code>&lt;body style="background-color: pink;"&gt;</code>
-					<p>This technique would be useful if you need some special presentation for just <em>one</em> element, and you're pretty sure that you won't use it anywhere else. In this course website, I need to present some special examples from time to time, which requires some CSS styles just for these examples. This is the case where I choose to just use inline styling, because the styles are not going to be reused again. However, if you have lots of properties to specified even just for a single element, you'd better define this style in a CSS file since it would be easier to read in the source code.</p>
+					<p>This technique would be useful if you need some special presentation for just <em>one</em> element, and you're pretty sure that you won't use it anywhere else. In this course website, I need to present some special examples from time to time, which requires some CSS styles just for these examples. This is the case where I choose to just use inline styling, because the styles are not going to be reused again. However, if you have lots of properties to specified even just for a single element, you'd better define this style in a CSS file since it would be easier to read in the source code. We will return to inline styling later in this unit.</p>
+				</section>
+				<section>
+					<h2 id="experimenting">Experimenting different styles</h2>
+					<p>When you begin to style your webpages, you naturally keep adjusting the properties until you settle down on the layout that you're satisfied with. Normally, this means to constantly make changes to your CSS file in a text editor, upload it to your website, and check the changes in your Web browser. There is nevertheless a hidden tool in your Web browser that you can use to experiment and examine changes in real time, which is mostly called <em class="extra">Developer Tools</em>. Well, you may have come across it in your Web browser when you hit <em class="extra">F12</em> by accident and didn't know what to do with it:</p>
+					<picture>
+						<img src="img/devtools.png"/>
+					</picture>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
