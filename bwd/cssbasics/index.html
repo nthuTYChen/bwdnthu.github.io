@@ -197,9 +197,36 @@
 						<p> code: Lekton</p>
 						<p>*/</p>
 					</code>
+					<p>When you need to apply a font style to an element, add the <code>font-family</code> property to the style you defined in your CSS file, just like:</p>
+					<p><code>font-family: 'Zilla Slab', serif;</code></p>
+					<p>In this property, you can specify more than one fonts separated using a <em>comma</em>. A Web browser will try to apply the first font style, and if the first style is not available, it will try the second one, and so on, until it finds an available font style. In the above example, I added <em>serif</em> as the last resort, so a Web browser to use whatever serif font available to it when there's no other available choice. You should instead add <em>sans-serif</em> at the end if other specified fonts in the same line are also sans-serif, so some consistencies could be maintained, although the replacement would not give the best look of your website.</p>
 					<p>Now, take some time to get the font part done. You can surely change your mind later, but your initial attempt might not be bad at all!</p>
 					<h3>A colorful world</h3>
 					<p>There are more decisions to make, and this time it's about the colors in your website. Colors undoubtedly have their visual/emotional impacts, you need to choose them wisely. Again, I'm not expert, but the keywords for you to google would be <em class="extra">psychology of colors</em>. For this course website, I just followed my instinct to use the combination of red, organge, green, and black colors. Red and organge stand out because I use them to put an emphasis on various elements, so they become the theme of my website - McDonald's uses this color combination, too, so don't judge!</p>
+					<p>You don't use colors just to make your website look fancier than others. Colors are just like fonts, which would help convey <em class="extra">systematic messages</em> of your website, such as:</p>
+					<ul>
+						<li>The theme of a webpage.</li>
+						<li>The highlights in a webpage.</li>
+						<li>Distinct sections in a webpage.</li>
+						<li>Etc.</li>
+					</ul>
+					<p>In CSS, you can specify a color in many different ways. One is to use the word that represents a color, such as black, red, and pink, which we have tried earlier. There's no much flexibility with this method since the subtly difference in colors cannot be specified using words in CSS. Alternatively, most Web designers would choose to use <em class="extra">RGB value or HEX code</em> to specify a color:</p>
+					<code>
+						<p>background-color: rgb(0, 0, 0); /* both represents a black color */</p>
+						<p>background-color: #000000;</p>
+					</code>
+					<p>I've never received any professional training in digital art, so I choose to use the HEX system only because it's easier to type. You can make your own choice based on what you know (or like) for sure. OK, let's set the tone for your website, and don't forget to add some note in your CSS file to remind you the function of each color of your choice, such as:</p>
+					<code>
+						<p>/*</p>
+						<p>text color: #383838; (light grey)</p>
+						<p>link color: #cccccc; (super-light grey)</p>
+						<p>link hovered color: #000000; (black)</p>
+						<p>menu bg color: #b30000; (dark red)</p>
+						<p>section bg color: #f2f2f2 (lighter grey);</p>
+						<p>highlight color: #e68a00; (dark orange)</p>
+						<p>code color:#226d6d; (cyan)</p>
+						<p>*/</p>
+					</code>
 				</section>
 				<section>
 					<h2 id="dimension">Dimension</h2>
