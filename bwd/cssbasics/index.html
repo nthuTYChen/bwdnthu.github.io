@@ -178,9 +178,9 @@
 					</picture>
 					<p>The first method provides you a line of <code>&lt;link&gt;</code> codes, which you can put into the <code>&lt;head&gt;</code> element as part of the metadata of your website:</p>
 					<p><code>&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"&gt;</code></p>
-					<p>The second method provides you a line of <code>@import</code> codes, which you can put into the first line of your global/local CSS file (it is in fact embedded inside the <code>&lt;style&gt;</code> element, but I already explain why this might not be the best idea):</p>
-					<p>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');</p>
-					
+					<p>The second method provides you a line of <code>@import</code> codes, which you can put into the first line of your global/local CSS file (it is in fact embedded inside the <code>&lt;style&gt;</code> element which is supposed to be inserted into <code>&lt;head&gt;</code>, but I already explain why this might not be the best idea):</p>
+					<p><code>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');</code></p>
+					<p>I personally always prefer the second method, since the font styles I choose are usually applied across all webpages. Since I already have to load the global/local CSS file for every webpage, why don't I just load the font styles from Google in my CSS file, so I don't have to repeat the <code>&lt;link&gt;</code> codes in the metadata of every webpage.</p>
 				</section>
 				<section>
 					<h2 id="dimension">Dimension</h2>
