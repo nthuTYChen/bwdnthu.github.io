@@ -134,7 +134,30 @@
 						</tbody>
 					</table>
 					<h3>The &lt;style&gt; element and inline styling</h3>
-					<p></p>
+					<p>If you search for some information about CSS on the internet, you probably will see two alternative methods of styling the elements directly inside your HTML files. The first one is to define the styles directly inside the <code>&lt;style&gt;&lt;/style&gt;</code> element, which is then inserted into <code>&lt;head&gt;&lt;/head&gt;</code> as part of the metadata of a webpage, as in the following example:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>&lt;style&gt;</td><td></td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>body {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td></td><td>background-color: pink;</td>
+							</tr>
+							<tr>
+								<td></td><td>}</td><td></td>
+							</tr>
+							<tr>
+								<td>&lt;/style&gt;</td><td></td><td></td>
+							</tr>
+						</tbody>
+					</table>
+					<p>This would be useful when you have some styles that are only applicable to the elements in a webpage. But I personally wouldn't recommend it. If later you decide to extend these styles to other webpages, you still need to move them to a CSS file so you don't have to repeat these styles again and again in different HTML files.</p>
+					<p>Alternatively, you could put CSS properties in the value of the <em>style</em> attribute of an HTML element (namely, <em class="extra">inline styling</em>) to style that particular element, as in the following example:</p>
+					<code>&lt;body style="background-color: pink;"&gt;</code>
+					<p>This technique would be useful if you need some special presentation for just <em>one</em> element, and you're pretty sure that you won't use it anywhere else. In this course website, I need to present some special examples from time to time, which requires some CSS styles just for these examples. This is the case where I choose to just use inline styling, because the styles are not going to be reused again. However, if you have lots of properties to specified even just for a single element, you'd better define this style in a CSS file since it would be easier to read in the source code.</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
