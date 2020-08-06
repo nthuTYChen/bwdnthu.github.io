@@ -24,8 +24,7 @@
 			<article>
 				<h1>3. CSS Basics</h1>
 				<p><em>Cascading Style Sheet</em> - that's what CSS means, which is the flesh of your HTML document (or, the dress it wears). Most of simple website project could be done with HTML and CSS alone, just like this course website.</p>
-				<p><a href="#beforewestart">Before we start...</a> / <a href="#cascading">Style sheet, understood. But "cascading"?</a> / <a href="#addsomespice">Add some spices</a> / <a href="#formattingsourcecodes">Formatting source codes</a> / <a href="#htmlw3c">HTML and W3C Standards</a> / <a href="#thebuildingblocks">The building blocks</a> / <a href="#inlineelements">Inline elements</a> / <a href="#webstructure">The file structure of your website</a> / <a href="#blueprint">Making a blueprint</a> / <a href="#finalizethedraft">Finalize the draft</a> / <a href="#forthenextunit">For the next unit...</a></p>
-				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
+				<p><a href="#beforewestart">Before we start...</a> / <a href="#cascading">Style sheet, understood. But "cascading"?</a> / <a href="#globalthinking">Global thinking, efficient execution</a> / <a href="#formattingsourcecodes">Formatting source codes</a> / <a href="#htmlw3c">HTML and W3C Standards</a> / <a href="#thebuildingblocks">The building blocks</a> / <a href="#inlineelements">Inline elements</a> / <a href="#webstructure">The file structure of your website</a> / <a href="#blueprint">Making a blueprint</a> / <a href="#finalizethedraft">Finalize the draft</a> / <a href="#forthenextunit">For the next unit...</a></p>
 				<section>
 					<h2 id="beforewestart">Before we start...</h2>
 					Let's take a look at some English writing issues I found in your autobiography, so you can keep improving the quality in the future.
@@ -37,26 +36,50 @@
 					<p><q>to pass information, knowledge, etc. to a person or group so that they can pass it on to others; to be passed on in this way</q></p>
 					<p>Remember that in the <em>Document Object Model (DOM)</em>, we can define the relationship between HTML elements. In a style sheet, when you specify the style of a parent, the style would <em>cascade down</em>, <em>flow downwards</em>, or <em>pass on</em> to it children, until the <em>flow</em> encounters a different style (that is, you specify a different style for the children).</p>
 					<p>In the following HTML document, for instance, if <code>&lt;html&gt;</code> is specified to have a black background, it's <em>child</em> <code>&lt;div&gt;</code> will also <em>inherit</em> this style, unless you specify a different background color for it - the style <em>flow</em> is stopped.</p>
-					<code>
-						<table>
-							<tbody>
-								<tr>
-									<td>&lt;body&gt;</td><td></td>
-								</tr>
-								<tr>
-									<td></td><td>&lt;div&gt;</td>
-								</tr>
-								<tr>
-									<td></td><td>&lt;/div&gt;</td>
-								</tr>
-								<tr>
-									<td>&lt;/body&gt;</td><td></td>
-								</tr>
-							</tbody>
-						</table>
-					</code>
+					<table>
+						<tbody>
+							<tr>
+								<td>&lt;body&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>&lt;div&gt;</td>
+							</tr>
+							<tr>
+								<td></td><td>&lt;/div&gt;</td>
+							</tr>
+							<tr>
+								<td>&lt;/body&gt;</td><td></td>
+							</tr>
+						</tbody>
+					</table>
 					<p>The most updated CSS system is CSS3, although we would mostly use the features that are well-developed following W3C standards from early on. There are also many new stuff in CSS3 that can create some very fancy effects in your webpage. But again, be very careful when you try to use them because some might be too new to be supported in all major Web browsers. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#Keyword_index" target="blank">MDN Web Docs</a> still provides you a very complete CSS guide that you should always refer to.</p>
 				</section>
+				<section>
+					<h2 id="globalthinking">Global thinking, efficient execution</h2>
+					<p>In the previous unit, I talked about how to organize the files in your website, which is part of the global thinking required for your website project. I told you that when you create a <em>css</em> directory in the <em>root</em> directory of a website project, it has the implication that the styles specified in the CSS files in this directory would apply to the entire website, presumably because, for instance, you have the same navigation pane in different webpages. You probably don't want to include styles that are specific to some elements in some specific webpages that belongs to a specific sub-project - these styles should go to a CSS file located in the <em>css</em> directory of the sub-project folder, which is only loaded when those specific webpages are presented in a Web browser.</p>
+					<p>Let me again use my course website as an example. In the file structure below, I have a <em>bwd</em> directory and a <em>meteor</em> directory right under the <em>root</em> directory because I have two course sub-projects. Under the <em>root</em> directory, I have a <em>css</em> directory for global CSS files, because I assume that my <em>bwd</em> and <em>meteor</em> would have a similar layout (for instance, the same style for the navigation pane) and I only need one CSS file for these common styles. But I also expect both projects to have some unique presentation of their contents, which requires some styles that are not useful for the other project, and I would put them into a CSS file in the <em>css</em> directory of each sub-project.</p>
+					<table>
+						<tr>
+							<td>/ (root)</td><td>─ index.html (default homepage)</td><td></td>
+						</tr>
+						<tr>
+							<td></td><td>┕ /css (global css files)</td><td></td>
+						</tr>
+						<tr>
+							<td></td><td>┕ /bwd (bwd project folder)</td><td>─ index.html (course default homepage)</td>
+						</tr>
+						<tr>
+							<td></td><td></td><td>┕ /css (bwd css files)</td>
+						</tr>
+						<tr>
+							<td></td><td>┕ /meteor (meteor project folder)</td><td>─ index.html (course default homepage)</td>
+						</tr>
+						<tr>
+							<td></td><td></td><td>┕ /css (meteor css files)</td>
+						</tr>
+					</table>
+				</section>
+				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
 		</div>
 	</body>
