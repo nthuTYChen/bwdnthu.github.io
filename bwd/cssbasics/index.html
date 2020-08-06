@@ -56,7 +56,7 @@
 				</section>
 				<section>
 					<h2 id="globalthinking">Global thinking, efficient execution</h2>
-					<p>In the previous unit, I talked about how to organize the files in your website, which is part of the global thinking required for your website project. I told you that when you create a <em>css</em> directory in the <em>root</em> directory of a website project, it has the implication that the styles specified in the CSS files in this directory would apply to the entire website, presumably because, for instance, you have the same navigation pane in different webpages. You probably don't want to include styles that are specific to some elements in some specific webpages that belongs to a specific sub-project - these styles should go to a CSS file located in the <em>css</em> directory of the sub-project folder, which is only loaded when those specific webpages are presented in a Web browser.</p>
+					<p>In the previous unit, I talked about how to organize the files in your website, which is part of the global thinking required for your Web development project. I told you that when you create a <em>css</em> directory in the <em>root</em> directory of a website project, it has the implication that the styles specified in the CSS files in this directory would apply to the entire website, presumably because, for instance, you have the same navigation pane in different webpages. You probably don't want to include styles that are specific to some elements in some specific webpages that belongs to a specific sub-project - these styles should go to a CSS file located in the <em>css</em> directory of the sub-project folder, which is only loaded when those specific webpages are presented in a Web browser.</p>
 					<p>Let me again use my course website as an example. In the file structure below, I have a <em>bwd</em> directory and a <em>meteor</em> directory right under the <em>root</em> directory because I have two course sub-projects. Under the <em>root</em> directory, I have a <em>css</em> directory for global CSS files, because I assume that my <em>bwd</em> and <em>meteor</em> would have a similar layout (for instance, the same style for the navigation pane) and I only need one CSS file for these common styles. But I also expect both projects to have some unique presentation of their contents, which requires some styles that are not useful for the other project, and I would put them into a CSS file in the <em>css</em> directory of each sub-project.</p>
 					<table>
 						<tr>
@@ -78,6 +78,8 @@
 							<td></td><td></td><td>┕ /css (meteor css files)</td>
 						</tr>
 					</table>
+					<h3>Are these manipulations crucial?</h3>
+					<p>Maybe, depending on the scale of your Web development project. It's not about the performance of your website, because modern computers are very powerful, and most of time you probably won't feel the difference in whether a website loads a tiny CSS file with only essential styles or a sizable one with lots of <em>redundancies</em>. Things could go wild very easily, however. The less planning you do, the more time you could waste on fixing problems.</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
