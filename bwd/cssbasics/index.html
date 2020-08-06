@@ -38,7 +38,7 @@
 						<img src="img/waterfall.jpg"/>
 						<sub>Elakala Waterfall, Credit: <a href="https://commons.wikimedia.org/wiki/User:ForestWander" target="blank">ForestWander</a></sub>
 					</picture>
-					<p>Remember that in the <em>Document Object Model (DOM)</em>, we can define the relationship between HTML elements. In a style sheet, when you specify the style of a parent, the style would <em>cascade down</em>, <em>flow downwards</em>, or <em>pass on</em> to it children, until the <em>flow</em> encounters a different style (that is, you specify a different style for the children).</p>
+					<p>Remember that in the <em>Document Object Model (DOM)</em>, we can define the relationship between HTML elements. In a style sheet, when you specify the style of a parent, the style would <em>cascade down</em>, <em>flow downwards</em>, or <em>pass on</em> to its children, until the <em>flow</em> encounters a different style (that is, you specify a different style for the children).</p>
 					<p>In the following HTML document, for instance, if <code>&lt;html&gt;</code> is specified to have a black background, it's <em>child</em> <code>&lt;div&gt;</code> will also <em>inherit</em> this style, unless you specify a different background color for it - the style <em>flow</em> is stopped.</p>
 					<table>
 						<tbody>
@@ -101,7 +101,23 @@
 							</tr>
 						</tbody>
 					</table>
-					<p>In the above style template, <em class="extra">selector</em> allows a Web browser to pin down a group of elements or one single specific element in a DOM. The curved brackets <em class="extra">{}</em> defines the scope of a style, in which the value of properties of the style are specified. There are many CSS properties for you to change the visual representation of a webpage, such background color, font color, font style...just too many of them. We usually use one line for every single property which <em class="extra">must</em> ends with a semi-colon <code>;</code>, and in each line, the name of the property and its value must be separated by a colon <code>:</code>. Did you happen to notice the indention at the beginning of a property line, and know why this is recommended?</p>
+					<p>In the above style template, <em class="extra">selector</em> allows a Web browser to pin down a group of elements or one single specific element in a DOM. The curved brackets <code>{ }</code> defines the scope of a style, in which the value of properties of the style are specified. There are many CSS properties for you to change the visual representation of a webpage, such background color, font color, font style...just too many of them. We usually use one line for every single property which <em class="extra">must</em> ends with a semi-colon <code>;</code>, and in each line, the name of the property and its value must be separated by a colon <code>:</code>. Did you happen to notice the indention at the beginning of a property line, and know why this is recommended?</p>
+					<p>Let's try to create your very first style and apply it to your personal website. In your <em>style.css</em> for the personal website, add the following style so the background of <code>&lt;body&gt;</code> will have a pink color.</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>body {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>background-color: pink;</td>
+							</tr>
+							<tr>
+								<td>}</td><td></td>
+							</tr>
+						</tbody>
+					</table>
+					<p>Now link the CSS file to <em>index.html</em> by adding the following line into <code>&lt;head&gt;&lt;/head&gt;</code>so the default homepage would be styled based on the CSS file. Note that in our case, the path in this link does not begin with <code>/</code>, because the CSS file is not located in a <em>css</em> directory under the <em>root</em> directory. Instead, the CSS file is located in the <em>css</em> directory in your <em>cv</em> directory, along with the <em>index.html</em> file it styles. This type of paths is called <em class="extra">relative</em> path, because the path to the linked CSS file is <em>relative</em> to the HTML file.</p>
+					<code>&lt;link rel="stylesheet" href="css/style.css"&gt;</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
