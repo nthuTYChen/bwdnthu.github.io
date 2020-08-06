@@ -22,7 +22,7 @@
 		</nav>
 		<div class="container">
 			<article>
-				<h1>HTML Basics</h1>
+				<h1>2. HTML Basics</h1>
 				<p><em>HyperText Markup Language</em> - that's what HTML stands for. It builds the fundamental structure of a webpage for you, just like the bones in your body.</p>
 				<p><a href="#beforewestart">Before we start...</a> / <a href="#firstindexhtml">Your first index.html</a> / <a href="#addsomespice">Add some spices</a> / <a href="#formattingsourcecodes">Formatting source codes</a> / <a href="#htmlw3c">HTML and W3C Standards</a> / <a href="#thebuildingblocks">The building blocks</a> / <a href="#inlineelements">Inline elements</a> / <a href="#webstructure">The file structure of your website</a> / <a href="#blueprint">Making a blueprint</a> / <a href="#finalizethedraft">Finalize the draft</a> / <a href="#forthenextunit">For the next unit...</a></p>
 				<section>
@@ -59,7 +59,7 @@
 					<p>Now that we understand how HTML tags work in our first <em>index.html</em>, we have to make some additional tweaks to optimize the decoding of your HTML document in different Web browsers.</p>
 					<p>First, let's change <code>&lt;html&gt;</code> to:</p>
 					<p><code>&lt;html lang="en-us"&gt;</code></p>
-					<p>In this change, we add the <em class="extra">attribute</em> <em>lang</em> to the <code>&lt;html&gt;</code> element. An attribute assigns a <em>property</em> to a specific element. In the above change, the value <em>en-us</em> of the <em>lang</em> attribute explicitly requires the browser to arrange texts following <em>US English</em>. When your webpage goes bilingual, then the value of this attribute for your Taiwan Mandarin webpages should be <em class="extra">zh-Hant-TW</em> (rather than just zh-tw).</p>
+					<p>In this change, we add the <em class="extra">attribute</em> <em>lang</em> to the <code>&lt;html&gt;</code> element and enclose the <em class="extra">value</em> of the attribute with <em class="extra">double quotation marks</em>. An attribute assigns a <em>property</em> to a specific element. In the above change, the value <em>en-us</em> of the <em>lang</em> attribute explicitly requires the browser to arrange texts following <em>US English</em>. When your webpage goes bilingual, then the value of this attribute for your Taiwan Mandarin webpages should be <em class="extra">zh-Hant-TW</em> (rather than just zh-tw).</p>
 					<p>Next, inside <code>&lt;head&gt;&lt;/head&gt;</code>, let's add the following line after <code>&lt;/title&gt;</code>:</p>
 					<p><code>&lt;meta charset="UTF-8"&gt;</code></p>
 					<p>This  <code>&lt;meta&gt;</code> element is obviously adding some metadata to our HTML document, and the attribute <em>charset</em> is specified with <em>UTF-8</em>, which tells a Web browser to treat the contents as Unicode texts, so texts could be encoded properly even if they are from different languages. You can't imagine how hard it was to get foreign websites encoded properly 20 years ago. Most of modern Web browsers set UTF-8 encoding as their default, but it doesn't hurt to always have this by default just in case.</p>
@@ -159,7 +159,7 @@
 						</tr>
 					</table>
 					<p>
-						With this logic in mind, you should be able to have the file structure of your website clearly organized - whenever you need to make changes or update the contents, you know where to look at. Now, let's create the directories for your two course projects under the root directory, calling them <em class="extra">cv</em> and <em>featured</em> respectively, and put an <em>index.html</em> into both directories. The name of directories and files are <em class="extra">case-sensitive</em>, so make sure that you have the correct case for the spellings.
+						With this logic in mind, you should be able to have the file structure of your website clearly organized - whenever you need to make changes or update the contents, you know where to look at. Now, let's create the directories for your two course projects under the root directory, calling them <em class="extra">cv</em> and <em class="extra">featured</em> respectively, and put an <em>index.html</em> into both directories. The name of directories and files are <em class="extra">case-sensitive</em>, so make sure that you have the correct case for the spellings.
 					</p>
 					<p>Every student should have the same directories for their course projects, and <em class="extra">I will only assess the contents in these two directories</em>.</p>
 				</section>
