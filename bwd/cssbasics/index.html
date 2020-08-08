@@ -24,7 +24,7 @@
 			<article>
 				<h1>3. CSS Basics</h1>
 				<p><em>Cascading Style Sheet</em> - that's what CSS means, which is the flesh of your HTML document (or, the dress it wears). Most of simple website projects could be done with HTML and CSS alone, just like this course website. <em class="extra">Surprise!</em></p>
-				<p><a href="#beforewestart">Before we start...</a> / <a href="#cascading">Style sheet, understood. But "cascading"?</a> / <a href="#globalthinking">Global thinking, efficient execution</a> / <a href="#csssyntax">CSS syntax, a breakdown</a> / <a href="#experimenting">Experimenting different styles</a> / <a href="#fontcolors">Fonts and colors</a> / <a href="#cssunits">CSS Units</a> / <a href="#position">Position</a> / <a href="#textlayout">Text Layout</a> / <a href="#aesthetics">Aesthetics</a> / <a href="#moreonselector">More on selector</a></p>
+				<p><a href="#beforewestart">Before we start...</a> / <a href="#cascading">Style sheet, understood. But "cascading"?</a> / <a href="#globalthinking">Global thinking, efficient execution</a> / <a href="#csssyntax">CSS syntax, a breakdown</a> / <a href="#experimenting">Experimenting different styles</a> / <a href="#fontcolors">Fonts and colors</a> / <a href="#cssunits">CSS Units</a> / <a href="#textlayout">Text Layout</a> / <a href="#position">Position</a> / <a href="#aesthetics">Aesthetics</a> / <a href="#moreonselector">More on selector</a></p>
 				<section>
 					<h2 id="beforewestart">Before we start...</h2>
 					Let's take a look at some English writing issues I found in your autobiography, so you can keep improving the quality in the future.
@@ -230,7 +230,7 @@
 				</section>
 				<section>
 					<h2 id="cssunits">CSS Units</h2>
-					<p>You must have been waiting for a tutorial for how to adjust the size of texts and elements in your website, and there you go! There are different units in a CSS file that you can use to define the size, distance, width, height, etc., and we'll start with <em class="extra">absolute length units</em> (from <a href="https://www.w3schools.com/CSSref/css_units.asp" target="blank">W3CSchool</a>). They are absolute because the units refer to an absolute scale and are not dependent of other specified lengths in an HTML document. Among the units in the following list, <em>px</em> is probably the most frequently used absolute length unit.</p>
+					<p>You must have been waiting for a tutorial for how to adjust the size of texts and elements in your website, and there you go! There are different units in a CSS file that you can use to define the size, distance, width, height, etc., and we'll start with <em class="extra">absolute length units</em> (from <a href="https://www.w3schools.com/CSSref/css_units.asp" target="blank">W3CSchool</a>). They are absolute because the units refer to an absolute scale and are not dependent of other specified lengths in an HTML document. Among the units in the following list, <em>px</em> is probably the most frequently used absolute length unit in Web design - the screen resolution is defined by pixels and the dimension of an image  is generally specified with pixels, too. Again, I could be wrong, but when referring to pixel, I feel more comfortable with estimating the size of an element in an webpage across different devices.</p>
 					<ul>
 						<li><code>cm</code> - centimeters</li>
 						<li><code>mm</code> - millimeters</li>
@@ -239,13 +239,22 @@
 						<li><code>pt</code> - points (1pt = 1/72 of 1in)</li>
 						<li><code>pc</code> - picas (1pc = 12pt = 1/6 of 1in)</li>
 					</ul>
-					</code>
-				</section>
-				<section>
-					<h2 id="position">Position</h2>
+					<p>Many things could be either <em class="extra">absolute</em> or <em class="extra">relative</em>, just like the path to a file that we have discussed previously, so it's natural that we have <em class="extra">relative length units</em> as in the following list, too. When you use a relative length unit, the actual length is relative to some other length. For instance, if the font size of a <code>div</code> element is set to <em>16px</em>, and you want emphasized texts in the element are twice larger, then you could set the font size of the emphasized texts to <code>2em</code>.</p>
+					<ul>
+						<li><code>em</code> - relative to the font size of the current element</li>
+						<li><code>rem</code> - relative to the font size of the <em>root</em> element</li>
+						<li><code>vw</code> - relative to 1% of the viewport (the browser window size) width</li>
+						<li><code>vh</code> - relative to 1% of the viewport height</li>
+						<li><code>vmin</code> - relative to 1% of the smaller viewport dimension</li>
+						<li><code>vmax</code> - relative to 1% of the larger viewport dimension</li>
+						<li><code>%</code> - relative to the parent element</li>
+					</ul>
 				</section>
 				<section>
 					<h2 id="textlayout">Text layout</h2>
+				</section>
+				<section>
+					<h2 id="position">Position</h2>
 				</section>
 				<section>
 					<h2 id="aesthetics">Aesthetics</h2>
