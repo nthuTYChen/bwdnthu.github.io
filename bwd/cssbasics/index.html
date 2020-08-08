@@ -239,7 +239,7 @@
 						<li><code>pt</code> - points (1pt = 1/72 of 1in)</li>
 						<li><code>pc</code> - picas (1pc = 12pt = 1/6 of 1in)</li>
 					</ul>
-					<p>Many things could be either <em class="extra">absolute</em> or <em class="extra">relative</em>, just like the path to a file that we have discussed previously, so it's natural that we have <em class="extra">relative length units</em> as in the following list, too. When you use a relative length unit, the actual length is relative to some other length. For instance, if the font size of a <code>div</code> element is set to <em>16px</em>, and you want emphasized texts in the element are twice larger, then you could set the font size of the emphasized texts to <code>2em</code>.</p>
+					<p>Many things could be either <em class="extra">absolute</em> or <em class="extra">relative</em>, just like the path to a file that we have discussed previously, so it's natural that we have <em class="extra">relative length units</em> as in the following list, too. When you use a relative length unit, the actual length is relative to some other length. For instance, if the font size of a <code>&lt;div&gt;</code> element is set to <code>16px</code>, and you want emphasized texts in the element are twice larger, then you could set the font size of the emphasized texts to <code>2em</code>.Well, you could simply use <code>32px</code>, too, but soon you will find this strategy very inefficient because every time you change the base font size, you need to change all associated font sizes.</p>
 					<ul>
 						<li><code>em</code> - relative to the font size of the current element</li>
 						<li><code>rem</code> - relative to the font size of the <em>root</em> element</li>
@@ -249,6 +249,7 @@
 						<li><code>vmax</code> - relative to 1% of the larger viewport dimension</li>
 						<li><code>%</code> - relative to the parent element</li>
 					</ul>
+					<p>My own strategy is even more radical. In some cases, I even start with the relative length unit as the base to make sure that the webpage is in general consistent across different devices. For instance, I might set the base font size to <code>1.5vh</code>, that is <em>1.5% of the browser window height</em>, so whether the screen width is 1920px, 768px, or 1280px, the font size is relatively the same. Then, the size of emphasized texts could be set to <code>2em</code>, which is equivalent to <code>3vh</code>. This strategy is also the foundation of <em class="extra">Responsive Web Design</em>, which focuses on providing a <em>unified</em> browsing experience for your website. We will be back to this a few weeks later.</p>
 				</section>
 				<section>
 					<h2 id="textlayout">Text layout</h2>
