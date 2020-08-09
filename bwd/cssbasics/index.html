@@ -311,20 +311,23 @@
 						</tbody>
 					</table>
 					<h3>Margin Collapsing</h3>
-					<p>Before we end the current tutorial about margin and padding, there's something you should know when you set the margin for adjacent elements, that is, <em class="extra">margin collapsing</em> (see the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="blank">MDN Web docs page</a> for more details). For instance, when you define the following style in your CSS file, you might hope to a <code>&lt;div&gt;</code> element from its previous and following block by 15px.</p>
+					<p>Before we end the current tutorial about margin and padding, there's something you should know when you set the margin for adjacent elements, that is, <em class="extra">margin collapsing</em>. For instance, when you define the following style in your CSS file, you might hope to a <code>&lt;div&gt;</code> element from its previous and following elements (as well as the top and the bottom edge of a webpage) by 15px.</p>
 					<table>
 						<tbody>
 							<tr>
 								<td>div {</td><td></td>
 							</tr>
 							<tr>
-								<td></td><td>margin: 20px 0;</td>
+								<td></td><td>margin: 15px 0;</td>
 							</tr>
 							<tr>
 								<td>}</td><td></td>
 							</tr>
 						</tbody>
 					</table>
+					<p>But if this style applies to two adjacent <code>&lt;div&gt;</code> elements without any adjustment, the two elements are supposed to be separated by <em class="extra">15px (margin-bottom of the first) + 15px (marigin-top of the second) = 30px</em>. This is not what you hope for, and the Web browser simply collapses these margins for you and make it just 15px. This strategy of presenting your webpage makes sense because you don't need extra spacing with <em class="extra">additive margins</em>.</p>
+					<p>You might have already thought of some workaround, such as using <code>margin-top</code> to separate elements by top margin, but in this case you would have to specify the bottom margin for the last element of a webpage. So, why not just give in and take full advantage of your Web browser's ability to read your mind? :-)</p>
+
 				</section>
 				<section>
 					<h2 id="position">Position</h2>
