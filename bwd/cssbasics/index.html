@@ -289,6 +289,23 @@
 					<p><code>margin: 0 2px; /* zero for top/bottom, 2px for left/right */</code></p>
 					<p><code>margin: 0 2px 5px; /* zero for top, 2px for left/right, 5px for bottom */</code></p>
 					<p>The above logic applies to all CSS properties that refers to the four sides of an element, such as <code>border</code>.</p>
+					<p>Different Web browsers have their default margins and paddings for some elements, so to provide a <em>unified</em> layout across the browsers, we need to <em class="extra">reset margins and paddings</em> with the following style in your CSS file, namely to set zero margins and paddings for <em>all</em> elements:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>* {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>box-sizing: border-box; /* from the old style */ </td>
+							</tr>
+							<tr>
+								<td></td><td>margin: 0;</td>
+							</tr>
+							<tr>
+								<td>}</td><td>padding: 0;</td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 				<section>
 					<h2 id="position">Position</h2>
