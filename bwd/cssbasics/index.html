@@ -276,10 +276,13 @@
 					<p><code>padding-bottom: 10px; /* the contents are 10px from the border at the bottom */</code></p>
 					<div style="display: inline-block; height: 10vw; width: 10vw; background-color: blue;"></div><code>margin-left</code>
 					<div style="display: inline-block; height: 10vw; width: 10vw; background-color: blue;">
-						<div style="position: absolute; top: 0; left: 0; height: 70%; width: 100%; background-color: blue;"></div>
-						<code style="color: white;">padding-bottom</code>
+						<div style="height: 70%; width: 100%; background-color: red;"></div>
+						<div style="height: 30%; width: 100%; background-color: blue; color: white;"><code>padding-bottom</code></div>
 					</div>
-					<p>Alternatively, you can define the spacing in general using the property <code>margin</code> and <code>padding</code>. Depending on the number of values you specify for these two properties </p>
+					<p>Alternatively, you can define the spacing in general using the property <code>margin</code> and <code>padding</code>. Depending on the number of values you specify for these two properties, the spacing is set <em class="extra">clockwise</em> around or within an element:</p>
+					<p><code>margin: 0; /* zero margin on all four sides */</code></p>
+					<p><code>margin: 0 0 0 0; /* as above */</code></p>
+					<p><code>margin: 0 2px; /* zero margin for top/bottom, 2px margin for left/right */</code></p>
 				</section>
 				<section>
 					<h2 id="position">Position</h2>
