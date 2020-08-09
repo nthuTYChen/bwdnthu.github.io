@@ -310,6 +310,21 @@
 							</tr>
 						</tbody>
 					</table>
+					<h3>Margin Collapsing</h3>
+					<p>Before we end the current tutorial about margin and padding, there's something you should know when you set the margin for adjacent elements, that is, <em class="extra">margin collapsing</em> (see the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="blank">MDN Web docs page</a> for more details). For instance, when you define the following style in your CSS file, you might hope to a <code>&lt;div&gt;</code> element from its previous and following block by 15px.</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>div {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>margin: 20px 0;</td>
+							</tr>
+							<tr>
+								<td>}</td><td></td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 				<section>
 					<h2 id="position">Position</h2>
