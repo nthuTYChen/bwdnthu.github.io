@@ -272,20 +272,23 @@
 				<section>
 					<h2 id="pagetextlayout">Page and text layout</h2>
 					<p>Now you have the knowledge to quickly fine-tune the layout of your webpage, and let's us start with <em class="extra">margin</em> and <em class="extra">padding</em>. Margin specifies the space between elements, both vertically and horizontally. Padding defines the space between contents and borders, both vertically and horizontally. You can define the spacing toward a specific direction (<em>top, right, bottom, and left</em>), using the properties such as <code>margin-left</code> or <code>padding-bottom</code>:</p>
-					<p><code>margin-left: 5px; /* the current element is 5px from the element to its  left */</code></p>
-					<p><code>padding-bottom: 10px; /* the contents are 10px from the border at the bottom */</code></p>
-					<div style="display: inline-block; height: 10vw; width: 10vw; background-color: blue;"></div>
-					<div style="display: inline-block;"><code>margin-left</code></div>
-					<div style="display: inline-block; height: 10vw; width: 10vw; background-color: blue;">
-						<div style="height: 70%; width: 100%; background-color: red;"></div>
-						<div style="height: 30%; width: 100%; background-color: blue; color: white;"><code>padding-bottom</code></div>
-					</div>
+					<table style="height: 10vw;">
+						<tbody>
+							<tr>
+								<td rowspan="2" style="background-color: blue; color: white;">left element</td><td rowspan="2">margin-left</td><td style="background-color: red; color: white; height: 70%;">target element</td>
+							</tr>
+							<tr>
+								<td style="background-color: blue; color: white;">padding-bottom</td>
+							</tr>
+						</tbody>
+					</table>
 					<p>Alternatively, you can define the spacing in general using the property <code>margin</code> and <code>padding</code>. Depending on the number of values you specify for these two properties, the spacing is set <em class="extra">clockwise</em> around or within an element:</p>
 					<p><code>margin: 0; /* zero margin on all four sides */</code></p>
 					<p><code>margin: 0 0 0 0; /* as above */</code></p>
 					<p><code>margin: 1px 2px 3px 4px; /* 1/2/3/4px for top/right/bottom/left respectively */</code></p>
 					<p><code>margin: 0 2px; /* zero for top/bottom, 2px for left/right */</code></p>
-					<p><code>margin: 0 2px 5px; /* zero for top, 2px for left/right, 5px for bottom */</p>
+					<p><code>margin: 0 2px 5px; /* zero for top, 2px for left/right, 5px for bottom */</code></p>
+					<p>The above logic applies to all CSS properties that refers to the four sides of an element, such as <code>border</code>.</p>
 				</section>
 				<section>
 					<h2 id="position">Position</h2>
