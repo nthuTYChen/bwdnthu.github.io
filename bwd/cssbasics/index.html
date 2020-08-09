@@ -275,7 +275,7 @@
 					<table style="height: 10vw;">
 						<tbody>
 							<tr>
-								<td rowspan="2" style="padding: 0 2px; background-color: blue; color: white;">left element</td><td rowspan="2">margin-left</td><td style="padding: 0 2px; background-color: red; color: white; height: 70%;">target element</td>
+								<td rowspan="2" style="padding: 0 0.5vw; background-color: blue; color: white;">left element</td><td rowspan="2">margin-left</td><td style="padding: 0 0.5vw; background-color: red; color: white; height: 70%;">target element</td>
 							</tr>
 							<tr>
 								<td style="background-color: blue; color: white;">padding-bottom</td>
@@ -289,6 +289,7 @@
 					<p><code>margin: 0 2px; /* zero for top/bottom, 2px for left/right */</code></p>
 					<p><code>margin: 0 2px 5px; /* zero for top, 2px for left/right, 5px for bottom */</code></p>
 					<p>The above logic applies to all CSS properties that refers to the four sides of an element, such as <code>border</code>.</p>
+					<h3>Resetting margins and paddings</h3>
 					<p>Different Web browsers have their default margins and paddings for some elements, so to provide a <em>unified</em> layout across the browsers, we need to <em class="extra">reset margins and paddings</em> with the following style in your CSS file, namely to set zero margins and paddings for <em>all</em> elements:</p>
 					<table>
 						<tbody>
