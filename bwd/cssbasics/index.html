@@ -492,7 +492,7 @@
 						</tbody>
 					</table>
 					<div style="height: 3vh; width: 3vh; background-color: blue; position: relative; bottom: 30px; opacity: 0.5;"></div>
-					<p>One thing to note here is that you can see the space left by the moved block, since the area the block occupies <em class="extra">does not vanish</em> even after it's moved from its original position with <code>position: relative;</code>. Another thing to note here is that, if you use <code>%</code> as a unit when trying to set a relative-positioned element, <code>%</code> means <em extra="class">relative to the elements' own dimension.</em> In the following example, <code>left: 30%;</code> means to move from its left by 30% of its own width, not the 30% of its parent's width:</p>
+					<p>One thing to note here is that you can see the space left by the moved block, since the area the block occupies <em class="extra">does not vanish</em> even after it's moved from its original position with <code>position: relative;</code>. Another thing to note here is that, if you use <code>%</code> as a unit when trying to set a relative-positioned element, <code>%</code> means <em extra="class">relative to the elements' own dimension.</em> In the following example, <code>left: 30%;</code> means to move from its left by 30% of its parent's width:</p>
 					<table>
 						<tbody>
 							<tr>
@@ -509,7 +509,10 @@
 							</tr>
 						</tbody>
 					</table>
-					<div style="height: 3vh; width: 3vh; background-color: blue; position: relative; left: 30%; opacity: 0.5;"></div>
+					<div style="height: 3vh; width: 3vh; background-color: blue; position: relative; left: 30%;"></div>
+					<h3>Fixed</h3>
+					<p>When an element's position is set to <code>fixed</code>, the element will stay in the same position in the <em>browser window</em> even if you scroll the page. Many designer found it useful for various reasons: Keep the navigation pane in the same position, always show a <em>Go to top</em> button in the bottom-right corner for users to navigate back to the beginning of a webpage very easily, etc. You are smart, so you know it must be similar to how you set the position of an element as <code>relative</code>. Why not try it yourself?</p>
+					<p>Before you get too excited with your achievement, I need you to pay attention to the area originally occupied by the element...is it still there?</p>
 				</section>
 				<section>
 					<h2 id="moreonselector">More on selector</h2>
