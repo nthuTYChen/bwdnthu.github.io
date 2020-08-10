@@ -402,7 +402,7 @@
 				<section>
 					<h2 id="aesthetics">Aesthetics</h2>
 					<p>You might be eager to try other things to beautify your webpage, and here are some more tips for you. There are just too many of them, so it's not possible for me to answer all <em>How do you...</em> questions. But I'm pretty sure that once you feed Google with your questions, you will find the answers pretty soon. For example, if you google <q>How to animate background color in CSS?</q>, you will see many solutions.</p>
-					<p>The first thing we would do here is to further style the <code>&lt;body&lt;</code> element with the <code>width</code> properties and set their value to <code>100%</code>. The relative length unit <code>%</code> refers to the dimension of the parent, which is <code>&lt;html&gt;</code> in this case, so when to set the width of the <code>&lt;body&lt;</code> element, it means the <code>&lt;body&lt;</code> element will fill the browser window horizontally, and the style will <em>cascade</em> to all of its children whose <code>width</code> property is unspecified. Next, we add the <code>overflow-x</code> property and set it to <code>hidden</code> so the horizontal scroll bar does not appear. This will restrict the display of your webpage to the full width of the browser window. We also add and set the <code>overflow-y</code> property to <code>auto</code>, so the vertical scroll bar appears when the <em>height</em> of a webpage exceeds the height of a browser window. It's easier to both read and scroll from top to bottom than from left to right (or right to left).</p>
+					<p>The first thing we would do here is to further style the <code>&lt;body&gt;</code> element with the <code>width</code> properties and set their value to <code>100%</code>. The relative length unit <code>%</code> refers to the dimension of the parent, which is <code>&lt;html&gt;</code> in this case, so when to set the width of the <code>&lt;body&lt;</code> element, it means the <code>&lt;body&lt;</code> element will fill the browser window horizontally, and the style will <em>cascade</em> to all of its children whose <code>width</code> property is unspecified. Next, we add the <code>overflow-x</code> property and set it to <code>hidden</code> so the horizontal scroll bar does not appear. This will restrict the display of your webpage to the full width of the browser window. We also add and set the <code>overflow-y</code> property to <code>auto</code>, so the vertical scroll bar appears when the <em>height</em> of a webpage exceeds the height of a browser window. It's easier to both read and scroll from top to bottom than from left to right (or right to left).</p>
 					<table>
 						<tbody>
 							<tr>
@@ -419,6 +419,26 @@
 							</tr>
 							<tr>
 								<td></td><td>font: 1.6vw/2.4vw Zilla Slab, serif;</td>
+							</tr>
+							<tr>
+								<td>}</td><td></td>
+							</tr>
+						</tbody>
+					</table>
+					<p>Most Web designer would also choose to style hyperlinks marked up by <code>&lt;a&gt;</code> since the default style in a Web browser doesn't look decent. Hyperlinks usually are underlined by default, but you can change this by set the <code>text-decoration</code> property to <em>none</em> (or you can play with the property to adopt <a href="https://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="blank">different kinds of text decoration</a>). But you still need to make hyperlinks distinct from other normal texts, so you probably want to use a different font color for <code>&lt;a&gt;</code>. You can further differentiate hyperlinks by making them <em>bold</em>.</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>a {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>color: grey;</td>
+							</tr>
+							<tr>
+								<td></td><td>text-decoration: none;</td>
+							</tr>
+							<tr>
+								<td></td><td>font-weight: bold;</td>
 							</tr>
 							<tr>
 								<td>}</td><td></td>
