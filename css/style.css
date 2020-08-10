@@ -165,13 +165,15 @@ p, picture {
 
 picture {
 	display: block;
+	position: relative;
 	max-width: 100%;
 	height: auto;
 }
 
 picture > sub {
 	position: absolute;
-	left: 22%;
+	top: 0;
+	left: 0;
 	padding: 0 1vw;
 	background-color: white;
 	opacity: 0.5;
