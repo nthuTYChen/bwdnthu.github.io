@@ -470,7 +470,7 @@
 						<li><code>static</code> - the default position</li>
 						<li><code>relative</code> - relative to the original (static) position</li>
 						<li><code>fixed</code> - fixed to a given position relative to the viewport (browser window)</li>
-						<li><code>absolute</code> - relative to a non-fixed positioned parent, or <code>&lt;body&gt;</code> if there's no such parent.</li>
+						<li><code>absolute</code> - relative to a positioned parent/ancestor, or <code>&lt;body&gt;</code> if there's no such element.</li>
 					</ul>
 					<p>Except for the default position <code>static</code>, other positions could be defined along with the CSS properties <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. We will play around these properties in this section.</p>
 					<h3>Relative</h3>
@@ -531,6 +531,29 @@
 							</tr>
 						</tbody>
 					</table>
+					<p>If <code>&lt;article&gt;</code> is styled with <code>position: relative;</code> and <code>&lt;section&gt;</code> with <code>position: absolute;</code>, the properties such as <code>left</code> and <code>top</code> refer to the edges of <code>&lt;article&gt;</code>. However, if <code>&lt;section&gt;</code> has a <code>static</code> position, then the properties would refer to the edges of <code>&lt;body&gt;</code> (or other non-static-positioned element in between). Let's try this on a separate page because I hate to ruin my webpage!</p>
+					<h3>A "relative" element nested inside an element with a non-static position</h3>
+					<p>When you embed an element with a relative position inside another element with a non-static position, the relative length unit <code>%</code> would be assigned a different function.</p>
+					<p>In an earlier example, we can see that <code>%</code> means <em>relative to the parent's dimension</em> when we try to move an element from its original position. However, in the following structure, when both <code>&lt;div&gt;</code> elements are styled with <code>position: relative;</code>, and you try to move the embeded one with <code>left: 30%;</code>, there's only a small movement to the right from its original position:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>&lt;div&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>&lt;div&gt;</td>
+							</tr>
+							<tr>
+								<td></td><td>&lt;/div&gt;</td>
+							</tr>
+							<tr>
+								<td>&lt;/div&gt;</td><td></td>
+							</tr>
+						</tbody>
+					</table>
+					<div style="width: 100%; position: relative;">
+						<div style="position: relative; left: 30%; background-color: blue; color: white;">I was only moved a bit.</div>
+					</div>
 				</section>
 				<section>
 					<h2 id="moreonselector">More on selector</h2>
