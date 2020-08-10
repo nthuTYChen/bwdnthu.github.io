@@ -513,6 +513,24 @@
 					<h3>Fixed</h3>
 					<p>When an element's position is set to <code>fixed</code>, the element will stay in the same position in the <em>browser window</em> even if you scroll the page. Many designer found it useful for various reasons: Keep the navigation pane in the same position, always show a <em>Go to top</em> button in the bottom-right corner for users to navigate back to the beginning of a webpage very easily, etc. You are smart, so you know it must be similar to how you set the position of an element as <code>relative</code>. Why not try it yourself?</p>
 					<p>Before you get too excited with your achievement, I need you to pay attention to the area originally occupied by the element...is it still there?</p>
+					<h3>Absolute</h3>
+					<p>As noted above, the position <code>absolute</code> has two different meanings - absolute to its positioned parent/ancestor, or absolute to <code>&lt;body&gt;</code>. Suppose that we have the following structure:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>&lt;article&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>&lt;section&gt;</td>
+							</tr>
+							<tr>
+								<td></td><td>&lt;/section&gt;</td>
+							</tr>
+							<tr>
+								<td>&lt;/article&gt;</td><td></td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 				<section>
 					<h2 id="moreonselector">More on selector</h2>
