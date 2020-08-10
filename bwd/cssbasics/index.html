@@ -532,29 +532,6 @@
 						</tbody>
 					</table>
 					<p>If <code>&lt;article&gt;</code> is styled with <code>position: relative;</code> and <code>&lt;section&gt;</code> with <code>position: absolute;</code>, the properties such as <code>left</code> and <code>top</code> refer to the edges of <code>&lt;article&gt;</code>. However, if <code>&lt;section&gt;</code> has a <code>static</code> position, then the properties would refer to the edges of <code>&lt;body&gt;</code> (or other non-static-positioned element in between). Let's try this on a separate page because I hate to ruin my webpage!</p>
-					<h3>A "relative" element nested inside an element with a non-static position</h3>
-					<p>When you embed an element with a relative position inside another element with a non-static position, the relative length unit <code>%</code> would be assigned a different function.</p>
-					<p>In an earlier example, we can see that <code>%</code> means <em>relative to the parent's dimension</em> when we try to move an element from its original position. However, in the following structure, when both <code>&lt;div&gt;</code> elements are styled with <code>position: relative;</code>, and you try to move the embeded one with <code>left: 30%;</code>, there's only a small movement to the right from its original position:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>&lt;div&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>&lt;div&gt;</td>
-							</tr>
-							<tr>
-								<td></td><td>&lt;/div&gt;</td>
-							</tr>
-							<tr>
-								<td>&lt;/div&gt;</td><td></td>
-							</tr>
-						</tbody>
-					</table>
-					<div style="width: 100%; position: relative;">
-						<span style="position: relative; left: 30%; background-color: blue; color: white;">I was only moved a bit.</span>
-					</div>
-					<p>There are some contexts where this trick may become useful. For instance, you might want to have an element aligned to its own center vertically or horizontally, so you need to move it by 50% of its own height or width. Do you know how to do it? (Hint: use the <em>negative</em> value)</p>
 				</section>
 				<section>
 					<h2 id="moreonselector">More on selector</h2>
