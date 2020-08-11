@@ -607,10 +607,63 @@
 				</section>
 				<section>
 					<h2 id="moreonselector">More on selector</h2>
-					<p>In the previous section, I add an <code>id</code> attribute to the container element so I can specifically select this element when trying to style it. However, this is actually not the best practice in Web design. The CSS selector allows an element to be identified from DOM in many different ways, and most of times you do not need any <code>id</code> (or <code>class</code>) attribute when you just try to style an element or a set of elements.</p>
-					<h3>Siblings</h3>
+					<p>In the previous section, I add an <code>id</code> attribute to the container element so I can specifically select this element when trying to style it. However, this is actually not the best practice in Web design. The CSS selector allows an element to be identified from DOM in many different ways, and most of times you do not need any <code>id</code> (or <code>class</code>) attribute when you just try to style an element or a set of elements. Before I had learned more about how to use selectors and semantic HTML elements efficiently, I once made mistakes by only using <code>&lt;div&gt;</code> elements and giving them specific ids just in order to style them, which is something you need to avoid.</p>
+					<h3>(Adjacent) Siblings</h3>
 					<p>For instance, you might have <code>&lt;p&gt;</code> elements that are <em>siblings</em> of an either <code>&lt;h2&gt;</code> or <code>&lt;h3&gt;</code> heading as in the following example, and you want these <code>&lt;p&gt;</code> elements to be styled differently.</p>
-					
+					<table>
+						<tbody>
+							<tr>
+								<td>&lt;h2&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td>&lt;/h2&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td>&lt;p&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td>&lt;/p&gt;</td><td>;</td>
+							</tr>
+							<tr>
+								<td>&lt;h3&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td>&lt;/h3&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td>&lt;p&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td>&lt;/p&gt;</td><td></td>
+							</tr>
+						</tbody>
+					</table>
+					<p>Since the headings and the paragraphs are adjacent to each other, you can use the <code>+</code> <em>operator</em> to denote the sibling relationship, and you don't need to give any specific id to the paragraphs immediately next to different headings:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>h2 + p {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>...</td>
+							</tr>
+							<tr>
+								<td>}</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>;</td>
+							</tr>
+							<tr>
+								<td>h3 + p {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>...</td>
+							</tr>
+							<tr>
+								<td>}</td><td></td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 				<section>
 					<h2 id="beforethenextunit">Before the next unit...</h2>
