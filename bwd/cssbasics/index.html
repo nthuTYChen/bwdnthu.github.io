@@ -664,7 +664,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<p>There could also be non-adjacent siblings when, for instance, a <code>&lt;picture&gt;</code> element is inserted between headings and paragraphs:</p>
+					<p>There could also be <em class="extra">non-adjacent</em> siblings when, for instance, a <code>&lt;picture&gt;</code> element is inserted between headings and paragraphs:</p>
 					<table>
 						<tbody>
 							<tr>
@@ -701,6 +701,38 @@
 							</tr>
 						</tbody>
 					</table>
+					<h3>(Immediate) Child</h3>
+					<p>In a similar vein, you and identify the parent-child relation in a CSS selector. In the following example, we have different <code>&lt;p&gt;</code> elements inside <code>&lt;body&gt;</code> and <code>&lt;section&gt;</code>, which are thus immediate children of <code>&lt;body&gt;</code> and <code>&lt;section&gt;</code>:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>&lt;body&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>&lt;p&gt;</td>
+							</tr>
+							<tr>
+								<td></td><td>&lt;/p&gt;</td>
+							</tr>
+							<tr>
+								<td>&lt;/body&gt;</td><td>;</td>
+							</tr>
+							<tr>
+								<td>&lt;section&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>&lt;p&gt;</td>
+							</tr>
+							<tr>
+								<td></td><td>&lt;/p&gt;</td>
+							</tr>
+							<tr>
+								<td>&lt;/section&gt;</td><td></td>
+							</tr>
+						</tbody>
+					</table>
+					<p>Now, suppose that you only want to style the child paragraphs of <code>&lt;section&gt;</code>. You can use the operator <code>&gt;</code> in the selector to denote this relation:</p>
+					
 				</section>
 				<section>
 					<h2 id="beforethenextunit">Before the next unit...</h2>
