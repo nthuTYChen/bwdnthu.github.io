@@ -546,8 +546,26 @@
 							<td style="width: 70%; background-color: blue; color: white;">div</td>
 						</tr>
 					</table>
-					<p>First of all, let's add an <code>id</code> attribute to the <code>&lt;div&gt;</code> element to give it a <em>name</em> of <code>container</code>. This attribute does not change its appearance at all; it simply makes <em class="extra">selection</em> of this element in a CSS file easy.</p>
+					<p>First of all, let's add an <code>id</code> attribute to the <code>&lt;div&gt;</code> element to give it a <em>name</em> of <code>container</code>. This attribute does not change its appearance at all; it simply makes <em class="extra">selection</em> of this element in a CSS file easy. Note that you must be <em class="extra">very discreet</em> about using this strategy - we'll return to this issue below in <a href="#moreonselector">More on selector</a>.</p>
 					<p><code>&lt;div id="container"&gt;</code></p>
+					<p>Next, let's give 70% of the entire browser window width to your container, and align it to the right edge of the window in the CSS file:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>div#container {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>width: 70%;</td>
+							</tr>
+							<tr>
+								<td></td><td>margin-left: 30%;</td>
+							</tr>
+							<tr>
+								<td>}</td><td></td>
+							</tr>
+						</tbody>
+					</table>
+					<p>In the above style example, the hashtag <code>#</code> is used to identify an element with an <code>id</code> of a specific value. The selector can thus be translated as <q>find a <code>&lt;div&gt;</code> element that has an <code>id</code> set to <code>container</code></q>.</p>
 				</section>
 				<section>
 					<h2 id="moreonselector">More on selector</h2>
