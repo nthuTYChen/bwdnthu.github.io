@@ -732,7 +732,33 @@
 						</tbody>
 					</table>
 					<p>Now, suppose that you only want to style the child paragraphs of <code>&lt;section&gt;</code>. You can use the operator <code>&gt;</code> in the selector to denote this relation:</p>
-					
+					<table>
+						<tbody>
+							<tr>
+								<td>section > p {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>...</td>
+							</tr>
+							<tr>
+								<td>}</td><td></td>
+							</tr>
+						</tbody>
+					</table>
+					<p>Now, if the paragraph is not the immediate child of an ancestor element, you can still specify this grandparent-grandchild relation in the CSS selector, just with a <em class="extra">space</em> between the grandparent and the grandchild:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>section p {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>...</td>
+							</tr>
+							<tr>
+								<td>}</td><td></td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 				<section>
 					<h2 id="beforethenextunit">Before the next unit...</h2>
