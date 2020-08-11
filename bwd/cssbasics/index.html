@@ -548,7 +548,7 @@
 					</table>
 					<p>First of all, let's add an <code>id</code> attribute to the <code>&lt;div&gt;</code> element to give it a <em>name</em> of <code>container</code>. This attribute does not change its appearance at all; it simply makes <em class="extra">selection</em> of this element in a CSS file easy. Note that you must be <em class="extra">very discreet</em> about using this strategy - we'll return to this issue below in <a href="#moreonselector">More on selector</a>.</p>
 					<p><code>&lt;div id="container"&gt;</code></p>
-					<p>Next, let's give 70% of the entire browser window width to your container, and align it to the right edge of the window in the CSS file:</p>
+					<p>Next, let's give 70% of the entire browser window width to your container, and align it to the right edge of the window in the CSS file to give the space on the left to the navigation pane:</p>
 					<table>
 						<tbody>
 							<tr>
@@ -565,7 +565,10 @@
 							</tr>
 						</tbody>
 					</table>
-					<p>In the above style example, the hashtag <code>#</code> is used to identify an element with an <code>id</code> of a specific value. The selector can thus be translated as <q>find a <code>&lt;div&gt;</code> element that has an <code>id</code> set to <code>container</code></q>. Then, the <code>width</code> of <code>70%</code> refers to the width of the parent of the container, which is <code>&lt;body&gt;</code>. Since <code>&lt;body&gt;</code> is styled to have a width of 100% (the full browser window width), the container with a width of 70% occupies 70% of the browser window horizontally.</p>
+					<p>In the above style example, the hashtag <code>#</code> is used to identify an element with an <code>id</code> of a specific value. The selector can thus be translated as <q>find a <code>&lt;div&gt;</code> element that has an <code>id</code> set to <code>container</code></q>. Then, the <code>width</code> of <code>70%</code> refers to the width of the parent of the container, which is <code>&lt;body&gt;</code>. Since <code>&lt;body&gt;</code> is styled to have a width of 100% (the full browser window width), the container with a width of 70% occupies 70% of the browser window horizontally. Since I want to align the container to the right edge of the browser window, I set the left margin of the container to 30% - a gap of 30% browser window width to the left, and an element of 70% browser window width to the right...see the logic?</p>
+					<p>The empty space on the left is for the <em>navigation pane</em>, and I have a few goals here. First, I want it to occupy that 30% of the browser window width as well as the full browser window height. Second, I want it to fix to its position, so it always stay there regardless of the scrolling action. I list the CSS properties you need for this styling below, and try it yourself first:</p>
+					<ul>
+					</ul>
 				</section>
 				<section>
 					<h2 id="moreonselector">More on selector</h2>
