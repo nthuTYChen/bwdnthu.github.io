@@ -101,7 +101,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<p>In the above style template, <em class="extra">selector</em> allows a Web browser to pin down a group of elements or one single specific element in a DOM. The curved brackets <code>{ }</code> defines the scope of a style, in which the value of properties of the style are specified. There are many CSS properties for you to change the visual representation of a webpage, such background color, font color, font style...just too many of them. We usually use one line for every single property which <em class="extra">must</em> ends with a semi-colon <code>;</code>, and in each line, the name of the property and its value must be separated by a colon <code>:</code>. Did you happen to notice the indention at the beginning of a property line, and know why this is recommended? In addition, we can still add some notes that will not be considered part of styling for our own reference with the following line:</p>
+					<p>In the above style template, <em class="extra">selector</em> allows a Web browser to pin down a group of elements or one single specific element in a DOM. The curved brackets <code>{ }</code> defines the scope of a style, in which the value of properties of the style are specified. There are many <em>CSS properties</em> for you to change the visual representation of a webpage, such background color, font color, font style...just too many of them. We usually use one line for every single property which <em class="extra">must</em> ends with a semi-colon <code>;</code>, and in each line, the name of the property and its value must be separated by a colon <code>:</code>. Did you happen to notice the indention at the beginning of a property line, and know why this is recommended? In addition, we can still add some notes that will not be considered part of styling for our own reference with the following line:</p>
 					<code>/* some notes in a CSS file! */</code>
 					<p>Let's try to create your very first style and apply it to your personal website. In your <em>style.css</em> for the personal website, add the following style so the background of <code>&lt;body&gt;</code> will have a pink color.</p>
 					<table>
@@ -158,6 +158,8 @@
 					<p>Alternatively, you could put CSS properties in the value of the <em>style</em> attribute of an HTML element (namely, <em class="extra">inline styling</em>) to style that particular element, as in the following example:</p>
 					<code>&lt;body style="background-color: pink;"&gt;</code>
 					<p>This technique would be useful if you need some special presentation for just <em>one</em> element, and you're pretty sure that you won't use it anywhere else. In this course website, I need to present some special examples from time to time, which requires some CSS styles just for these examples. This is the case where I choose to just use inline styling, because the styles are not going to be reused again. However, if you have lots of properties to specified even just for a single element, you'd better define this style in a CSS file since it would be easier to read in the source code. We will return to inline styling later in this unit.</p>
+					<h3>Vendor prefix</h3>
+					<p>This is just a side note, but one special thing about CSS property you need to pay attention to is called <em>vendor prefix</em>. Sometimes a CSS property is just introduced and being experimented, so different Web browsers have their own ways of applying these properties and you need to add the proper vendor prefix to get the expected CSS effects across different Web browsers.</p>
 				</section>
 				<section>
 					<h2 id="experimenting">Experimenting different styles</h2>
@@ -873,8 +875,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<h3>Vendor prefix</h3>
-					<p></p>
+					<p>If you have multiple selectors as complex as the one you were just tested, then you should refer to the full system of how specificity is calculated on this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" target="blank">MDN Web Docs page</a>. Selectors in most small to medium website projects would be straightforward, I think.</p>
 				</section>
 				<section>
 					<h2 id="beforethenextunit">Before the next unit...</h2>
