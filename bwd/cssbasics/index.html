@@ -821,6 +821,34 @@
 						</tbody>
 					</table>
 					<p>You don't have to be worried about it if the styles selecting the same element(s) use different properties - the two styles will be <em>merged</em> into one.</p>
+					<p>In the next scenario, we have to deal with the <em class="extra">specificity</em> of a selector - the properties in a more specific selector override those in a less specific selector. Now, assuming we have an element specified with a <code>class</code> attribute, such as <code>&lt;p class="intro"&gt;</code>, and we have the following two styles for the background color of <code>&lt;p&gt;</code>.</p>
+					
+					<p>both styles will be applied to <code>&lt;p&gt;</code> elements and change their background color. However, since the first selector is less specific than the second one, the first <code>background-color</code> property is overriden by the second one.</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>p {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>background-color: white; /* overriden */</td>
+							</tr>
+							<tr>
+								<td>}</td><td></td>
+							</tr>
+							<tr>
+								<td>...</td><td></td>
+							</tr>
+							<tr>
+								<td>section > p {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>background-color: grey;</td>
+							</tr>
+							<tr>
+								<td>}</td><td></td>
+							</tr>
+						</tbody>
+					</table>
 					<h3>Vendor prefix</h3>
 					<p></p>
 				</section>
