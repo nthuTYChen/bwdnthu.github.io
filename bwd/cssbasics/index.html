@@ -651,10 +651,47 @@
 								<td>}</td><td></td>
 							</tr>
 							<tr>
-								<td></td><td>;</td>
+								<td></td><td></td>
 							</tr>
 							<tr>
 								<td>h3 + p {</td><td></td>
+							</tr>
+							<tr>
+								<td></td><td>...</td>
+							</tr>
+							<tr>
+								<td>}</td><td></td>
+							</tr>
+						</tbody>
+					</table>
+					<p>There could also be non-adjacent siblings when, for instance, a <code>&lt;picture&gt;</code> element is inserted between headings and paragraphs:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>&lt;h2&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td>&lt;/h2&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td>&lt;picture&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td>&lt;/picture&gt;</td><td>;</td>
+							</tr>
+							<tr>
+								<td>&lt;p&gt;</td><td></td>
+							</tr>
+							<tr>
+								<td>&lt;/p&gt;</td><td></td>
+							</tr>
+						</tbody>
+					</table>
+					<p>In this case, if you need to style the paragraphs below the headings, you can use the <code>~</code> operator to denote the non-adjacent sibling relation, such as:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>h2 ~ p {</td><td></td>
 							</tr>
 							<tr>
 								<td></td><td>...</td>
