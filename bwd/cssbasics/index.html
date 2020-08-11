@@ -159,7 +159,14 @@
 					<code>&lt;body style="background-color: pink;"&gt;</code>
 					<p>This technique would be useful if you need some special presentation for just <em>one</em> element, and you're pretty sure that you won't use it anywhere else. In this course website, I need to present some special examples from time to time, which requires some CSS styles just for these examples. This is the case where I choose to just use inline styling, because the styles are not going to be reused again. However, if you have lots of properties to specified even just for a single element, you'd better define this style in a CSS file since it would be easier to read in the source code. We will return to inline styling later in this unit.</p>
 					<h3>Vendor prefix</h3>
-					<p>This is just a side note, but one special thing about CSS property you need to pay attention to is called <em>vendor prefix</em>. Sometimes a CSS property is just introduced and being experimented, so different Web browsers have their own ways of applying these properties and you need to add the proper vendor prefix to get the expected CSS effects across different Web browsers.</p>
+					<p>This is just a side note, but one special thing about CSS property you need to pay attention to is called <em>vendor prefix</em>. Sometimes a CSS property is just introduced and being experimented, so different Web browsers have their own ways of applying these properties and you need to add the proper vendor prefix to get the expected CSS effects across different Web browsers (for instance, <code>-webkit-transition</code>). Here is the list from this <a href="https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix" target="blank">MDN Web Docs page</a>:</p>
+					<ul>
+						<li><code>-webkit-</code> - for Webkit-based browsers like Chrome, Safari, and iOS browsers</li>
+						<li><code>-moz-</code> - for Mozilla Firefox</li>
+						<li><code>-o-</code> - for older Opera</li>
+						<li><code>-ms-</code> - for Internet Explorer and Microsoft Edge</li>
+					</ul>
+					<p>Most of times you can just use the name of a property without and vendor prefix at all. But in case that you find anything wrong with a CSS property <em class="extra">only</em> in some specific Web browsers, then you might want to check if you need a vendor prefix for that CSS property.</p>
 				</section>
 				<section>
 					<h2 id="experimenting">Experimenting different styles</h2>
@@ -624,7 +631,7 @@
 								<td>&lt;p&gt;</td><td></td>
 							</tr>
 							<tr>
-								<td>&lt;/p&gt;</td><td>;</td>
+								<td>&lt;/p&gt;</td><td></td>
 							</tr>
 							<tr>
 								<td>&lt;h3&gt;</td><td></td>
@@ -679,7 +686,7 @@
 								<td>&lt;picture&gt;</td><td></td>
 							</tr>
 							<tr>
-								<td>&lt;/picture&gt;</td><td>;</td>
+								<td>&lt;/picture&gt;</td><td></td>
 							</tr>
 							<tr>
 								<td>&lt;p&gt;</td><td></td>
@@ -717,7 +724,7 @@
 								<td></td><td>&lt;/p&gt;</td>
 							</tr>
 							<tr>
-								<td>&lt;/body&gt;</td><td>;</td>
+								<td>&lt;/body&gt;</td><td></td>
 							</tr>
 							<tr>
 								<td>&lt;section&gt;</td><td></td>
