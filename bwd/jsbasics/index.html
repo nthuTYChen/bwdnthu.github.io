@@ -83,6 +83,12 @@
 					<p>The most frequent type of statements you probably will write and see would involve some <em>operator</em> <code>=</code>, as in the following line:</p>
 					<p><code>num = 5;</code></p>
 					<p>This <code>= (equal)</code> operator assigns the value to its right (<em>5</em>) to a container named <em>num</em> to its left. More details about this process will be given in the <a href="#variable">Variable</a> section below, but my point here is to bring up another <em>tradition</em> in coding that is not specific to JS. That is, when there's an operator in a statement, we tend to leave a space on both sides of it, again for a <em>better readibility</em> of your codes. You can remove the spaces and will find the processing of your codes unaffected, but it's not as clear in your text editor.</p>
+					<p>Finally, as in the case of HTML and CSS, you can also add some notes in your JS file using <code>//</code> or <code>/**/</code>. By adding <code>//</code> before some texts in a JS file, the texts after <code>//</code> in the same line are treated as a <em>comment</em>, rather than part of JS codes:</p>
+					<p><code>// This is a comment!</code></p>
+					<p>We also frequently use <code>//</code> to <em>temporarily</em> comment out a statement when debugging our codes:</p>
+					<p><code>//No more pop-up message!</code></p>
+					<p><code>//alert('embedded!'); </code></p>
+					<p><code>console.log('logged!');</code></p>
 				</section>
 				<section>
 					<h2 id="variable">Variable</h2>
@@ -90,7 +96,11 @@
 						<img src="img/cart.png"/>
 						<sub>Credit: <a href="https://www.flickr.com/photos/polycart/5395209587/" target="blank">Polycart</a></sub>
 					</picture>
-					<p>When you do grocery shopping, you don't go back and forth between shelves and the casher. Instead, you get a basket or a cart with you. You grab goods on the shelves and put them into your basket/cart. Later, you would check your container to see if you have everything in your list, and you don't need to go back  - perhaps you would add something or get rid of something</p>
+					<p>When you do grocery shopping, you don't go back and forth between shelves and the casher. Instead, you get a basket or a cart with you. You grab goods on the shelves and put them into your basket/cart. Later, you would simply check your container to see the number of things there, and you don't have to go back to every corner in the grocery store to count how many times you grab things from the shelves. Of course, you could change the things in your container freely, but still, you only need to count the number of things in that container.</p>
+					<p>All programming languagues have such a container for storing information, from which you can re-use the information easily - it's called <em class="extra">variable</em>. In JS, you can use the keyword <code>var</code> to declare a variable, as in the following example:</p>
+					<p><code>var num; // Declare a variable named "num"</code></p>
+					<p>And we can put things into the container (I mean, variable) with the <em>=</em> operator introduced in the previous section:</p>
+					<p><code>var num = 5; // Declare a variable named "num" equal to a numeric value of 5.</code></p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
