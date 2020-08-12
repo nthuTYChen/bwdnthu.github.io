@@ -58,8 +58,10 @@
 					<h2 id="jssyntax">JavaScript syntax, a breakdown</h2>
 					<p>The codes you will see in a JS file could be in general categorized into two types - <em class="extra">statement</em> and <em class="extra">code blocks</em>. We have seen some <em>statements</em> when we were preparing for our JS programming above, one of which is repeated here:</p>
 					<p><code>alert('embedded!');</code></p>
-					<p>This is a simplified statement that will be translated in an order by a Web browser as <q>show a pop-up message 'embedded!' in the browser window!</q>. The most important thing about a statement in a JS file is that it ends with a <em class="extra">semi-colon</em> <code>;</code>, which indicates the end of a statement.</p>
-					<p></p>
+					<p>This is a simplified statement that will be translated in an order by a Web browser as <q>show a pop-up message 'embedded!' in the browser window!</q>. The most important thing about a statement in a JS file is that it ends with a <em class="extra">semi-colon</em> <code>;</code>, which indicates <em>the end</em> of a statement. Interestingly, if you remove the semi-colon from the statement above, you'll still see the pop-up message. This does not suggest that the semi-colon is not important - it's just that your Web browser is smart enough to ignore the mistake you make.</p>
+					<p>A good example showing the importance of semi-colon in a statement is to put the two statements we used above in the same line as:</p>
+					<p><code>alert('embedded!'); console.log('logged!');</code></p>
+					<p>Not only will you see the same pop-up message again, you will also see the text message in the console tab of your Developer Tools. This means that statements are processed based on the ending indicated by semi-colons, rather than by separate lines - of course, we still put individual statements in separate lines for <em>a better readibility</em>. So, <em>always</em> add a semi-colons at the end of a statement.</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
