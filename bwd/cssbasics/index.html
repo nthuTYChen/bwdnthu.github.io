@@ -556,6 +556,18 @@
 					<p><code>display: inline; /* default for inline elements */</code></p>
 					<p>Of course, with this CSS property, one could convert a default block-level element into an inline element or the other way around. Or, you can make an element something in between with the <code>inline-block</code> value:</p>
 					<p><code>display: inline-block; /* something between block and inline */</code></p>
+					<p>Here are the pairwise comparisons between these three values for the <code>display</code> property for you to know the differences among them better:</p>
+					<ul>
+						<li><code>inline vs. block</code> - height and width only work for block-level elements, and only block-level elements comes with a line break after it</li>
+						<li><code>inline vs. inline-block</code> - the only difference is that height and width only work for inline-block elements</li>
+						<li><code>inline-block vs. block</code> - the only difference is that inline-block elements do not come with a line break, so they do not break the text flow.</li>
+					</ul>
+					One very common use of <code>inline-block</code>, following the topic of <em>position</em> of this section, is to make it possible to juxtapose block-level elements in the same line and use the CSS property <code>text-align</code> to adjust their horizontal position. This is convenient especially when you try to align these block-level elements to the center of their parent:
+					<div style="display: inline-block; text-align: center;">
+						<div style="height: 3vw; width: 3vw; background-color: red;"></div>
+						<div style="height: 3vw; width: 3vw; background-color: blue;"></div>
+						<div style="height: 3vw; width: 3vw; background-color: purple;"></div>
+					</div>
 					<h3>Locate your &lt;nav&gt; and the container block</h3>
 					<p>During the previous lectures, I've also already guided you to create a <code>&lt;nav&gt;</code> element for the navigation pane of your website, and a <code>&lt;div&gt;</code> element as the container of the main contents. With the CSS properties for positioning, I'll demonstrate how the layout of the current website is created. Here's our target template from the previous unit, with <code>&lt;nav&gt;</code> on the left and <code>&lt;div&gt;</code> on the right:</p>
 					<table style="width: 10vw; height: 10vw; text-align: center;">
