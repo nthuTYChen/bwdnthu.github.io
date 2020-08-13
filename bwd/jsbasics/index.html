@@ -110,7 +110,12 @@
 					<p>When you declare a variable, it is also important give your variable a semantically meaningful name. In the above example, my first variable is named <code>num</code> because...it's assigned a numerical value. The second one is <code>nullVar</code> because it is not assigned any value. This logic is similar to those applied to the use of HTML elements - to be <em class="extra">semantically meaningful</em>. No one would stop you using random variable names like x, y, z, etc., but later you would have a hard time recalling the meaning of these variables. In addition to the above guideline, there are some more rules that you must be aware of before moving on:</p>
 					<ul>
 						<li><em>A variable name cannot include any space</em>, so when I need to combine multiple words for a meaningful variable name, I always capitalize the first letter of a word in the name to make it more readible, just like the <code>nullVar</code> variable above.</li>
+						<li><em>A variable name cannot start with a digit letter</em>, so a variable name like <code>1stVar</code> won't work.</li>
+						<li><em>Most symbols are reserved for special use</em>, like the operators <code>=</code>, <code>+</code>, etc. The best way to avoid this problem is not to have any symbol in your variable name.</li>
 					</ul>
+					<p>Interestingly, you can use weird Unicode characters in your variable name, like <em>ಠ_ಠ</em>:</p>
+					<p><code>var ಠ_ಠ; /* Declare a weird variable name */ </code></p>
+					<p><code>console.log(ಠ_ಠ); /* You should get "null" */</code></p>
 					<p>In JS, you can assign different types of values to a variable using exactly the same keyword <code>var</code>, just like in the following</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
