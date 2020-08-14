@@ -86,9 +86,11 @@
 					<p>Finally, as in the case of HTML and CSS, you can also add some notes in your JS file using <code>//</code> or <code>/**/</code>. By adding <code>//</code> before some texts in a JS file, the texts after <code>//</code> in the same line are treated as a <em>comment</em>, rather than part of JS codes:</p>
 					<p><code>// This is a comment!</code></p>
 					<p>We also frequently use <code>//</code> to <em>temporarily</em> comment out a statement when debugging our codes:</p>
-					<p><code>//No more pop-up message!</code></p>
-					<p><code>//alert('embedded!'); </code></p>
-					<p><code>console.log('logged!');</code></p>
+					<code>
+						<p>//No more pop-up message!</p>
+						<p>//alert('embedded!');</p>
+						<p>console.log('logged!');</p>
+					</code>
 				</section>
 				<section>
 					<h2 id="variable">Variable</h2>
@@ -104,8 +106,10 @@
 					<p>It's also possible to declare a variable first without assigning its value, mostly because the value will be assigned in other statements later. In this case, the variable has a <code>null</code> value, since there's nothing in it:</p>
 					<p><code>var nullVar; // This variable has a "null" value </code></p>
 					<p>Let's try to print the value of both variables in the console tab of our Developer Tools to verify my claims:</p>
-					<p><code>console.log(num); // Print the value of "num" </code></p>
-					<p><code>console.log(nullVar); // Print the value of "nullVar" </code></p>
+					<code>
+						<p>console.log(num); // Print the value of "num"</p>
+						<p>console.log(nullVar); // Print the value of "nullVar"</p>
+					</code>
 					<h3>The sense/rules of variable naming</h3>
 					<p>When you declare a variable, it is also important give your variable a semantically meaningful name. In the above example, my first variable is named <code>num</code> because...it's assigned a numeric value. The second one is <code>nullVar</code> because it is not assigned any value. This logic is similar to those applied to the use of HTML elements - to be <em class="extra">semantically meaningful</em>. No one would stop you using random variable names like x, y, z, etc., but later you would have a hard time recalling the meaning of these variables. In addition to the above guideline, there are some more rules that you must be aware of before moving on:</p>
 					<ul>
@@ -125,12 +129,16 @@
 					<p><code>console.log(Num); // It's impossible to be 5</code></p>
 					<h3>Number, string, and operators</h3>
 					<p>In the above examples, we see how to assign a value to a variable via the operator <code>=</code>, but the assigned value could also be the result of some mathematical calculations using the operators <code>+</code>, <code>-</code>, <code>*</code> (multiply), and <code>/</code> (divide), as in the following cases:</p>
-					<p><code>var math1 = 2 + 5;</code></p>
-					<p><code>var math2 = 3 * 4.5;</code></p>
-					<p><code>var math3 = 1 - 5 * 40;</code></p>
+					<code>
+						<p>var math1 = 2 + 5;</p>
+						<p>var math2 = 3 * 4.5;</p>
+						<p>var math3 = 1 - 5 * 40;</p>
+					</code>
 					<p>Crucially, your formula can include other variables that are assigned a value <em class="extra">earlier</em>:</p>
-					<p><code>var num = 5;</code></p>
-					<p><code>var newNum = 4 + num;</code></p>
+					<code>
+						<p>var num = 5;</p>
+						<p>var newNum = 4 + num;</p>
+					</code>
 					<p>So far, the focus has been on variables that are assigned a numeric value, but of course we have many different types of data that can be stored into a variable. The data type we will be using a lot in JS, especially when we need to make our webpages interactive, is <em class="extra">string</em>. In JS, a string must be enclosed inside a pair of single/double quotation marks, as in the following example:</p>
 					<p><code>var stringVar = 'Here is a string!';</code></p>
 					<p>Whether you use single or double quotation marks doesn't really matter, as long as you are <em>consistent</em>. You can't have a single quotation mark on the one side but a double quotation mark on the other:</p>
@@ -138,20 +146,28 @@
 					<p>I prefer to use <em>single</em> quotation mark just because it's easier to type (you need <em>shift + '</em> to get a double quotation mark). Yes, I'm just a lazybone. The only minor issue that you might encounter is when your string also has some single quotation marks. In this case, you need to add a <em class="extra">backslash</em> <code>\</code> before each special symbol to <em>escape</em> the character (namely, to tell a Web browser that this single quotation mark should be treated as a regular character, not a special symbol):</p>
 					<p><code>var stringWithQuote = 'Here<em>\</em>'s a single quotation mark!';</code></p>
 					<p>In JS, you could also easily combine numeric and string values as a <em>string</em> using the <code>+</code> operator:</p>
-					<p><code>console.log('A number: '+5); // Output = 'A number 5';</code></p>
-					<p><code>var num = 5;</code></p>
-					<p><code>var str = 'A number ';</code></p>
-					<p><code>console.log(str+num); // The output is the same;</code></p>
+					<code>
+						<p>console.log('A number: '+5); // Output = 'A number 5';</p>
+						<p>var num = 5;</p>
+						<p>var str = 'A number ';</p>
+						<p>console.log(str+num); // The output is the same;</p>
+					</code>
 					<p>Let's have a small test here - what is the value of the two variables <code>test1</code> and <code>test2</code> below?</p>
-					<p><code>var test1 = 'Value: ' + 5 + 10;</code></p>
-					<p><code>var test2 = 'Value: ' + 5 * 10;</code></p>
+					<code>
+						<p>var test1 = 'Value: ' + 5 + 10;</p>
+						<p>var test2 = 'Value: ' + 5 * 10;</p>
+					</code>
 					<p>Of course, it is not possible to use other operators for numeric and string values:</p>
-					<p><code>var wrongVar = 'Value ' * 5; // What is this supposed to mean anyway?</code></p>
-					<p><code>var cantDoThis = 'Get rid of A' - 'A'; // Nope. You can't take out a string in this way.</code></p>
+					<code>
+						<p>var wrongVar = 'Value ' * 5; // What is this supposed to mean anyway?</p>
+						<p>var cantDoThis = 'Get rid of A' - 'A'; // Nope. You can't take out a string in this way.</p>
+					</code>
 					<p>The distiction between numeric and string values are particularly important for digit letters 0-9; when digits are enclosed inside quotation marks, they are viewed as a string, rather a numeric sequence:</p>
-					<p><code>var numAsNum = 5; // A numeric value 5 is assigned to "numAsNum" </code></p>
-					<p><code>var numAsStr = '5'; // A string value '5' is assigned to "numAsStr" </code></p>
-					<p><code>console.log(numAsNum + numAsStr); // The output is a string '55', not a numeric value 25</code></p>
+					<code>
+						<p>var numAsNum = 5; // A numeric value 5 is assigned to "numAsNum"</p>
+						<p>var numAsStr = '5'; // A string value '5' is assigned to "numAsStr"</p>
+						<p>console.log(numAsNum + numAsStr); // The output is a string '55', not a numeric value 25</p>
+					</code>
 					<p>It is always possible to convert a string composed of digits into a numeric value with two JS functions <code>parseInt()</code> and <code>Number()</code> (we will get to the function section pretty soon). The main difference is that <code>parseInt()</code> always round the target number:</p>
 					<code>
 						<p>var strNum1 = '11.99';</p>
