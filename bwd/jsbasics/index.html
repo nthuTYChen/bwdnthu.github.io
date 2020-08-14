@@ -107,7 +107,7 @@
 					<p><code>console.log(num); /* Print the value of "num" */</code></p>
 					<p><code>console.log(nullVar); /* Print the value of "nullVar" */ </code></p>
 					<h3>The sense/rules of variable naming</h3>
-					<p>When you declare a variable, it is also important give your variable a semantically meaningful name. In the above example, my first variable is named <code>num</code> because...it's assigned a numerical value. The second one is <code>nullVar</code> because it is not assigned any value. This logic is similar to those applied to the use of HTML elements - to be <em class="extra">semantically meaningful</em>. No one would stop you using random variable names like x, y, z, etc., but later you would have a hard time recalling the meaning of these variables. In addition to the above guideline, there are some more rules that you must be aware of before moving on:</p>
+					<p>When you declare a variable, it is also important give your variable a semantically meaningful name. In the above example, my first variable is named <code>num</code> because...it's assigned a numeric value. The second one is <code>nullVar</code> because it is not assigned any value. This logic is similar to those applied to the use of HTML elements - to be <em class="extra">semantically meaningful</em>. No one would stop you using random variable names like x, y, z, etc., but later you would have a hard time recalling the meaning of these variables. In addition to the above guideline, there are some more rules that you must be aware of before moving on:</p>
 					<ul>
 						<li><em>A variable name cannot include any space</em>, so when I need to combine multiple words for a meaningful variable name, I always capitalize the first letter of a word in the name to make it more readible, just like the <code>nullVar</code> variable above.</li>
 						<li><em>A variable name cannot start with a digit letter</em>, so a variable name like <code>1stVar</code> won't work.</li>
@@ -137,14 +137,17 @@
 					<p><code>var wrongStringVar = <em>'</em>This will not work!<em>"</em>; /* You will see some error message in the console */</code></p>
 					<p>I prefer to use <em>single</em> quotation mark just because it's easier to type (you need <em>shift + '</em> to get a double quotation mark). Yes, I'm just a lazybone. The only minor issue that you might encounter is when your string also has some single quotation marks. In this case, you need to add a <em class="extra">backslash</em> <code>\</code> before each special symbol to <em>escape</em> the character (namely, to tell a Web browser that this single quotation mark should be treated as a regular character, not a special symbol):</p>
 					<p><code>var stringWithQuote = 'Here<em>\</em>'s a single quotation mark!';</code></p>
-					<p>In JS, you could also easily combine numerical and string values as a <em>string</em> using the <code>+</code> operator:</p>
+					<p>In JS, you could also easily combine numeric and string values as a <em>string</em> using the <code>+</code> operator:</p>
 					<p><code>console.log('A number: '+5); // Output = 'A number 5';</code></p>
 					<p><code>var num = 5;</code></p>
 					<p><code>var str = 'A number ';</code></p>
 					<p><code>console.log(str+num); // The output is the same;</code></p>
-					<p>Let's have a small test here - what are the outputs of the two variables <code>test1</code> and <code>test2</code> below?</p>
+					<p>Let's have a small test here - what is the value of the two variables <code>test1</code> and <code>test2</code> below?</p>
 					<p><code>var test1 = 'Value: ' + 5 + 10;</code></p>
 					<p><code>var test2 = 'Value: ' + 5 * 10;</code></p>
+					<p>Of course, it is not possible to use other operators for numeric and string values:</p>
+					<p><code>var wrongVar = 'Value ' * 5; // What is this supposed to mean anyway?</code></p>
+					<p><code>var cantDoThis = 'Get rid of A' - 'A'; // Nope. You can't take out a string in this way.</code></p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
