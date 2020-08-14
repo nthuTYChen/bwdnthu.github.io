@@ -242,6 +242,7 @@
 						console.log(multiDArray[2][0]); // Output = 9
 					</code>
 					<p>The codes shouldn't be too difficult to understand - the variable <code>multiDArray</code> is declared as a one-dimensional array with <code>[ ]</code>, in which each position is stored with another one-dimensional array with <code>[ ]</code>. When try to access this two-dimensional array, you use two paris of <code>[ ]</code>. The first pair specifies the index of the outer array, as in <code>multiDArray[0]</code>. Since the first position of the outer array is another array, you use the second pair to specify the index of this inner array, as in <code>multiDArray[0][1]</code> - now you have access to the first position of <code>multiDArray</code> and then second position of <code>multiDArray[0]</code>, which gives you the output of <code>2</code>. The same logic applies to <code>multiDArray[2][0]</code>. In Web design, a one-dimensional array would suffice in most cases. For instance, when we retrieve a group of HTML elements from a webpage in JS, they will be presented in a one-dimensional array. Remember, an array is mostly used to store homegeneous data. Before you go for a two-dimensional array or even beyond that, you need to think carefully if you really need this level of <em>coding complexity</em>, or whether using an <em>object</em> will be a better choice.</p>
+					<h3>Object-oriented programming</h3>
 					<p>An object is suitable for a complex data structure, especially when there's no better way of presenting this complex data structure. Let's go back to our <em>profile</em> example. I have demonstrated why array is not a good container for a profile, since every entry of the profile has different meanings, which are thus not <em>homogeneous</em>. We can declare each entry as a separate variable as in the example below, but not only does the code become lengthy, the relation between these entries is not properly presented:</p>
 					<code>
 						var name = 'TY Chen';<br/>
@@ -249,7 +250,19 @@
 						var affiliation = 'NTHU';<br/>
 						...
 					</code>
-					
+					<p>But imagine an array-like container, in which each position can be given a meaningful label, so we can clearly know which position stores which type of data...and then you're talking about <em>object</em>. An object is defined with a pair of <em>curved brackets</em> <code>{ }</code> (still remember <em>code block</em>?), which include <em class="extra">keys</em> and their <em>values</em>:</p>
+					<table>
+						<tbody>
+							<tr><td>var profile = {</td><td></td></tr>
+							<tr><td></td><td>name: 'TY Chen',</td></tr>
+							<tr><td></td><td>age: 39,</td></tr>
+							<tr><td></td><td>affiliation: 'NTHU',</td></tr>
+							<tr><td></td><td>height: 180,</td></tr>
+							<tr><td></td><td>weight: 72</td></tr>
+							<tr><td>};</td><td></td></tr>
+						</tbody>
+					</table>
+					<p>In the above example, each key and its value is separated by a colon <em>:</em>, and the value is followed by a comma <code>,</code> indicating the end of a <em>field</em>, except for the last one. Note that after the second curved bracket <code>}</code>, a semi-colon <code>;</code> is still added since we are dealing with a <em>statement</em> that declares a variable <code>profile</code>. </p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
