@@ -212,6 +212,16 @@
 					<p>Why does the index of an array position start with <code>0</code> not <code>1</code>? I didn't dig very deep into the history, but one speculation that I have seen on the internet is that <code>0</code> is <em class="extra">the first natural number</em> in math. I'm not a mathmatician, neither a computer scientist, so you can do your own research. But things won't change with your complains, so let's deal with it and remember that the index starts with <code>0</code>.</p>
 					<p>Again, things are pretty free in JS, so an array in JS can have different types of data in different positions, as in the following example:</p>
 					<code>var mixedArray = [1, 'hello!', 'yes!', 9, 87]; // An array with mixed data types</code>
+					<p>However, you should not take this feature for granted and always use arrays with different types of data in different positions. Supposed that you use an array to store the profile of a person, the organization might make sense in the first place, but soon you will forget which position stores which part of the profile info:</p>
+					<code>var profile = ['TY Chen', 'NTHU', 39, 180, 72]; // Name, Affiliation, Age, Height, Weight </code>
+					<p>Instead, an array is best used to store <em class="extra">homogeneous</em> data, that is, data that represent similar info. For instance, if you have multiple phone numbers, you can use an array to store them:</p>
+					<code>var phoneNums = [0937149506, 0956771481, 0982982143]; // Don't call any of these!</code>
+					<p>When you use an array to store homogeneous data, the index number makes sense - the first phone number, the second phone number, etc.:</p>
+					<code>
+						phoneNums[0]; // The first phone number<br/>
+						phoneNums[1]; // The second phone number<br/>
+						...
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
