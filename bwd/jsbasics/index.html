@@ -121,8 +121,8 @@
 					<p>Lastly, I would like to remind you that everything in JS are <em class="extra">case-sensitive</em>:</p>
 					<p><code>var num = 5;</code></p>
 					<p><code>var Num = 10;</code></p>
-					<p><code>console.log(num); /* It's impossible to be 10 */</code></p>
-					<p><code>console.log(Num); /* It's impossible to be 5 */</code></p>
+					<p><code>console.log(num); // It's impossible to be 10</code></p>
+					<p><code>console.log(Num); // It's impossible to be 5</code></p>
 					<h3>Number, string, and operators</h3>
 					<p>In the above examples, we see how to assign a value to a variable via the operator <code>=</code>, but the assigned value could also be the result of some mathematical calculations using the operators <code>+</code>, <code>-</code>, <code>*</code> (multiply), and <code>/</code> (divide), as in the following cases:</p>
 					<p><code>var math1 = 2 + 5;</code></p>
@@ -135,8 +135,13 @@
 					<p><code>var stringVar = 'Here is a string!';</code></p>
 					<p>Whether you use single or double quotation marks doesn't really matter, as long as you are <em>consistent</em>. You can't have a single quotation mark on the one side but a double quotation mark on the other:</p>
 					<p><code>var wrongStringVar = <em>'</em>This will not work!<em>"</em>; /* You will see some error message in the console */</code></p>
-					<p>I prefer to use <em>single</em> quotation mark just because it's easier to type (you need <em>shift+'</em> to get a double quotation mark). Yes, I'm just a lazybone. The only minor issue that you might encounter is when your string also has some single quotation marks. In this case, you need to add a <em class="extra">backslash</em> <code>\</code> to <em>escape</em> the character (namely, to tell a Web browser that this single quotation mark should be treated as a regular character, not a special symbol):</p>
-					<p>var stringWithQuote = 'Here<em>\</em>'s a single quotation mark!';</p>
+					<p>I prefer to use <em>single</em> quotation mark just because it's easier to type (you need <em>shift+'</em> to get a double quotation mark). Yes, I'm just a lazybone. The only minor issue that you might encounter is when your string also has some single quotation marks. In this case, you need to add a <em class="extra">backslash</em> <code>\</code> before each special symbol to <em>escape</em> the character (namely, to tell a Web browser that this single quotation mark should be treated as a regular character, not a special symbol):</p>
+					<p><code>var stringWithQuote = 'Here<em>\</em>'s a single quotation mark!';</code></p>
+					<p>In JS, you could also easily combine numerical and string values as a <em>string</em> using the <code>+</code> operator:</p>
+					<p>console.log('A number: '+5); // Output = 'A number 5';</p>
+					<p>var num = 5;</p>
+					<p>var str = 'A number ';</p>
+					<p>console.log(str+num);</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
