@@ -126,6 +126,14 @@ code {
 	padding: 0 0.5vw;
 }
 
+code > p:first-of-type {
+	margin-top: 0;
+}
+
+code > p:last-of-type {
+	margin-bottom: 0;
+}
+
 a {
 	text-decoration: none;
 	padding-bottom: 1px;
