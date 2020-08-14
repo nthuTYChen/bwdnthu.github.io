@@ -198,7 +198,20 @@
 					<picture>
 						<img src="img/array.png"/>
 					</picture>
-					
+					<p>Now let's move on to some more advanced data types - <em>array</em> and <em>object</em>. You could imagine an array of data to be a train, and each carriage is stored with their own data. Maybe just look at the code directly:</p>
+					<code>var numArray = [1, 5, 2, 11, 7]; // An array of five numeric values</code>
+					<p>In the above example, you see a train of data defined by a pair of <em>square brackets</em> <code>[ ]</code>, in which every two carriages are seperated from each other with a <em>comma</em>. Each carriage has its own value, and the entire train is assigned to the variable <code>numArray</code>. The value in each carriage can be accessed or replaced by specifying the number of the carriage (or more precisely, the <em>index</em> of an array position) in <code>[ ]</code>, starting with <code>0</code> (thus the picture you saw above):</p>
+					<code>
+						var anArrayValue = numArray[0]; // Get the first value of an array<br/>
+						console.log(anArrayValue); // Output = 1<br/>
+						anArrayValue = numArray[1]; // Get the second value of the array<br/>
+						console.log(anArrayValue); // Output = 5<br/>
+						numArray[1] = 18; // Replace the second value of the array with 18<br/>
+						console.log(numArray[1]); // Output = 18
+					</code>
+					<p>Why does the index of an array position start with <code>0</code> not <code>1</code>? I didn't dig very deep into the history, but one speculation that I have seen on the internet is that <code>0</code> is <em class="extra">the first natural number</em> in math. I'm not a mathmatician, neither a computer scientist, so you can do your own research. But things won't change with your complains, so let's deal with it and remember that the index starts with <code>0</code>.</p>
+					<p>Again, things are pretty free in JS, so an array in JS can have different types of data in different positions, as in the following example:</p>
+					<code>var mixedArray = [1, 'hello!', 'yes!', 9, 87]; // An array with mixed data types</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
