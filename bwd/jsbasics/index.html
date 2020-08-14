@@ -262,7 +262,33 @@
 							<tr><td>};</td><td></td></tr>
 						</tbody>
 					</table>
-					<p>In the above example, each key and its value is separated by a colon <em>:</em>, and the value is followed by a comma <code>,</code> indicating the end of a <em>field</em>, except for the last one. Note that after the second curved bracket <code>}</code>, a semi-colon <code>;</code> is still added since we are dealing with a <em>statement</em> that declares a variable <code>profile</code>. </p>
+					<p>In the above example, each key and its value is separated by a colon <em>:</em>, and the value is followed by a comma <code>,</code> indicating the end of a <em>field</em>, except for the last one. Note that after the second curved bracket <code>}</code>, a semi-colon <code>;</code> is still added since we are dealing with a <em>statement</em> that declares a variable <code>profile</code>. The way a value is accessed from an object is also very straightforward - just add a period <code>.</code> after the name of an object and the key of the target field:</p>
+					<code>
+						profile.name; // Get the value of the 'name' field<br/>
+						profile['name']; // This would work, too
+					</code>
+					<p>The same logic applies when you need to update the value of a field or <em>insert</em> a new field:</p>
+					<code>
+						profile.name = 'Tsung-Ying Chen'; // Update an existing field;<br/>
+						profile.gender = 'Male'; // Add a new field called 'gender' with a value 'Male'
+					</code>
+					<p>As with the case of array, there is no constraint on the type of data in each field - it can be a numeric value, a string, an array, and even another object:</p>
+					<table>
+						<tbody>
+							<tr><td>var profile = {</td><td></td><td></td></tr>
+							<tr><td></td><td>name: 'TY Chen',</td><td></td></tr>
+							<tr><td></td><td>age: 39,</td><td></td></tr>
+							<tr><td></td><td>affiliation: 'NTHU',</td><td></td></tr>
+							<tr><td></td><td>height: 180,</td><td></td></tr>
+							<tr><td></td><td>weight: 72,</td><td></td></tr>
+							<tr><td></td><td>contact: {</td><td></td></tr>
+							<tr><td></td><td></td><td></td>home: 02-27682149, // Don't call!</tr>
+							<tr><td></td><td></td><td>mobile: [0937149506, 0956771481, 0982982143]</td></tr>
+							<tr><td></td><td>}</td><td></td></tr>
+							<tr><td>};</td><td></td></tr>
+						</tbody>
+					</table>
+					<p></p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
