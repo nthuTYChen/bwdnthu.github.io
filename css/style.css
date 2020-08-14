@@ -164,7 +164,7 @@ p, picture {
 	margin: 1.2vh 0;
 }
 
-p > code {
+p > code, li > code {
 	display: inline;
 }
 
