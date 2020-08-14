@@ -186,9 +186,9 @@
 						<img src="img/googlefonts.png"/>
 					</picture>
 					<p>The first method provides you a line of <code>&lt;link&gt;</code> codes, which you can put into the <code>&lt;head&gt;</code> element as part of the metadata of your website:</p>
-					<p><code>&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"&gt;</code></p>
+					<code>&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"&gt;</code>
 					<p>The second method provides you a line of <code>@import</code> codes, which you can put into the first line of your global/local CSS file (it is in fact embedded inside the <code>&lt;style&gt;</code> element which is supposed to be inserted into <code>&lt;head&gt;</code>, but I already explain why this might not be the best idea):</p>
-					<p><code>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');</code></p>
+					<code>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');</code>
 					<p>I personally always prefer the second method, since the font styles I choose are usually applied across all webpages. Since I already have to load the global/local CSS file for every webpage, why don't I just load the font styles from Google in my CSS file, so I don't have to repeat the <code>&lt;link&gt;</code> codes in the metadata of every webpage.</p>
 					<h3>How do you choose fonts?</h3>
 					<p>Hmm, good question. I'm no typographer, so I generally follow the rule of thumb and then pick the fonts I feel appropriate (so I could be wrong, and you need to dig deeper by yourself). All fonts could be categorized as either <em class="extra">Serif</em> or <em class="extra">Sans-serif</em>. The former type has small strokes attached to the end of main strokes (as in the fonts you're seeing now in this website), which give the characters more details. It is believed that serif fonts are easier to read than sans-serif fonts, especially in print, which is also the reason that they are commonly applied to body texts. Sans-serif fonts, without those extended small strokes, usually have square or round edges at the end of a stroke. They are usually used for large-size texts such as headings, rather than for body texts.</p>
@@ -198,13 +198,13 @@
 					</picture>
 					<p>After you make your decision and embedded the essential codes into your website to load the fonts, you should also <em>add some notes</em> to your CSS file to remind yourself which font is for which part of texts in your website, just like what I do for mine, too:</p>
 					<code>
-						<p>/*</p>
-						<p> Main Title/h1: Mukta</p>
-						<p> h2: Dosis</p>
-						<p> h3: Thasadith</p>
-						<p> body: Zilla Slab</p>
-						<p> code: Lekton</p>
-						<p>*/</p>
+						/*<br/>
+						 Main Title/h1: Mukta<br/>
+						 h2: Dosis<br/>
+						 h3: Thasadith<br/>
+						 body: Zilla Slab<br/>
+						 code: Lekton<br/>
+						*/<br/>
 					</code>
 					<p>When you need to apply a font style to an element, add the <code>font-family</code> property to the style you defined in your CSS file, just like:</p>
 					<p><code>font-family: Zilla Slab, serif;</code></p>
@@ -221,20 +221,20 @@
 					</ul>
 					<p>In CSS, you can specify a color in many different ways. One is to use the word that represents a color, such as black, red, and pink, which we have tried earlier. There's no much flexibility with this method since the subtly difference in colors cannot be specified using words in CSS. Alternatively, most Web designers would choose to use <em class="extra">RGB value or HEX code</em> to specify a color:</p>
 					<code>
-						<p>background-color: rgb(0, 0, 0); /* both represents a black color */</p>
-						<p>background-color: #000000;</p>
+						background-color: rgb(0, 0, 0); /* both represents a black color */<br/>
+						background-color: #000000;
 					</code>
 					<p>I've never received any professional training in digital art, so I choose to use the HEX system only because it's easier to type. You can make your own choice based on what you know (or like) for sure. OK, let's set the tone for your website, and don't forget to add some note in your CSS file to remind you the function of each color of your choice, such as:</p>
 					<code>
-						<p>/*</p>
-						<p>text color: #383838; (light grey)</p>
-						<p>link color: #cccccc; (super-light grey)</p>
-						<p>link hovered color: #000000; (black)</p>
-						<p>menu bg color: #b30000; (dark red)</p>
-						<p>section bg color: #f2f2f2 (lighter grey);</p>
-						<p>highlight color: #e68a00; (dark orange)</p>
-						<p>code color:#226d6d; (cyan)</p>
-						<p>*/</p>
+						/*<br/>
+						 text color: #383838; (light grey)<br/>
+						 link color: #cccccc; (super-light grey)<br/>
+						 link hovered color: #000000; (black)<br/>
+						 menu bg color: #b30000; (dark red)<br/>
+						 section bg color: #f2f2f2; (lighter grey)<br/>
+						 highlight color: #e68a00; (dark orange)<br/>
+						 code color:#226d6d; (cyan)<br/>
+						*/
 					</code>
 				</section>
 				<section>
@@ -292,11 +292,13 @@
 						</tbody>
 					</table>
 					<p>Alternatively, you can define the spacing in general using the property <code>margin</code> and <code>padding</code>. Depending on the number of values you specify for these two properties, the spacing is set <em class="extra">clockwise</em> around or within an element:</p>
-					<p><code>margin: 0; /* zero margin on all four sides */</code></p>
-					<p><code>margin: 0 0 0 0; /* as above */</code></p>
-					<p><code>margin: 1px 2px 3px 4px; /* 1/2/3/4px for top/right/bottom/left respectively */</code></p>
-					<p><code>margin: 0 2px; /* zero for top/bottom, 2px for left/right */</code></p>
-					<p><code>margin: 0 2px 5px; /* zero for top, 2px for left/right, 5px for bottom */</code></p>
+					<code>
+						margin: 0; /* zero margin on all four sides */<br/>
+						margin: 0 0 0 0; /* as above */<br/>
+					 	margin: 1px 2px 3px 4px; /* 1/2/3/4px for top/right/bottom/left respectively */<br/>
+						margin: 0 2px; /* zero for top/bottom, 2px for left/right */<br/>
+						margin: 0 2px 5px; /* zero for top, 2px for left/right, 5px for bottom */
+					</code>
 					<p>The above logic applies to all CSS properties that refers to the four sides of an element, such as <code>border</code>.</p>
 					<h3>Resetting margins and paddings</h3>
 					<p>Different Web browsers have their default margins and paddings for some elements, so to provide a <em>unified</em> layout across the browsers, we need to <em class="extra">reset margins and paddings</em> with the following style in your CSS file, namely to set zero margins and paddings for <em>all</em> elements:</p>
@@ -347,8 +349,10 @@
 						<li><code>line-height</code> - define line spacing with length units</li>
 					</ul>
 					<p>You could also use the shorthand <code>font</code> by specifying the above properties in the order <em class="extra">(style)-(variant)-(weight)-(size/line-height)-family</em>. In the first example below, the <code>font</code> property set an italic, non-small-caps, and bold font with a size of 20px and a line height of 30px using Zilla Slab or any serif font. In the second example, the font size is set to 10px, and the font family is set to sans-serif; other values that are <em>omitted</em> are set to default.</p>
-					<p><code>font: italic normal bold 20px/30px Zilla Slab, serif;</code></p>
-					<p><code>font: 10px sans-serif;</code></p>
+					<code>
+						font: italic normal bold 20px/30px Zilla Slab, serif;<br/>
+						font: 10px sans-serif;
+					</code>
 					<p>With the above in mind, we can start to set the font style for the entire webpage, by adding the <code>font</code> property to the style of <code>&lt;body&gt;</code> to your CSS file, just like the example below.</p>
 					<table>
 						<tbody>
@@ -461,14 +465,14 @@
 					</table>
 					<h3>Border</h3>
 					<p>As mentioned earlier, one way of making the edges of an element apparent is to style its <code>border</code>. Just like <code>margin</code> and <code>padding</code>, you can choose to style one of the four borders (with <code>border-left</code>, for instance), or use the shorthand <code>border</code> to style the four borders altogether. In each <code>border</code> property, the values are specified in the order <em class="extra">width-style-color</em> as in the following example (see <a href="https://www.w3schools.com/CSSref/pr_border-style.asp" target="blank">this W3CSchool page</a> for different border styles that you can play with):</p>
-					<p><code style="border: 2px solid red;">border: 2px solid red;</code></p>
+					<code style="border: 2px solid red;">border: 2px solid red;</code>
 					<h3>Border radius</h3>
 					<p>You might not just want a rectangular with right angles, and that's when the <code>border-radius</code> property is useful. In the following example, the value <code>3px</code> means to align a circle with a diameter of 3px to each of the four corner of a square, and cut the corner edge following the edge of the circle, thus the round edges. As usual, it's possible to set each of the four corners separately, starting with the top-left corner. I'll just leave it to you.</p>
-					<p><code style="border: 2px solid red; border-radius: 5px;">border-radius: 5px;</code></p>
+					<code style="border: 2px solid red; border-radius: 5px;">border-radius: 5px;</code>
 					<h3>Shadow</h3>
 					<p>I sometimes like to add shadows to make some elements fancier (for instance, headings), although not in this website. The properties <code>text-shadow</code> and <code>box-shadow</code> could be used to decorate texts inside an element and an element itself respectively with some shadows. The two first values control the <em>direction</em> of the shadow (positive value = toward the right/bottom; negative value = toward the left/top). The third value control the blurriness of the shadow, and the last value determines the color of the shadow:</p>
-					<p><code style="text-shadow: 0.3vh 0.3vw 0.2vw grey;">text-shadow: 0.3vh 0.3vw 0.2vw grey;</code></p>
-					<p style="border: 2px solid red; box-shadow: 0.3vh 0.3vw 0.2vw red;"><code style="opacity: 0.95;">box-shadow: 1vh 1vw 0.2vw red;</code></p>
+					<code style="text-shadow: 0.3vh 0.3vw 0.2vw grey;">text-shadow: 0.3vh 0.3vw 0.2vw grey;</code>
+					<code style="border: 2px solid red; box-shadow: 0.3vh 0.3vw 0.2vw red;">box-shadow: 1vh 1vw 0.2vw red;</code>
 					<p>There are just too many tricks you can do to make your website pretty - <em>just google your ideas</em>!</p>
 				</section>
 				<section>
@@ -552,8 +556,10 @@
 					<p>If <code>&lt;article&gt;</code> is styled with <code>position: relative;</code> and <code>&lt;section&gt;</code> with <code>position: absolute;</code>, the properties such as <code>left</code> and <code>top</code> refer to the edges of <code>&lt;article&gt;</code>. However, if <code>&lt;section&gt;</code> has a <code>static</code> position, then the properties would refer to the edges of <code>&lt;body&gt;</code> (or other non-static-positioned element in between). Let's try this on a separate page because I hate to ruin my webpage!</p>
 					<h3>Inline vs. block vs. inline-block</h3>
 					<p>In previous sections/units, we have been working on both <em>inline elements</em> (such as <code>&lt;a&gt;</code>) and <em>block-level elements</em> (such as <code>&lt;p&gt;</code>). The former creates a text flow from left to right, whereas the latter is arranged from top to down with a line break after each, thus interrupting the text flow if being inserted into the middle of texts (see <a href="https://nthutychen.github.io/bwd/htmlbasics/">HTML Basics</a> for the demo). We usually don't have to manually style inline and block-level elements with CSS since Web browsers have the default style for these elements with the CSS property <code>display</code>:</p>
-					<p><code>display: block; /* default for block-level elements */</code></p>
-					<p><code>display: inline; /* default for inline elements */</code></p>
+					<code>
+						display: block; /* default for block-level elements */<br/>
+						display: inline; /* default for inline elements */
+					</code>
 					<p>Of course, with this CSS property, one could convert a default block-level element into an inline element or the other way around. Or, you can make an element something in between with the <code>inline-block</code> value:</p>
 					<p><code>display: inline-block; /* something between block and inline */</code></p>
 					<p>Here are the pairwise comparisons between these three values for the <code>display</code> property for you to know the differences among them better:</p>
@@ -578,7 +584,7 @@
 						</tr>
 					</table>
 					<p>First of all, let's add an <code>id</code> attribute to the <code>&lt;div&gt;</code> element to give it a <em>name</em> of <code>container</code>. This attribute does not change its appearance at all; it simply makes <em class="extra">selection</em> of this element in a CSS file easy. Note that you must be <em class="extra">very discreet</em> about using this strategy - we'll return to this issue below in <a href="#moreonselector">More on selector</a>.</p>
-					<p><code>&lt;div id="container"&gt;</code></p>
+					<code>&lt;div id="container"&gt;</code>
 					<p>Next, let's give 70% of the entire browser window width to your container, and align it to the right edge of the window in the CSS file to give the space on the left to the navigation pane:</p>
 					<table>
 						<tbody>
