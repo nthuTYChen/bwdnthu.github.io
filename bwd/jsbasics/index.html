@@ -24,7 +24,7 @@
 			<article>
 				<h1>4. JavaScript Basics</h1>
 				<p>It's an oxymoron - learning how to do computer programming without worrying too much about computer programming.</p>
-				<p><a href="#beforewestart">Before we start...</a> / <a href="#overview">An overview</a> / <a href="#jssyntax">JavaScript syntax, a breakdown</a> / <a href="#variable">Variable</a> / <a href="#arrayobj">Array and object</a> / <a href="#interface">Accessing the HTML document</a> / <a href="#loop">Loop</a> / <a href="#ifelse">If...else...</a> / <a href="#function">Function</a> / <a href="#forthenextunit">For the next unit...</a></p>
+				<p><a href="#beforewestart">Before we start...</a> / <a href="#overview">An overview</a> / <a href="#jssyntax">JavaScript syntax, a breakdown</a> / <a href="#variable">Variable</a> / <a href="#arrayobj">Array and object</a> / <a href="#function">Function</a> / <a href="#interface">Accessing the HTML document</a> / <a href="#loop">Loop</a> / <a href="#ifelse">If...else...</a> / <a href="#forthenextunit">For the next unit...</a></p>
 				<section>
 					<h2 id="beforewestart">Before we start...</h2>
 					<ol>
@@ -102,10 +102,10 @@
 					<p>And we can put things into the container (I mean, variable) with the <code>=</code> operator introduced in the previous section:</p>
 					<p><code>var num = 5; // Declare a variable named "num" equal to a numeric value of 5</code></p>
 					<p>It's also possible to declare a variable first without assigning its value, mostly because the value will be assigned in other statements later. In this case, the variable has a <code>null</code> value, since there's nothing in it:</p>
-					<p><code>var nullVar; /* This variable has a "null" value */</code></p>
+					<p><code>var nullVar; // This variable has a "null" value </code></p>
 					<p>Let's try to print the value of both variables in the console tab of our Developer Tools to verify my claims:</p>
-					<p><code>console.log(num); /* Print the value of "num" */</code></p>
-					<p><code>console.log(nullVar); /* Print the value of "nullVar" */ </code></p>
+					<p><code>console.log(num); // Print the value of "num" </code></p>
+					<p><code>console.log(nullVar); // Print the value of "nullVar" </code></p>
 					<h3>The sense/rules of variable naming</h3>
 					<p>When you declare a variable, it is also important give your variable a semantically meaningful name. In the above example, my first variable is named <code>num</code> because...it's assigned a numeric value. The second one is <code>nullVar</code> because it is not assigned any value. This logic is similar to those applied to the use of HTML elements - to be <em class="extra">semantically meaningful</em>. No one would stop you using random variable names like x, y, z, etc., but later you would have a hard time recalling the meaning of these variables. In addition to the above guideline, there are some more rules that you must be aware of before moving on:</p>
 					<ul>
@@ -148,6 +148,19 @@
 					<p>Of course, it is not possible to use other operators for numeric and string values:</p>
 					<p><code>var wrongVar = 'Value ' * 5; // What is this supposed to mean anyway?</code></p>
 					<p><code>var cantDoThis = 'Get rid of A' - 'A'; // Nope. You can't take out a string in this way.</code></p>
+					<p>The distiction between numeric and string values are particularly important for digit letters 0-9; when digits are enclosed inside quotation marks, they are viewed as a string, rather a numeric sequence:</p>
+					<p><code>var numAsNum = 5; // A numeric value 5 is assigned to "numAsNum" </code></p>
+					<p><code>var numAsStr = '5'; // A string value '5' is assigned to "numAsStr" </code></p>
+					<p><code>console.log(numAsNum + numAsStr); // The output is a string '55', not a numeric value 25</code></p>
+					<p>It is always possible to convert a string composed of digits into a numeric value with two JS functions <code>parseInt()</code> and <code>Number()</code> (we will get to the function section pretty soon). The main difference is that <code>parseInt()</code> always round the target number:</p>
+					<code>
+						<p>var strNum1 = '11.99';</p>
+						<p>console.log(1 + strNum1); // Output = '111.99'</p>
+						<p>strNum1 = parseInt(strNum1); // Convert the value of "strNum1" in to a numeric value assigned to "strNum1"</p>
+						<p>consolt.log(1 + strNum1); // Output = 12</p>
+					</code>
+				</section>
+				<section>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
