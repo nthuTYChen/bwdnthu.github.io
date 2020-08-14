@@ -103,12 +103,17 @@
 					<code><p>var num; // Declare a variable named "num"</p></code>
 					<p>And we can put things into the container (I mean, variable) with the <code>=</code> operator introduced in the previous section:</p>
 					<code><p>var num = 5; // Declare a variable named "num" equal to a numeric value of 5</p></code>
-					<p>It's also possible to declare a variable first without assigning its value, mostly because the value will be assigned in other statements later. In this case, the variable has a <code>null</code> value, since there's nothing in it:</p>
-					<code><p>var nullVar; // This variable has a "null" value</p></code>
+					<p>It's also possible to declare a variable first without assigning its value, mostly because the value will be assigned in other statements later. In this case, the variable has a <code>undefined</code> value, since it's value is not defined just yet:</p>
+					<code><p>var undefinedVar; // This variable has a "undefined" value</p></code>
 					<p>Let's try to print the value of both variables in the console tab of our Developer Tools to verify my claims:</p>
 					<code>
 						<p>console.log(num); // Print the value of "num"</p>
-						<p>console.log(nullVar); // Print the value of "nullVar"</p>
+						<p>console.log(undefinedVar); // Print the value of "undefinedVar"</p>
+					</code>
+					<p>Now, if someone start a conversation with you by saying <q>Did I tell you I love him so much?</q>, your first question would naturally be <q>Who the hell is <em>him</em>?</q>. Your question stems from the fact the referent of the pronoun is <em>not defined</em> in the conversational context. Similarly, in JS you cannot have access to the value of a variable before you declare it in your code:</p>
+					<code>
+						<p>console.log(him); // Who the hell is "him"?</p>
+						<p>var him = 'Mike'; // Give me this info first!</p>
 					</code>
 					<h3>The sense/rules of variable naming</h3>
 					<p>When you declare a variable, it is also important give your variable a semantically meaningful name. In the above example, my first variable is named <code>num</code> because...it's assigned a numeric value. The second one is <code>nullVar</code> because it is not assigned any value. This logic is similar to those applied to the use of HTML elements - to be <em class="extra">semantically meaningful</em>. No one would stop you using random variable names like x, y, z, etc., but later you would have a hard time recalling the meaning of these variables. In addition to the above guideline, there are some more rules that you must be aware of before moving on:</p>
