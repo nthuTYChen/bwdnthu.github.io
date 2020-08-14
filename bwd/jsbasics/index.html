@@ -134,7 +134,9 @@
 					<p>So far, the focus has been on variables that are assigned a numeric value, but of course we have many different types of data that can be stored into a variable. The data type we will be using a lot in JS, especially when we need to make our webpages interactive, is <em class="extra">string</em>. In JS, a string must be enclosed inside a pair of single/double quotation marks, as in the following example:</p>
 					<p><code>var stringVar = 'Here is a string!';</code></p>
 					<p>Whether you use single or double quotation marks doesn't really matter, as long as you are <em>consistent</em>. You can't have a single quotation mark on the one side but a double quotation mark on the other:</p>
-					<p><code>var wrongStringVar = 'This will not work!"; /* You will see some error message in the console */</code></p>
+					<p><code>var wrongStringVar = <em>'</em>This will not work!<em>"</em>; /* You will see some error message in the console */</code></p>
+					<p>I prefer to use <em>single</em> quotation mark just because it's easier to type (you need <em>shift+'</em> to get a double quotation mark). Yes, I'm just a lazybone. The only minor issue that you might encounter is when your string also has some single quotation marks. In this case, you need to add a <em class="extra">backslash</em> <code>\</code> to <em>escape</em> the character (namely, to tell a Web browser that this single quotation mark should be treated as a regular character, not a special symbol):</p>
+					<p>var stringWithQuote = 'Here<em>\</em>'s a single quotation mark!';</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
