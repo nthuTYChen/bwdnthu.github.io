@@ -288,7 +288,11 @@
 							<tr><td>};</td><td></td></tr>
 						</tbody>
 					</table>
-					<p></p>
+					<p>In the above example, I added another field with a key <code>contact</code> to store my contact info, whose value is also an object with two fields for my <em>fake</em> home number and <em>fake</em> mobile phone numbers. The <code>mobile</code> field has an array of three numeric values for my three <em>fake</em> mobile numbers, which are <em>homogeneous</em>. Now, the entire profile has a very clear, sensible structure, and can be accessed in a meaningful way:</p>
+					<code>
+						profile.contact.home; // Get the home number<br/>
+						profile.contact.mobile[0]; // Get the first mobile number
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
