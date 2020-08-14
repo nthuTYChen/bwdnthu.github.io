@@ -222,6 +222,20 @@
 						phoneNums[1]; // The second phone number<br/>
 						...
 					</code>
+					<p>It is also possible to declare an <em>empty</em> array if the values in it will be determined later. A new value could be inserted by directly specifying the position where the value is stored to:</p>
+					<code>
+						var emptyArray = []; // Leave nothing in the square brackets<br/>
+						emptyArray[0] = 1; // Insert a value 1 to the array's first position<br/>
+						console.log(emptyArray[0]); // Output = 1
+					</code>
+					<p>A quick test: What's the output you will get by running the following codes?</p>
+					<code>
+						var emptyArray [];<br/>
+						emptyArray[1] = 1; // Insert a value 1 to the array's second position<br/>
+						console.log(emptyArray[0]); // What's the output?
+					</code>
+					<p>It would certainly be a rare occassion for you to create an empty array first and insert values by skipping some positions. But since you might make a common mistake (for instance, forget that the first position is 0), it's good to know how the above case works.</p>
+					<p>The above examples include arrays that have only <em class="extra">one single dimension</em>; since you only need one <em>coordinate</em> to identify the position of a value in </p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
