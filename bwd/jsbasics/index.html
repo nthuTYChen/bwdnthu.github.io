@@ -57,10 +57,10 @@
 				<section>
 					<h2 id="jssyntax">JavaScript syntax, a breakdown</h2>
 					<p>The codes you will see in a JS file could be in general categorized into two types - <em class="extra">statement</em> and <em class="extra">code blocks</em>. We have seen some <em>statements</em> when we were preparing for our JS programming above, one of which is repeated here:</p>
-					<code><p>alert('embedded!');</p></code>
+					<code>alert('embedded!');</code>
 					<p>This is a simplified statement that will be translated in an order by a Web browser as <q>show a pop-up message 'embedded!' in the browser window!</q>. The most important thing about a statement in a JS file is that it ends with a <em class="extra">semi-colon</em> <code>;</code>, which indicates <em>the end</em> of a statement. Interestingly, if you remove the semi-colon from the statement above, you'll still see the pop-up message. This does not suggest that the semi-colon is not important - it's just that your Web browser is smart enough to ignore the mistake you make.</p>
 					<p>A good example showing the importance of semi-colon in a statement is to put the two statements we used above in the same line as:</p>
-					<code><p>alert('embedded!'); console.log('logged!');</p></code>
+					<code>alert('embedded!'); console.log('logged!');</code>
 					<p>Not only will you see the same pop-up message again, you will also see the text message in the console tab of your Developer Tools. This means that statements are processed based on the ending indicated by semi-colons, rather than by separate lines - of course, we still put individual statements in separate lines for <em>a better readibility</em>. So, <em>always</em> add a semi-colons at the end of a statement.</p>
 					<p>A <em>code block</em> is just a collection of statements represented with a pair of curved brackets <code>{ }</code>. We have seen the adoption of this concept in the CSS tutorials, in which curved brackets include a collection of CSS properties, and we will extend this concept to <em>objects</em> when we get to <a href="#variable">Variable</a> part. In the following example, we have a code block containing the two statements introduced previously:</p>
 					<table>
@@ -81,7 +81,7 @@
 					</table>
 					<p>We need to use code blocks from time to time in special occassions: Repeat the same statements for multiple times (see <a href="#loop">Loop</a>), run different sets of statements  when different conditions are met (see <a href="#ifelse">If...else...</a>), etc. So code block is just very convenient for programmers. Again, the tradition is to have each statement <em class="extra">indented from the left edge</em> when it is included in a code block to better show where it belongs, and this is why a good editor like Sublime Text also does this for you automatically in a JS file. If you align all statements to the left edge, it won't matter; the statements will still be processed normally by Web browsers. It just creates a mess for you (and your partners in a collaborative project).</p>
 					<p>The most frequent type of statements you probably will write and see would involve some <em>operator</em> <code>=</code>, as in the following line:</p>
-					<code><p>num = 5;</p></code>
+					<code>num = 5;</code>
 					<p>This <code>= (equal)</code> operator assigns the value to its right (<em>5</em>) to a container named <em>num</em> to its left. More details about this process will be given in the <a href="#variable">Variable</a> section below, but my point here is to bring up another <em>tradition</em> in coding that is not specific to JS. That is, when there's an operator in a statement, we tend to leave a space on both sides of it, again for a <em>better readibility</em> of your codes. You can remove the spaces and will find the processing of your codes unaffected, but it's not as clear in your text editor.</p>
 					<p>Finally, as in the case of HTML and CSS, you can also add some notes in your JS file using <code>//</code> or <code>/**/</code>. By adding <code>//</code> before some texts in a JS file, the texts after <code>//</code> in the same line are treated as a <em>comment</em>, rather than part of JS codes:</p>
 					<p><code>// This is a comment!</code></p>
@@ -89,7 +89,7 @@
 					<code>
 						//No more pop-up message!<br/>
 						//alert('embedded!');<br/>
-						console.log('logged!');<br/>
+						console.log('logged!');
 					</code>
 				</section>
 				<section>
@@ -104,16 +104,16 @@
 					<p>And we can put things into the container (I mean, variable) with the <code>=</code> operator introduced in the previous section:</p>
 					<code><p>var num = 5; // Declare a variable named "num" equal to a numeric value of 5</p></code>
 					<p>It's also possible to declare a variable first without assigning its value, mostly because the value will be assigned in other statements later. In this case, the variable has a <code>undefined</code> value, since it's value is not defined just yet:</p>
-					<code><p>var undefinedVar; // This variable has a "undefined" value</p></code>
+					<code>var undefinedVar; // This variable has a "undefined" value</code>
 					<p>Let's try to print the value of both variables in the console tab of our Developer Tools to verify my claims:</p>
 					<code>
-						<p>console.log(num); // Print the value of "num"</p>
-						<p>console.log(undefinedVar); // Print the value of "undefinedVar"</p>
+						console.log(num); // Print the value of "num"<br/>
+						console.log(undefinedVar); // Print the value of "undefinedVar"
 					</code>
 					<p>Now, if someone start a conversation with you by saying <q>Did I tell you I love him so much?</q>, your first question would naturally be <q>Who the hell is <em>him</em>?</q>. Your question stems from the fact the referent of the pronoun is <em>not defined</em> in the conversational context. Similarly, in JS you cannot have access to the value of a variable before you declare it in your code:</p>
 					<code>
-						<p>console.log(him); // Who the hell is "him"?</p>
-						<p>var him = 'Mike'; // Give me this info first!</p>
+						console.log(him); // Who the hell is "him"?<br/>
+						var him = 'Mike'; // Give me this info first!
 					</code>
 					<h3>The sense/rules of variable naming</h3>
 					<p>When you declare a variable, it is also important give your variable a semantically meaningful name. In the above example, my first variable is named <code>num</code> because...it's assigned a numeric value. The second one is <code>nullVar</code> because it is not assigned any value. This logic is similar to those applied to the use of HTML elements - to be <em class="extra">semantically meaningful</em>. No one would stop you using random variable names like x, y, z, etc., but later you would have a hard time recalling the meaning of these variables. In addition to the above guideline, there are some more rules that you must be aware of before moving on:</p>
@@ -125,64 +125,64 @@
 					</ul>
 					<p>Interestingly, you can use weird Unicode characters in your variable name, like <em>ಠ_ಠ</em>:</p>
 					<code>
-						<p>var ಠ_ಠ; // Declare a weird variable name</p>
-						<p>console.log(ಠ_ಠ); // You should get "null"</p>
+						var ಠ_ಠ; // Declare a weird variable name<br/>
+						console.log(ಠ_ಠ); // You should get "null"
 					</code>
 					<p>I would suggest no one to include any special Unicode characters in your variable names - imagine how emoticons could annoy other people trying to read your codes, for instance. Just use the regular English alphabet. If you have any conern over your variable names, you can check their validity on <a href="https://mothereff.in/js-variables" target="blank">this page</a>.</p>
 					<p>Lastly, I would like to remind you that everything in JS are <em class="extra">case-sensitive</em>:</p>
 					<code>
-						<p>var num = 5;</p>
-						<p>var Num = 10;</p>
-						<p>console.log(num); // It's impossible to be 10</p>
-						<p>console.log(Num); // It's impossible to be 5</p>
+						var num = 5;<br/>
+						var Num = 10;<br/>
+						console.log(num); // It's impossible to be 10<br/>
+						console.log(Num); // It's impossible to be 5
 					</code>
 					<h3>Number, string, and operators</h3>
 					<p>In the above examples, we see how to assign a value to a variable via the operator <code>=</code>, but the assigned value could also be the result of some mathematical calculations using the operators <code>+</code>, <code>-</code>, <code>*</code> (multiply), and <code>/</code> (divide), as in the following cases:</p>
 					<code>
-						<p>var math1 = 2 + 5;</p>
-						<p>var math2 = 3 * 4.5;</p>
-						<p>var math3 = 1 - 5 * 40;</p>
+						var math1 = 2 + 5;<br/>
+						var math2 = 3 * 4.5;<br/>
+						var math3 = 1 - 5 * 40;
 					</code>
 					<p>Crucially, your formula can include other variables that are assigned a value <em class="extra">earlier</em>:</p>
 					<code>
-						<p>var num = 5;</p>
-						<p>var newNum = 4 + num;</p>
+						var num = 5;<br/>
+						var newNum = 4 + num;
 					</code>
 					<p>So far, the focus has been on variables that are assigned a numeric value, but of course we have many different types of data that can be stored into a variable. The data type we will be using a lot in JS, especially when we need to make our webpages interactive, is <em class="extra">string</em>. In JS, a string must be enclosed inside a pair of single/double quotation marks, as in the following example:</p>
-					<p><code>var stringVar = 'Here is a string!';</code></p>
+					<code>var stringVar = 'Here is a string!';</code>
 					<p>Whether you use single or double quotation marks doesn't really matter, as long as you are <em>consistent</em>. You can't have a single quotation mark on the one side but a double quotation mark on the other:</p>
-					<p><code>var wrongStringVar = <em>'</em>This will not work!<em>"</em>; /* You will see some error message in the console */</code></p>
+					<code>var wrongStringVar = <em>'</em>This will not work!<em>"</em>; /* You will see some error message in the console */</code>
 					<p>I prefer to use <em>single</em> quotation mark just because it's easier to type (you need <em>shift + '</em> to get a double quotation mark). Yes, I'm just a lazybone. The only minor issue that you might encounter is when your string also has some single quotation marks. In this case, you need to add a <em class="extra">backslash</em> <code>\</code> before each special symbol to <em>escape</em> the character (namely, to tell a Web browser that this single quotation mark should be treated as a regular character, not a special symbol):</p>
-					<p><code>var stringWithQuote = 'Here<em>\</em>'s a single quotation mark!';</code></p>
+					<code>var stringWithQuote = 'Here<em>\</em>'s a single quotation mark!';</code>
 					<p>In JS, you could also easily combine numeric and string values as a <em>string</em> using the <code>+</code> operator:</p>
 					<code>
-						<p>console.log('A number: '+5); // Output = 'A number 5';</p>
-						<p>var num = 5;</p>
-						<p>var str = 'A number ';</p>
-						<p>console.log(str+num); // The output is the same;</p>
+						console.log('A number: '+5); // Output = 'A number 5';<br/>
+						var num = 5;<br/>
+						var str = 'A number ';<br/>
+						console.log(str+num); // The output is the same;
 					</code>
 					<p>Let's have a small test here - what is the value of the two variables <code>test1</code> and <code>test2</code> below?</p>
 					<code>
-						<p>var test1 = 'Value: ' + 5 + 10;</p>
-						<p>var test2 = 'Value: ' + 5 * 10;</p>
+						var test1 = 'Value: ' + 5 + 10;<br/>
+						var test2 = 'Value: ' + 5 * 10;
 					</code>
 					<p>Of course, it is not possible to use other operators for numeric and string values:</p>
 					<code>
-						<p>var wrongVar = 'Value ' * 5; // What is this supposed to mean anyway?</p>
-						<p>var cantDoThis = 'Get rid of A' - 'A'; // Nope. You can't take out a string in this way.</p>
+						var wrongVar = 'Value ' * 5; // What is this supposed to mean anyway?<br/>
+						var cantDoThis = 'Get rid of A' - 'A'; // Nope. You can't take out a string in this way.
 					</code>
 					<p>The distiction between numeric and string values are particularly important for digit letters 0-9; when digits are enclosed inside quotation marks, they are viewed as a string, rather a numeric sequence:</p>
 					<code>
-						<p>var numAsNum = 5; // A numeric value 5 is assigned to "numAsNum"</p>
-						<p>var numAsStr = '5'; // A string value '5' is assigned to "numAsStr"</p>
-						<p>console.log(numAsNum + numAsStr); // The output is a string '55', not a numeric value 25</p>
+						var numAsNum = 5; // A numeric value 5 is assigned to "numAsNum"<br/>
+						var numAsStr = '5'; // A string value '5' is assigned to "numAsStr"<br/>
+						console.log(numAsNum + numAsStr); // The output is a string '55', not a numeric value 25
 					</code>
 					<p>It is always possible to convert a string composed of digits into a numeric value with two JS functions <code>parseInt()</code> and <code>Number()</code> (we will get to the function section pretty soon). The main difference is that <code>parseInt()</code> always round the target number:</p>
 					<code>
-						<p>var strNum1 = '11.99';</p>
-						<p>console.log(1 + strNum1); // Output = '111.99'</p>
-						<p>strNum1 = parseInt(strNum1); // Convert the value of "strNum1" in to a numeric value assigned to "strNum1"</p>
-						<p>consolt.log(1 + strNum1); // Output = 12</p>
+						var strNum1 = '11.99';<br/>
+						console.log(1 + strNum1); // Output = '111.99'<br/>
+						strNum1 = parseInt(strNum1); // Convert the value of "strNum1" in to a numeric value assigned to "strNum1"<br/>
+						consolt.log(1 + strNum1); // Output = 12
 					</code>
 				</section>
 				<section>
