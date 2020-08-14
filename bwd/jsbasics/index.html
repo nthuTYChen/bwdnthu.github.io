@@ -115,6 +115,14 @@
 						console.log(him); // Who the hell is "him"?<br/>
 						var him = 'Mike'; // Give me this info first!
 					</code>
+					<p>Once you have declared a variable with <code>var</code>, you can always assign a new value to it later without <code>var</code>:</p>
+					<code>
+						var newVal = 0; // Declare a new variable with a value 0<br/>
+						console.log(newVal); // Output = 0<br/>
+						newVal = 5; // Assign a new value<br/>
+						console.log(newVal); // Output = 5
+					</code>
+					<p>You can also freely assign a value of a different type (for instance, a string, see below) to a declared variable, but it's going to be a <em>very bad practice</em>. A variable is usually created to serve a particular function, such as storing the name of a user, the type of the user's browser, the time the user spends on your website, etc., so it's usually not the case in which you need a variable to store both a numeric value and certain text info. And that's why we need a logical sense of naming.</p>
 					<h3>The sense/rules of variable naming</h3>
 					<p>When you declare a variable, it is also important give your variable a semantically meaningful name. In the above example, my first variable is named <code>num</code> because...it's assigned a numeric value. The second one is <code>nullVar</code> because it is not assigned any value. This logic is similar to those applied to the use of HTML elements - to be <em class="extra">semantically meaningful</em>. No one would stop you using random variable names like x, y, z, etc., but later you would have a hard time recalling the meaning of these variables. In addition to the above guideline, there are some more rules that you must be aware of before moving on:</p>
 					<ul>
@@ -125,8 +133,8 @@
 					</ul>
 					<p>Interestingly, you can use weird Unicode characters in your variable name, like <em>ಠ_ಠ</em>:</p>
 					<code>
-						var ಠ_ಠ; // Declare a weird variable name<br/>
-						console.log(ಠ_ಠ); // You should get "null"
+						var ಠ_ಠ; // Declare a variable with a weird name<br/>
+						console.log(ಠ_ಠ); // You should get "undefined"
 					</code>
 					<p>I would suggest no one to include any special Unicode characters in your variable names - imagine how emoticons could annoy other people trying to read your codes, for instance. Just use the regular English alphabet. If you have any conern over your variable names, you can check their validity on <a href="https://mothereff.in/js-variables" target="blank">this page</a>.</p>
 					<p>Lastly, I would like to remind you that everything in JS are <em class="extra">case-sensitive</em>:</p>
