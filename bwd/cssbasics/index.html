@@ -277,19 +277,13 @@
 					</code>
 					<h3>Margin Collapsing</h3>
 					<p>Before we end the current tutorial about margin and padding, there's something you should know when you set the margin for adjacent elements, that is, <em class="extra">margin collapsing</em>. For instance, when you define the following style in your CSS file, you might hope to a <code>&lt;div&gt;</code> element from its previous and following elements (as well as the top and the bottom edge of a webpage) by 15px.</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>div {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>margin: 15px 0;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						div {
+						<code>
+							margin: 15px 0;
+						</code>
+						}
+					</code>
 					<p>But if this style applies to two adjacent <code>&lt;div&gt;</code> elements without any adjustment, the two elements are supposed to be separated by <em class="extra">15px (margin-bottom of the first) + 15px (marigin-top of the second) = 30px</em>. This is not what you hope for, and the Web browser simply collapses these margins for you and make it just 15px. This strategy of presenting your webpage makes sense because you don't need extra spacing with <em class="extra">additive margins</em>.</p>
 					<p>You might have already thought of some workaround, such as using <code>margin-top</code> to separate elements by top margin, but in this case you would have to specify the bottom margin for the last element of a webpage. So, why not just give in and take full advantage of your Web browser's ability to read your mind? :-) There many different conditions where margin collapsing does or does not apply. See the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="blank">MDN Web docs page</a> for more details. It is a rather minor issue, but you might want to <em>master</em> it to always get the expected layout right.</p>
 					<h3>Typesetting</h3>
@@ -308,48 +302,28 @@
 						font: 10px sans-serif;
 					</code>
 					<p>With the above in mind, we can start to set the font style for the entire webpage, by adding the <code>font</code> property to the style of <code>&lt;body&gt;</code> to your CSS file, just like the example below.</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>body {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>font: 1.6vw/2.4vw Zilla Slab, serif;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						body {
+						<code>
+							font: 1.6vw/2.4vw Zilla Slab, serif;
+						</code>
+						}
+					</code>
 					<p>Note two things here. First, I adopt the <em>more radical</em> approach by using the <em>relative length unit</em> for my font size and line height, because I want the two properties to adapt to different screen resolutions. Second, the values assigned to the <code>font</code> property here are for the body texts; the font size is appropriate for large amount of texts, and the font type is a <em>serif</em> font. This makes sense because we are styling <code>&lt;body&gt;</code>, rather than other elements, and everything we do has to be <em class="extra">semantically</em> meaningful. Also note that I prefer to set the line height to be <em>150%</em> of the font size in an element, which in general makes texts easier to read. You can also define the font color for body texts using the property <code>color</code> and assign an RGB or HEX value to it.</p>
 					<p>Now, try to define the font style for <code>&lt;h1&gt;-&lt;h6&gt;</code> by yourself. Since you already have a <em class="extra">root element</em>, which is <code>&lt;body&gt;</code>, you can use another relative length unit for the font size and line height. Do you still remember which one it is? (select the following blank section to find out!)</p>
-					<table style="color: #f2f2f2;" >
-						<tbody>
-							<tr>
-								<td>h1 {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>font: 2rem/3rem Mutka, sans-serif; /* rem = relative to the root element */</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code style="color: #f2f2f2;">
+						h1 {
+						<code>
+							font: 2rem/3rem Mutka, sans-serif; /* rem = relative to the root element */
+						</code>
+						}
+					</code>
 					<p>We can also set margins and paddings for our <em>containers</em>, such as <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;p&gt;</code>. In this course website, every webpage is viewed as an article, and I prefer to have some small space between its contents and the four edges, thus the <code>padding</code> setting below:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>article {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>padding: 0.5vh 1vw; /* 0.5vh padding from top/bottom and 1vw padding from left/right */</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						article {
+						<code>padding: 0.5vh 1vw; /* 0.5vh padding from top/bottom and 1vw padding from left/right */</code>
+						}
+					</code>
 					<p>Then, both <code>&lt;section&gt;</code> and <code>&lt;p&lt;</code> are used by me to represent a paragraph in this course website, so I add some margins for them to slightly separate them from each other <em>vertically</em>. Note how it is possible to have more than one <em>selector</em> in your CSS file - just separate them with a <em class="extra">comma</em>:</p>
 					<table>
 						<tbody>
