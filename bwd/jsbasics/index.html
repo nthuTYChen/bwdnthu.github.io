@@ -397,10 +397,12 @@
 					</code>
 					<p>Before we leave this section, we can create an object in which each field is a <em>function</em> to mimic the codes like <code>console.log</code>, which calls a function in an object:</p>
 					<code>
-						var demoFuncs = {<br/>
+						var demoFuncs = {
+						<code>
 							popupMsg: popupMsg, // Key name before the colon, function name after the colon<br/>
 							userMsg: userMsg,<br/>
-							complexCalc: complexCalc<br/>
+							complexCalc: complexCalc
+						</code>
 						};
 					</code>
 					<p>In the <code>demoFuncs</code> object, similar functions are grouped together since they are all some kind of demos. Then, we can call the corresponding function by referring to the specific field in the object, just like <code>console.log</code>:</p>
