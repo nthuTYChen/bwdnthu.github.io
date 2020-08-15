@@ -399,50 +399,32 @@
 					</code>
 					<div style="height: 3vh; width: 3vh; background-color: blue; position: relative; bottom: 30px; opacity: 0.5;"></div>
 					<p>One thing to note here is that you can see the space left by the moved block, since the area the block occupies <em class="extra">does not vanish</em> even after it's moved from its original position with <code>position: relative;</code>. In the following example, <code>left: 30%;</code> means to move from its left by 30% of its parent's width:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>div {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>position: relative;</td>
-							</tr>
-							<tr>
-								<td></td><td>left: 30%;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						div {
+						<code>
+							position: relative;<br/>
+							left: 30%;
+						</code>
+						}
+					</code>
 					<div style="height: 3vh; width: 3vh; background-color: blue; position: relative; left: 30%;"></div>
 					<h3>Fixed</h3>
 					<p>When an element's position is set to <code>fixed</code>, the element will stay in the same position in the <em>browser window</em> even if you scroll the page. Many designer found it useful for various reasons: Keep the navigation pane in the same position, always show a <em>Go to top</em> button in the bottom-right corner for users to navigate back to the beginning of a webpage very easily, etc. You are smart, so you know it must be similar to how you set the position of an element as <code>relative</code>. Why not try it yourself?</p>
 					<p>Before you get too excited with your achievement, I need you to pay attention to the area originally occupied by the element...is it still there?</p>
 					<h3>Absolute</h3>
 					<p>As noted above, the position <code>absolute</code> has two different meanings - absolute to its positioned parent/ancestor, or absolute to <code>&lt;body&gt;</code>. Suppose that we have the following structure:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>&lt;body&gt;</td><td></td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>&lt;article&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td></td><td>&lt;section&gt;</td>
-							</tr>
-							<tr>
-								<td></td><td></td><td>&lt;/section&gt;</td>
-							</tr>
-							<tr>
-								<td></td><td>&lt;/article&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;/body&gt;</td><td></td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						&lt;body&gt;
+						<code>
+							&lt;article&gt;<br/>
+							<code>
+								&lt;section&gt;<br/>
+								&lt;/section&gt;
+							</code>
+							&lt;/article&gt;
+						</code>
+						&lt;/body&gt;
+					</code>
 					<p>If <code>&lt;article&gt;</code> is styled with <code>position: relative;</code> and <code>&lt;section&gt;</code> with <code>position: absolute;</code>, the properties such as <code>left</code> and <code>top</code> refer to the edges of <code>&lt;article&gt;</code>. However, if <code>&lt;section&gt;</code> has a <code>static</code> position, then the properties would refer to the edges of <code>&lt;body&gt;</code> (or other non-static-positioned element in between). Let's try this on a separate page because I hate to ruin my webpage!</p>
 					<h3>Inline vs. block vs. inline-block</h3>
 					<p>In previous sections/units, we have been working on both <em>inline elements</em> (such as <code>&lt;a&gt;</code>) and <em>block-level elements</em> (such as <code>&lt;p&gt;</code>). The former creates a text flow from left to right, whereas the latter is arranged from top to down with a line break after each, thus interrupting the text flow if being inserted into the middle of texts (see <a href="https://nthutychen.github.io/bwd/htmlbasics/">HTML Basics</a> for the demo). We usually don't have to manually style inline and block-level elements with CSS since Web browsers have the default style for these elements with the CSS property <code>display</code>:</p>
