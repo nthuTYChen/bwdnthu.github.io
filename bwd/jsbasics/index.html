@@ -383,7 +383,7 @@
 						result = result / (x - y);<br/>
 						result = result * y - x;<br/>
 						return result; // Return the final outcome<br/>
-						};
+						}
 					</code>
 					<p>Now you can save lots of space without repeating these statements in this function, assuming that you need to do the same calculation for multiple times in your JS codes. But when you call this function, you also need to prepare a variable to store the data the function returns as in the following statement:</p>
 					<code>var num = complexCalc(4, 6); // Assign the returned value to a newly declared variable</code>
@@ -395,6 +395,17 @@
 						alert('Q_Q'); // Not executed<br/>
 						}
 					</code>
+					<p>Before we leave this section, we can create an object in which each field is a <em>function</em> to mimic the codes like <code>console.log</code>, which calls a function in an object:</p>
+					<code>
+						var demoFuncs = {<br/>
+							popupMsg: popupMsg, // Key name before the colon, function name after the colon<br/>
+							userMsg: userMsg,<br/>
+							complexCalc: complexCalc<br/>
+						};
+					</code>
+					<p>In the <code>demoFuncs</code> object, similar functions are grouped together since they are all some kind of demos. Then, we can call the corresponding function by referring to the specific field in the object, just like <code>console.log</code>:</p>
+					<code>demoFuncs.userMsg('Victor', 'I am calling a function!');</code>
+					<p>Knowing how to create functions helps you save your effort in coding repeating processes, and knowing how to link a function to a field of an object helps you understand the nature of <em class="extra">object-oriented programming</em>.</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
