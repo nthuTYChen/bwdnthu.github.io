@@ -127,6 +127,14 @@ code {
 	padding: 0 0.5vw;
 }
 
+code > code {
+	padding-left: 4.8vh;
+}
+
+code > code > code {
+	padding-left: 4.8vh;
+}
+
 a {
 	text-decoration: none;
 	padding-bottom: 1px;
