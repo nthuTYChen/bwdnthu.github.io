@@ -382,11 +382,19 @@
 						result = x * y;<br/>
 						result = result / (x - y);<br/>
 						result = result * y - x;<br/>
-						return result; // Return the final outcome
+						return result; // Return the final outcome<br/>
 						};
 					</code>
 					<p>Now you can save lots of space without repeating these statements in this function, assuming that you need to do the same calculation for multiple times in your JS codes. But when you call this function, you also need to prepare a variable to store the data the function returns as in the following statement:</p>
-					<code>var num = complexCalc(4, 6);</code>
+					<code>var num = complexCalc(4, 6); // Assign the returned value to a newly declared variable</code>
+					<p>One <em>important</em> thing about <code>return</code> is that one a function reach this line, the statements after it won't be executed:</p>
+					<code>
+						function poorLine () {<br/>
+						var msg = 'test';<br/>
+						return msg; // Function stops here<br/>
+						alert('Q_Q'); // Not executed<br/>
+						}
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
