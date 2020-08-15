@@ -115,6 +115,19 @@
 						console.log(him); // Who the hell is "him"?<br/>
 						var him = 'Mike'; // Give me this info first!
 					</code>
+					<p>Intriguingly, if you separate variable declaration from value assignment, it is in fact possible to get the value of the variable even if the variable declaration is the <em>last</em> statement in your code:</p>
+					<code>
+						him = 'Mike';<br/>
+						console.log(him); // I know who 'him' is!<br/>
+						var him;
+					</code>
+					<p>This is because variable declaration is always <em class="extra">hoisted</em> in JS, so the above code is automatically interpreted as:</p>
+					<code>
+						var him; // Hoisted variable declaration<br/>
+						him = 'Mike';<br/>
+						console.log(him); // I know who 'him' is!
+					</code>
+					<p>Being allowed to drink a dozen of beer doesn't mean you SHOULD drink a dozen of beer - why do you want to stupidly declare a variable in the last statement and let JS to figure it out by itself? <em class="extra">Always declare your variables first</em>, whether they are assigned a value right away.</p>
 					<p>Once you have declared a variable with <code>var</code>, you can always assign a new value to it later without <code>var</code>:</p>
 					<code>
 						var newVal = 0; // Declare a new variable with a value 0<br/>
