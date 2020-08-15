@@ -312,14 +312,25 @@
 				</section>
 				<section>
 					<h2 id="function">Function</h2>
-					<p>We rely on functions (or something alike) a lot in all kinds of computer programming since sometimes we need to <em>repeat</em> the same process in our program, so we make the process a function and use it whenever necessary without writing the same codes again and again. A JS function can be defined with the following syntax:</p>
+					<p>We rely on functions (or something alike) a lot in all kinds of computer programming since sometimes we need to <em>repeat</em> the same process in our program, so we make the process a function and use it whenever necessary without writing the same codes again and again. A JS function can be created with the following syntax:</p>
 					<table>
 						<tbody>
 							<tr><td>function name () {</td><td></td><td></td></tr>
-							<tr><td></td><td>someStatements;</td><td></td></tr>
+							<tr><td></td><td>// some statements here</td><td></td></tr>
 							<tr><td>}</td><td></td></tr>
 						</tbody>
 					</table>
+					<p>First of all, you need the keyword <code>function</code> to create a JS function, which should be followed by the <em>name</em> of the function. After the function name comes with a pair of brackets <code>( )</code>, which would enclose the data <em class="extra">submitted</em> to the function; in our use of <code>console.log</code>, we always submit the data to the function for it to print out the data. It is nevertheless not required for a function to receive any submitted data, as we will see later. After the brackets, we see a pair of curved brackets <code>{ }</code> that defines a <em class="extra">code block</em> (remember this term?) including some statements. Let's add the following example to our JS file:</p>
+					<table>
+						<tbody>
+							<tr><td>function actionCompleted () {</td><td></td><td></td></tr>
+							<tr><td></td><td>alert('Completed!');</td><td></td></tr>
+							<tr><td>}</td><td></td></tr>
+						</tbody>
+					</table>
+					<p>And when we need to call this newly created function, we just need a statement with the function's name plus a pair of brackets <code>( )</code>. Since we don't need to submit any data to this function, nothings has to be put into <code>( )</code>:</p>
+					<code>actionCompleted();</code>
+					<p></p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
