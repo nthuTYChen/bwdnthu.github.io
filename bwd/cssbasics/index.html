@@ -100,19 +100,13 @@
 					<p>Now link the CSS file to <em>index.html</em> by adding the following line into <code>&lt;head&gt;&lt;/head&gt;</code>so the default homepage would be styled based on the CSS file. Note that in our case, the path in this link does not begin with <code>/</code>, because the CSS file is not located in a <em>css</em> directory under the <em>root</em> directory. Instead, the CSS file is located in the <em>css</em> directory in your <em>cv</em> directory, along with the <em>index.html</em> file it styles. This type of paths is called <em class="extra">relative</em> path, because the path to the linked CSS file is <em>relative</em> to the HTML file.</p>
 					<code>&lt;link rel="stylesheet" href="css/style.css"&gt;</code>
 					<p>If you've done everything correctly, you should see the fancy pink color in the background of the homepage of your personal website. And you would observe the <em class="extra">cascading effect</em>, too; every element inside <code>&lt;body&gt;</code> has a pink backgroud. Let's try to stop this cascading effect by specifying a different background color for the <em>children</em> of <code>&lt;body&gt;</code>...say, <code>&lt;section&gt;</code>...? Add the following style to the <em>style.css</em> file, and you will see the contrast. Most of the elements inside <code>&lt;body&gt;</code> still has a pink background, except for every single <code>&lt;section&gt;</code> element (and it's children), which now has a white background.</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>section {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>background-color: white;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						section {
+						<code>
+							background-color: white;
+						</code>
+						}
+					</code>
 					<h3>The &lt;style&gt; element and inline styling</h3>
 					<p>If you search for some information about CSS on the internet, you probably will see two alternative methods of styling the elements directly inside your HTML files. The first one is to define the styles directly inside the <code>&lt;style&gt;&lt;/style&gt;</code> element, which is then inserted into <code>&lt;head&gt;&lt;/head&gt;</code> as part of the metadata of a webpage, as in the following example:</p>
 					<table>
