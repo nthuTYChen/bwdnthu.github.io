@@ -109,25 +109,17 @@
 					</code>
 					<h3>The &lt;style&gt; element and inline styling</h3>
 					<p>If you search for some information about CSS on the internet, you probably will see two alternative methods of styling the elements directly inside your HTML files. The first one is to define the styles directly inside the <code>&lt;style&gt;&lt;/style&gt;</code> element, which is then inserted into <code>&lt;head&gt;&lt;/head&gt;</code> as part of the metadata of a webpage, as in the following example:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>&lt;style&gt;</td><td></td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>body {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td></td><td>background-color: pink;</td>
-							</tr>
-							<tr>
-								<td></td><td>}</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;/style&gt;</td><td></td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						&lt;style&gt;
+						<code>
+							body {
+							<code>
+								background-color: pink;
+							</code>
+							}
+						</code>
+						&lt;/style&gt;
+					</code>
 					<p>This would be useful when you have some styles that are only applicable to the elements in a webpage. But I personally wouldn't recommend it. If later you decide to extend these styles to other webpages, you still need to move them to a CSS file so you don't have to repeat these styles again and again in different HTML files.</p>
 					<p>Alternatively, you could put CSS properties in the value of the <em>style</em> attribute of an HTML element (namely, <em class="extra">inline styling</em>) to style that particular element, as in the following example:</p>
 					<code>&lt;body style="background-color: pink;"&gt;</code>
@@ -172,13 +164,15 @@
 					</picture>
 					<p>After you make your decision and embedded the essential codes into your website to load the fonts, you should also <em>add some notes</em> to your CSS file to remind yourself which font is for which part of texts in your website, just like what I do for mine, too:</p>
 					<code>
-						/*<br/>
-						 Main Title/h1: Mukta<br/>
-						 h2: Dosis<br/>
-						 h3: Thasadith<br/>
-						 body: Zilla Slab<br/>
-						 code: Lekton<br/>
-						*/<br/>
+						/*
+						<code>
+							Main Title/h1: Mukta<br/>
+							h2: Dosis<br/>
+							h3: Thasadith<br/>
+							body: Zilla Slab<br/>
+							code: Lekton
+						</code>
+						*/
 					</code>
 					<p>When you need to apply a font style to an element, add the <code>font-family</code> property to the style you defined in your CSS file, just like:</p>
 					<p><code>font-family: Zilla Slab, serif;</code></p>
@@ -200,14 +194,16 @@
 					</code>
 					<p>I've never received any professional training in digital art, so I choose to use the HEX system only because it's easier to type. You can make your own choice based on what you know (or like) for sure. OK, let's set the tone for your website, and don't forget to add some note in your CSS file to remind you the function of each color of your choice, such as:</p>
 					<code>
-						/*<br/>
-						 text color: #383838; (light grey)<br/>
-						 link color: #cccccc; (super-light grey)<br/>
-						 link hovered color: #000000; (black)<br/>
-						 menu bg color: #b30000; (dark red)<br/>
-						 section bg color: #f2f2f2; (lighter grey)<br/>
-						 highlight color: #e68a00; (dark orange)<br/>
-						 code color:#226d6d; (cyan)<br/>
+						/*
+						<code>
+							text color: #383838; (light grey)<br/>
+							link color: #cccccc; (super-light grey)<br/>
+							link hovered color: #000000; (black)<br/>
+							menu bg color: #b30000; (dark red)<br/>
+							section bg color: #f2f2f2; (lighter grey)<br/>
+							highlight color: #e68a00; (dark orange)<br/>
+							code color:#226d6d; (cyan)
+						</code>
 						*/
 					</code>
 				</section>
@@ -238,19 +234,13 @@
 					</div>
 					<h3>Border-box or content-box?</h3>
 					<p>It might be more logical to adopt <em>border-box</em> as a default, since normally you wouldn't evaluate the dimension of an element by excluding its borders. For instance, when you want to clear an area on your wall to hang a beautful <em>framed</em> picture, you wouldn't just think about the dimension of the picture itself, but also the borders created with the frame, right? This would be mostly irrelevant because not many elements need borders, and the edge of an element could be made distinct in many different ways (by setting a background color, for example). But for now, let's make <em>border-box</em> as the default for <em>all</em> elements in your webpage by setting following style in your CSS file (the selector <code>*</code> is a <a href="https://en.wikipedia.org/wiki/Wildcard_character" target+"blank">wild card character</a> that means <em class="extra">any character</em>, which thus selects <em>every</em> elements):</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>* {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>box-sizing: border-box;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						* {
+							<code>
+								box-sizing: border-box;
+							</code>
+						}
+					</code>
 				</section>
 				<section>
 					<h2 id="pagetextlayout">Page and text layout</h2>
@@ -276,25 +266,15 @@
 					<p>The above logic applies to all CSS properties that refers to the four sides of an element, such as <code>border</code>.</p>
 					<h3>Resetting margins and paddings</h3>
 					<p>Different Web browsers have their default margins and paddings for some elements, so to provide a <em>unified</em> layout across the browsers, we need to <em class="extra">reset margins and paddings</em> with the following style in your CSS file, namely to set zero margins and paddings for <em>all</em> elements:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>* {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>box-sizing: border-box; /* from the old style */ </td>
-							</tr>
-							<tr>
-								<td></td><td>margin: 0;</td>
-							</tr>
-							<tr>
-								<td></td><td>padding: 0;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						* {
+						<code>
+							box-sizing: border-box; /* from the old style */<br/>
+							margin: 0;<br/>
+							padding: 0;
+						</code>
+						}
+					</code>
 					<h3>Margin Collapsing</h3>
 					<p>Before we end the current tutorial about margin and padding, there's something you should know when you set the margin for adjacent elements, that is, <em class="extra">margin collapsing</em>. For instance, when you define the following style in your CSS file, you might hope to a <code>&lt;div&gt;</code> element from its previous and following elements (as well as the top and the bottom edge of a webpage) by 15px.</p>
 					<table>
