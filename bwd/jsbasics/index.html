@@ -360,7 +360,7 @@
 					<p>A function can receive <em>multiple data entries</em>, as long as you separate the names of the variables representing each data entry in the function with a comma <code>,</code> inside <code>( )</code>:</p>
 					<table>
 						<tbody>
-							<tr><td>function popupMsg (name, msg) {</td><td></td></tr>
+							<tr><td>function userMsg (name, msg) {</td><td></td></tr>
 							<tr><td></td><td>var finalMsg = name + ' says: ' + msg; // Compose the final msg</td></tr>
 							<tr><td></td><td>alert(finalMsg);</td><td></td></tr>
 							<tr><td>}</td><td></td></tr>
@@ -368,6 +368,8 @@
 							<tr><td>popupMsg('Mary', 'I love Victor!');</td><td></td></tr>
 						</tbody>
 					</table>
+					<p>To know more about the behavior of a function and a function call, let's assume two possible scenarios. First, you call <code>popupMsg</code>, but nothing is submitted to the function. What would happen?</p>
+					<code>popupMsg(); // Call the function without submitting the required data entry</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
