@@ -313,7 +313,7 @@
 					<p>Now, try to define the font style for <code>&lt;h1&gt;-&lt;h6&gt;</code> by yourself. Since you already have a <em class="extra">root element</em>, which is <code>&lt;body&gt;</code>, you can use another relative length unit for the font size and line height. Do you still remember which one it is? (select the following blank section to find out!)</p>
 					<code style="color: #f2f2f2;">
 						h1 {
-						<code>
+						<code style="color: #f2f2f2;">
 							font: 2rem/3rem Mutka, sans-serif; /* rem = relative to the root element */
 						</code>
 						}
@@ -478,7 +478,7 @@
 					<p>Still couldn't get it right? Select the following blank section for the answer:</p>
 					<code style="color: #f2f2f2;">
 						nav {
-						<code>
+						<code style="color: #f2f2f2;">
 							position: fixed;<br/>
 							top: 0;<br/>
 							left: 0;<br/>
@@ -494,155 +494,73 @@
 					<p>In the previous section, I add an <code>id</code> attribute to the container element so I can specifically select this element when trying to style it. However, this is actually not the best practice in Web design. The CSS selector allows an element to be identified from DOM in many different ways, and most of times you do not need any <code>id</code> (or <code>class</code>) attribute when you just try to style an element or a set of elements. Before I had learned more about how to use selectors and semantic HTML elements efficiently, I once made mistakes by only using <code>&lt;div&gt;</code> elements and giving them specific ids just in order to style them, which is something you need to avoid.</p>
 					<h3>(Adjacent) Siblings</h3>
 					<p>For instance, you might have <code>&lt;p&gt;</code> elements that are <em>siblings</em> of an either <code>&lt;h2&gt;</code> or <code>&lt;h3&gt;</code> heading as in the following example, and you want these <code>&lt;p&gt;</code> elements to be styled differently.</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>&lt;h2&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;/h2&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;p&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;/p&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;h3&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;/h3&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;p&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;/p&gt;</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						&lt;h2&gt;<br/>
+						&lt;/h2&gt;<br/>
+						&lt;p&gt;<br/>
+						&lt;/p&gt;<br/>
+						&lt;h3&gt;<br/>
+						&lt;/h3&gt;<br/>
+						&lt;p&gt;<br/>
+						&lt;/p&gt;
+					</code>
 					<p>Since the headings and the paragraphs are adjacent to each other, you can use the <code>+</code> <em>operator</em> to denote the sibling relationship, and you don't need to give any specific id to the paragraphs immediately next to different headings:</p>
+					<code>
+						h2 + p {
+						<code>
+							...
+						</code>
+						}<br/>
+						h3 + p {
+						<code>
+							...
+						</code>
+						}
+					</code>
 					<table>
-						<tbody>
-							<tr>
-								<td>h2 + p {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>...</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td></td>
-							</tr>
-							<tr>
-								<td>h3 + p {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>...</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
 					<p>There could also be <em class="extra">non-adjacent</em> siblings when, for instance, a <code>&lt;picture&gt;</code> element is inserted between headings and paragraphs:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>&lt;h2&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;/h2&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;picture&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;/picture&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;p&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;/p&gt;</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						&lt;h2&gt;<br/>
+						&lt;/h2&gt;<br/>
+						&lt;picture&gt;<br/>
+						&lt;/picture&gt;<br/>
+						&lt;p&gt;<br/>
+						&lt;/p&gt;
+					</code>
 					<p>In this case, if you need to style the paragraphs below the headings, you can use the <code>~</code> operator to denote the non-adjacent sibling relation, such as:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>h2 ~ p {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>...</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						h2 ~ p {
+						<code>...</code>
+						}
+					</code>
 					<h3>(Immediate) Child</h3>
 					<p>In a similar vein, you and identify the parent-child relation in a CSS selector. In the following example, we have different <code>&lt;p&gt;</code> elements inside <code>&lt;body&gt;</code> and <code>&lt;section&gt;</code>, which are thus immediate children of <code>&lt;body&gt;</code> and <code>&lt;section&gt;</code>:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>&lt;body&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>&lt;p&gt;</td>
-							</tr>
-							<tr>
-								<td></td><td>&lt;/p&gt;</td>
-							</tr>
-							<tr>
-								<td>&lt;/body&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td>&lt;section&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>&lt;p&gt;</td>
-							</tr>
-							<tr>
-								<td></td><td>&lt;/p&gt;</td>
-							</tr>
-							<tr>
-								<td>&lt;/section&gt;</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						&lt;body&gt;
+						<code>
+							&lt;p&gt;<br/>
+							&lt;/p&gt;
+						</code>
+						&lt;/body&gt;<br/>
+						&lt;section&gt;
+						<code>
+							&lt;p&gt;<br/>
+							&lt;/p&gt;
+						</code>
+						&lt;/section&gt;
+					</code>
 					<p>Now, suppose that you only want to style the child paragraphs of <code>&lt;section&gt;</code>. You can use the operator <code>&gt;</code> in the selector to denote this relation:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>section > p {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>...</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						section > p {
+						<code>...</code>
+						}
+					</code>
 					<p>Now, if the paragraph is not the immediate child of an ancestor element, you can still specify this grandparent-grandchild relation in the CSS selector, just with a <em class="extra">space</em> between the grandparent and the grandchild:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>section p {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>...</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						section p {
+						<code>...</code>
+						}
+					</code>
 					<h3>Pseudo-class and pseudo-elements</h3>
 					<p>In CSS, there are various <em class="extra">pseudo-class</em> and <em class="extra">pseudo-elements</em> that you can use in the selector to style classes and elements that are not defined by HTML tags and attributes (and that's why they have a <em>pseudo-</em> prefix). Here are some frequently used pseudo-classes that are denoted using <code>:</code> (for instance, <code>selector:pseudo-class</code>):</p>
 					<ul>
@@ -662,101 +580,58 @@
 						<li><code>:nth-last-child(n)</code> - the nth child of an element counting from the last child (n = nth)</li>
 					</ul>
 					<p>Let me give you a small test here: What does the following style do? (select the line below the CSS style to find the answer)</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>body </td><td> section:not(:last-child) &gt; a::after {</td>
-							</tr>
-							<tr>
-								<td></td><td>content: '[link]';</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						body section:not(:last-child) &gt; a::after {
+						<code>content: '[link]';</code>
+						}
+					</code>
 					<p><code style="color: #f2f2f2;">/* Add texts '[link]' after every &lt;a&gt; that is the immediate child of a &lt;section&gt; that is not the last child of its ancestor &lt;body&gt;. */</code></p>
 					<p>The full list of <em>pseudo-classes</em> could be found on this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="blank">MDN Web Docs page</a>. Note that some of these pseudo-classes are still experimental and are not supported by all Web browsers. Check compatibility before using them in your own webpage.</p>
 					<h3>Priority/Specificity</h3>
 					<p>When elements are selected by <em>multiple selectors</em> in a CSS file and the properties in these styles are the same, one of these styles would have a higher <em>priority</em> to be applied to the selected elements. Let's start with the simpler case. Suppose that you carelessly style the background color of <code>&lt;body&gt;</code> twice in your CSS file, the last style <em>overrides</em> the first one:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>body {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>background-color: white; /* overriden */</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-							<tr>
-								<td>...</td><td></td>
-							</tr>
-							<tr>
-								<td>body {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>background-color: grey;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						body {
+						<code>
+							background-color: white; /* overriden */
+						</code>
+						}<br/>
+						...<br/>
+						body {
+						<code>
+							background-color: grey;
+						</code>
+						}<br/>
+						...
+					</code>
 					<p>You don't have to be worried about it if the styles selecting the same element(s) use different properties - the two styles will be <em>merged</em> into one.</p>
 					<p>In the next scenario, we have to deal with the <em class="extra">specificity</em> of a selector - the properties in a more specific selector override those in a less specific selector. Now, assuming we have an element specified with a <code>class</code> attribute, such as <code>&lt;p class="intro"&gt;</code>, and we have the following two styles for the background color of <code>&lt;p&gt;</code>. The second selector is <em>more specific</em> than the first one since it selects all <code>&lt;p&gt;</code> with a class attribute of <code>intro</code>, denoted with a period <code>.</code>. Thus, although <code>&lt;p class="intro"&gt;</code> is selected by both selectors, the more specific one applies.</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>p {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>background-color: white; /* overriden */</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-							<tr>
-								<td>...</td><td></td>
-							</tr>
-							<tr>
-								<td>p.intro {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>background-color: grey;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						p {
+						<code>
+							background-color: white; /* overriden */
+						</code>
+						}<br/>
+						...<br/>
+						p.intro {
+						<code>
+							background-color: grey;
+						</code>
+						}
+					</code>
 					<p>The above example seems pretty straightforward, so let take a look at a some more complex case. Now suppose we have a <code>&lt;p&gt;</code> element inside a <code>&lt;section&gt;</code> element, and we have the following two styles in our CSS file. Both styles will be applied to the <code>&lt;p&gt;</code> elements to change its background color, but since the first selector is less specific than the second one, the first <code>background-color</code> property is overriden by the second one.</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>p {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>background-color: white; /* overriden */</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-							<tr>
-								<td>...</td><td></td>
-							</tr>
-							<tr>
-								<td>section > p {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>background-color: grey;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						p {
+						<code>
+							background-color: white; /* overriden */
+						</code>
+						}<br/>
+						...<br/>
+						section > p {
+						<code>
+							background-color: grey;
+						</code>
+						}
+					</code>
 					<p>Finally, <em>inline styling</em> with the <code>&lt;style&gt;</code> attribute is more specific most of times:</p>
 					<p><code>&lt;p style="background-color: red;"&gt; &lt;!-- more specific than the two styles above --&gt;</code></p>
 					<p>If you have multiple selectors as complex as the one you were just tested, then you should refer to the full system of how specificity is calculated on this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" target="blank">MDN Web Docs page</a>. Selectors in most small to medium website projects would be straightforward, I think.</p>
