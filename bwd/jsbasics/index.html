@@ -350,14 +350,24 @@
 						<tbody>
 							<tr><td>function popupMsg (msg) {</td><td></td></tr>
 							<tr><td></td><td>var finalMsg = 'Site message: ' + msg; // Make some twist</td></tr>
-							<tr><td></td><td>alert(final);</td><td></td></tr>
+							<tr><td></td><td>alert(finalMsg);</td><td></td></tr>
 							<tr><td>}</td><td></td></tr>
-							<tr><td>&nbsp;</td><td></td></tr>
 							<tr><td>popupMsg('Test!');</td><td></td></tr>
 							<tr><td>popupMsg('Warning!');</td><td></td></tr>
 						</tbody>
 					</table>
-					<p>In the above example, the function <code>popupMsg</code> is set to receive one data entry, which is given the name <code>msg</code> in this <em>code block</em>. In other words, <code>msg</code> will be the variable name of the data receive by <code>popupMsg</code> <em>only</em> in this function.</p>
+					<p>In the above example, the function <code>popupMsg</code> is set to receive one data entry, which is given the name <code>msg</code> in this <em>code block</em>. In other words, <code>msg</code> will be the variable name of the data receive by <code>popupMsg</code> <em>only</em> in this function. In <code>popupMsg</code>, I declare another variable <code>finalMsg</code> to store the twist I make for <code>msg</code>. Then, <code>finalMsg</code> is submitted to the <code>alert</code> function to create a pop-up window with the final message in the last statement. After the function code, I call the function twice with two different string values, and two pop-up windows would appear in the order I call the function.</p>
+					<p>A function can receive <em>multiple data entries</em>, as long as you separate the names of the variables representing each data entry in the function with a comma <code>,</code> inside <code>( )</code>:</p>
+					<table>
+						<tbody>
+							<tr><td>function popupMsg (name, msg) {</td><td></td></tr>
+							<tr><td></td><td>var finalMsg = name + ' says: ' + msg; // Compose the final msg</td></tr>
+							<tr><td></td><td>alert(finalMsg);</td><td></td></tr>
+							<tr><td>}</td><td></td></tr>
+							<tr><td>popupMsg('Victor', 'Surprise!');</td><td></td></tr>
+							<tr><td>popupMsg('Mary', 'I love Victor!');</td><td></td></tr>
+						</tbody>
+					</table>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
