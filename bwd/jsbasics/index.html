@@ -293,10 +293,20 @@
 						profile.contact.home; // Get the home number<br/>
 						profile.contact.mobile[0]; // Get the first mobile number
 					</code>
-					<p>Now back to the statement we have been using a lot - <code>console.log()</code>; clearly, there's an object named <code>console</code>, which refers to the console tab of the Developer Tools in your Web browser in this case, and it has a field with a key named <code>log</code>, which is a <em>function</em> represented with a pair of brackets <code>( )</code> that allows you to print some message in the console (again, we will get to the function part soon). Yes, we have been in the world of object <em>since the very beginning of this tutorial!!!</em>. JS is one of the <em>obeject-oriented programming languages</em>, and thus the concept of object is crucial to the rest of this tutorial. In fact, all variables are an object regardless of they are assigned a number, string, or array as their value. For instance, once you declare a string variable, you actually can have access to its <code>length</code> field for the number of characters in this variable:</p>
+					<p>Now back to the statement we have been using a lot - <code>console.log()</code>; clearly, there's an object named <code>console</code>, which refers to the console tab of the Developer Tools in your Web browser in this case, and it has a field with a key named <code>log</code>, which is a <em>function</em> represented with a pair of brackets <code>( )</code> that allows you to print some message in the console (again, we will get to the function part soon). Yes, we have been in the world of object <em>since the very beginning of this tutorial!!!</em>. JS is one of the <em>obeject-oriented programming languages</em>, and thus the concept of object is crucial to the rest of this tutorial. In fact, all variables are an object regardless of they are assigned a number, string, or array as their value. For instance, once you declare a <em>string</em> variable, you actually can have access to its <code>length</code> field for the number of characters in this variable:</p>
 					<code>
 						var str = 'This is a loooooooooooooooog string!';<br/>
 						console.log(str.length); // Print the number of characters in "str"
+					</code>
+					<p>Or, when you have an <em>array</em>, its <code>length</code> field provides you the number of <em>data entries</em> in this array:</p>
+					<code>
+						var mobileNum = [0937149506, 0956771481, 0982982143];<br/>
+						console.log(mobileNum.length); // Get the number of data entries stored in "mobileNum"
+					</code>
+					<p>You can also add a new entry to the end of an array with the function of the <code>push</code> field of an array object:</p>
+					<code>
+						mobileNum.push(0976111358); // Insert a new number to the last position of "mobileNum"<br/>
+						console.log(mobileNum[3]); // Output = 0976111358
 					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
