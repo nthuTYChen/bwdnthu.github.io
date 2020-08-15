@@ -336,14 +336,27 @@
 					<p>First of all, you need the keyword <code>function</code> to create a JS function, which should be followed by the <em>name</em> of the function. After the function name comes with a pair of brackets <code>( )</code>, which would enclose the data <em class="extra">submitted</em> to the function; in our use of <code>console.log</code>, we always submit the data to the function for it to print out the data. It is nevertheless not required for a function to receive any submitted data, as we will see later. After the brackets, we see a pair of curved brackets <code>{ }</code> that defines a <em class="extra">code block</em> (remember this term?) including some statements. Let's add the following example to our JS file:</p>
 					<table>
 						<tbody>
-							<tr><td>function actionCompleted () {</td><td></td><td></td></tr>
-							<tr><td></td><td>alert('Completed!');</td><td></td></tr>
+							<tr><td>function actionCompleted () {</td><td></td></tr>
+							<tr><td></td><td>alert('Completed!');</td></tr>
 							<tr><td>}</td><td></td></tr>
 						</tbody>
 					</table>
 					<p>And when we need to call this newly created function, we just need a statement with the function's name plus a pair of brackets <code>( )</code>. Since we don't need to submit any data to this function, nothing has to be put into <code>( )</code>:</p>
 					<code>actionCompleted();</code>
 					<p>It doesn't matter whether the statement calling a function occurs before or after the function itself; the <code>function</code> part is always <em class="extra">hoisted</em> to the top of your JS code, too. If we follow the logic discussed earlier about variable declaration, then we should develop a habit to put the function codes to the top of our JS file, because it's natural to think that we create them first and then call them later. However, since you might have many complex functions, their codes are going to be lengthy. Plus, they are not used all the time, and what really matters more is the main code. In this case, putting your function codes to the top of your JS file might be in fact bothersome, because most of the time you just want to debug your main code. So, I'll let you decide which works best for you.</p>
+					<h3>Data transmitted between functions and their calls</h3>
+					<p>Just like <code>console.log</code>, we can create a function that receives data from its calls and do something with that data. In our first example, we create a function that can send whatever message it receives, make some changes, and put it into a pop-up message box:</p>
+					<table>
+						<tbody>
+							<tr><td>function popupMsg (msg) {</td><td></td></tr>
+							<tr><td></td><td>var finalMsg = 'Site message: ' + msg; // Make some twist</td></tr>
+							<tr><td></td><td>alert(final);</td><td></td></tr>
+							<tr><td>}</td><td></td></tr>
+							<tr><td></td><td></td></tr>
+							<tr><td>popupMsg('Test!');</td><td></td></tr>
+							<tr><td>popupMsg('Warning!');</td><td></td></tr>
+						</tbody>
+					</table>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
