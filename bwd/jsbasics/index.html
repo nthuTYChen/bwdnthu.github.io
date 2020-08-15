@@ -358,16 +358,16 @@
 					</table>
 					<p>In the above example, the function <code>popupMsg</code> is set to receive one data entry, which is given the name <code>msg</code> in this <em>code block</em>. In other words, <code>msg</code> will be the variable name of the data receive by <code>popupMsg</code> <em>only</em> in this function. In <code>popupMsg</code>, I declare another variable <code>finalMsg</code> to store the twist I make for <code>msg</code>. Then, <code>finalMsg</code> is submitted to the <code>alert</code> function to create a pop-up window with the final message in the last statement. After the function code, I call the function twice with two different string values, and two pop-up windows would appear in the order I call the function.</p>
 					<p>A function can receive <em>multiple data entries</em>, as long as you separate the names of the variables representing each data entry in the function with a comma <code>,</code> inside <code>( )</code>:</p>
-					<table>
-						<tbody>
-							<tr><td>function userMsg (name, msg) {</td><td></td></tr>
-							<tr><td></td><td>var finalMsg = name + ' says: ' + msg; // Compose the final msg</td></tr>
-							<tr><td></td><td>alert(finalMsg);</td><td></td></tr>
-							<tr><td>}</td><td></td></tr>
-							<tr><td>popupMsg('Victor', 'Surprise!');</td><td></td></tr>
-							<tr><td>popupMsg('Mary', 'I love Victor!');</td><td></td></tr>
-						</tbody>
-					</table>
+					<code>
+						function userMsg (name, msg) {
+						<code>
+							var finalMsg = name + ' says: ' + msg; // Compose the final msg<br/>
+							alert(finalMsg);
+						</code>
+						}<br/>
+						popupMsg('Victor', 'Surprise!');<br/>
+						popupMsg('Mary', 'I love Victor!');
+					</code>
 					<p>To know more about the behavior of a function and a function call, let's assume two possible scenarios. First, you call <code>popupMsg</code>, but nothing is submitted to the function. What would happen?</p>
 					<code>popupMsg(); // Call the function without submitting the required data entry</code>
 					<p>Second, supposed that you rename <code>userMsg</code> as <code>popupMsg</code>, making it two functions with the same name, but requesting different numbers of data entries. What would happen when you run the two following lines?</p>
@@ -377,12 +377,14 @@
 					</code>
 					<p>Since you can submit some data to a fuction, a function can also return some data back to where it is called as well, and the keyword is exactly what you expect - <code>return</code>. In the following function <code>complexCalc</code>, it always does a complex calculation based on the two numeric values submitted to it:</p>
 					<code>
-						function complexCalc (x, y) {<br/>
-						var result = 0; // Declare a variable used to store the result of calculation<br/>
-						result = x * y;<br/>
-						result = result / (x - y);<br/>
-						result = result * y - x;<br/>
-						return result; // Return the final outcome<br/>
+						function complexCalc (x, y) {
+						<code>
+							var result = 0; // Declare a variable used to store the result of calculation<br/>
+							result = x * y;<br/>
+							result = result / (x - y);<br/>
+							result = result * y - x;<br/>
+							return result; // Return the final outcome
+						</code>
 						}
 					</code>
 					<p>Now you can save lots of space without repeating these statements in this function, assuming that you need to do the same calculation for multiple times in your JS codes. But when you call this function, you also need to prepare a variable to store the data the function returns as in the following statement:</p>
