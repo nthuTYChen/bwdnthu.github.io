@@ -286,21 +286,23 @@
 						profile.gender = 'Male'; // Add a new field called 'gender' with a value 'Male'
 					</code>
 					<p>As with the case of array, there is no constraint on the type of data in each field - it can be a numeric value, a string, an array, and even another object:</p>
-					<table>
-						<tbody>
-							<tr><td>var profile = {</td><td></td><td></td></tr>
-							<tr><td></td><td>name: 'TY Chen',</td><td></td></tr>
-							<tr><td></td><td>age: 39,</td><td></td></tr>
-							<tr><td></td><td>affiliation: 'NTHU',</td><td></td></tr>
-							<tr><td></td><td>height: 180,</td><td></td></tr>
-							<tr><td></td><td>weight: 72,</td><td></td></tr>
-							<tr><td></td><td>contact: {</td><td></td></tr>
-							<tr><td></td><td></td><td>home: 02-27682149, // Don't call!</td></tr>
-							<tr><td></td><td></td><td>mobile: [0937149506, 0956771481, 0982982143]</td></tr>
-							<tr><td></td><td>}</td><td></td></tr>
-							<tr><td>};</td><td></td></tr>
-						</tbody>
-					</table>
+					<code>
+						var profile = {<br/>
+						<code>
+							name: 'TY Chen',<br/>
+							age: 39,<br/>
+							affiliation: 'NTHU',<br/>
+							height: 180,<br/>
+							weight: 72,<br/>
+							contact: {
+							<code>
+								home: 02-27682149, // Don't call!<br/>
+								mobile: [0937149506, 0956771481, 0982982143]
+							</code>
+							}
+						</code>
+						};
+					</code>
 					<p>In the above example, I added another field with a key <code>contact</code> to store my contact info, whose value is also an object with two fields for my <em>fake</em> home number and <em>fake</em> mobile phone numbers. The <code>mobile</code> field has an array of three numeric values for my three <em>fake</em> mobile numbers, which are <em>homogeneous</em>. Now, the entire profile has a very clear, sensible structure, and can be accessed in a meaningful way:</p>
 					<code>
 						profile.contact.home; // Get the home number<br/>
@@ -326,36 +328,32 @@
 				<section>
 					<h2 id="function">Function</h2>
 					<p>We rely on functions (or something alike) a lot in all kinds of computer programming since sometimes we need to <em>repeat</em> the same process in our program, so we make the process a function and use it whenever necessary without writing the same codes again and again. A JS function can be created with the following syntax:</p>
-					<table>
-						<tbody>
-							<tr><td>function name () {</td><td></td><td></td></tr>
-							<tr><td></td><td>// some statements here</td><td></td></tr>
-							<tr><td>}</td><td></td></tr>
-						</tbody>
-					</table>
+					<code>
+						function name () {<br/>
+						<code>// some statements here</code>
+						}
+					</code>
 					<p>First of all, you need the keyword <code>function</code> to create a JS function, which should be followed by the <em>name</em> of the function. After the function name comes with a pair of brackets <code>( )</code>, which would enclose the data <em class="extra">submitted</em> to the function; in our use of <code>console.log</code>, we always submit the data to the function for it to print out the data. It is nevertheless not required for a function to receive any submitted data, as we will see later. After the brackets, we see a pair of curved brackets <code>{ }</code> that defines a <em class="extra">code block</em> (remember this term?) including some statements. Let's add the following example to our JS file:</p>
-					<table>
-						<tbody>
-							<tr><td>function actionCompleted () {</td><td></td></tr>
-							<tr><td></td><td>alert('Completed!');</td></tr>
-							<tr><td>}</td><td></td></tr>
-						</tbody>
-					</table>
+					<code>
+						function actionCompleted () {
+						<code>alert('Completed!');</code>
+						}
+					</code>
 					<p>And when we need to call this newly created function, we just need a statement with the function's name plus a pair of brackets <code>( )</code>. Since we don't need to submit any data to this function, nothing has to be put into <code>( )</code>:</p>
 					<code>actionCompleted();</code>
 					<p>It doesn't matter whether the statement calling a function occurs before or after the function itself; the <code>function</code> part is always <em class="extra">hoisted</em> to the top of your JS code, too. If we follow the logic discussed earlier about variable declaration, then we should develop a habit to put the function codes to the top of our JS file, because it's natural to think that we create them first and then call them later. However, since you might have many complex functions, their codes are going to be lengthy. Plus, they are not used all the time, and what really matters more is the main code. In this case, putting your function codes to the top of your JS file might be in fact bothersome, because most of the time you just want to debug your main code. So, I'll let you decide which works best for you.</p>
 					<h3>Data transmitted between functions and their calls</h3>
 					<p>Just like <code>console.log</code>, we can create a function that receives data from its calls and do something with that data. In our first example, we create a function that can send whatever message it receives, make some changes, and put it into a pop-up message box:</p>
-					<table>
-						<tbody>
-							<tr><td>function popupMsg (msg) {</td><td></td></tr>
-							<tr><td></td><td>var finalMsg = 'Site message: ' + msg; // Make some twist</td></tr>
-							<tr><td></td><td>alert(finalMsg);</td><td></td></tr>
-							<tr><td>}</td><td></td></tr>
-							<tr><td>popupMsg('Test!');</td><td></td></tr>
-							<tr><td>popupMsg('Warning!');</td><td></td></tr>
-						</tbody>
-					</table>
+					<code>
+						function popupMsg (msg) {
+						<code>
+							var finalMsg = 'Site message: ' + msg; // Make some twist<br/>
+							alert(finalMsg);
+						</code>
+						}<br/>
+						popupMsg('Test!');<br/>
+						popupMsg('Warning!');
+					</code>
 					<p>In the above example, the function <code>popupMsg</code> is set to receive one data entry, which is given the name <code>msg</code> in this <em>code block</em>. In other words, <code>msg</code> will be the variable name of the data receive by <code>popupMsg</code> <em>only</em> in this function. In <code>popupMsg</code>, I declare another variable <code>finalMsg</code> to store the twist I make for <code>msg</code>. Then, <code>finalMsg</code> is submitted to the <code>alert</code> function to create a pop-up window with the final message in the last statement. After the function code, I call the function twice with two different string values, and two pop-up windows would appear in the order I call the function.</p>
 					<p>A function can receive <em>multiple data entries</em>, as long as you separate the names of the variables representing each data entry in the function with a comma <code>,</code> inside <code>( )</code>:</p>
 					<code>
