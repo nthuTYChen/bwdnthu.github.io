@@ -40,22 +40,14 @@
 					</picture>
 					<p>Remember that in the <em>Document Object Model (DOM)</em>, we can define the relationship between HTML elements. In a style sheet, when you specify the style of a parent, the style would <em>cascade down</em>, <em>flow downwards</em>, or <em>pass on</em> to its children, until the <em>flow</em> encounters a different style (that is, you specify a different style for the children).</p>
 					<p>In the following HTML document, for instance, if <code>&lt;html&gt;</code> is specified to have a black background, it's <em>child</em> <code>&lt;div&gt;</code> will also <em>inherit</em> this style, unless you specify a different background color for it - the style <em>flow</em> is stopped.</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>&lt;body&gt;</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>&lt;div&gt;</td>
-							</tr>
-							<tr>
-								<td></td><td>&lt;/div&gt;</td>
-							</tr>
-							<tr>
-								<td>&lt;/body&gt;</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						&lt;body&gt;
+						<code>
+							&lt;div&gt;<br/>
+							&lt;/div&gt;
+						</code>
+						&lt;/body&gt;
+					</code>
 					<p>The most updated CSS system is CSS3, although we would mostly use the features that are well-developed following W3C standards from early on. There are also many new stuff in CSS3 that can create some very fancy effects in your webpage. But again, be very careful when you try to use them because some might be too new to be supported in all major Web browsers. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#Keyword_index" target="blank">MDN Web Docs</a> still provides you a very complete CSS guide that you should always refer to.</p>
 				</section>
 				<section>
@@ -88,35 +80,23 @@
 				<section>
 					<h2 id="csssyntax">CSS syntax, a breakdown</h2>
 					<p>OK, enough life lessons. Let's first create a <em>css</em> directory <em class="extra">inside</em> your <em>cv</em> directory (because I'm assuming that your themetic website will look very distinct), and then create a <em>style.css</em> file in the <em>css</em> directory. The filename is not going to matter, but you always have to choose a <em>sensible</em> one - what could be more sensible to name the file <em>style.css</em> if the file is really just for styling...? (Let's agree to disagree). In the CSS file, the syntax of a given style should look like this:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>selector {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>property: value;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						selector {
+							<code>
+								property: value;
+							</code>
+						}
+					</code>
 					<p>In the above style template, <em class="extra">selector</em> allows a Web browser to pin down a group of elements or one single specific element in a DOM. The curved brackets <code>{ }</code> defines the scope of a style, in which the value of properties of the style are specified. There are many <em>CSS properties</em> for you to change the visual representation of a webpage, such background color, font color, font style...just too many of them. We usually use one line for every single property which <em class="extra">must</em> ends with a semi-colon <code>;</code>, and in each line, the name of the property and its value must be separated by a colon <code>:</code>. Did you happen to notice the indention at the beginning of a property line, and know why this is recommended? In addition, we can still add some notes that will not be considered part of styling for our own reference with the following line:</p>
 					<code>/* some notes in a CSS file! */</code>
 					<p>Let's try to create your very first style and apply it to your personal website. In your <em>style.css</em> for the personal website, add the following style so the background of <code>&lt;body&gt;</code> will have a pink color.</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>body {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>background-color: pink;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						body {
+						<code>
+							background-color: pink;
+						</code>
+						}
+					</code>
 					<p>Now link the CSS file to <em>index.html</em> by adding the following line into <code>&lt;head&gt;&lt;/head&gt;</code>so the default homepage would be styled based on the CSS file. Note that in our case, the path in this link does not begin with <code>/</code>, because the CSS file is not located in a <em>css</em> directory under the <em>root</em> directory. Instead, the CSS file is located in the <em>css</em> directory in your <em>cv</em> directory, along with the <em>index.html</em> file it styles. This type of paths is called <em class="extra">relative</em> path, because the path to the linked CSS file is <em>relative</em> to the HTML file.</p>
 					<code>&lt;link rel="stylesheet" href="css/style.css"&gt;</code>
 					<p>If you've done everything correctly, you should see the fancy pink color in the background of the homepage of your personal website. And you would observe the <em class="extra">cascading effect</em>, too; every element inside <code>&lt;body&gt;</code> has a pink backgroud. Let's try to stop this cascading effect by specifying a different background color for the <em>children</em> of <code>&lt;body&gt;</code>...say, <code>&lt;section&gt;</code>...? Add the following style to the <em>style.css</em> file, and you will see the contrast. Most of the elements inside <code>&lt;body&gt;</code> still has a pink background, except for every single <code>&lt;section&gt;</code> element (and it's children), which now has a white background.</p>
