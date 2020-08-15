@@ -63,22 +63,14 @@
 					<code>alert('embedded!'); console.log('logged!');</code>
 					<p>Not only will you see the same pop-up message again, you will also see the text message in the console tab of your Developer Tools. This means that statements are processed based on the ending indicated by semi-colons, rather than by separate lines - of course, we still put individual statements in separate lines for <em>a better readibility</em>. So, <em>always</em> add a semi-colons at the end of a statement.</p>
 					<p>A <em>code block</em> is just a collection of statements represented with a pair of curved brackets <code>{ }</code>. We have seen the adoption of this concept in the CSS tutorials, in which curved brackets include a collection of CSS properties, and we will extend this concept to <em>objects</em> when we get to <a href="#variable">Variable</a> part. In the following example, we have a code block containing the two statements introduced previously:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>{</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>alert('embedded!');</td>
-							</tr>
-							<tr>
-								<td></td><td>console.log('logged!');</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						{
+							<code>
+								alert('embedded!');<br/>
+								console.log('logged!');<br/>
+							</code>
+						}
+					</code>
 					<p>We need to use code blocks from time to time in special occassions: Repeat the same statements for multiple times (see <a href="#loop">Loop</a>), run different sets of statements  when different conditions are met (see <a href="#ifelse">If...else...</a>), etc. So code block is just very convenient for programmers. Again, the tradition is to have each statement <em class="extra">indented from the left edge</em> when it is included in a code block to better show where it belongs, and this is why a good editor like Sublime Text also does this for you automatically in a JS file. If you align all statements to the left edge, it won't matter; the statements will still be processed normally by Web browsers. It just creates a mess for you (and your partners in a collaborative project).</p>
 					<p>The most frequent type of statements you probably will write and see would involve some <em>operator</em> <code>=</code>, as in the following line:</p>
 					<code>num = 5;</code>
@@ -264,17 +256,17 @@
 						...
 					</code>
 					<p>But imagine an array-like container, in which each position can be given a meaningful label, so we can clearly know which position stores which type of data...and then you're talking about <em>object</em>. An object is defined with a pair of <em>curved brackets</em> <code>{ }</code> (still remember <em>code block</em>?), which include <em class="extra">keys</em> and their <em>values</em>:</p>
-					<table>
-						<tbody>
-							<tr><td>var profile = {</td><td></td></tr>
-							<tr><td></td><td>name: 'TY Chen',</td></tr>
-							<tr><td></td><td>age: 39,</td></tr>
-							<tr><td></td><td>affiliation: 'NTHU',</td></tr>
-							<tr><td></td><td>height: 180,</td></tr>
-							<tr><td></td><td>weight: 72</td></tr>
-							<tr><td>};</td><td></td></tr>
-						</tbody>
-					</table>
+					<code>
+						var profile = {<br/>
+						<code>
+							name: 'TY Chen',<br/>
+							age: 39,<br/>
+							affiliation: 'NTHU',<br/>
+							height: 180,<br/>
+							weight: 72,<br/>
+						</code>
+						};
+					</code>
 					<p>In the above example, each key and its value is separated by a colon <em>:</em>, and the value is followed by a comma <code>,</code> indicating the end of a <em>field</em>, except for the last one. Note that after the second curved bracket <code>}</code>, a semi-colon <code>;</code> is still added since we are dealing with a <em>statement</em> that declares a variable <code>profile</code>. The way a value is accessed from an object is also very straightforward - just add a period <code>.</code> after the name of an object and the key of the target field:</p>
 					<code>
 						profile.name; // Get the value of the 'name' field<br/>
