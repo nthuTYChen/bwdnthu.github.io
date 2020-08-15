@@ -325,19 +325,13 @@
 						}
 					</code>
 					<p>Then, both <code>&lt;section&gt;</code> and <code>&lt;p&lt;</code> are used by me to represent a paragraph in this course website, so I add some margins for them to slightly separate them from each other <em>vertically</em>. Note how it is possible to have more than one <em>selector</em> in your CSS file - just separate them with a <em class="extra">comma</em>:</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>section, p {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>margin: 0.5vh 0; /* 0.5vh top/bottom margin */</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						section, p {
+						<code>
+							margin: 0.5vh 0; /* 0.5vh top/bottom margin */
+						</code>
+						}
+					</code>
 					<p>You can try many different margins and paddings for various elements until you're satisfied with the visual presentation of the overall layout.</p>
 				</section>
 				<section>
@@ -345,52 +339,28 @@
 					<p>You might be eager to try other things to beautify your webpage, and here are some more tips for you. There are just too many of them, so it's not possible for me to answer all <em>How do you...</em> questions. But I'm pretty sure that once you feed Google with your questions, you will find the answers pretty soon. For example, if you google <q>How to animate background color in CSS?</q>, you will see many solutions.</p>
 					<h3>Body</h3>
 					<p>The first thing we would do here is to further style the <code>&lt;body&gt;</code> element with the <code>width</code> and <code>height</code> properties and set their value to <code>100%</code>. The relative length unit <code>%</code> refers to the dimension of the parent, which is <code>&lt;html&gt;</code> in this case, so when to set the width of the <code>&lt;body&lt;</code> element, it means the <code>&lt;body&lt;</code> element will fill the browser window horizontally/vertically, and the style will <em>cascade</em> to all of its children whose <code>width</code> property is unspecified. Next, we add the <code>overflow-x</code> property and set it to <code>hidden</code> so the horizontal scroll bar does not appear. This will restrict the display of your webpage to the full width of the browser window. We also add and set the <code>overflow-y</code> property to <code>auto</code>, so the vertical scroll bar appears when the <em>height</em> of a webpage exceeds the height of a browser window. It's easier to both read and scroll from top to bottom than from left to right (or right to left).</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>body {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>width: 100%;</td>
-							</tr>
-							<tr>
-								<td></td><td>height: 100%;</td>
-							</tr>
-							<tr>
-								<td></td><td>overflow-x: hidden;</td>
-							</tr>
-							<tr>
-								<td></td><td>overflow-y: auto;</td>
-							</tr>
-							<tr>
-								<td></td><td>font: 1.6vw/2.4vw Zilla Slab, serif;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						body {
+						<code>
+							width: 100%;<br/>
+							height: 100%;<br/>
+							overflow-x: hidden;<br/>
+							overflow-y: auto;<br/>
+							font: 1.6vw/2.4vw Zilla Slab, serif;
+						</code>
+						}
+					</code>
 					<h3>Hyperlink</h3>
 					<p>Most Web designer would also choose to style hyperlinks marked up by <code>&lt;a&gt;</code> since the default style in a Web browser doesn't look decent. Hyperlinks usually are underlined by default, but you can change this by set the <code>text-decoration</code> property to <em>none</em> (or you can play with the property to adopt <a href="https://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="blank">different kinds of text decoration</a>). But you still need to make hyperlinks distinct from other normal texts, so you probably want to use a different font color for <code>&lt;a&gt;</code>. You can further differentiate hyperlinks by making them <em>bold</em>. Again, try many different things, and find the style you prefer.</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>a {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>color: grey;</td>
-							</tr>
-							<tr>
-								<td></td><td>text-decoration: none;</td>
-							</tr>
-							<tr>
-								<td></td><td>font-weight: bold;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						a {
+						<code>
+							color: grey;<br/>
+							text-decoration: none;<br/>
+							font-weight: bold;
+						</code>
+						}
+					</code>
 					<h3>Border</h3>
 					<p>As mentioned earlier, one way of making the edges of an element apparent is to style its <code>border</code>. Just like <code>margin</code> and <code>padding</code>, you can choose to style one of the four borders (with <code>border-left</code>, for instance), or use the shorthand <code>border</code> to style the four borders altogether. In each <code>border</code> property, the values are specified in the order <em class="extra">width-style-color</em> as in the following example (see <a href="https://www.w3schools.com/CSSref/pr_border-style.asp" target="blank">this W3CSchool page</a> for different border styles that you can play with):</p>
 					<code style="border: 2px solid red;">border: 2px solid red;</code>
@@ -419,22 +389,14 @@
 					<p>Except for the default position <code>static</code>, other positions could be defined along with the CSS properties <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. We will play around these properties in this section.</p>
 					<h3>Relative</h3>
 					<p>Remember that with the default position, elements are presented <em>from top to bottom (block elements) and left to right (inline elements)</em> following their order in an HTML document. When you set the position of an element to be <code>relative</code> to move the element from its default position. In the example below, a <code>&lt;div&gt;</code> is moved from its bottom edge by <em>30px</em> (<code>top: -30px;</code> would do the same effect), and that's why the block overlaps with the last curved bracket of the source code (the curved bracket is made visible by styling the block with the CSS property <code>opacity</code>):</p>
-					<table>
-						<tbody>
-							<tr>
-								<td>div {</td><td></td>
-							</tr>
-							<tr>
-								<td></td><td>position: relative;</td>
-							</tr>
-							<tr>
-								<td></td><td>bottom: 30px;</td>
-							</tr>
-							<tr>
-								<td>}</td><td></td>
-							</tr>
-						</tbody>
-					</table>
+					<code>
+						div {
+						<code>
+							position: relative;<br/>
+							bottom: 30px;
+						</code>
+						}
+					</code>
 					<div style="height: 3vh; width: 3vh; background-color: blue; position: relative; bottom: 30px; opacity: 0.5;"></div>
 					<p>One thing to note here is that you can see the space left by the moved block, since the area the block occupies <em class="extra">does not vanish</em> even after it's moved from its original position with <code>position: relative;</code>. In the following example, <code>left: 30%;</code> means to move from its left by 30% of its parent's width:</p>
 					<table>
