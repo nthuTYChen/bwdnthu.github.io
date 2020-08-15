@@ -370,6 +370,23 @@
 					</table>
 					<p>To know more about the behavior of a function and a function call, let's assume two possible scenarios. First, you call <code>popupMsg</code>, but nothing is submitted to the function. What would happen?</p>
 					<code>popupMsg(); // Call the function without submitting the required data entry</code>
+					<p>Second, supposed that you rename <code>userMsg</code> as <code>popupMsg</code>, making it two functions with the same name, but requesting different numbers of data entries. What would happen when you run the two following lines?</p>
+					<code>
+						popupMsg('Test!');<br/>
+						popupMsg('Victor', 'Hey!');
+					</code>
+					<p>Since you can submit some data to a fuction, a function can also return some data back to where it is called as well, and the keyword is exactly what you expect - <code>return</code>. In the following function <code>complexCalc</code>, it always does a complex calculation based on the two numeric values submitted to it:</p>
+					<code>
+						function complexCalc (x, y) {<br/>
+						var result = 0; // Declare a variable used to store the result of calculation<br/>
+						result = x * y;<br/>
+						result = result / (x - y);<br/>
+						result = result * y - x;<br/>
+						return result; // Return the final outcome
+						};
+					</code>
+					<p>Now you can save lots of space without repeating these statements in this function, assuming that you need to do the same calculation for multiple times in your JS codes. But when you call this function, you also need to prepare a variable to store the data the function returns as in the following statement:</p>
+					<code>var num = complexCalc(4, 6);</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
