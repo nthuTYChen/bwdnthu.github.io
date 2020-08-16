@@ -334,6 +334,17 @@
 					<p>And when we need to call this newly created function, we just need a statement with the function's name plus a pair of brackets <code>( )</code>. Since we don't need to submit any data to this function, nothing has to be put into <code>( )</code>:</p>
 					<code>actionCompleted();</code>
 					<p>It doesn't matter whether the statement calling a function occurs before or after the function itself; the <code>function</code> part is always <em class="extra">hoisted</em> to the top of your JS code, too. If we follow the logic discussed earlier about variable declaration, then we should develop a habit to put the function codes to the top of our JS file, because it's natural to think that we create them first and then call them later. However, since you might have many complex functions, their codes are going to be lengthy. Plus, they are not used all the time, and what really matters more is the main code. In this case, putting your function codes to the top of your JS file might be in fact bothersome, because most of the time you just want to debug your main code. So, I'll let you decide which works best for you.</p>
+					<p>However, if you declare a variable and assign a function to it with <code>var</code>, this declaration and initialization <em class="extra">won't be hoisted</em> to the top, which means that the statement that calls this function must <em>follow</em> the declaration and initialization codes:</p>
+					<code>
+						actionCompleted(); // You get an error<br/>
+						var actionCompleted = function() { // Declare a variable "actionCompleted" and initialize it with a function
+						<code>
+							alert('Completed!');
+						</code>
+						}
+						actionComplete(); // Not a problem
+					</code>
+					<p>To avoid the above complication, I usually use just go with the <em class="extra">hoisting approach</em>.</p>
 					<h3>Data transmitted between functions and their calls</h3>
 					<p>Just like <code>console.log</code>, we can create a function that receives data from its calls and do something with that data. In our first example, we create a function that can send whatever message it receives, make some changes, and put it into a pop-up message box:</p>
 					<code>
