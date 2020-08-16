@@ -537,13 +537,15 @@
 						<li><code>keydown</code> - when you press down any key</li>
 						<li><code>keyup</code> - when you release a key</li>
 						<li><code>click</code> - when you click a mouse key</li>
+						<li><code>mousedown</code> - when you click down a mouse key</li>
+						<li><code>mouseup</code> - when you release a mouse key</li>
 						<li><code>mouseover</code> - when you move a mouse cursor over the target</li>
 						<li><code>mouseenter</code> - when you move a mouse cursor into the target</li>
 						<li><code>mouseleave</code> - when you move a mouse cursor out of the target</li>
 						<li><code>touchstart</code> - when you touch one our more points on the surface</li>
 						<li><code>touchend</code> - when you remove one or more touch points from the surface</li>
 					</ul>
-					<p>The <em>listener</em> of a JS event could be added to an element with the <code>addEventListener()</code> function of an element object, in which you need to specify the event the element listens to and the action taken in JS specified in the <em>listener</em>, which is essentially a function:</p>
+					<p>The <em>listener</em> of a JS event could be added to an element with the <code>addEventListener()</code> function of an element object, in which you need to specify the event the element listens to and the action taken in JS specified in the <em>listener</em>, which is essentially a function (but see this <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="blank">MDN Web Doc page</a> for some complications):</p>
 					<code>
 						var em = document.querySelector('body'); // Get the 'body' element<br/>
 						em.addEventListener('click', function() { // A function triggered upon a 'click' event
