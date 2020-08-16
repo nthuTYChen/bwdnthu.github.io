@@ -454,7 +454,16 @@
 						console.log(allAudios); // Probably "null" - nothing
 					</code>
 					<p>In the above example, we first use <code>getElementsByTagName</code> to retrieve all <code>&lt;div&gt;</code> elements. Since your HTML document is likely to have one or more <code>&lt;div&gt;</code> elements, each element would be collected as an object and stored in an <em>array</em> and finally returned to where <code>getElementsByTagName</code> is called. This is true even if there is only <em>one</em> element, which is stored in an array with just this element. If the function finds nothing in an HTML document, it returns a <code>null</code> value, which represents the absolute <em>emptiness</em> in the word of computer programming.</p>
-					<p>The other two functions trawl through an HTML document for elements that are given some specific <code>class</code> and <code>id</code> value, as their name suggests. As briefly discussed earlier, </p>
+					<p>The other two functions trawl through an HTML document for elements that are given some specific <code>class</code> and <code>id</code> value, as their name suggests. As briefly discussed earlier, you could <em>group HTML elements together</em> with the <code>class</code> attribute with the <em>same</em> value, or make them <em>distinct from each other</em> with the <code>id</code> attribute assigned a <em>unique</em> value:</p>
+					<code>
+						&lt;div class="group1" id="no1"&gt;Group 1 No 1&lt;/div&gt;<br/>
+						&lt;div class="group1" id="no2"&gt;Group 1 No 2&lt;/div&gt;<br/>
+						&lt;div class="group1" id="no3"&gt;Group 1 No 3&lt;/div&gt;<br/>
+						&lt;div class="group2" id="no1"&gt;Group 2 No 1&lt;/div&gt;<br/>
+						&lt;div class="group2" id="no2"&gt;Group 2 No 2&lt;/div&gt;<br/>
+						&lt;div class="group2" id="no3"&gt;Group 2 No 3&lt;/div&gt;
+					</code>
+					<p>With the six <code>&lt;div&gt;</code> elements in our HTML document, we could try out <code>getElementsByClassName</code> and <code>getElementById</code> respectively:</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
