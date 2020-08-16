@@ -587,34 +587,30 @@
 					</ol>
 					<p>Select the following section to find a <em>complicated</em> solution:</p>
 					<code style="color: #f2f2f2;">
+						var div = document.getElementByTagName('div');<br/>
+						var div1 = div[0], div2 = div[1];<br/>
 						// For the first 'div' element<br/>
 						function newDiv1BgColor () {
 							<code style="color: inherit;">
-								var div = document.getElementByTagName('div'); // Get all two 'div' elements<br/>
-								div[0].style.backgroundColor = 'red';
+								div1.style.backgroundColor = 'red';
 							</code>
 						}<br/>
 						function oldDiv1BgColor () {
 							<code style="color: inherit;">
-								var div = document.getElementByTagName('div'); // Get all two 'div' elements<br/>
-								div[0].style.backgroundColor = 'white';
+								div1.style.backgroundColor = 'white';
 							</code>
 						}<br/>
 						// For the second 'div' element<br/>
 						function newDiv2BgColor () {
 							<code style="color: inherit;">
-								var div = document.getElementByTagName('div'); // Get all two 'div' elements<br/>
-								div[1].style.backgroundColor = 'blue';
+								div2.style.backgroundColor = 'blue';
 							</code>
 						}<br/>
 						function oldDiv2BgColor () {
 							<code style="color: inherit;">
-								var div = document.getElementByTagName('div'); // Get all two 'div' elements<br/>
-								div[1].style.backgroundColor = 'white';
+								div2.style.backgroundColor = 'white';
 							</code>
 						}<br/>
-						var div = document.getElementByTagName('div');<br/>
-						var div1 = div[0], div2 = div[1];<br/>
 						div1.addEventListener('mouseenter', newDiv1BgColor);<br/>
 						div1.addEventListener('mouseleave', oldDiv1BgColor);<br/>
 						div2.addEventListener('mouseenter', newDiv2BgColor);<br/>
@@ -631,6 +627,8 @@
 					</code>
 					<p>So, how can <code>this</code> help simplify our codes in the complicated solution? We can directly set the style of the target <code>&lt;div&gt;</code> element directly with <code>this</code> - we don't even need two functions to reset the background color since the default color is the same:</p>
 					<code>
+						var div = document.getElementByTagName('div');<br/>
+						var div1 = div[0], div2 = div[1];<br/>
 						// For the first 'div' element<br/>
 						function newDiv1BgColor () {
 							<code>
@@ -649,8 +647,6 @@
 								this.style.backgroundColor = 'white';
 							</code>
 						}<br/>
-						var div = document.getElementByTagName('div');<br/>
-						var div1 = div[0], div2 = div[1];<br/>
 						div1.addEventListener('mouseenter', newDiv1BgColor);<br/>
 						div1.addEventListener('mouseleave', oldDivBgColor);<br/>
 						div2.addEventListener('mouseenter', newDiv2BgColor);<br/>
