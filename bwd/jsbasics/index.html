@@ -618,10 +618,41 @@
 						div1.addEventListener('mouseenter', newDiv1BgColor);<br/>
 						div1.addEventListener('mouseleave', oldDiv1BgColor);<br/>
 						div2.addEventListener('mouseenter', newDiv2BgColor);<br/>
-						div2.addEventListener('mouseleave', oldDiv2BgColor);<br/>
+						div2.addEventListener('mouseleave', oldDiv2BgColor);
 					</code>
 					<h3>The magical <q>this</q></h3>
-					<p></p>
+					<p>The above solution is complicated because in each <em>listener</em>, I have to retrieve all <code>&lt;div&gt;</code> elements, isolate the target <code>&lt;div&gt;</code>, and set the style accordingly. But there's a keyword <code>this</code> in JS, which can save us lots of works. It has <a href="https://www.w3schools.com/js/js_this.asp" target="blank">different meanings</a> in distinct contexts, but here we focus on its use in an event: <code>this</code> represents the element that receives the target event. Let's validate this first:</p>
+					<code>
+						document.addEventListener('click', function() {<br/>
+							console.log(this); <br/> // Print the element that receives this 'click' event, namely 'document'
+						});
+					</code>
+					<p>So, how can <code>this</code> help simplify our codes in the complicated solution? We can directly set the style of the target <code>&lt;div&gt;</code> element directly with <code>this</code> - we don't even need two functions to reset the background color since the default color is the same:</p>
+					<code>
+						// For the first 'div' element<br/>
+						function newDiv1BgColor () {<br/>
+							<code>
+								this.style.backgroundColor = 'red';
+							</code>
+						}<br/>
+						// For the second 'div' element<br/>
+						function newDiv2BgColor () {<br/>
+							<code>
+								this.style.backgroundColor = 'blue';
+							</code>
+						}<br/>
+						function oldDivBgColor () {<br/>
+							<code>
+								this.style.backgroundColor = 'white';
+							</code>
+						}<br/>
+						var div = document.getElementByTagName('div');<br/>
+						var div1 = div[0], div2 = div[1];<br/>
+						div1.addEventListener('mouseenter', newDiv1BgColor);<br/>
+						div1.addEventListener('mouseleave', oldDivBgColor);<br/>
+						div2.addEventListener('mouseenter', newDiv2BgColor);<br/>
+						div2.addEventListener('mouseleave', oldDivBgColor);
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
