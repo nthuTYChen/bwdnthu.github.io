@@ -417,7 +417,11 @@
 						window.location.href = 'https://google.com'; // Change the current URL to Google<br/>
 						window.location.pathname = '/nosuchpath'; // Change to a path that does not exit
 					</code>
-					<p>There are many properties or functions that you can take advantage of (see the full list on this <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="blank">MDN Web Docs page</a>), but our focus in this section will be mostly on <code>window.document</code>, which apparently refers to the HTML document that is currently presented in a Web browser. Since hardly anyone writes JS codes without using <code>window.document</code>, JS developers decided to create a <em>shortcut</em> for it, so you can simply use <code>document</code> for <code>window.document</code>.</p>
+					<p>There are many properties or functions that you can take advantage of (see the full list on this <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="blank">MDN Web Docs page</a>), but our focus in this section will be mostly on <code>window.document</code>, which apparently refers to the HTML document that is currently presented in a Web browser. Since hardly anyone writes JS codes without using <code>window.document</code>, JS developers decided to create a <em>shortcut</em> for it, so you can simply use <code>document</code> for <code>window.document</code>. In <code>document</code>, you can have access to information or elements included in an HTML document, such as the title of the website specified inside the <code>&lt;title&gt;</code>:</p>
+					<code>
+						var siteTitle = document.title;<br/>
+						console.log(siteTitle);
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
