@@ -554,6 +554,14 @@
 						</code>
 						}); // It's a statement, so add a semi-colon at the end
 					</code>
+					<p>If you have different elements that are linked to the same listener, you can create the listener function separately so it can be used in every <code>addEventListener()</code> function:</p>
+					<code>
+						function clickedMsg() {
+							<code>alert('clicked!');</code>
+						}<br/>
+						var em = document.querySelector('body');<br/>
+						em.addEventListener('click', clickedMsg);
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
