@@ -477,7 +477,15 @@
 						idEm.innerHTML = 'Group 2 No 5 (Changed)'; // Change the content of the element
 					</code>
 					<h3>JS styling</h3>
-					<p>Not only can we change the content of an element, we can also style a particular element in JS, which is probably the most important thing in Web design. For each element object, there is a field named <code>style</code>...and it's clear what it does, right? </p>
+					<p>Not only can we change the content of an element, we can also style a particular element in JS, which is probably the most important thing in Web design. For each element object, there is a field named <code>style</code>...and it's clear what it does, right? In this field, you can find and set CSS properties with their name, such as:</p>
+					<code>
+						idEm.style.color = 'red'; // Set the font color
+					</code>
+					<p>For CSS properties that originally have a hyphen in their name, such as <code>background-color</code>, you need to remove the hyphen and captalize the first letter of the second word, such as <code>backgroundColor</code> in order to set these CSS properties:</p>
+					<code>
+						var anotherIdEm = document.getElementById('no6'); // Get <em>one</em> 'no6' id element<br/>
+						anotherIdEm.style.backgroundColor = 'red';
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
