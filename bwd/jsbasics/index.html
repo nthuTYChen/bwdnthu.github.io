@@ -459,11 +459,18 @@
 						&lt;div class="group1" id="no1"&gt;Group 1 No 1&lt;/div&gt;<br/>
 						&lt;div class="group1" id="no2"&gt;Group 1 No 2&lt;/div&gt;<br/>
 						&lt;div class="group1" id="no3"&gt;Group 1 No 3&lt;/div&gt;<br/>
-						&lt;div class="group2" id="no1"&gt;Group 2 No 1&lt;/div&gt;<br/>
-						&lt;div class="group2" id="no2"&gt;Group 2 No 2&lt;/div&gt;<br/>
-						&lt;div class="group2" id="no3"&gt;Group 2 No 3&lt;/div&gt;
+						&lt;div class="group2" id="no4"&gt;Group 2 No 4&lt;/div&gt;<br/>
+						&lt;div class="group2" id="no5"&gt;Group 2 No 5&lt;/div&gt;<br/>
+						&lt;div class="group2" id="no6"&gt;Group 2 No 6&lt;/div&gt;
 					</code>
-					<p>With the six <code>&lt;div&gt;</code> elements in our HTML document, we could try out <code>getElementsByClassName</code> and <code>getElementById</code> respectively:</p>
+					<p>With the six <code>&lt;div&gt;</code> elements in our HTML document, we could try out <code>getElementsByClassName</code> and <code>getElementById</code> respectively. For a specific element object, we could use the property <code>innerHTML</code> to retrieve its content:</p>
+					<code>
+						var allGroupEm = document.getElementsByClassName('group1'); // Get all "group1" class elements<br/>
+						var groupEm = allGroupEm[0]; // Get the first element of the "group1" class<br/>
+						console.log(groupEm.innerHTML); // Print the content in the console<br/>
+						var idEm = document.getElementById('no6'); // Get <em>one</em> 'no6' id element<br/>
+						console.log(idEm.innerHTML); // Print the content
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
