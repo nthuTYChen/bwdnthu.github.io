@@ -405,10 +405,10 @@
 				</section>
 				<section>
 					<h2 id="interface">Accessing an HTML document</h2>
-					<p>After telling you how object-oriented programming in JS works, I am now able to explain the <em>interface</em> between JS and an HTML document. In JS, we can communicate with our Web browser primarily via the two objects <code>window</code> and <code>document</code>. Evidently, the former refers to the browser window, and the latter to the HTML document currently presented in the browser window. For instance, we can get the <em class="extra">viewport</em> width and height by accessing to the <code>innerWidth</code> and <code>innerHeight</code> property of <code>window</code>:</p>
+					<p>After telling you how object-oriented programming in JS works, I am now able to explain the <em>interface</em> between JS and an HTML document. In JS, we can communicate with our Web browser via the object <code>window</code>. Evidently, this object refers to the browser window, which includes many fields that are directly linked to different parts of a Web browser. For instance, we can get the <em class="extra">viewport</em> width and height by accessing to the <code>innerWidth</code> and <code>innerHeight</code> property of <code>window</code>:</p>
 					<code>
-						var winWidth = window.innerWidth; // Viewport width in px, numeric value<br/>
-						var winHeight = window.innerHeight;<br/>
+						var winWidth = window.innerWidth; // Viewport width in pixel, numeric value<br/>
+						var winHeight = window.innerHeight; // Viewport height<br/>
 						console.log(winWidth);<br/>
 						console.log(winHeight);
 					</code>
@@ -417,6 +417,7 @@
 						window.location.href = 'https://google.com'; // Change the current URL to Google<br/>
 						window.location.pathname = '/nosuchpath'; // Change to a path that does not exit
 					</code>
+					<p>There are many properties or functions that you can take advantage of (see the full list on this <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" target="blank">MDN Web Docs page</a>), but our focus in this section will be mostly on <code>window.document</code>, which apparently refers to the HTML document that is currently presented in a Web browser. Since hardly anyone writes JS codes without using <code>window.document</code>, JS developers decided to create a <em>shortcut</em> for it, so you can simply use <code>document</code> for <code>window.document</code>.</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
