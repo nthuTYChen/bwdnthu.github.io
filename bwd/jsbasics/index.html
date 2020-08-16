@@ -536,13 +536,20 @@
 						<li><code>scroll</code> - when you scroll</li>
 						<li><code>keydown</code> - when you press down any key</li>
 						<li><code>keyup</code> - when you release a key</li>
-						<li><code>onclick</code> - when you click a mouse key</li>
-						<li><code>onmouseover</code> - when you move a mouse cursor over the target</li>
-						<li><code>onmouseenter</code> - when you move a mouse cursor into the target</li>
-						<li><code>onmouseleave</code> - when you move a mouse cursor out of the target</li>
+						<li><code>click</code> - when you click a mouse key</li>
+						<li><code>mouseover</code> - when you move a mouse cursor over the target</li>
+						<li><code>mouseenter</code> - when you move a mouse cursor into the target</li>
+						<li><code>mouseleave</code> - when you move a mouse cursor out of the target</li>
 						<li><code>touchstart</code> - when you touch one our more points on the surface</li>
 						<li><code>touchend</code> - when you remove one or more touch points from the surface</li>
 					</ul>
+					<p>The <em>listener</em> of a JS event could be added to an element with the <code>addEventListener()</code> function of an element object, in which you need to specify the event the element listens to and the action taken in JS specified in the <em>listener</em>, which is essentially a function:</p>
+					<code>
+						var em = document.querySelector('body'); // Get the 'body' element<br/>
+						em.addEventListener('click', function() { // A function triggered upon a 'click' event<br/>
+							alert('clicked!');<br/>
+						}); // It's a statement, so add a semi-colon at the end
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
