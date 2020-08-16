@@ -583,7 +583,41 @@
 						<li>style both <code>&lt;div&gt;</code> elements using <em>inline styles</em>, specify a width and a height of <code>5vh</code> to make them a square, and</li>
 						<li>add two event listeners to each <code>&lt;div&gt;</code> - one changes the background color to any color of your choice when you move your mouse cursor over it, and the other changes the background color back to the default white backgroud.</li>
 					</ol>
-					<p></p>
+					<p>Select the following section to find a complicated solution:</p>
+					<code>
+						// For the first 'div' element<br/>
+						function newDiv1BgColor () {<br/>
+							<code>
+								var div = document.getElementByTagName('div'); // Get all two 'div' elements<br/>
+								div[0].style.backgroundColor = 'red';
+							</code>
+						}<br/>
+						function oldDiv1BgColor () {<br/>
+							<code>
+								var div = document.getElementByTagName('div'); // Get all two 'div' elements<br/>
+								div[0].style.backgroundColor = 'white';
+							</code>
+						}<br/>
+						// For the second 'div' element<br/>
+						function newDiv2BgColor () {<br/>
+							<code>
+								var div = document.getElementByTagName('div'); // Get all two 'div' elements<br/>
+								div[1].style.backgroundColor = 'blue';
+							</code>
+						}<br/>
+						function oldDiv2BgColor () {<br/>
+							<code>
+								var div = document.getElementByTagName('div'); // Get all two 'div' elements<br/>
+								div[1].style.backgroundColor = 'white';
+							</code>
+						}<br/>
+						var div = document.getElementByTagName('div');<br/>
+						var div1 = div[0], div2 = div[1];<br/>
+						div1.addEventListener('mouseenter', newDiv1BgColor);<br/>
+						div1.addEventListener('mouseleave', oldDiv1BgColor);<br/>
+						div2.addEventListener('mouseenter', newDiv2BgColor);<br/>
+						div2.addEventListener('mouseleave', oldDiv2BgColor);<br/>
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
