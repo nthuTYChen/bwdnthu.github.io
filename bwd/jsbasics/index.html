@@ -562,6 +562,15 @@
 						var em = document.querySelector('body');<br/>
 						em.addEventListener('click', clickedMsg);
 					</code>
+					<p>It is also possible to add multiple event listeners to the same element:</p>
+					<code>
+						function enteredMsg() {
+							<code>
+								alert('mouse entered!');
+							</code>
+						}<br/>
+						em.addEventListener('mouseenter', enteredMsg);
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
