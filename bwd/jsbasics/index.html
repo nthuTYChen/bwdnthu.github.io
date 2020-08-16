@@ -499,7 +499,21 @@
 					<p>Since the styles set in JS are viewed as <em>inline styles</em>, they would be <em class="extra">more specific</em> than the styles set in a CSS file for the target elements when same CSS properties are involved. This make sense because you can have some <em>default</em> styles for some elements, whose properties are changed by JS in some contexts.</p>
 					<p>You can also set <em>inline styles</em> with the function <code>setAttribute()</code> for an element object, as demonstrated on this <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style" target="blank">MDN Web Docs page</a>, but I won't go through it here.</p>
 					<h3>Query selector</h3>
-					<p>You are now probably very excited, because it's so convenient to refer to the <code>class</code> and <code>id</code> attributes when you need to set the style for a specific element, so you start to think about grouping elements together or making them distinct from each other with these attributes. That's the first mistake I made as an amateur Web designer - I used <em>semantically-free</em> <code>&lt;div&gt;</code> only, and gave them different <code>class</code> and <code>id</code> attribute value so I could locate them in my JS codes very easily.</p>
+					<p>You are now probably very excited, because it's so convenient to refer to the <code>class</code> and <code>id</code> attributes when you need to set the style for a specific element, so you start to think about grouping elements together or making them distinct from each other with these attributes. That's the first mistake I made as an amateur Web designer - I used <em>semantically-free</em> <code>&lt;div&gt;</code> only, and gave them different <code>class</code> and <code>id</code> attribute value so I could locate them in my JS codes very easily. But as I said in the previous unit, this is not the best practice. When you use <em>semantically meaningful</em> elements and have a clear structure for your HTML document, you shouldn't need the <code>class</code> and <code>id</code> attributes most of the time. For example, the <code>&lt;p&gt;</code> elements inside <code>&lt;article&gt;</code> and <code>&lt;section&gt;</code> in the following example might represent different types of information in your webpage. But you don't need different <code>id</code> values for the two paragraphs, because you can use different <em class="extra">selectors</em> to refer to each paragraph: <code>article > p</code> and <code>section > p</code>.</p>
+					<code>
+						&lt;article&gt;<br/>
+						<code>
+							&lt;p&gt;<br/>
+							&lt;/p&gt;
+						</code>
+						&lt;/article&gt;<br/>
+						&lt;section&gt;
+						<code>
+							&lt;p&gt;<br/>
+							&lt;/p&gt;
+						</code>
+						&lt;/section&gt;
+					</code>
 				</section>
 				<section>
 					<h2 id="event">Event and interaction</h2>
