@@ -496,7 +496,8 @@
 						// Set CSS properties all at once<br/>
 						oneMoreIdEm.style.cssText = 'background-color: green; color: yellow;';
 					</code>
-					<p>You can also set <em>inline style</em> with the function <code>setAttribute()</code> for an element object, as demonstrated on this <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style" target="blank">MDN Web Docs page</a>, but I won't go through it here.</p>
+					<p>Since the styles set in JS are viewed as <em>inline styles</em>, they would be <em class="extra">more specific</em> than the styles set in a CSS file for the target elements when same CSS properties are involved. This make sense because you can have some <em>default</em> styles for some elements, whose properties are changed by JS in some contexts.</p>
+					<p>You can also set <em>inline styles</em> with the function <code>setAttribute()</code> for an element object, as demonstrated on this <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style" target="blank">MDN Web Docs page</a>, but I won't go through it here.</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
