@@ -546,8 +546,10 @@
 					<p>The <em>listener</em> of a JS event could be added to an element with the <code>addEventListener()</code> function of an element object, in which you need to specify the event the element listens to and the action taken in JS specified in the <em>listener</em>, which is essentially a function:</p>
 					<code>
 						var em = document.querySelector('body'); // Get the 'body' element<br/>
-						em.addEventListener('click', function() { // A function triggered upon a 'click' event<br/>
-							alert('clicked!');<br/>
+						em.addEventListener('click', function() { // A function triggered upon a 'click' event
+						<code>
+							alert('clicked!');
+						</code>
 						}); // It's a statement, so add a semi-colon at the end
 					</code>
 				</section>
