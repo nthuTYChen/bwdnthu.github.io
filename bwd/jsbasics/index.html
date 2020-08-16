@@ -265,7 +265,7 @@
 							age: 39,<br/>
 							affiliation: 'NTHU',<br/>
 							height: 180,<br/>
-							weight: 72,<br/>
+							weight: 72<br/>
 						</code>
 						};
 					</code>
@@ -370,6 +370,17 @@
 						}<br/>
 						popupMsg('Victor', 'Surprise!');<br/>
 						popupMsg('Mary', 'I love Victor!');
+					</code>
+					<p>Before we move on, we need to add a side note that the variable declared inside a function can only be accessed <em>inside</em> that function, whereas a variable decalred <em>outside</em> a function can be accessed inside the function:</p>
+					<code>
+						var x = 5;<br/>
+						function test () {
+						<code>
+							console.log(x); // Not a problem<br/>
+							var y = 10;<br/>
+						</code>
+						}<br/>
+						console.log(y); // Get an error in the console tab
 					</code>
 					<p>To know more about the behavior of a function and a function call, let's assume two possible scenarios. First, you call <code>popupMsg</code>, but nothing is submitted to the function. What would happen?</p>
 					<code>popupMsg(); // Call the function without submitting the required data entry</code>
