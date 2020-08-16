@@ -624,7 +624,7 @@
 					<p>The above solution is complicated because in each <em>listener</em>, I have to retrieve all <code>&lt;div&gt;</code> elements, isolate the target <code>&lt;div&gt;</code>, and set the style accordingly. But there's a keyword <code>this</code> in JS, which can save us lots of works. It has <a href="https://www.w3schools.com/js/js_this.asp" target="blank">different meanings</a> in distinct contexts, but here we focus on its use in an event: <code>this</code> represents <em class="extra">the element that receives the target event</em>. Let's validate this first:</p>
 					<code>
 						document.addEventListener('click', function() {<br/>
-							console.log(this); <br/> // Print the element that receives this 'click' event, namely 'document'
+							console.log(this); // Print the element that receives this 'click' event, namely 'document'<br/> 
 						});
 					</code>
 					<p>So, how can <code>this</code> help simplify our codes in the complicated solution? We can directly set the style of the target <code>&lt;div&gt;</code> element directly with <code>this</code> - we don't even need two functions to reset the background color since the default color is the same:</p>
