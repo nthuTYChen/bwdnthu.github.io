@@ -24,7 +24,7 @@
 			<article>
 				<h1>4. JavaScript Basics</h1>
 				<p>It's an oxymoron - learning how to do computer programming without worrying too much about computer programming.</p>
-				<p><a href="#beforewestart">Before we start...</a> / <a href="#overview">An overview</a> / <a href="#jssyntax">JavaScript syntax, a breakdown</a> / <a href="#variable">Variable</a> / <a href="#arrayobj">Array and object</a> / <a href="#function">Function</a> / <a href="#interface">Accessing the HTML document</a> / <a href="#loop">Loop</a> / <a href="#ifelse">If...else...</a> / <a href="#forthenextunit">For the next unit...</a></p>
+				<p><a href="#beforewestart">Before we start...</a> / <a href="#overview">An overview</a> / <a href="#jssyntax">JavaScript syntax, a breakdown</a> / <a href="#variable">Variable</a> / <a href="#arrayobj">Array and object</a> / <a href="#function">Function</a> / <a href="#interface">Accessing an HTML document</a> / <a href="#loop">Loop</a> / <a href="#ifelse">If...else...</a> / <a href="#forthenextunit">For the next unit...</a></p>
 				<section>
 					<h2 id="beforewestart">Before we start...</h2>
 					<ol>
@@ -402,6 +402,16 @@
 					<p>In the <code>demoFuncs</code> object, similar functions are grouped together since they are all some kind of demos. Then, we can call the corresponding function by referring to the specific field in the object, just like <code>console.log</code>:</p>
 					<code>demoFuncs.userMsg('Victor', 'I am calling a function!');</code>
 					<p>Knowing how to create functions helps you save your effort in coding repeating processes, and knowing how to link a function to a field of an object helps you understand the nature of <em class="extra">object-oriented programming</em>.</p>
+				</section>
+				<section>
+					<h2 id="interface">Accessing an HTML document</h2>
+					<p>After telling you how object-oriented programming in JS works, I am now able to explain the <em>interface</em> between JS and an HTML document. In JS, we can communicate with our Web browser primarily via the two objects <code>window</code> and <code>document</code>. Evidently, the former refers to the browser window, and the latter to the HTML document currently presented in the browser window. For instance, we can get the <em class="extra">viewport</em> width and height by accessing to the <code>innerWidth</code> and <code>innerHeight</code> property of <code>window</code>:</p>
+					<code>
+						var winWidth = window.innerWidth; // Viewport width in px, numeric value<br/>
+						var winHeight = window.innerHeight;<br/>
+						console.log(winWidth);<br/>
+						console.log(winHeight);
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
