@@ -486,6 +486,17 @@
 						var anotherIdEm = document.getElementById('no6'); // Get <em>one</em> 'no6' id element<br/>
 						anotherIdEm.style.backgroundColor = 'red';
 					</code>
+					<p>What if you need to set <em>multiple</em> CSS properties? Well, you can have one statement for each CSS property, but more easily, you can set them all at once with the <code>cssText</code> property of the <code>style</code> field, in which you put in CSS properties as in the CSS file:</p>
+					<code>
+						var oneMoreIdEm = document.getElementById('no2'); // Get <em>one</em> 'no2' id element<br/>
+						// Set CSS properties one by one<br/>
+						oneMoreIdEm.style.backgroundColor = 'red';<br/>
+						oneMoreIdEm.style.color = 'white';<br/>
+						oneMoreIdEm = document.getElementById('no3'); // Get <em>one</em> 'no3' id element<br/>
+						// Set CSS properties all at once<br/>
+						oneMoreIdEm.style.cssText = 'background-color: green; color: yellow;';
+					</code>
+					<p>You can also set <em>inline style</em> with the function <code>setAttribute()</code> for an element object, as demonstrated on this <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style" target="blank">MDN Web Docs page</a>, but I won't go through it here.</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
