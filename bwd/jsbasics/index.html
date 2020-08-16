@@ -448,8 +448,11 @@
 					<p>Since <code>document</code> allows JS codes to go through the DOM of an HTML document, it is certianly possible for us to retrieve some HTML elements from the DOM, with the functions like <code>getElement<em>s</em>ByTagName</code>, <code>getElement<em>s</em>ByClassName</code>, and <code>getElementById</code>. Note the emphasis put on the plural suffix <em>-s</em> of <em>Element</em> in the first two - It implies that the functions could get <em class="extra">one or more</em> HTML elements from an HTML documents. Let's start with <code>getElementsByTagName</code>, which retrieve all the elements with the same tag name for you:</p>
 					<code>
 						var allDivs = document.getElementsByTagName('div'); // Assign all "div" elements returned as an array to "allDivs"<br/>
-						console.log(allDivs[0]); // Examine the first "div" element as an object in the console tab
+						console.log(allDivs[0]); // Examine the first "div" element as an object in the console tab<br/>
+						var allAudios = document.getElementsByTagName('audio'); // Assign all "audio" elements returned as an array to "allAudios"<br/>
+						console.log(allAudios); // Probably "null" - nothing
 					</code>
+					<p>In the above example, </p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
