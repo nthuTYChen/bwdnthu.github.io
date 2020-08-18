@@ -24,7 +24,7 @@
 			<article>
 				<h1>4. JavaScript Basics</h1>
 				<p>It's an oxymoron - learning how to do computer programming without worrying too much about computer programming.</p>
-				<p><a href="#beforewestart">Before we start...</a> / <a href="#overview">An overview</a> / <a href="#jssyntax">JavaScript syntax, a breakdown</a> / <a href="#variable">Variable</a> / <a href="#arrayobj">Array and object</a> / <a href="#function">Function</a> / <a href="#interface">Accessing an HTML document</a> / <a href="#event">Event and interaction</a> / <a href="#form"> Form and submit / <a href="#loop">Loop</a> / <a href="#ifelse">If...else...</a> / <a href="#forthenextunit">For the next unit...</a></p>
+				<p><a href="#beforewestart">Before we start...</a> / <a href="#overview">An overview</a> / <a href="#jssyntax">JavaScript syntax, a breakdown</a> / <a href="#variable">Variable</a> / <a href="#arrayobj">Array and object</a> / <a href="#function">Function (Method)</a> / <a href="#interface">Accessing an HTML document</a> / <a href="#event">Event and interaction</a> / <a href="#form"> Form and submit / <a href="#loop">Loop</a> / <a href="#ifelse">If...else...</a> / <a href="#forthenextunit">For the next unit...</a></p>
 				<section>
 					<h2 id="beforewestart">Before we start...</h2>
 					<ol>
@@ -320,7 +320,7 @@
 					<p>So from now on, when you see a period <code>.</code> in our JS code, you should know that it means two different things - First, it could indicate a decimal in a <em>numeric</em> value as in <em>3.14159</em>, or alternative, it could indicate a field of an object, as in <code>console.log</code>. We will see both cases a lot in the rest of this course.</p>
 				</section>
 				<section>
-					<h2 id="function">Function</h2>
+					<h2 id="function">Function (Method)</h2>
 					<p>We rely on functions (or something alike) a lot in all kinds of computer programming since sometimes we need to <em>repeat</em> the same process in our program, so we make the process a function and use it whenever necessary without writing the same codes again and again. A JS function can be created with the following syntax:</p>
 					<code>
 						function name () {<br/>
@@ -730,17 +730,42 @@
 							</code>
 						}
 					</code>
-					<p>In this object, you would some fields that includes some crucial information, such as <code>target</code> (the element on which the event is triggered) and <code>path</code> (the nodes passed in the DOM to reach the target). The former <code>target</code> is useful since sometimes multiple elements could be tied to the <em>same</em> listener as in the example above, and you might want to do different things based on different target elements (again, we will get back to this very soon). The latter <code>path</code> is more crucial at this point, because it shows how your Web browser tries to locate the target element - starting with the <em>root node</em>, and then gradually descend to the target node/element. This of course makes sense because if you click on the <code>&lt;button&gt;</code> element in the following structure, it also means you click the <code>&lt;div&gt;</code> as well as its child <code>&lt;p&gt;</code>:</p>
+					<p>In this object, you would some fields that includes some crucial information, such as <code>target</code> (the element on which the event is triggered) and <code>path</code> (the nodes passed in the DOM to reach the target). The former <code>target</code> is useful since sometimes multiple elements could be tied to the <em>same</em> listener as in the example above, and you might want to do different things based on different target elements (again, we will get back to this very soon). The latter <code>path</code> is more crucial at this point, because it shows how your Web browser tries to locate the target element - starting with the <em>root node</em>, and then gradually descend to the target node/element. This of course makes sense because if you click on the <code>&lt;button&gt;</code> element in the following structure, it also means you click the <code>&lt;div&gt;</code> and its child <code>&lt;p&gt;</code>, too:</p>
 					<code>
 						&lt;div&gt;
 						<code>
 							&lt;p&gt;
 							<code>
-								&lt;button&gt;&lt;/button&gt;
+								This is a paragraph.
+								&lt;button&gt;I'm a button&lt;/button&gt;
 							</code>
 							&lt;/p&gt;
 						</code>
 						&lt;/div&gt;
+					</code>
+					<p>Now, supposed that in the above HTML document, both of the <code>&lt;button&gt;</code> element and the <code>&lt;p&gt;</code> element are set to listen to a <code>click</code> event, clicking on the <code>button</code> element will also fire the clicking event of the <code>&lt;p&gt;</code> element. This is called <em class="extra">bubbling</em>, as your Web browser starts with the target element and gradually go back to check every ancestor to see if it listens to the same event (this is an oversimplified fact; see this <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" target="blank">MDN Web Docs page</a>):</p>
+					<code>
+						// You can read this line, right?<br/>
+						document.getElementsByTagName('p')[0].addEventListener('click', function(event) {
+							<code>
+								this.style.backgroundColor = 'red';
+							</code>
+						});<br/>
+						// You can also read this line, right?<br/>
+						document.getElementsByTagName('button')[0].addEventListener('click', function(event) {<br/>
+							<code>
+								alert('Clicked!');
+							</code>
+						});
+					</code>
+					<p>Again, this makes sense because you are clicking on the <code>&lt;button&gt;</code> element inside a <code>&lt;p&gt;</code> element. But most of time you don't want this default behavior - you just want the button to do its own thing. So, you need to stop the event from <em class="extra">propagating</em> with the <code>stopPropagation()</code> function of the <em>event object</em> passed to the listener function:</p>
+					<code>
+						document.getElementsByTagName('button')[0].addEventListener('click', function(event) {<br/>
+							<code>
+								event.stopPropagation(); // Stop the clicking event from bubbling to its ancestor<br/>
+								alert('Clicked!');
+							</code>
+						});
 					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
