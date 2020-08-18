@@ -690,6 +690,24 @@
 						buttons[1].addEventListener('click', changeBg2);<br/>
 						buttons[2].addEventListener('click', changeBg3);
 					</code>
+					<p>We can greatly simplify the above complex solution by adding the same <code>id</code> attributes to the three <code>&lt;div&gt;</code> elements and use the magical <code>this</code> keyword to get the <code>id</code> attribute of the clicked button to change the background color of the target <code>&lt;div&gt;</code> block:</p>
+					<code>
+						&lt;!-- Add the same id attribute to each div --&gt;<br/>
+						&lt;div id="block1" style="width: 5vh; height: ...<br/>
+						&lt;div id="block2" style="width: 5vh; height: ...<br/>
+						&lt;div id="block3" style="width: 5vh; height: ...<br/>
+						...<br/><br/>
+						// Simplified JS codes<br/>
+						var buttons = document.getElementByTagName('button');<br/>
+						function changBg () {<br/>
+							var buttonId = this.id; // Get the id attribute of the clicked button<br/>
+							var target = document.getElementById(buttonId); // Get the target div with the same id<br/>
+							target.style.backgroundColor = 'purple'; // Set a new background color<br/>
+						}<br/>
+						buttons[0].addEventListener('click', changeBg);<br/>
+						buttons[1].addEventListener('click', changeBg);<br/>
+						buttons[2].addEventListener('click', changeBg);
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
