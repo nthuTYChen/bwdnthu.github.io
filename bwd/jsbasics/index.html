@@ -663,6 +663,33 @@
 						div2.addEventListener('mouseenter', newDiv2BgColor);<br/>
 						div2.addEventListener('mouseleave', oldDivBgColor);
 					</code>
+					<p>Building on the previous practices, our next task to create a more common interactive interface - click on a link and change the style of an element accordingly. Let's first create three <code>&lt;div&lt;</code> blocks and three corresponding <code>button</code> elements in an HTML document:</p>
+					<code>
+						&lt;!-- Divs with inline styles --&gt;<br/>
+						&lt;div style="width: 5vh; height: 5vh; background-color: black; color: white;" &gt;Block1&lt;/div&gt;<br/>
+						&lt;div style="width: 5vh; height: 5vh; background-color: red; color: white;" &gt;Block2&lt;/div&gt;<br/>
+						&lt;div style="width: 5vh; height: 5vh; background-color: green; color: white;" &gt;Block1&lt;/div&gt;<br/>
+						&lt;button id="block1"&gt;Change Block1 Background Color&lt;/button&gt;<br/>
+						&lt;button id="block2"&gt;Change Block2 Background Color&lt;/button&gt;<br/>
+						&lt;button id="block3"&gt;Change Block3 Background Color&lt;/button&gt;
+					</code>
+					<p>Apprently, what I want to do here is to click a button and change the background color of the corresponding <code>&lt;div&gt;</code> element to some other color. Before I give you a complex solution (well, just select the section below), could you try yourself and make this happen in your JS file embedded into the webpage (choose your own new background colors)?</p>	
+					<code style="color: #f2f2f2;">
+						var divs = document.getElementByTagName('div');<br/>
+						var buttons = document.getElementByTagName('button');<br/>
+						function changeBg1 () {<br/>
+							divs[0].style.backgroundColor = 'red';<br/>
+						}<br/>
+						function changeBg2 () {<br/>
+							divs[1].style.backgroundColor = 'green';<br/>
+						}<br/>
+						function changeBg3 () {<br/>
+							divs[2].style.backgroundColor = 'black';<br/>
+						}<br/>
+						buttons[0].addEventListener('click', changeBg1);<br/>
+						buttons[1].addEventListener('click', changeBg2);<br/>
+						buttons[2].addEventListener('click', changeBg3);
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
