@@ -674,17 +674,23 @@
 						&lt;button id="block3"&gt;Change Block3 Background Color&lt;/button&gt;
 					</code>
 					<p>Apprently, what I want to do here is to click a button and change the background color of the corresponding <code>&lt;div&gt;</code> element to some other color. Before I give you a complex solution (well, just select the section below), could you try yourself and make this happen in your JS file embedded into the webpage (choose your own new background colors)?</p>	
-					<code style="color: #f2f2f2;">
+					<code style="color: #f2f2f2 !important;">
 						var divs = document.getElementByTagName('div');<br/>
 						var buttons = document.getElementByTagName('button');<br/>
-						function changeBg1 () {<br/>
-							divs[0].style.backgroundColor = 'red';<br/>
+						function changeBg1 () {
+							<code>
+								divs[0].style.backgroundColor = 'red';
+							</code>
 						}<br/>
-						function changeBg2 () {<br/>
-							divs[1].style.backgroundColor = 'green';<br/>
+						function changeBg2 () {
+							<code>
+								divs[1].style.backgroundColor = 'green';
+							</code>
 						}<br/>
-						function changeBg3 () {<br/>
-							divs[2].style.backgroundColor = 'black';<br/>
+						function changeBg3 () {
+							<code>
+								divs[2].style.backgroundColor = 'black';
+							</code>
 						}<br/>
 						buttons[0].addEventListener('click', changeBg1);<br/>
 						buttons[1].addEventListener('click', changeBg2);<br/>
@@ -699,15 +705,18 @@
 						...<br/><br/>
 						// Simplified JS codes<br/>
 						var buttons = document.getElementByTagName('button');<br/>
-						function changBg () {<br/>
-							var buttonId = this.id; // Get the id attribute of the clicked button<br/>
-							var target = document.getElementById(buttonId); // Get the target div with the same id<br/>
-							target.style.backgroundColor = 'purple'; // Set a new background color<br/>
+						function changBg () {
+							<code>
+								var buttonId = this.id; // Get the id attribute of the clicked button<br/>
+								var target = document.getElementById(buttonId); // Get the target div with the same id<br/>
+								target.style.backgroundColor = 'purple'; // Set a new background color
+							</code>
 						}<br/>
 						buttons[0].addEventListener('click', changeBg);<br/>
 						buttons[1].addEventListener('click', changeBg);<br/>
 						buttons[2].addEventListener('click', changeBg);
 					</code>
+					<p>The function of the simplified codes is a bit different, because it could not set a different background color for each <code>&lt;div&gt;</code>, but we will get there eventually. The main point of the above demo is to show how to use the <code>id</code> attribute shared by <code>&lt;div&gt;</code> and <code>&lt;button&gt;</code> to do the trick more easily.</p>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
