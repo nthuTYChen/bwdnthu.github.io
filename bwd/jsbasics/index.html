@@ -718,6 +718,10 @@
 					</code>
 					<p>The function of the simplified codes is a bit different, because it could not set a different background color for each <code>&lt;div&gt;</code>, but we will get there eventually. The main point of the above demo is to show how to use the <code>id</code> attribute shared by <code>&lt;div&gt;</code> and <code>&lt;button&gt;</code> to do the trick more easily.</p>
 					<h3>More on the nature of an event</h3>
+					<picture>
+						<img src="img/bubble.png"/>
+						<sub>Credit: <a href="https://www.flickr.com/photos/paulslab/7031967973/" target="blank">Paul</a></sub>
+					</picture>
 					<p>Every <em>listener function</em> could receive an <code>event</code> object passed from the <em class="extra">event handler</em> that comes with every single detail about the triggered event, and we can examine these details in our Developer Tools console:</p>
 					<code>
 						function changBg (event) { // "event" is just a variable name, so you can change it if you want
@@ -726,7 +730,18 @@
 							</code>
 						}
 					</code>
-					<p>In this object, you would some fields that includes some crucial information, such as <code>target</code> (the element on which the event is triggered) and <code>path</code> (the nodes passed in the DOM to reach the target). The former <code>target</code> is useful since sometimes multiple elements could be tied to the <em>same</em> listener as in the example above, and you might want to do different things based on different target elements (again, we will get back to this very soon). The latter <code>path</code> is more crucial at this point, because it shows how your Web browser tries to locate the target element - starting with the <em>root node</em>, and then gradually descend to the target node/element.</p>
+					<p>In this object, you would some fields that includes some crucial information, such as <code>target</code> (the element on which the event is triggered) and <code>path</code> (the nodes passed in the DOM to reach the target). The former <code>target</code> is useful since sometimes multiple elements could be tied to the <em>same</em> listener as in the example above, and you might want to do different things based on different target elements (again, we will get back to this very soon). The latter <code>path</code> is more crucial at this point, because it shows how your Web browser tries to locate the target element - starting with the <em>root node</em>, and then gradually descend to the target node/element. This of course makes sense because if you click on the <code>&lt;button&gt;</code> element in the following structure, it also means you click the <code>&lt;div&gt;</code> as well as its child <code>&lt;p&gt;</code>:</p>
+					<code>
+						&lt;div&gt;
+						<code>
+							&lt;p&gt;
+							<code>
+								&lt;button&gt;&lt;/button&gt;
+							</code>
+							&lt;/p&gt;
+						</code>
+						&lt;/div&gt;
+					</code>
 				</section>
 				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
 			</article>
