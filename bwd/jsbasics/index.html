@@ -24,7 +24,7 @@
 			<article>
 				<h1>4. JavaScript Basics</h1>
 				<p>It's an oxymoron - learning how to do computer programming without worrying too much about computer programming.</p>
-				<p><a href="#beforewestart">Before we start...</a> / <a href="#overview">An overview</a> / <a href="#jssyntax">JavaScript syntax, a breakdown</a> / <a href="#variable">Variable</a> / <a href="#arrayobj">Array and object</a> / <a href="#function">Function (Method)</a> / <a href="#interface">Accessing an HTML document</a> / <a href="#event">Event and interaction</a> / <a href="#loop">Loop</a> / <a href="#ifelse">If...else...</a> / <a href="#form"> Form, submit, and reset / <a href="#forthenextunit">For the next unit...</a></p>
+				<p><a href="#beforewestart">Before we start...</a> / <a href="#overview">An overview</a> / <a href="#jssyntax">JavaScript syntax, a breakdown</a> / <a href="#variable">Variable</a> / <a href="#arrayobj">Array and object</a> / <a href="#function">Function (Method)</a> / <a href="#interface">Accessing an HTML document</a> / <a href="#event">Event and interaction</a> / <a href="#ifelse">If...else...</a> / <a href="#loop">Loop</a> / <a href="#form"> Form, submit, and reset / <a href="#forthenextunit">For the next unit...</a></p>
 				<section>
 					<h2 id="beforewestart">Before we start...</h2>
 					<ol>
@@ -770,6 +770,10 @@
 					<p>I could imagine that sometimes the default <em>bubbling</em> effect is useful, but more often it creates <em>bugs</em> for newbies, so you need to pay attention to it when adding event listeners to your webpages.</p>
 				</section>
 				<section>
+					<h2 id="ifelse">If...else...</h2>
+					<p></p>
+				</section>
+				<section>
 					<h2 id="loop">Loop</h2>
 					<picture>
 						<img src="img/loop.gif"/ style="width: 20%; height: auto;">
@@ -819,9 +823,29 @@
 							</code>
 						}
 					</code>
-				</section>
-				<section>
-					<h2 id="ifelse">If...else...</h2>
+					<p>As mentioned earlier, we want to style a group of elements in a loop, which requires you to have the following sense:</p>
+					<ul>
+						<li>You will use <code>getElementsByTagName()</code>, <code>getElementsByClass()</code>, or <code>querySelectorAll()</code> to get a group of elements.</li>
+						<li>These elements will be stored in an array return by the aforementioned functions.</li>
+						<li>You loop through this array and style each element until the end of this array (your loop condition).</li>
+					</ul>
+					<p>Let's now have three <code>&lt;div&gt;</code> siblings, and use a <code>&lt;button&gt;</code> element that listen to a <code>click</code> event to style all three elements:</p>
+					<code>
+						var button = document.getElementsByTagName('button')[0]; // Get one and the only 'button' element<br/>
+						button.addEventListener('click', function()) {
+							<code>
+								var divs = document.getElementsByTagName('div'); // Get all 'div' elements returned as an array<br/>
+								var divNum = divs.length; // Get the number of data entries in the 'divs' array
+								// Counter starts with zero, increases by 1 at the end, loop stops when i === divNum
+								for(var i = 0 ; i < divNum ; i++) {
+									<code>
+										var div = divs[i]; // Get the target div by the index number
+										div.style.backgroundColor = 'red'; // Style it
+									</code>
+								}
+							</code>
+						};
+					</code>
 					<p></p>
 				</section>
 				<section>
