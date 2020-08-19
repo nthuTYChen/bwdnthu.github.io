@@ -847,6 +847,25 @@
 						};
 					</code>
 					<p>In the above example, we usually name the counter variable something like <code>i</code> since it represents the <em>index</em> number in an array, and it starts with <em>0</em> because it represents the first data entry in an array. Since we need to loop through the end of the array, we need to know how many data entries there are in the array, which can be obtained with the <code>length</code> property of an array object. In the condition, we need the operator <code>&lt;</code> rather than <code>=</code> since the index of the last data entry in an array is always <em>arrary length minus 1</em>.</p>
+					<p>If we include <code>if...else...</code> statements in a <code>for</code> loop, it will be possible to make our styling function more flexible to deal with subgroups of elements in the <em>same</em>. For example, perhaps we don't want to change the background color of the second <code>&lt;div&gt;</code> element of the three <code>&lt;div&gt;</code> elements we had above, so we add an <code>id</code> attribute to it with a value <code>nostyle</code>:</p>
+					<code>
+						&lt;div id="nostyle"&gt;Div 2&lt;/div&gt;
+					</code>
+					<p>Then, we would use the <code>if</code> statement to style a <code>&lt;div&gt;</code> element only when it's <code>id</code> attribute is not <code>nostyle</code>:</p>
+					<code>
+						...<br/>
+						for(var i = 0 ; i < divNum ; i++) {
+							<code>
+								var div = divs[i]; // Get the target div by the index number<br/>
+								if(div.id !== 'nostyle') { // Style the element only when the id attribute is not "nostyle"
+									<code>
+										div.style.backgroundColor = 'red';
+									</code>
+								}
+							</code>
+						}<br/>
+						...
+					</code>
 				</section>
 				<section>
 					<h2 id="form">Form, submit, and reset</h2>
