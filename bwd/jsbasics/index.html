@@ -867,7 +867,32 @@
 						...
 					</code>
 					<h3>Hit the "break"</h3>
-					<p>Sometimes you just need to loop through an array of elements to search for a very specific element. If you get lucky, you would find it in the first position of an array, in the very first loop in <code>for</code>. Then, you don't need to run the rest of the <code>for</code> loop, and you want to use the keyword <code>break</code> to discontinue the <code>for loop</code>. In a nutshell, we need an <code>if...else...</code> statement for a condition that is met when a specific element is found, </p>
+					<p>Sometimes you just need to loop through an array of elements to search for a very specific element. If you get lucky, you would find it in the first position of an array, in the very first loop in <code>for</code>. Then, you don't need to run the rest of the <code>for</code> loop, and you want to use the keyword <code>break</code> to discontinue the <code>for loop</code>. In a nutshell, we need an <code>if...else...</code> statement for a condition that is met when a specific element is found, and some statements to style this element and discontinue the loop afterwards. Let's start with our HTML part, in which we have three <code>&lt;div&gt;</code> elements specified with a distinct <code>id</code> value and a <code>&lt;button&gt;</code> element specified with one of the three <code>id</code> values:</p>
+					<code>
+						&lt;div id="div1"&gt;Div 1&lt;/div&gt;<br/>
+						&lt;div id="div2"&gt;Div 2&lt;/div&gt;<br/>
+						&lt;div id="div3"&gt;Div 3&lt;/div&gt;<br/>
+						&lt;button id="div2"&gt;Style Div 2&lt;/button&gt;
+					</code>
+					<p>Now, let's add an event listener to the <code>&lt;button&gt;</code> element for a <em>clicking</em> event, and we get the <code>id</code> of the <code>&lt;button&gt;</code> element, search for the <code>&lt;div&gt;</code> element with the same <code>id</code>, style it, and discontinue the loop:</p>
+					<code>
+						...<br/>
+						var buttonId = this.id; // Get the id of the clicked button
+						for(var i = 0 ; i < divNum ; i++) {
+							<code>
+								var div = divs[i]; // Get the target div by the index number<br/>
+								if(div.id === buttonId) { // Style the element only when there's a match in id
+									<code>
+										div.style.backgroundColor = 'red';<br/>
+										console.log(i); // Print out the counter<br/>
+										break; // Discontinue the loop
+									</code>
+								}
+							</code>
+						}<br/>
+						...
+					</code>
+					<p>The Web browser in your modern computer won't be overwhelmed by a simple loop even if it is unnecesary to complete it. But our goal is always to create an efficient program that saves as much computation resources as possible. When your program grows further, every redundancy would matter. Speaking of efficient, there's in fact an even much simpler solution using <code>querySelector()</code>, but I'll leave this to you, since my point is to demonstrate the use of <code>break</code> in the <code>for</code> loop.</p>
 				</section>
 				<section>
 					<h2 id="form">Form, submit, and reset</h2>
