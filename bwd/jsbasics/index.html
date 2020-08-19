@@ -893,6 +893,50 @@
 						...
 					</code>
 					<p>The Web browser in your modern computer won't be overwhelmed by a simple loop even if it is unnecesary to complete it. But our goal is always to create an efficient program that saves as much computation resources as possible. When your program grows further, every redundancy would matter. Speaking of efficient, there's in fact an even much simpler solution using <code>querySelector()</code>, but I'll leave this to you, since my point is to demonstrate the use of <code>break</code> in the <code>for</code> loop.</p>
+					<p>A <code>for</code> loop can also be used to iterate through an object, mostly for retrieving the keys of the object:</p>
+					<code>
+						var div = document.getElementsByTagName('div')[0]; // The first div element of the document<br/>
+						for(var key in div) { // Declare a variable "key" for each key string of the object in each iteration
+							<code>
+								console.log(key); // Print the key<br/>
+								console.log(div[key]); // Print the value of each field
+							</code>
+						}
+					</code>
+					<h3>do...while...</h3>
+					<picture>
+						<img src="daruma.gif"/>
+					</picture>
+					<p>Another type of loop in JS can be created with the <code>do...while...</code> statement, which could simply be interpreted as <q>do something while the condition is met</q>:</p>
+					<code>
+						do {
+							<code>
+								// Some statements executed when the condition is met
+							</code>
+						}<br/>
+						while(condition);
+					</code>
+					<p>The idea is similar to the <code>for</code> loop - as long as the condition is met (=<code>true</code>), the same statement(s) will be repeated over and over, and of course we can also use <code>break</code> to discontinue the loop manually. Let me translate the previous <code>for</code> loop that attempts to identify a <code>&lt;div&gt;</code> element with a specific <code>id</code> attribute into a <code>do...while...</code> loop:</p>
+					<code>
+						...<br/>
+						var buttonId = this.id; // Get the id of the clicked button<br/>
+						var i = 0; // Declare a counter variable<br/>
+						do {
+							<code>
+								var div = divs[i]; // Get the target div by the index number<br/>
+								if(div.id === buttonId) { // Style the element only when there's a match in id
+									<code>
+										div.style.backgroundColor = 'red';<br/>
+										console.log(i); // Print out the counter<br/>
+										break; // Discontinue the loop
+									</code>
+								}
+							</code>
+							i++; // Increase the counter by 1<br/>
+						}<br/>
+						while(i < divs.length);
+					</code>
+					<p>There is one thing worthnoting here. The counter variable <code>i</code> is declared outside the loop, so its value can be accessed by other parts of your JS codes in the same file, which could lead to some potential bugs. One possible solution is to avoid using counter in <code>do...while...</code> to iterate through an array. Instead, we can </p>
 				</section>
 				<section>
 					<h2 id="form">Form, submit, and reset</h2>
