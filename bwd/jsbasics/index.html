@@ -945,8 +945,23 @@
 					</code>
 					<p>Every time you drop an entry from an array object, its <code>length</code> field decreases by 1. So when there is no more entry in the array object, its <code>length</code> field would be <em>0</em>, and that's when the iteration through the array object should be over. Taken altogether, the <code>for</code> loop can be translated into a <code>do...while...</code> loop without a counter is as follows:</p>
 					<code>
-						
+						...<br/>
+						var buttonId = this.id; // Get the id of the clicked button<br/>
+						do {
+							<code>
+								var div = divs[0]; // Always get the first div in the array<br/>
+								if(div.id === buttonId) { // Style the element only when there's a match in id
+									<code>
+										div.style.backgroundColor = 'red';<br/>
+										break; // Discontinue the loop
+									</code>
+								}<br/>
+								divs.splice(0, 1); // Drop the first div object in the array 
+							</code>
+						}<br/>
+						while(divs.length > 0); // Repeat when there's at least one data entry in the array object
 					</code>
+					<p>So, <code>for</code> loop or <code>do...while...</code> loop? I mostly use the former, because its syntax is pretty straightforward, and it's useful when you need to iterate through an object. Some might also have the question about which one is <em>computationally</em> more efficient. I have a vague memory that <code>do...while...</code> is faster than <code>for</code>, everything else being equal. But after googling information a bit, the performacne seems to vary across Web browsers. So do you own research, and choose the one the works most efficiently for most of your users. It's always like this in the world of computer programming.</p>
 				</section>
 				<section>
 					<h2 id="form">Form, submit, and reset</h2>
