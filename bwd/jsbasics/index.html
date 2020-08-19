@@ -348,9 +348,9 @@
 					</code>
 					<p>To avoid the above complication, I usually use just go with the <em class="extra">hoisting approach</em>.</p>
 					<h3>Data transmitted between functions and their calls</h3>
-					<p>Just like <code>console.log</code>, we can create a function that receives data from its calls and do something with that data. In our first example, we create a function that can send whatever message it receives, make some changes, and put it into a pop-up message box:</p>
+					<p>Just like <code>console.log</code>, we can create a function that receives data as its <em class="extra">parameter(s)</em> from its calls and do something with that data. In our first example, we create a function that can send whatever message it receives, make some changes, and put it into a pop-up message box:</p>
 					<code>
-						function popupMsg (msg) {
+						function popupMsg (msg) { // "msg" is the parameter of popMsg()
 						<code>
 							var finalMsg = 'Site message: ' + msg; // Make some twist<br/>
 							alert(finalMsg);
@@ -930,13 +930,20 @@
 										console.log(i); // Print out the counter<br/>
 										break; // Discontinue the loop
 									</code>
-								}
+								}<br/>
+								i++; // Increase the counter by 1
 							</code>
-							i++; // Increase the counter by 1<br/>
 						}<br/>
 						while(i < divs.length);
 					</code>
-					<p>There is one thing worthnoting here. The counter variable <code>i</code> is declared outside the loop, so its value can be accessed by other parts of your JS codes in the same file, which could lead to some potential bugs. One possible solution is to avoid using counter in <code>do...while...</code> to iterate through an array. Instead, we can </p>
+					<p>There is one thing worthnoting here. The counter variable <code>i</code> is declared outside the loop, so its value can be accessed by other parts of your JS codes in the same file, which could lead to some potential bugs. One possible solution is to avoid using counter in <code>do...while...</code> to iterate through an array. Instead, we can always check the first entry of an array, and get rid of it from the array if there's no match, and the second entry would "drop" to the first place, just like the animation above demonstrating the Japanese game <em>Daruma Otoshi</em>. This way, we can always just check the first entry without the need for a counter, until all the entries are dropped or a <code>break</code> statement is executed. First, we will need the <code>splice()</code> function of an array object, which requires two parameters - index (where to start dropping data entries) and number (how many data entries to be dropped):</p>
+					<code>Array.splice(index, number)</code>
+					<p>The following examples give you some overview about how it is used:</p>
+					<code>
+						Array.splice(0, 1); // Start from the first position and drop one entry (drop the first entry)<br/>
+						Array.splice(2, 3); // Start from the third position and drop three entries (drop 4th, 5th, and 6th entries)
+					</code>
+					<p></p>
 				</section>
 				<section>
 					<h2 id="form">Form, submit, and reset</h2>
