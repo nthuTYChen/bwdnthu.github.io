@@ -905,7 +905,7 @@
 					</code>
 					<h3>do...while...</h3>
 					<picture>
-						<img src="daruma.gif"/>
+						<img src="img/daruma.gif"/>
 					</picture>
 					<p>Another type of loop in JS can be created with the <code>do...while...</code> statement, which could simply be interpreted as <q>do something while the condition is met</q>:</p>
 					<code>
@@ -943,7 +943,10 @@
 						Array.splice(0, 1); // Start from the first position and drop one entry (drop the first entry)<br/>
 						Array.splice(2, 3); // Start from the third position and drop three entries (drop 4th, 5th, and 6th entries)
 					</code>
-					<p></p>
+					<p>Every time you drop an entry from an array object, its <code>length</code> field decreases by 1. So when there is no more entry in the array object, its <code>length</code> field would be <em>0</em>, and that's when the iteration through the array object should be over. Taken altogether, the <code>for</code> loop can be translated into a <code>do...while...</code> loop without a counter is as follows:</p>
+					<code>
+						
+					</code>
 				</section>
 				<section>
 					<h2 id="form">Form, submit, and reset</h2>
