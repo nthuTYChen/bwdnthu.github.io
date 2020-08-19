@@ -783,6 +783,42 @@
 							</code>
 						}
 					</code>
+					<p>The <code>for</code> loop includes three core statements separated with a <em class="extra">semi-colon</em> <code>;</code> (you can surely guess why this is the case...?). In the first statement, you can create a variable that is only accessible in this loop, such as <code>var i=0</code>. This variable often functions as a <em>counter</em> in this loop (1st loop, 2nd loop, 3rd loop, etc.). The second statement is a <em class="extra">condition</em> that we have seen in the previous section, which determines whether a loop should continue (when the condition is <code>true</code>) or not (when the condition is <code>false</code>). For instance, with the condition <code>i < 10</code>, the loop would continue until the variable <code>i</code> is assigned a value larger than 10. Finally, the last statement will be executed at the end of the loop, which is usually used to updated the <em>counter variable</em> declared in the first statement, such as <code>i++</code> (<code>i</code> increases by 1) or <code>i--</code> (<code>i</code> decreases by 1). By this point you probably can see how a <code>for</code> loop works - define a counter, set a condition involving the counter, and update the counter until the condition is no longer <code>true</code>, as in the following example:</p>
+					<code>
+						// A loop that is repeated 10 times<br/>
+						for(var i = 0 ; i < 10 ; i++) {
+							<code>
+								console.log(i); // Print the value of the counter
+							</code>
+						}
+					</code>
+					<p>The most common bug in coding a JS loop is to create an <em>infinite loop</em>, usually by accident. That is, the loop condition in never <code>false</code>, so a loop never stops. Here are two possible examples:</p>
+					<code>
+						// The counter never reaches the threshold<br/>
+						for(var i = 0 ; i < 10 ; i--) {
+							<code>
+								console.log(i);
+							</code>
+						}
+					</code>
+					<code>
+						// The condition involves a wrong variable<br/>
+						var j = 0;<br/>
+						for(var i = 0 ; j < 10 ; i++) {
+							<code>
+								console.log(i);
+							</code>
+						};
+					</code>
+					<p>Alternatively, your loop could never start since the condition is <code>false</code> right at the beginning:</p>
+					<code>
+						// The condition is never met<br/>
+						for(var i=0 ; i > 10 ; i++) {
+							<code>
+								console.log(i);
+							</code>
+						}
+					</code>
 				</section>
 				<section>
 					<h2 id="ifelse">If...else...</h2>
