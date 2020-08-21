@@ -831,6 +831,26 @@
 						buttons[1].addEventListener('click', changeBg);<br/>
 						buttons[2].addEventListener('click', changeBg);
 					</code>
+					<p>As mentioned earlier, the <code>else</code> part in the <code>if...else...</code> statement is <em>optional</em>, so in the above example we only make it clear what to do when the condition <code>buttonId === 'block1'</code> is <code>true</code>. Next, we add the <code>else</code> part to specify the background color for a corresponding <code>&lt;div&gt;</code> element when the <code>id</code> is <em>not</em> <code>block1</code>:</p>
+					<code>
+						...<br/>
+						function changBg () {
+							<code>
+								var buttonId = this.id; // Get the id attribute of the clicked button<br/>
+								var target = document.getElementById(buttonId); // Get the target div with the same id<br/>
+								if(buttonId === 'block1') { // Change the background color only for a specific div
+									<code>
+										target.style.backgroundColor = 'purple';
+									</code>
+								}
+								else { // If buttonId is not block1, change the background color to 'yellow'
+									<code>
+										target.style.backgroundColor = 'yellow';
+									</code>
+								}
+							</code>
+						}<br/>
+					</code>
 				</section>
 				<section>
 					<h2 id="loop">Loop</h2>
