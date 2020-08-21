@@ -879,6 +879,46 @@
 						...
 					</code>
 					<p>In the above example, I tested all the conditions one by one until one of them is <code>true</code>, or do everything in the <code>else</code> block when none of them is <code>true</code>. Since I only have three elements that require a different background color, I don't need to add another condition when the first two are not <code>true</code> - the <code>else</code> part itself represents the third and the only possible choice - <code>block3</code>.</p>
+					<h3>!!!!!!!!!!!!</h3>
+					<p><q>What the heck is this subheading?</q> You might ask. In this section, I've shown to you that the exclamation mark <code>!</code> means <em class="extra">not</em> in a comparison. But there is also another role it plays in a condition. When you put a <code>!</code> immediately before the name of a variable, the result is a <em>boolean</em> value that tells you if the variable is a <code>null</code> or an <code>undefined</code> variable:</p>
+					<code>
+						var valueVar = 5, nullVar = null;<br/>
+						console.log(!valueVar); // You get a 'false'<br/>
+						console.log(valueVar); // You get a 'true' (do you know why?<br/>
+						console.log(!nullVar); // You get a 'true'<br/>
+						console.log(nullVar); // You get a 'false' (do you know why?)
+					</code>
+					<p>How is this useful in styling? Well, when you use functions like <code>querySelector()</code> or <code>querySelectorAll()</code> to retrieve HTML elements, there's no guarantee that you will get any. If there's no HTML element that meets your criteria, these functions would <em>return</em> a <code>null</code> value, which literally just means...<em>nothing</em>. If this is the case, then you don't need to do any action related to styling and HTML element. For example, let's add a fourth button with a weird <code>id</code> attribute in the earlier example, and we link it to the same listener function:</p>
+					<code>
+						...<br/>
+						&lt;button id="iamweird"&gt;I'm weird&lt;/button&gt;
+					</code>
+					<code>
+						...<br/>
+						buttons[3].addEventListener('click', changeBg);
+					</code>
+					<p>Now, we know that if you click on this button, you JS code won't be able to find a <code>&lt;div&gt;</code> with the button's <code>id</code>. The <code>target</code> variable will thus be assigned a <code>null</code> value returned from <code>getElementById()</code>. Therefore, we can add a new <code>if...else...</code> after this line to judge if the variable <code>target</code> has a null value, and style the target element if it's not:</p>
+					<code>
+						...<br/>
+						function changBg () {
+							<code>
+								var buttonId = this.id; // Get the id attribute of the clicked button<br/>
+								var target = document.getElementById(buttonId); // Get the target div with the same id<br/>
+								if(!target) {
+									<code>
+										// Show a pop-up message if no element is found<br/>
+										alert('No such element: ' + buttonId);
+									</code>
+								}<br/>
+								else {
+									<code>
+										// The old if...else... statement for styling divs
+									</code>
+								}
+							</code>
+						}<br/>
+						...
+					</code>
 				</section>
 				<section>
 					<h2 id="loop">Loop</h2>
