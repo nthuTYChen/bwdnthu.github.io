@@ -804,6 +804,33 @@
 						console.log('5' === 5); // You get a "false"
 					</code>
 					<p>In the first comparison, you get a <code>true</code> value when a character 5 is compared to a numerical 5 using <code>==</code> - since the two values are compared with no regard to their data type, <em>automatical type conversion</em> applies to make the two values equivalent to each other. By contrast, when the same values are compared using <code>===</code>, the type conversion does not apply, and the result is a <code>false</code> since they are of different data types. In other words, comparisons using <code>===</code> are more conservative than those using <code>==</code>. I personally always choose the more conservative option since it lowers the risk of having <em>bugs</em> in your codes. If I need to convert strings into numerical values, I would do it myself manually using the <code>Number()</code> or <code>parseInt()</code> function.</p>
+					<p>Now back to our <code>if...else...</code> statements. We use the previous example with three <code>&lt;div&gt;</code> elements, and three corresponding <code>&lt;button&gt;</code> elements sharing the same <code>id</code> attribute with the <code>&lt;div&gt;</code> elements:</p>
+					<code>
+						&lt;div id="block1" style="width: 5vh; height: ...<br/>
+						&lt;div id="block2" style="width: 5vh; height: ...<br/>
+						&lt;div id="block3" style="width: 5vh; height: ...<br/>
+						&lt;button id="block1"&gt;Change Block 1&lt;/button&gt;<br/>
+						&lt;button id="block2"&gt;Change Block 2&lt;/button&gt;<br/>
+						&lt;button id="block3"&gt;Change Block 3&lt;/button&gt;
+					</code>
+					<p>We would associate all three <code>&lt;button&gt;</code> elements to the same listener function for an clicking event, but only when the <code>id</code> attribute is <code>block1</code>, the corresponding <code>&lt;div&gt;</code> element would have a new background color:</p>
+					<code>
+						var buttons = document.getElementByTagName('button');<br/>
+						function changBg () {
+							<code>
+								var buttonId = this.id; // Get the id attribute of the clicked button<br/>
+								var target = document.getElementById(buttonId); // Get the target div with the same id<br/>
+								if(buttonId === 'block1') { // Change the background color only for a specific div
+									<code>
+										target.style.backgroundColor = 'purple';
+									</code>
+								}
+							</code>
+						}<br/>
+						buttons[0].addEventListener('click', changeBg);<br/>
+						buttons[1].addEventListener('click', changeBg);<br/>
+						buttons[2].addEventListener('click', changeBg);
+					</code>
 				</section>
 				<section>
 					<h2 id="loop">Loop</h2>
