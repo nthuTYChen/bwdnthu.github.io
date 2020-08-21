@@ -798,7 +798,12 @@
 						<li><code>A === B</code> - A is equivalent to B in terms of both value and data type</li>
 						<li><code>A !== B</code> - A is not equivalent to B in terms of both value and data type</li>
 					</ul>
-					<p>The first four comparisons should be rather understandable, so let's put our focus on the last four comparing the equivalence of two values. In addition to the use of <code>!</code> to represent <em class="extra">not</em> in a condition, the major difference lies in whether an extra equal sign <code>=</code> is used to compare values by taking their data type into consideration.</p>
+					<p>The first four comparisons should be rather understandable, so let's put our focus on the last four comparing the equivalence of two values. In addition to the use of <code>!</code> to represent <em class="extra">not</em> in a condition, the major difference lies in whether an extra equal sign <code>=</code> is used to compare values by taking their data type into consideration. The difference matters the most in cases where numerical values and digit <em>characters</em> are compared as in the following two lines:</p>
+					<code>
+						console.log('5' == 5); // You get a "true"<br/>
+						console.log('5' === 5); // You get a "false"
+					</code>
+					<p>In the first comparison, you get a <code>true</code> value when a character 5 is compared to a numerical 5 using <code>==</code> - since the two values are compared with no regard to their data type, <em>automatical type conversion</em> applies to make the two values equivalent to each other. By contrast, when the same values are compared using <code>===</code>, the type conversion does not apply, and the result is a <code>false</code> since they are of different data types. In other words, comparisons using <code>===</code> are more conservative than those using <code>==</code>. I personally always choose the more conservative option since it lowers the risk of having <em>bugs</em> in your codes. If I need to convert strings into numerical values, I would do it myself manually using the <code>Number()</code> or <code>parseInt()</code> function.</p>
 				</section>
 				<section>
 					<h2 id="loop">Loop</h2>
