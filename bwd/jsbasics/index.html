@@ -775,7 +775,19 @@
 						<img src="img/ifelse.png"/>
 						<sub>Credit: <a href="https://www.flickr.com/photos/red11group/4869913259/" target="blank">Jocelyn Wallace</a></sub>
 					</picture>
-					<p>To have your JS codes interacting with the HTML interface in the previous sections, you need to write complex codes, such as creating separate listener functions that are essentially similar.</p>
+					<p>To have your JS codes interacting with the HTML interface in the previous sections, you need to write complex codes, such as creating separate listener functions that are essentially similar. For instance, if you need to have a different background color for <code>&lt;div&gt;</code> and <code>&lt;p&gt;</code> <em>respectively</em> after clicking on a different button, then you need two listener functions in which the JS code specifies a different background color. But why can't we have just one listener function in which the JS code gives an element a different background color dependending on which element it is? Of course we can, if we use the <code>if...else...</code> statement in our JS code:</p>
+					<code>
+						if(condition) {
+							<code>
+								// Statements executed when the condition is met
+							</code>
+						} else { // the "else" part is optional
+							<code>
+								// Statements executed when the condition is not met
+							</code>
+						}
+					</code>
+					<p>With the above syntax, our JS codes would tell a Web browser to execute a code block when a condition is met, or the other code block when it is not met. Before we break this down, we need to know one more data type in addition to number, string, array, and object, that is, a <em class="extra">boolean</em> value. A <em>boolean</em> value could be either <code>true</code> or <code>false</code>, and there's nothing in between.</p>
 				</section>
 				<section>
 					<h2 id="loop">Loop</h2>
