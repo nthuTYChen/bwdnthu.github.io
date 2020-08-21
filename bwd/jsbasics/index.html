@@ -850,7 +850,35 @@
 								}
 							</code>
 						}<br/>
+						...
 					</code>
+					<p>But maybe you actually want to style every single <code>&lt;div&gt;</code> element with a different color depending on which button is clicked. In this case, you could choose to add another <code>if</code> condition after <code>else</code> for another comparison if the result of the previous comparison is <code>false</code>:</p>
+					<code>
+						...<br/>
+						function changBg () {
+							<code>
+								var buttonId = this.id; // Get the id attribute of the clicked button<br/>
+								var target = document.getElementById(buttonId); // Get the target div with the same id<br/>
+								if(buttonId === 'block1') { // Change the background color only for a specific div
+									<code>
+										target.style.backgroundColor = 'purple';
+									</code>
+								}
+								else if(buttonId === 'block2') { // When the previous condition is 'false', check another condition
+									<code>
+										target.style.backgroundColor = 'yellow';
+									</code>
+								}<br/>
+								else { // Use another background color if all previous conditions are 'false'
+									<code>
+										target.style.backgroundColor = 'grey';
+									</code>
+								}
+							</code>
+						}<br/>
+						...
+					</code>
+					<p>In the above example, I tested all the conditions one by one until one of them is <code>true</code>, or do everything in the <code>else</code> block when none of them is <code>true</code>. Since I only have three elements that require a different background color, I don't need to add another condition when the first two are not <code>true</code> - the <code>else</code> part itself represents the third and the only possible choice - <code>block3</code>.</p>
 				</section>
 				<section>
 					<h2 id="loop">Loop</h2>
