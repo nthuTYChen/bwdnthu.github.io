@@ -1170,6 +1170,17 @@
 						inputEm.addEventListener('keypress', styleEm);
 					</code>
 					<p>This function currently can style all elements that are found to have the target tag, but it cannot <em>reset</em> the style if a new target tag is obtained. I want you to make this possible by modifying the JS codes in the above (<em>Hint:</em> You need to restore the default style of the current target tag before using a new target tag to style the other set of elements).</p>
+					<p>Now we can try to demonstrate the full function of a <code>&lt;form&gt;</code> element by including the <code>text</code> field and a <code>submit</code> and <code>reset</code> button in it:</p>
+					<code>
+						&lt;form&gt;
+						<code>
+							&lt;input type="text" id="styleTag" placeholder="enter a tag name..." /&gt;<br/>
+							&lt;input type="submit" id="submitTag" value="Submit" /&gt;<br/>
+							&lt;input type="reset" id="resetTag" value="Reset" /&gt;
+						</code>
+						&lt;/form&gt;
+					</code>
+					<p>For the <code>submit</code> and <code>reset</code> types of the <code>&lt;input&gt;</code> element, the attribute <code>value</code> determines their texts. Now, if we type some texts in the <code>text</code> field, and hit the <code>reset</code> button, the texts will be cleared completely. </p>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
