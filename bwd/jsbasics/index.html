@@ -928,7 +928,15 @@
 							</code>
 						}
 					</code>
-					<p>In the above example, the result is <code>true</code> if one of the conditions is <code>true</code>.</p>
+					<p>In the above example, the result is <code>true</code> if one of the conditions is <code>true</code>. Alternatively, we can check if we have successfully retrieved a target element <em>and</em> whether the element has a specific <code>id</code> attribute with the logical operator <code>&&</code> in the same <code>if...else...</code> statement:</p>
+					<code>
+						if(target && buttonId === 'block3') { // Conditions combined with the AND operator
+							<code>
+								// Style the background
+							</code>
+						}
+					</code>
+					<p>In the above example, the result is <code>true</code> only when both conditions are <code>true</code> - The variable is neither <code>null</code> nor <code>undefined</code>, and the element <code>id</code> is <code>block3</code>. In JS, it is almost impossible to make things happen easily without <code>if...else...</code> statements, and I believe you will find it useful very soon.</p>
 				</section>
 				<section>
 					<h2 id="loop">Loop</h2>
