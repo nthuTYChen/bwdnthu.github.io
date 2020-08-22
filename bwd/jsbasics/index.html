@@ -880,7 +880,7 @@
 					</code>
 					<p>In the above example, I tested all the conditions one by one until one of them is <code>true</code>, or do everything in the <code>else</code> block when none of them is <code>true</code>. Since I only have three elements that require a different background color, I don't need to add another condition when the first two are not <code>true</code> - the <code>else</code> part itself represents the third and the only possible choice - <code>block3</code>.</p>
 					<h3>!!!!!!!!!!!!</h3>
-					<p><q>What the heck is this subheading?</q> You might ask. In this section, I've shown to you that the exclamation mark <code>!</code> means <em class="extra">not</em> in a comparison. But there is also another role it plays in a condition. When you put a <code>!</code> immediately before the name of a variable, the result is a <em>boolean</em> value that tells you if the variable is a <code>null</code> or an <code>undefined</code> variable:</p>
+					<p><q>What the heck is this subheading?</q> You might ask. In this section, I've shown to you that the exclamation mark <code>!</code> means <em class="extra">not</em> in a comparison. But there is also another role it plays in a condition. When you put a <code>!</code> immediately before the name of a variable, the result is a <em>boolean</em> value that tells you if the variable is <code>null</code>, <code>undefined</code>, <code>0</code>, <code>NaN</code> (Not a Number), or <code>''</code> (empty string):</p>
 					<code>
 						var valueVar = 5, nullVar = null;<br/>
 						console.log(!valueVar); // You get a 'false'<br/>
@@ -919,6 +919,8 @@
 						}<br/>
 						...
 					</code>
+					<h3>Logical operators AND and OR</h3>
+					<p>Sometimes in an <code>if...else...</code> statement, you want to have an action executed when <em>one</em> or <em>all</em> of the conditions are <code>true</code>, and you need the logical operators <code>||</code> (OR) and <code>&&</code> (AND) to do this job for you. </p>
 				</section>
 				<section>
 					<h2 id="loop">Loop</h2>
