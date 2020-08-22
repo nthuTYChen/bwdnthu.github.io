@@ -1139,6 +1139,36 @@
 						<li><code>submit</code> - A button used to submit the data of a <code>&lt;form&gt;</code></li>
 						<li><code>reset</code> - A butto used to reset all fields in a <code>&lt;form&gt;</code></li>
 					</ul>
+					<p>We can try the <code>text</code> type and style HTML elements by their tag name input into the <code>text</code> field. Let's create three <code>&lt;div&gt;</code> elements and three <code>&lt;p&gt;</code> elements with one <code>&lt;input&gt;</code> element:</p>
+					<code>
+						&lt;div&gt;Div1&lt;/div&gt;<br/>
+						&lt;div&gt;Div2&lt;/div&gt;<br/>
+						&lt;div&gt;Div3&lt;/div&gt;<br/>
+						&lt;p&gt;P1&lt;/p&gt;<br/>
+						&lt;p&gt;P2&lt;/p&gt;<br/>
+						&lt;p&gt;P3&lt;/p&gt;<br/>
+						&lt;input type="text" id="styleTag" placeholder="enter a tag name..." /&gt;
+					</code>
+					<p>In the <code>&lt;input&gt;</code> element, I add a <code>placeholder</code> attribute, whose value would fill in the field before we type anything in it and thus provides a useful hint. Now we need some JS codes to capture the <code>keypress</code> event of the <code>&lt;input&gt;</code> element, and try to style all the elements of a tag name in the <code>&lt;input&gt;</code> element every time we type something in it:</p>
+					<code>
+						var inputEm = document.getElementById('styleTag'); // Get the 'input' element<br/>
+						var targetTag; // The value of the 'targetTag' variable will be retrieved from the 'input' field<br/>
+						function styleEm () { // The listener function that styles all found elements
+							<code>
+								targetTag = inputEm.value; // The value of 'targetTag' is the texts from the 'styleTag' input field<br/>
+								var Ems = document.getElementsByTagName(targetTag); // Get all elements by 'targetTag'<br/>
+								// You can check whether 'Ems' is 'null' or not if you want, but I skip it here<br/>
+								for(var i=0 ; i < Ems.length ; i ++) { // Iterate through the element array
+									<code>
+										var currentEm = Ems[i]; <br/>
+										currentEm.style.backgroundColor = 'red'; // Style every single selected element
+									</code>
+								}
+							</code>
+						}<br/>
+						// Every time you press a key in the 'styleTag' element, the listener function is activated<br/>
+						inputEm.addEventListener('keypress', styleEm);
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
