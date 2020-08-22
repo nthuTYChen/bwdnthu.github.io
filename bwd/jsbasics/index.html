@@ -920,7 +920,15 @@
 						...
 					</code>
 					<h3>Logical operators AND and OR</h3>
-					<p>Sometimes in an <code>if...else...</code> statement, you want to have an action executed when <em>one</em> or <em>all</em> of the conditions are <code>true</code>, and you need the logical operators <code>||</code> (OR) and <code>&&</code> (AND) to do this job for you. </p>
+					<p>Sometimes in an <code>if...else...</code> statement, you want to have an action executed when <em>one</em> or <em>all</em> of the conditions are <code>true</code>, and you need the logical operators <code>||</code> (OR) and <code>&&</code> (AND) to do this job for you. For instance, in our ealier example, if you need to change the background color when the <code>id</code> of a <code>&lt;div&gt;</code> element is <code>block1</code> <em>or</em> <code>block3</code>, then you can have the following conditions combined using the logical operator <code>||</code> in the <code>if...else...</code> statement:</p>
+					<code>
+						if(buttonId === 'block1' || buttonId === 'block3') { // Conditions combined with the OR operator
+							<code>
+								// Style the background
+							</code>
+						}
+					</code>
+					<p>In the above example, the result is <code>true</code> if one of the conditions is <code>true</code>.</p>
 				</section>
 				<section>
 					<h2 id="loop">Loop</h2>
