@@ -1157,7 +1157,7 @@
 							<code>
 								targetTag = inputEm.value; // The value of 'targetTag' is the texts from the 'styleTag' input field<br/>
 								var Ems = document.getElementsByTagName(targetTag); // Get all elements by 'targetTag'<br/>
-								// You can check whether 'Ems' is 'null' or not if you want, but I skip it here<br/>
+								// You MUST check whether 'Ems' is 'null' or not, but I skip this step here<br/>
 								for(var i=0 ; i < Ems.length ; i ++) { // Iterate through the element array
 									<code>
 										var currentEm = Ems[i]; <br/>
@@ -1169,6 +1169,7 @@
 						// Every time you press a key in the 'styleTag' element, the listener function is activated<br/>
 						inputEm.addEventListener('keypress', styleEm);
 					</code>
+					<p>This function currently can style all elements that are found to have the target tag, but it cannot <em>reset</em> the style if a new target tag is obtained. I want you to make this possible by modifying the JS codes in the above (<em>Hint:</em> You need to restore the default style of the current target tag before using a new target tag to style the other set of elements).</p>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
