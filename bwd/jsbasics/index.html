@@ -1180,7 +1180,36 @@
 						</code>
 						&lt;/form&gt;
 					</code>
-					<p>For the <code>submit</code> and <code>reset</code> types of the <code>&lt;input&gt;</code> element, the attribute <code>value</code> determines their texts. Now, if we type some texts in the <code>text</code> field, and hit the <code>reset</code> button, the texts will be cleared completely. </p>
+					<p>For the <code>submit</code> and <code>reset</code> types of the <code>&lt;input&gt;</code> element, the attribute <code>value</code> determines their texts. Now, if we type some texts in the <code>text</code> field, and hit the <code>reset</code> button, the texts will be cleared completely. If an <code>&lt;input&gt;</code> field has a default <code>value</code> attribute, then clicking on the <code>reset</code> button will reset the <code>&lt;input&gt;</code> field back to its default value. If you place the <code>reset</code> button outside the <code>&lt;form&gt;</code> element, the default resetting behavior doesn't work:</p>
+					<code>
+						&lt;form&gt;
+						<code>
+							&lt;input type="text" id="styleTag" placeholder="enter a tag name..." /&gt;<br/>
+							&lt;input type="submit" id="submitTag" value="Submit" /&gt;
+						</code>
+						&lt;/form&gt;<br/>
+						&lt;input type="reset" id="resetTag" value="Reset" /&gt; &lt;!-- This does not work --&gt;
+					</code>
+					<p>Now let's try the <code>submit</code> button - clicking on it (or hit the <em>enter</em> key in the text input field) will reload the entire page, which is the result of submitting of the entire form for data processing by default (just like the form you submit when you sign up for an account in a website). But this is not our case; we don't need to submit a form to somewhere else for data processing. We just want to input some tag name to style HTML elements. So, we need to prevent this default behvaior from happening. Do you still remember the <code>event</code> object that will be passed to a listener function when an event is triggered? We need to use the <code>preventDefault()</code> function of this object to stop the default behavior of a <code>submit</code> button:</p>
+					<code>
+						var submitButton = document.getElementById('submitTag'); // Get the submit button<br/>
+						submitButton.addEventListener('click', function(event) { // Add a 'click' event listener
+							<code>
+								event.preventDefault(); // Stop the default behavior of the button
+							</code>
+						});
+					</code>
+					<p>The preparation work is now completed. We can further add the JS codes required to get the input texts as the tag name, and style the corresponding elements. After we retrieve the text input element in the JS code, we can retrieve texts of the element with the <code>value</code> property of the element:</p>
+					<code>
+						...<br/>
+						submitButton.addEventListener('click', function(event) { // Add a 'click' event listener
+							<code>
+								event.preventDefault(); // Stop the default behavior of the button
+								var targetTag = document.getElementById('styleTag').value; // Get the value of the input field
+								// Complete the rest of the styling codes by yourself...
+							</code>
+						});
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
