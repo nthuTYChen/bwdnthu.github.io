@@ -149,14 +149,14 @@ a:hover {
 	transition: 0.3s all ease-out;
 }
 
-a.example {
+a.examples {
 	margin: 0 3px;
 	padding: 0 3px;
 	background-color: black;
 	color: #ff9900;
 }
 
-a.example:hover {
+a.examples:hover {
 	background-color: #ff9900;
 	color: black;
 }
