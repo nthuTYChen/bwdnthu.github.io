@@ -154,6 +154,7 @@ a.examples {
 	padding: 0 3px;
 	background-color: black;
 	color: #ff9900;
+	font-weight: bold;
 }
 
 a.examples:hover {
