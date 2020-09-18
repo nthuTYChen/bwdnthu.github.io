@@ -157,6 +157,14 @@ a.examples {
 	font-weight: bold;
 }
 
+a.examples::before {
+	content: '[';
+}
+
+a.examples::after {
+	content: ']';
+}
+
 a.examples:hover {
 	background-color: #ff9900;
 	color: black;
