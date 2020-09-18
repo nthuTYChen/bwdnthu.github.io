@@ -158,11 +158,11 @@ a.examples {
 }
 
 a.examples::before {
-	content: '[';
+	content: '[ ';
 }
 
 a.examples::after {
-	content: ']';
+	content: ' ]';
 }
 
 a.examples:hover {
