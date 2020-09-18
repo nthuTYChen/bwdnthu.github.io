@@ -166,6 +166,7 @@ a.examples::after {
 }
 
 a.examples:hover {
+	border-bottom: 0;
 	background-color: #ff9900;
 	color: black;
 }
