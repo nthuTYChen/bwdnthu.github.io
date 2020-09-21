@@ -27,11 +27,21 @@
 				<p><a href="#overview">Overview</a> / <a href="#dollarsign">The dollar sign</a> / <a href="#whatdoyouneed">What do you need?</a> / <a href="#courserequirements">Course Requirements</a> / <a href="#preparationworks">Preparation Works</a> / <a href="#moreongithub">More on GitHub</a> / <a href="#timetoexplore">It's time to explore!</a> / <a href="#forthenextunit">For the next unit...</a></p>
 				<section>
 					<h2 id="#overview">Overview</h2>
+					<picture>
+						<img src="./img/jquery.png" style="width: 70%; height: auto;"/>
+					</picture>
 					<p>All JavaScript codes make perfect sense: <code>addEventListener</code>? Sure. <code>document.querySelector()</code>? Fine. <code>document.getElementByTagName('div')[0].addEventListener()</code>? Probably a bit too much, right? Here's your savior: <em class="extra">jQuery</em> (<a href="https://jquery.com/" target="blank">https://jquery.com/</a>). It's still based on JavaScript, but it makes JavaScript programming much easier.</p>
-					<p>Before introducing the basics of jQuery, let's try to embed jQuery into our website so we can use it. You can see different versions of jQuery at <a href="https://code.jquery.com/" target="blank">https://code.jquery.com/</a>, and of course we go for the most updated 3.x version. On this webpage, you would see various types of codes for jQuery Core, including <em>uncompressed</em>, <em>minified</em>, <em>slim</em>, and <em>slim minified</em>. There are two ways of incorporating jQuery into your website projects. First, we can use the <code>&lt;link&gt;</code> HTML tag inside <code>&lt;head&gt;&lt;/head&gt;</code> in an HTML document to retrieve the jQuery file from the official website (here <em>v3.5.1</em> is used as the example), just like how we linked a CSS file to our webpage:</p>
+					<p>Before introducing the basics of jQuery, let's try to embed jQuery into our website so we can use it. You can see different versions of jQuery at <a href="https://code.jquery.com/" target="blank">https://code.jquery.com/</a>, and of course we go for the most updated 3.x version. On this webpage, you would see various types of codes for jQuery Core, including <em>uncompressed</em>, <em>minified</em>, <em>slim</em>, and <em>slim minified</em>. Most people would probably use the <em class="extra">minified</em> version, which comes without any comments and with simplified codes and a reduced file size to facilitate data transmission. The <em>slim</em> versions further exclude some functions that are considered more marginal, such as those related to CSS animation, so for us they could be a bit oversimplified.</p>
+					<p>There are two ways of incorporating jQuery into your website projects. First, we can use the <code>&lt;script&gt;</code> HTML tag inside <code>&lt;head&gt;&lt;/head&gt;</code> in an HTML document to retrieve the jQuery file from the official website (here <em>v3.5.1</em> is used as the example), just like how we linked a CSS file to our webpage:</p>
 					<code>
-						
+						&lt;script src="https://code.jquery.com/jquery-3.5.1.min.js"&gt;&lt;/script&gt;
 					</code>
+					<p>Or, following the official suggestion, we should have the complete line below for security reasons:</p>
+					<code>
+						&lt;script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"&gt;&lt;/script&gt;
+					</code>
+					<p>You can move the above line into <code>&lt;body&gt;&lt;/body&gt;</code>, which may not affect how your website works eventually. But to be safe, it is still the best idea to have the above line inside <code>&lt;head&gt;&lt;/head&gt;</code> as part of the metadata of a webpage, which is always loaded first. Crucially, if you have any jQuery codes to be run when the <em>Document Object Model (DOM)</em> of the webpage is ready, then the jQuery file <em class="extra">must</em> be linked inside <code>&lt;body&gt;&lt;/body&gt;</code> so it is guaranteed to be fully loaded before the DOM is ready. Or, your website may not work properly since the jQuery codes are run when the jQuery file is still on its way.</p>
+					<p>Alternatively, if your Web space can afford an additional file sized just a few hundreds KBs, which is likely the case if you host your website at GitHub, then why not </p>
 				</section>
 				<section>
 					<h2 id="whattolearn">What to learn?</h2>
