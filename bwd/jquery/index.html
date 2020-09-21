@@ -75,10 +75,26 @@
 					<code>
 						&lt;body&gt;
 						<code>
-							
+							&lt;p&gt;<br/>
+							&lt;/p&gt;<br/>
+							&lt;p class="special"&gt;<br/>
+							&lt;/p&gt;<br/>
+							&lt;p class="special last"&gt;
+								<code>
+									&lt;p&gt;<br/>
+									&lt;/p&gt;
+								</code>
+							&lt;/p&gt;
 						</code>
 						&lt;/body&gt;
 					</code>
+					<p>Now, let's try to do the find the following HTML elements and print them out in the browser console:</p>
+					<ol>
+						<li>The &lt;p&gt; element that is the immediate child of the element whose class is <code>last</code>.</li>
+						<li>The last &lt;p&gt; element whose ancestor is &lt;body&gt;.</li>
+						<li>All &lt;p&gt; elements that are an immediate child of &lt;body&gt;.</li>
+						<li>The second &lt;p&gt; element of the class <code>special</code>.</li>
+					</ol>
 				</section>
 				
 				<section>
