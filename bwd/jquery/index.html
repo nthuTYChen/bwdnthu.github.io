@@ -75,30 +75,51 @@
 					<code>
 						&lt;body&gt;
 						<code>
-							&lt;p&gt;<br/>
+							&lt;p&gt;
+							<code>
+								p1
+							</code>
 							&lt;/p&gt;<br/>
-							&lt;p class="special"&gt;<br/>
+							&lt;p class="special"&gt;
+							<code>
+								p2
+							</code>
 							&lt;/p&gt;<br/>
 							&lt;p class="special last"&gt;
-								<code>
-									&lt;p&gt;<br/>
-									&lt;/p&gt;
-								</code>
+							<code>
+								&lt;p&gt;<br/>
+								&lt;/p&gt;
+							</code>
 							&lt;/p&gt;
 						</code>
 						&lt;/body&gt;
 					</code>
-					<p>Now, let's try to do the find the following HTML elements and print them out in the browser console:</p>
+					<p>Now, let's try to do the find the following HTML elements and print their <em class="extra">HTML contents</em> out in the browser console:</p>
 					<ol>
 						<li>The <code>&lt;p&gt;</code> element that is the immediate child of the element whose class is <code>last</code>.</li>
 						<li>The last <code>&lt;p&gt;</code> element whose ancestor is &lt;body&gt;.</li>
 						<li>All <code>&lt;p&gt;</code> elements that are an immediate child of &lt;body&gt;.</li>
 						<li>The second <code>&lt;p&gt;</code> element of the class <code>special</code>.</li>
 					</ol>
-					<p>Isn't it so much easier to do the same things in jQuery? That's why jQuery becomes so popular in Web programming. Note that jQuery is still not magic at all - it is still based on the original JavaScript and the developers of jQuery simply create functions to help simply our use of JavaScript. Thus, the convenience of jQuery comes at the cost of the computational efficiency of JavaScript, although with very powerful computers and mobile devices at our disposal, the difference is often negligible.</p>
+					<h3>eq() and html()</h3>
+					<p>The way you completed the above task may still involve some old thinking with the idea of array, which is absolutely nothing wrong. For instance, you might use the following code to retrieve the first <code>&lt;p&gt;</code> element, where the square brackets are used to indicate the first element of the array returned by <code>$()</code>:</p>
+					<code>
+						$('p')[0]; // The first of all &lt;p&gt; elements
+					</code>
+					<p>But if you need to get the last item, what we have learned to do up to this point is still sort of troublesome. You get an array of HTML elements, get the length of the array, and retrieve the last element from the array with the index as the length of the array minus 1. <em>Gee!</em> The jQuery developers must have been bothered by the same problem, which drove them to create the second jQuery function you need learn in this tutorial, namely <code>eq()</code>. Similar to the square brackets <code>[]</code>, <code>eq()</code> allows you to choose a specific item based on an index, except that you can count backward from the end of a series of elements with a <em class="extra">negative</em> number:</p>
+					<code>
+						$('p').eq(0); // The first of all &lt;p&gt; elements<br/>
+						$('p').eq(-1); // The last of all &lt;p&gt; elements
+					</code>
+					<p>When you use <code>eq()</code> to choose an HTML element from a set of matched elements, you need to use the jQuery function <code>html()</code> (which corresponds to the <code>innerHTML</code> property) to retrieve the HTML contents of the chosen element:</p>
+					<code>
+						$('p').eq(0).html(); // The HTML contents of the first of all &lt;p&gt; elements
+					</code>
+					<p>Now, why don't we try the practices we have done earlier using <code>eq()</code> and <code>html()</code>?</p>
+					<p>Isn't it so much easier to do different things in jQuery? That's why jQuery becomes so popular in Web programming. Note that jQuery is still not magic at all - it is still based on the original JavaScript and the developers of jQuery simply create functions to help simply our use of JavaScript. Thus, the convenience of jQuery comes at the cost of the computational efficiency of JavaScript, although with very powerful computers and mobile devices at our disposal, the difference is often negligible.</p>
 				</section>
 				<section>
-					<h2 id="functions">The Essential Functions</h2>
+					<h2 id="functions">Some Essential Functions</h2>
 					<p></p>
 				</section>
 				<section>
