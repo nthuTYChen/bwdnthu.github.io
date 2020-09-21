@@ -56,7 +56,14 @@
 						<img src="./img/showme.gif" style="width: 50%; height: auto;" />
 						<sub>Source: Jerry McGuire the movie</sub>
 					</picture>
-					<p>In our JavaScript tutorial, we have learned the <code>window</code> object is at the center of JavaScript programming, which refers to the Web browser window and could be omitted when we try to access the HTML document itself inside the browser window with the keyword <code>document</code>. In jQuery, it all starts with the dollar sign <code>$</code>, which stands for a <em class="extra">jQuery</em> object.</p>
+					<p>In our JavaScript tutorial, we have learned the <code>window</code> object is at the center of JavaScript programming, which refers to the Web browser window and could be omitted when we try to access the HTML document itself inside the browser window with the keyword <code>document</code>. Here in this tutorial, we would start with the dollar sign <code>$</code>, which stands for <em class="extra">jQuery</em> itself. For instance, the two lines of jQuery codes below are exactly the same thing, except that the first line is simpler than the second line:</p>
+					<code>
+						$.ajax(); // You don't have to know what ajax is at this point<br/>
+						jQuery.ajax(); // The same thing<br/>
+					</code>
+					<p>Not only does it help to save your effort in writing your codes, it also helps reduce the size of your JS files and speed up the loading of your entire website. Let's see how much effort jQuery saves in terms of the action we possibly need the most in our JS codes - retrieving HTML elements.</p>
+					<h3>The query selector in three characters</h3>
+					<p>I hope you still remember a few JS functions we have used to access an HTML document and retrieve some HTML elements. These includes <code>getElementById()</code>, <code>getElementsByTagName()</code>, <code>getElementsByClassName()</code>, <code>querySelector()</code>, and <code>querySelectorAll()</code>. The last two are the most crucial ones when you need to get HTML elements depending on the complex relationship between children and ancestors in a DOM.</p>
 				</section>
 				
 				<section>
