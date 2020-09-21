@@ -63,7 +63,15 @@
 					</code>
 					<p>Not only does it help to save your effort in writing your codes, it also helps reduce the size of your JS files and speed up the loading of your entire website. Let's see how much effort jQuery saves in terms of the action we possibly need the most in our JS codes - retrieving HTML elements.</p>
 					<h3>The query selector in three characters</h3>
-					<p>I hope you still remember a few JS functions we have used to access an HTML document and retrieve some HTML elements. These includes <code>getElementById()</code>, <code>getElementsByTagName()</code>, <code>getElementsByClassName()</code>, <code>querySelector()</code>, and <code>querySelectorAll()</code>. The last two are the most crucial ones when you need to get HTML elements depending on the complex relationship between children and ancestors in a DOM.</p>
+					<p>I hope you still remember a few JS functions we have used to access an HTML document and retrieve some HTML elements. These includes <code>getElementById()</code>, <code>getElementsByTagName()</code>, <code>getElementsByClassName()</code>, <code>querySelector()</code>, and <code>querySelectorAll()</code>. The last two are the most crucial ones when you need to get HTML elements depending on the complex relationship between children and ancestors in a DOM. Supposed that you need to retrieve all <code>&lt;p&gt;</code> elements that have <code>&lt;body&gt;</code> as their immediate ancestor, you might need to write the expectedly long JS codes like:</p>
+					<code>
+						document.querySelectorAll('body > p'); // Get all &lt;p&gt; elements immediately inside &lt;body&gt;
+					</code>
+					<p>In jQuery, we can exactly replicate the same function of <code>querySelectorAll()</code> with three characters, namely <code>$()</code>:</p>
+					<code>
+						$('body > p'); // Also get all &lt;p&gt; elements immediately inside &lt;body&gt;
+					</code>
+					<p>Just like <code>querySelectorAll()</code>, <code>$()</code> returns an <em class="extra">array</em> of matched HTML elements or <code>null</code> when there is no matched HTML elements.</p>
 				</section>
 				
 				<section>
