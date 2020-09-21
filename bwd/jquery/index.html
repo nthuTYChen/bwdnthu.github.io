@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Bilingual Web Design@DFLL NTHU; Tsung-Ying Chen</title>
+		<link rel="stylesheet" href="/css/style.css">
+		<script src="/js/jquery-3.2.1.min.js"></script>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<nav>
+			<h2>
+				<a href="/bwd/">Intro</a>
+				<a href="/bwd/htmlbasics/">HTML Basics</a>
+				<a href="/bwd/cssbasics/">CSS Basics</a>
+				<a href="/bwd/jsbasics/">JS Basics</a>
+				<a class="selected" href="/bwd/jquery/">jQuery</a>
+				<a href="/bwd/rwd/">Responsive Web</a>
+				<a href="/bwd/cssanimation/">CSS Animation</a>
+				<a href="/bwd/engissues/">English Issues</a>
+				<a href="/bwd/students/">Students</a>
+			</h2>
+		</nav>
+		<div class="container">
+			<article>
+				<h1>5. jQuery</h1>
+				<p>Tired of juggling with crazily long JavaScript codes? Here's the tool to help you deal with your poor cognitive load.</p>
+				<p><a href="#overview">Overview</a> / <a href="#dollarsign">The dollar sign</a> / <a href="#whatdoyouneed">What do you need?</a> / <a href="#courserequirements">Course Requirements</a> / <a href="#preparationworks">Preparation Works</a> / <a href="#moreongithub">More on GitHub</a> / <a href="#timetoexplore">It's time to explore!</a> / <a href="#forthenextunit">For the next unit...</a></p>
+				<section>
+					<h2 id="#overview">Overview</h2>
+					<p>All JavaScript codes make perfect sense: <code>addEventListener</code>? Sure. <code>document.querySelector()</code>? Fine. <code>document.getElementByTagName('div')[0].addEventListener()</code>? Probably a bit too much, right? Here's your savior: <em class="extra">jQuery</em> (<a href="https://jquery.com/" target="blank">https://jquery.com/</a>). It's still based on JavaScript, but it makes JavaScript programming much easier.</p>
+					<p>Before introducing the basics of jQuery, let's try to embed jQuery into our website so we can use it. You can see different versions of jQuery at <a href="https://code.jquery.com/" target="blank">https://code.jquery.com/</a>, and of course we go for the most updated 3.x version. On this webpage, you would see various types of codes for jQuery Core, including <em>uncompressed</em>, <em>minified</em>, <em>slim</em>, and <em>slim minified</em>. There are two ways of incorporating jQuery into your website projects. First, we can use the <code>&lt;link&gt;</code> HTML tag inside <code>&lt;head&gt;&lt;/head&gt;</code> in an HTML document to retrieve the jQuery file from the official website (here <em>v3.5.1</em> is used as the example), just like how we linked a CSS file to our webpage:</p>
+					<code>
+						
+					</code>
+				</section>
+				<section>
+					<h2 id="whattolearn">What to learn?</h2>
+					<h3>HTML5, CSS, JavaScript(!!!)</h3>
+					<p>HTML5 and CSS are probably more entertaining since you get to see what you create immediately. JavaScript is perhaps a bit more <em>intimidating</em> - After all, computer programming sometimes means <em>a steep learning curve.</em></p>
+					<p>But that's exactly why you're here, to step out of your comfort zone, and that's why I'm <em>teaching this course in Chinese</em> (the materials are still in English, though).</p>
+				</section>
+				
+				<section>
+					<h2 id="forthenextunit">For the next unit...</h2>
+					<p>For the next unit, you will have to complete the following tasks:</p>
+					<ol>
+						<li>Find a website that impresses you the most. You'll have to explain why you like it in the next lecture.</li>
+					</ol>
+					<p><button onclick="htmlbasics()">>> Responsive Web Design</button></p>
+					<script>
+						function htmlbasics() {
+							window.location.href = '/bwd/rwd/';
+						}
+					</script>
+				</section>
+				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
+			</article>
+		</div>
+	</body>
+</html>
