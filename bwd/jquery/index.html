@@ -150,7 +150,7 @@
 						</code>
 						}
 					</code>
-					<h3>on()</h3>
+					<h3>on() and off()</h3>
 					<p>Remember the <code>addEventListener</code> field of an HTML object accessed in a JS file to create some interactive interface for your website? There's of couse an equivalent function in jQuery as well, which is <code>on()</code>. This function requires two types of data: The first one is event type (as a <em>string</em>), and the second one is the function executed when an event is <em>fired</em>. Let's try the <code>click</code> event first:</p>
 					<code>
 						window.onload = function() { // Make sure the document is fully loaded
@@ -183,9 +183,9 @@
 					<p>In fact, jQuery comes with functions that directly correspond to the event types accepted in <code>on()</code>, such as <code>click()</code> and <code>keypress()</code>, which only takes a <em>function</em> that is executed when an event is fired. How about let's rewrite the above two sections of codes with the two functions that seem more direct?</p>
 					<code>
 						// Try the other one by yourself! <br/>
-						window.onload = function() { // Make sure the document is fully loaded
+						window.onload = function() {
 						<code>
-							$('input').click(function() { // No need for eq(). Remember why?
+							$('input').eq(0).click(function() { // Replace on() with click()
 							<code>
 								alert('An input is clicked!');
 							</code>
@@ -194,6 +194,7 @@
 						}
 					</code>
 					<p>I usually still go for <code>on()</code> when I do jQuery programming. The main reason is that I found the equivalent functions like <code>click()</code> or <code>keypress()</code> don't work in all contexts for some reason. Maybe it's just my own issue since I'm pretty <em class="extra">amateurish in this field</em>.</p>
+					<p>Before we move on, I'd like to talk a bit more about the special interaction between <code>on()</code> and <code>eq()</code>. When I talked about <code>val()</code> earlier in this section, I specifically said that you could omit <code>eq()</code> if you are pretty sure that you always just need the value of the <em>first</em> element of a group of selected elements. However, if you omit <code>eq()</code> when you try to add an event listeners with <code>on()</code>, you're actually attaching exactly the same event listener to <em class="extra">ALL</em> elements selected by <code>$()</code>.</p>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
