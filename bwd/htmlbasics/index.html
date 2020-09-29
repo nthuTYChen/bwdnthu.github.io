@@ -63,6 +63,9 @@
 					<p>Next, inside <code>&lt;head&gt;&lt;/head&gt;</code>, let's add the following line after <code>&lt;/title&gt;</code>:</p>
 					<code>&lt;meta charset="UTF-8"&gt;</code>
 					<p>This  <code>&lt;meta&gt;</code> element is obviously adding some metadata to our HTML document, and the attribute <em>charset</em> is specified with <em>UTF-8</em>, which tells a Web browser to treat the contents as Unicode texts, so texts could be encoded properly even if they are from different languages. You can't imagine how hard it was to get foreign websites encoded properly 20 years ago. Most of modern Web browsers set UTF-8 encoding as their default, but it doesn't hurt to always have this by default just in case.</p>
+					<p>
+						<a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/blob/master/bwd/examples/1-1.html" target="blank">Example 1-1</a>
+					</p>
 				</section>
 				<section>
 					<h2 id="formattingsourcecodes">Formatting source codes</h2>
@@ -95,7 +98,7 @@
 					<ul>
 						<li><code>&lt;div&gt;&lt;/div&gt;</code> - A block that represents one DIVision in your webpage.</li>
 					</ul>
-					<p>Let's try to find one extra short text paragraph, throw it into a <code>&lt;div&gt;</code> block, and append this block to the end of the body...and still, the texts are just like those in other building blocks we added earlier.</p>
+					<p>Let's try to find one extra short text paragraph, throw it into a <code>&lt;div&gt;</code> block, and append this block to the end of the body...and still, the texts are just like those in other building blocks we added earlier. <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/blob/master/bwd/examples/1-2.html" target="blank">Example 1-2</a></p>
 					<h3>Semantic vs. non-semantic elements</h3>
 					<p>While the <code>&lt;div&gt;</code> block seems to work in the same way as other blocks do, <code>&lt;div&gt;</code> is <em class="extra">non-semantic</em>, whereas other blocks are <em class="extra">semantic</em>. When you see the name of a semantic element, you know what the contents of this element could be (article, section, paragraph, and so on), which is not possible when you use a non-semantic one (unless you use some other attributes to make it special; we'll get there soon). In HTML5, you're encouraged to use semantic elements and avoid non-semantic ones. This strategy brings benefits to your design process - for example, you can choose to directly style a <code>&lt;section&gt;</code> element, rather than an <code>&lt;div&gt;</code> element that is specified as a section. Note that it is absolutely possible to achieve the same visual representation of a webpage even if you only use <code>&lt;div&gt;</code>, but its maintainence is going to be <em>difficult</em>. Finally, this is not saying that you cannot use <code>&lt;div&gt;</code> at all - if you need a block that does not fit the semantics of the aforementioned elements, just use <code>&lt;div&gt;</code>.</p>
 					<p>Here are some other common semantic building blocks:</p>
@@ -108,7 +111,7 @@
 					</ul>
 					<p>Note that <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> cannot contain each other.</p>
 					<h3>A heading for each semantic block</h3>
-					<p>When you has a sementic block, the Web browser expects it to have a heading. Thus, a proper heading for a sementic block helps a Web browser parse the structure of a webpage. You can use <code>&lt;h1&gt;&lt;/h1&gt;</code> for a <em class="extra">first-level</em> heading or <code>&lt;h6&gt;&lt;/h6&gt;</code> for a <em class="extra">sixth-level</em> heading (and of course, everything in between). The level of a heading for a parent block should be <em>higher</em> than that for a child block. See <a href="https://html.spec.whatwg.org/multipage/sections.html#rank" target="blank">Section & Rank</a> for more info. Again, it is not fatal even if you don't follow this suggestion, but it's going to be helpful in many ways.</p>
+					<p>When you has a sementic block, the Web browser expects it to have a heading. Thus, a proper heading for a sementic block helps a Web browser parse the structure of a webpage. You can use <code>&lt;h1&gt;&lt;/h1&gt;</code> for a <em class="extra">first-level</em> heading or <code>&lt;h6&gt;&lt;/h6&gt;</code> for a <em class="extra">sixth-level</em> heading (and of course, everything in between). The level of a heading for a parent block should be <em>higher</em> than that for a child block. See <a href="https://html.spec.whatwg.org/multipage/sections.html#rank" target="blank">Section & Rank</a> for more info. Again, it is not fatal even if you don't follow this suggestion, but it's going to be helpful in many ways. <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/blob/master/bwd/examples/1-3.html" target="blank">Example 1-3</a> <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/blob/master/bwd/examples/1-4.html" target="blank">Example 1-4</a></p>
 				</section>
 				<section>
 					<h2 id="inlineelements">Inline elements</h2>
@@ -129,7 +132,7 @@
 						<li><code>&lt;br/&gt;</code> - Insert a line break.</li>
 						<li><code>&lt;input/&gt;</code> - Insert an input field.</li>
 					</ol>
-					<p>See this <a href="https://www.w3schools.com/htmL/html_blocks.asp" target="blank">W3CSchool page</a> for a more complete list of block-level and inline elements. Note that this default <em>block</em> vs. <em>inline</em> contrast from the elements is not absolute. We'll learn how to change this property when it comes to CSS.</p>
+					<p>See this <a href="https://www.w3schools.com/htmL/html_blocks.asp" target="blank">W3CSchool page</a> for a more complete list of block-level and inline elements. Note that this default <em>block</em> vs. <em>inline</em> contrast from the elements is not absolute. We'll learn how to change this property when it comes to CSS. <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/blob/master/bwd/examples/1-5.html" target="blank">Example 1-5</a></p>
 				</section>
 				<section>
 					<h2 id="webstructure">The file structure of your website</h2>
