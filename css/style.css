@@ -119,7 +119,7 @@ ol, ul {
 
 code, table {
 	font-family: 'Lekton', sans-serif;
-	color: #226d6d;
+	background-color: #e68a00;
 }
 
 code {
@@ -196,6 +196,8 @@ p, picture {
 
 p code, li code {
 	display: inline;
+	background-color: unset;
+	color: #226d6d;
 }
 
 picture {
