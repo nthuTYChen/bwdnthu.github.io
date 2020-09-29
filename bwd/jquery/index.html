@@ -174,7 +174,7 @@
 						<code>
 							$('input').eq(0).on('keypress', function() {
 							<code>
-								$('textarea').eq(0).html(this.value); // Do you know what this line means?
+								$('textarea').eq(0).html($(this).val()); // Do you know what this line means?
 							</code>
 							});
 						</code>
@@ -207,7 +207,7 @@
 							// Attach the same even listener to all input elements<br/>
 							$('input').on('keypress', function() {
 							<code>
-								$('textarea').eq(0).html(this.value);
+								$('textarea').eq(0).html($(this).val());
 							</code>
 							});
 						</code>
@@ -225,7 +225,7 @@
 							// Text-syncing event listener
 							$('input').eq(0).on('keypress', function() {
 							<code>
-								$('textarea').eq(0).html(this.value);
+								$('textarea').eq(0).html($(this).val());
 							</code>
 							});<br/>
 							// Stop-syncing event listener<br/>
@@ -290,6 +290,7 @@
 						</code>
 						...
 					</code>
+					<p>How easy it is with this second use of <code>css()</code> in jQuery! Well, you still can retrieve one CSS property at a time with the first use of <code>css()</code> - bummer. But again, we should not take everything for granted, and this is the best we can get so far.</p>
 				</section>
 				<section>
 					<h2 id="casestudy">A case study</h2>
