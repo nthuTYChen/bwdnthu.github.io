@@ -115,6 +115,10 @@
 					<code>
 						$('p').eq(0).html(); // The HTML contents of the first of all &lt;p&gt; elements
 					</code>
+					<p>If you're very sure that you just need the <em>first</em> element of a group of selected elements, you can further simplify the above code by removing <code>eq(0)</code>:</p>
+					<code>
+						$('p').html(); // Still the HTML contents of the first of all &lt;p&gt; elements
+					</code>
 					<p>Now, why don't we try the practices we have done earlier using <code>eq()</code> and <code>html()</code>?</p>
 					<p>Isn't it so much easier to do different things in jQuery? That's why jQuery becomes so popular in Web programming. Note that jQuery is still not magic at all - it is still based on the original JavaScript and the developers of jQuery simply create functions to help simply our use of JavaScript. Thus, the convenience of jQuery comes at the cost of the computational efficiency of JavaScript, although with very powerful computers and mobile devices at our disposal, the difference is often negligible.</p>
 				</section>
@@ -176,6 +180,7 @@
 						</code>
 						}
 					</code>
+					<p>In fact, </p>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
