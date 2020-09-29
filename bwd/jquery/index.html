@@ -130,7 +130,7 @@
 					<code>
 						window.onload = function() {
 						<code>
-							var defaultInputVal = $(input).eq(0).val();<br/>
+							var defaultInputVal = $('input').eq(0).val();<br/>
 							alert(defaultInputVal);
 						</code>
 						}
@@ -141,10 +141,28 @@
 					<code>
 						window.onload = function() {
 						<code>
-							$(input).eq(0).val('This is not the default value.'); // Set a new value<br/>
+							$('input').eq(0).val('This is not the default value.'); // Set a new value<br/>
 							alert('A new input value is set!');
 						</code>
 						}
+					</code>
+					<h3>on()</h3>
+					<p>Remember the <code>addEventListener</code> field of an HTML object accessed in a JS file to create some interactive interface for your website? There's of couse an equivalent function in jQuery as well, which is <code>on()</code>. This function requires two types of data: The first one is event type (as a <em>string</em>), and the second one is the function executed when an event is <em>fired</em>. Let's try the <code>click</code> event first:</p>
+					<code>
+						window.onload = function() { // Make sure the document is fully loaded
+						<code>
+							$('input').eq(0).on('click', function() {
+							<code>
+								alert('An input is clicked!');
+							</code>
+							});
+						</code>
+						}
+					</code>
+					<p>Now let's do a more complicated trick with the <code>keypress</code> event. That is, to update what you type in the <code>input</code> to a <code>&lt;textarea&gt;&lt;/textarea&gt;</code> <em class="extra">inline</em> element instantly. Let's create the element we need right before the <code>&lt;input&gt;</code> element:</p>
+					<code>
+						&lt;!-- Set the inline style to make a larger textarea, and add a line break after it --&gt;
+						&lt;textarea style="width: 300px; height: 300px;"&gt;&lt;/textarea&gt;&lt;br/&gt;
 					</code>
 				</section>
 				<section>
