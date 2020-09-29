@@ -247,11 +247,11 @@
 					</picture>
 					<p>If the previous section is not a tutorial of useful jQuery programming, what could be? But we are actually not that far off the starting line. There are still a lot to do to equip you with the skills you need to design a great interactive website.</p>
 					<h3>css()</h3>
-					<p>In plain JavaScript, we have to again specify a long string of codes in order to get or set <em>JUST ONE</em> CSS value. <em class="extra">JUST ONE!!!</em> For instance, the following codes only get you an HTML document with a black background color:</p>
+					<p>In plain JavaScript, we have to again specify a long string of codes in order to get or set <em>JUST ONE</em> CSS property. <em class="extra">JUST ONE!!!</em> For instance, the following codes only get you an HTML document with a black background color:</p>
 					<code>
 						document.body.style.backgroundColor = 'black';
 					</code>
-					<p>Imagine how many lines you need to write to set multiple CSS values, and even for a group of HTML elements. Here in jQuery, you can do it all at once with the function <code>css()</code>. Let's try this function with the following blocks inside <code>&lt;body&gt;&lt;/body&gt;</code>.</p>
+					<p>Imagine how many lines you need to write to set multiple CSS properties, and even for a group of HTML elements. Here in jQuery, you can do it all at once with the function <code>css()</code>. Let's try this function with the following blocks inside <code>&lt;body&gt;&lt;/body&gt;</code>.</p>
 					<code>
 						&lt;div style="height: 50px; width: 50px; background-color: yellow;"&gt;&lt;/div&gt;<br/>
 						&lt;div style="height: 50px; width: 50px; background-color: yellow;"&gt;&lt;/div&gt;<br/>
@@ -259,7 +259,7 @@
 						&lt;input type="button" id="changeOne" value="Change the color of one!" /&gt;<br/>
 						&lt;input type="button" id="changeTwo" value="Change the color of all!" /&gt;
 					</code>
-					<p>We can first use it to set one single CSS value as in the </p>
+					<p>Our goal is to add a <code>click</code> event listener to each button and use the <code>css()</code> function to change the background color of the first block or all blocks. Since this involves only one CSS property, the <code>css()</code> function requires two string data - the first is the <em>name</em> of the CSS property, <em class="extra">as in a CSS file</em> (such as <code>background-color</code>), and the second is the <em>value</em> of that property.</p>
 				</section>
 				<section>
 					<h2 id="casestudy">A case study</h2>
