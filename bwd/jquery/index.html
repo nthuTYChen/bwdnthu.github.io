@@ -151,7 +151,7 @@
 						}
 					</code>
 					<h3>on() and off()</h3>
-					<p>Remember the <code>addEventListener</code> field of an HTML object accessed in a JS file to create some interactive interface for your website? There's of couse an equivalent function in jQuery as well, which is <code>on()</code>. This function requires two types of data: The first one is event type (as a <em>string</em>), and the second one is the function executed when an event is <em>fired</em>. Let's try the <code>click</code> event first:</p>
+					<p>Remember the <code>addEventListener()</code> function of an HTML object accessed in a JS file to create some interactive interface for your website? There's of couse an equivalent function in jQuery as well, which is <code>on()</code>. This function requires two types of data: The first one is event type (as a <em>string</em>), and the second one is the function executed when an event is <em>fired</em>. Let's try the <code>click</code> event first:</p>
 					<code>
 						window.onload = function() { // Make sure the document is fully loaded
 						<code>
@@ -207,9 +207,33 @@
 							// Attach the same even listener to all input elements<br/>
 							$('input').on('keypress', function() {
 							<code>
-								$('textarea').eq(0).html(this.value); // Do you know what this line means?
+								$('textarea').eq(0).html(this.value);
 							</code>
 							});
+						</code>
+						}
+					</code>
+					<p>Since you already understanding the meaning of <code>on()</code>, you possibly already know what <code>off()</code> means - yes, to remove an event listener, just like <code>removeEventListener()</code> in plain JavaScript. To demonstrate its use, let's follow an earlier text-syncing example with a button which, if clicked, would stop syncing:</p>
+					<code>
+						&lt;input type="text" value="This is a default value." /&gt;<br/>
+						&lt;input type="button" id="stopSync" value="Stop Syncing!" /&gt;
+					</code>
+					<p>Then, in addition to the event listener for the text-syncing function associated to the text input field, we also need an event listener attached to the button to detach the text-syncing event listener (what a tongue twister):</p>
+					<code>
+						window.onload = function() {
+						<code>
+							// Text-syncing event listener
+							$('input').eq(0).on('keypress', function() {
+							<code>
+								$('textarea').eq(0).html(this.value);
+							</code>
+							});<br/>
+							// Stop-syncing event listener<br/>
+							$('#stopSync').on('click', function() {
+							<code>
+								$('input').eq(0).off('click'); // Specify the event type in off()
+							</code>
+							})
 						</code>
 						}
 					</code>
