@@ -194,7 +194,25 @@
 						}
 					</code>
 					<p>I usually still go for <code>on()</code> when I do jQuery programming. The main reason is that I found the equivalent functions like <code>click()</code> or <code>keypress()</code> don't work in all contexts for some reason. Maybe it's just my own issue since I'm pretty <em class="extra">amateurish in this field</em>.</p>
-					<p>Before we move on, I'd like to talk a bit more about the special interaction between <code>on()</code> and <code>eq()</code>. When I talked about <code>val()</code> earlier in this section, I specifically said that you could omit <code>eq()</code> if you are pretty sure that you always just need the value of the <em>first</em> element of a group of selected elements. However, if you omit <code>eq()</code> when you try to add an event listeners with <code>on()</code>, you're actually attaching exactly the same event listener to <em class="extra">ALL</em> elements selected by <code>$()</code>.</p>
+					<p>Before we move on, I'd like to talk a bit more about the special interaction between <code>on()</code> and <code>eq()</code>. When I talked about <code>val()</code> earlier in this section, I specifically said that you could omit <code>eq()</code> if you are pretty sure that you always just need the value of the <em>first</em> element of a group of selected elements. However, if you omit <code>eq()</code> when you try to add an event listeners with <code>on()</code>, you're actually attaching exactly the same event listener to <em class="extra">ALL</em> elements selected by <code>$()</code>. Let's add another <code>&lt;input&gt;</code> element in the previous text-syncing example, and remove <code>eq(0)</code> after <code>$()</code> and see what happens:</p>
+					<code>
+						...<br/>
+						&lt;!-- Add another input element in the HTML file --&gt;<br/>
+						&lt;input type="text" value="This is a default value." /&gt;<br/>
+						&lt;input type="text" value="This is a second input element." /&gt;<br/>
+						...<br/>
+						// Remove eq(0) in your JS file<br/>
+						window.onload = function() {
+						<code>
+							// Attach the same even listener to all input elements<br/>
+							$('input').on('keypress', function() {
+							<code>
+								$('textarea').eq(0).html(this.value); // Do you know what this line means?
+							</code>
+							});
+						</code>
+						}
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
