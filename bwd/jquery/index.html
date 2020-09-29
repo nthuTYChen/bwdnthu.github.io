@@ -161,7 +161,7 @@
 					</code>
 					<p>Now let's do a more complicated trick with the <code>keypress</code> event. That is, to update what you type in the <code>input</code> to a <code>&lt;textarea&gt;&lt;/textarea&gt;</code> <em class="extra">inline</em> element instantly. Let's create the element we need right before the <code>&lt;input&gt;</code> element:</p>
 					<code>
-						&lt;!-- Set the inline style to make a larger textarea, and add a line break after it --&gt;
+						&lt;!-- Set the inline style to make a larger textarea, and add a line break after it --&gt;<br/>
 						&lt;textarea style="width: 300px; height: 300px;"&gt;&lt;/textarea&gt;&lt;br/&gt;
 					</code>
 					<p>What we need to do next is to write jQuery codes doing the following things: First, add an event listener for the <code>keypress</code> event to the <code>&lt;input&gt;</code> element. Second, set the inner HTML contents of the <code>&lt;textarea&gt;</code> element every time you edit the contents of the <code>&lt;input&gt;</code> element.</p>
