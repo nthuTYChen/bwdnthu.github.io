@@ -120,6 +120,7 @@ ol, ul {
 code, table {
 	font-family: 'Lekton', sans-serif;
 	background-color: #e68a00;
+	color: white;
 }
 
 code {
