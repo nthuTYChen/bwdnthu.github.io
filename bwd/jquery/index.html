@@ -126,7 +126,26 @@
 					<code>
 						&lt;input type="text" value="This is a default value." /&gt;
 					</code>
-					
+					<p>In a JS file, we can try to show an alert box with the value of the <code>input</code> element with the <code>val()</code> function when the window is fully loaded:</p>
+					<code>
+						window.onload = function() {
+						<code>
+							var defaultInputVal = $(input).eq(0).val();<br/>
+							alert(defaultInputVal);
+						</code>
+						}
+					</code>
+					<p>
+						Of course, it means that you can set the value of an HTML element with the same function, too:
+					</p>
+					<code>
+						window.onload = function() {
+						<code>
+							$(input).eq(0).val('This is not the default value.'); // Set a new value<br/>
+							alert('A new input value is set!');
+						</code>
+						}
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
