@@ -280,6 +280,16 @@
 						</code>
 						};
 					</code>
+					<p>Now, if you need to set multiple CSS properties with <code>css()</code>, just put in pairs of property names and values as strings separated by a colon <code>:</code> inside <code>{}</code> and separate every two pairs with a comma, very similar to what you've done in a CSS file! We can therefore easily change the background color of a block, as well as the size of it!</p>
+					<code>
+						...<br/>
+						$('#changeOne').on('click', function() {
+						<code>
+							// Specify multiple CSS properties in css()<br/>
+							$('div').eq(0).css({'background-color': 'red', 'height': '70px', 'width': '70px'});
+						</code>
+						...
+					</code>
 				</section>
 				<section>
 					<h2 id="casestudy">A case study</h2>
