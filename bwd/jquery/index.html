@@ -180,7 +180,20 @@
 						</code>
 						}
 					</code>
-					<p>In fact, </p>
+					<p>In fact, jQuery comes with functions that directly correspond to the event types accepted in <code>on()</code>, such as <code>click()</code> and <code>keypress()</code>, which only takes a <em>function</em> that is executed when an event is fired. How about let's rewrite the above two sections of codes with the two functions that seem more direct?</p>
+					<code>
+						// Try the other one by yourself! <br/>
+						window.onload = function() { // Make sure the document is fully loaded
+						<code>
+							$('input').click(function() { // No need for eq(). Remember why?
+							<code>
+								alert('An input is clicked!');
+							</code>
+							});
+						</code>
+						}
+					</code>
+					<p>I usually still go for <code>on()</code> when I do jQuery programming. The main reason is that I found the equivalent functions like <code>click()</code> or <code>keypress()</code> don't work in all contexts for some reason. Maybe it's just my own issue since I'm pretty <em class="extra">amateurish in this field</em>.</p>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
