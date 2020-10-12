@@ -302,7 +302,7 @@
 					</code>
 					<p>Let's move the inline styling for the <code>&lt;div&gt;</code> elements as well as the styling we used in the <code>css()</code> function into a CSS file defined for the class named <code>selected</code>:</p>
 					<code>
-						/* Default styling for all DIVs */
+						/* Default styling for all DIVs */<br/>
 						div {
 						<code>
 							background-color: yellow;<br/>
@@ -327,6 +327,22 @@
 						</code>
 						});
 					</code>
+					<p>Now, how do we <em>de-select</em> an element using <code>removeClass()</code>? Two steps are necessary here. First, we need to limit the first event listener to <code>&lt;div&gt;</code> elements <em>without</em> the <code>selected</code> class name, which could be achieved using the CSS <em class="extra">pseudo-class</em> <code>not()</code> (do you still remember how to use it?). This first step is essential because you want <code>addClass()</code> to be applied to <code>&lt;div&gt;</code> elements without the class name and <code>removeClass()</code> to be applied to those with the class name. Second, we have to add an event listener to a clicked element <em>after</em> <code>addClass()</code> is applied, which is fired to apply <code>removeClass()</code> when the element is clicked <em>again</em>. If you try to create this event listener separately in the <code>onload</code> function, it won't work (guess why?). Again, try it yourself (select the following section for the solution)!</p>
+					<code style="color: #e68a00;">
+						// Limit the first event listener to non-selected DIVs<br/>
+						$('div').not('.selected').on('click', function() {
+						<code style="color: inherit;">
+							$(this).addClass('selected');<br/>
+							// Add another event listener to apply removeClass() to selected DIVs<br/>
+							$(this).on('click', function() {
+							<code style="color: inherit;">
+								$(this).removeClass('selected');
+							</code>
+							})
+						</code>
+						});
+					</code>
+					<p>Note that </p>
 					<h3>DOM insertion and removal</h3>
 					<h3>Chain effects</h3>
 				</section>
