@@ -347,6 +347,21 @@
 						});
 					</code>
 					<p>Note that in the current example, the selecting-de-selecting function only works once. Do you know why that is? The reason is that the first <code>click</code> event listener with <code>addClass()</code> is overwritten by the second one with <code>removeClass()</code>, so the code could never add <code>selected</code> back to a given element again. I've got a solution, which requires you to enclose the selcting-de-selecting steps in a <em>custom function</em>, and re-associate this function to the same element after <code>removeClass()</code> is applied. Let me just leave this to you to help you explore the world of JavaScript/jQuery coding.</p>
+					<p>Finally, how about creating another two buttons to (de-)select all <code>&lt;div&gt;</code> elements? Assuming that the buttons have <code>selectAll</code> and <code>selectNone</code> as their <code>id</code>, then the following event listeners are what you need for the functions:</p>
+					<code>
+						$('#selectAll').on('click', function() {
+						<code>
+							// Add class 'selected' to all DIVs<br/>
+							$('div').addClass('selected');
+						</code>
+						});<br/>
+						$('#selectNone').on('click', function() {
+						<code>
+							// Remove class 'selected' from all DIVs<br/>
+							$('div').removeClass('selected');
+						</code>
+						});
+					</code>
 					<h3>DOM insertion and removal</h3>
 					<h3>Chain effects</h3>
 				</section>
