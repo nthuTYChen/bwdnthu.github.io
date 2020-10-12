@@ -293,7 +293,32 @@
 					<p>It is just this easy to change the appearance of an element with this second use of <code>css()</code> in jQuery! Well, you still can retrieve one CSS property at a time with the first use of <code>css()</code> - bummer. But again, we should not take everything for granted, and this is the best we can get so far.</p>
 					<h3>Making changes to more attributes</h3>
 					<p>So far we've seen some jQuery functions that allow you to retrieve/change the <em>attributes</em> of an element. The <em>value</em> attribute could be accessed with <code>val()</code>, and the <code>style</code> attribute could be accessed with <code>css()</code>. You can keep playing around with <code>css()</code> especially when you need to create an interactive Web interface that changes the appearance HTML elements based on users' actions - that is, when an action is detected, an event is fired to apply the <code>css()</code> function to a specific element.</p>
-					<p>But here we will learn another more elegant way of changing how a specific element looks like using the jQuery functions <code>addClass()</code> and <code>removeClass()</code>. As smart as you are, you might already know what these two functions mean, right? That is, to add and remove a specific label from the <code>class</code> attribute of HTML elements. Thus, the idea is that you can define the CSS properties for a particular <em>class</em> in your CSS file. Then, you only need to add the name of this class to HTML elements when necessary.</p>
+					<p>But here we will learn another more elegant way of changing how a specific element looks like using the jQuery functions <code>addClass()</code> and <code>removeClass()</code>. As smart as you are, you might already know what these two functions mean, right? That is, to add and remove a specific label from the <code>class</code> attribute of HTML elements. Thus, the idea is that you can define the CSS properties for a particular <em>class</em> in your CSS file. Then, you only need to add the name of this class to HTML elements when necessary. And this approach opens up more possibilities in our Web design.</p>
+					<p>Let's wind back to our previous HTML example repeated below without the two buttons. In this old example, we need the buttons combined with the <code>css()</code> function to change the appearance of one or all of the <code>&lt;div&gt;</code> elements. But now, we can define a class in our CSS file, and add this class to a clicked <code>&lt;div&gt;</code> element to change its size and color.</p>
+					<code>
+						&lt;div style="height: 50px; width: 50px; background-color: yellow;"&gt;&lt;/div&gt;<br/>
+						&lt;div style="height: 50px; width: 50px; background-color: yellow;"&gt;&lt;/div&gt;<br/>
+						&lt;div style="height: 50px; width: 50px; background-color: yellow;"&gt;&lt;/div&gt;
+					</code>
+					<p>Let's put the styling we used in the <code>css()</code> function into a CSS file defined for the class named <code>selected</code>:</p>
+					<code>
+						/* Don't forget the '.' for a class name */<br/>
+						.selected {
+						<code>
+							background-color: red;<br/>
+							height: 70px;<br/>
+							width: 70px;
+						</code>
+						}
+					</code>
+					<p>The last step is to associate an event listener to <em>all</em> <code>&lt;div&gt;</code> element using the jQuery function <code>on()</code>: When a <code>&lt;div&gt;</code> element is clicked, the class name <code>selected</code> is added to <em>that</em> particulart element with <code>addClass()</code>. Try it yourself! (and select the following section to get the solution)</p>
+					<code style="color: #e68a00;">
+						$('div').on('click', function() {
+						<code>
+							$(this).addClass('selected');
+						</code>
+						});
+					</code>
 					<h3>DOM insertion and removal</h3>
 					<h3>Chain effects</h3>
 				</section>
