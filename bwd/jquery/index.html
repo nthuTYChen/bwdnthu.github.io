@@ -387,16 +387,22 @@
 						</code>
 						&lt;/table&gt;
 					</code>
-					<p>We can then begin our first step to make it possible to remove an item with <code>remove()</code> when <em>X</em> is clicked. Let's first build a function that is executed when a click event is fired, and let's call it <code>removeItem</code>.</p>
+					<p>We can then begin our first step to make it possible to remove an item with <code>remove()</code> when <em>X</em> is clicked. Let's first build a function that is executed when a click event is fired, and let's call it <code>removeItem</code>. Why do we need to create this function independently? Well, when we are able to add new items to the list, we also need the <em>X</em> link of these items to listen to the same clicking event and then execute the same function. So, by creating an independent function, it's easier to re-use the same codes. The function must be ready to receive an <code>event</code> object that is passed from an event listener when an event is fire. We need this object to stop the default action of a link with its <code>preventDefault()</code> function, so we won't be redirected to nowhere when <em>X</em> is clicked. Then, since our goal is to remove the entire row represented by a <code>tr</code> element, and every <em>X</em> is the child of a <code>tr</code>, we can rely on this relation to get the ancestor <code>tr</code> element when <em>X</em> is clicked. This can be done with the <code>closest()</code> function in jQuery, which finds the ancestor HTML tag (<code>tr</code> in this case) closest to the element listening to a fired event (<code>a</code> in this case). After finding this ancestor element, we can then apply <code>remove()</code> to get rid of the entire row. Finally, let's attach this function to the event listener with the function <code>on()</code>.</p>
 					<code>
 						function removeItem(event) {
 						<code>
 							// Need to stop the default action of a link<br/>
 							event.preventDefault();<br/>
-							// Get the 'tr' element that is the closest parent of the clicked 'X'<br/>
+							// Get the 'tr' element that is the closest parent of the clicked 'X' (represented by 'this')<br/>
 							var targetRow = $(this).closest('tr'); <br/>
 							// Remove the target 'tr' element<br/>
 							targetRow.remove();
+						</code>
+						};<br/>
+						window.onload = function() {
+						<code>
+							// Make every 'a' inside 'td' listening to a clicking event and execute 'removeItem'<br/>
+							$('td > a').on('click', removeItem);
 						</code>
 						}
 					</code>
