@@ -451,7 +451,11 @@
 					<h2 id="casestudy">Case Studies</h2>
 				</section>
 				<section>
-					<h2 id="async">Wait, I haven't done my job!</h2>
+					<h2 id="async">Synchronous asynchrony</h2>
+					<picture>
+						<img style="width: 20%; height: auto;" src="img/catsync.gif"/>
+						<sub>Source: Unknown</sub>
+					</picture>
 					<p>We are entering a slightly even more technical part of Web programming, that is, to know how to make a process <em class="extra">asynchronous</em>. This shouldn't be a problem that concerns you in your Web design projects, since most of times you only need to present data elegantly, and your JavaScript/jQuery codes are usually executed sequentially following their order in the JS files - The first line is done, then the second line, and then the third line, and so on. For instance, in the following JS codes, the third line always waits for the second line to complete, and you always get the sum of the two numbers. There's never the case where <code>alert()</code> is run before the sum is computed.</p>
 					<code>
 						var x = 5, y = 3;<br/>
