@@ -454,8 +454,8 @@
 					<h2 id="async">Wait, I haven't done my job!</h2>
 					<p>We are entering a slightly even more technical part of Web programming, that is, to know how to make a process <em class="extra">asynchronous</em>. This shouldn't be a problem that concerns you in your Web design projects, since most of times you only need to present data elegantly, and your JavaScript/jQuery codes are usually executed sequentially following their order in the JS files - The first line is done, then the second line, and then the third line, and so on. For instance, in the following JS codes, the third line always waits for the second line to complete, and you always get the sum of the two numbers. There's never the case where <code>alert()</code> is run before the sum is computed.</p>
 					<code>
-						var x = 5, y = 3;
-						var sum = x + y;
+						var x = 5, y = 3;<br/>
+						var sum = x + y;<br/>
 						alert(sum); // Always get the sum of x and y
 					</code>
 					<p>However, a process can be asynchronous if it is independent of the <em>main flow</em> of the sequential execution of your codes, which makes sense considering the efficiency in running a computer program. For instance, perhaps some contents of your website are retrieved from some external servers, but the internet connection between the server of your website and the external server is extremely slow. If this step is sequential and thus synchronous, then it would block everything else following this process, including the codes that are unrelated to this process (such as animation), which makes your Web program in efficient.</p>
@@ -464,7 +464,7 @@
 						retrieving external info; // Extremely slow connection...<br/>
 						animation codes; // Wait for years to run...
 					</code>
-					<p>To avoid such an issue, the process of retrieving the external information is made <em>asynchronous</em> so it can take as long as it needs to complete the process, and the rest of the codes can keep running. This is great because now the codes that animate HTML elements won't have to be delayed, for instance.</p>
+					<p>To avoid such an issue, the process of retrieving the external information is made <em>asynchronous</em> so it can take as long as it needs to complete the process, and the rest of the codes can keep running at the same time (which confusingly matches another definition of synchrony...). This is great because now the codes that animate HTML elements won't have to be delayed. </p>
 					<p> has to retrieve any information that is <em>not</em> from the current page. For example, perhaps you want to be thoughtfully provide weather information in your websites, and you have to load this weather information from some weather service so your websites are able to present the information. How is this process asynchronous? When your website requests some external information, it takes time for data transmission to complete, and an efficient computer program will simply keep running because maybe other part  waiting for the transmission to be done is independent of other synchronous processes, which could be executed Accordingly, then, you must <em class="extra">wait</em> for the data to be able to present</p>
 				</section>
 				<section>
