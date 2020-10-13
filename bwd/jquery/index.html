@@ -417,8 +417,29 @@
 						</code>
 						&lt;/form&gt;
 					</code>
-					<p></p>
-					<code></code>
+					<p>Let's also create the function executed when clicking the <em>Add</em> button as an independent one, so our JS codes look more organized.</p>
+					<code>
+						function addItem(event) {
+						<code>
+							// Avoid the default action caused by the Submit button<br/>
+							event.preventDefault();<br/>
+							// Get the value of the first 'input' element as date<br/>
+							let date = $('input').eq(0).val();<br/>
+							// Get the value of the second 'input' element as content<br/>
+							let content = $('input').eq(1).val();<br/>
+							// Create a clickable 'X' link for the newly created item<br/>
+							let removeLink = '&lt;a href=""&gt;X&lt;/a&gt;'<br/>
+							// Insert an empty new row into 'tbody' as the last item using append()<br/>
+							$('tbody').append('&lt;tr&gt;&lt;/tr&gt;');
+							// Combine everything together into two columns, and make them the HTML content of the newly inserted (last) 'tr' in 'tbody'<br/>
+							$('tbody > tr').eq(-1).html('&lt;td&gt;'+date+'&lt;/td&gt;&lt;td&gt;'+content+removeLink+'&lt;/td&gt;')<br/>
+							// Add the same 'removeItem' function to the event listener of the 'X' link of the newly created item<br/>
+							$('tbody > tr > a').eq(-1).on('click', removeItem);<br/>
+							// Simulate the clicking event for the Reset button with trigger()<br/>
+							$('input[type="reset"]').trigger('click');
+						</code>
+						};
+					</code>
 				</section>
 				<section>
 					<h2 id="technical">More technical stuff</h2>
