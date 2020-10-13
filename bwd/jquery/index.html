@@ -496,12 +496,13 @@
 					<p>This line of <code>$.get()</code> code doesn't block the execution of the codes following it, as demosntrated below:</p>
 					<code>
 						// Asynchronous<br/>
-						$.get(URL).done(function(result) {
+						$.get(URL).done(function(result) {<br/>
 							alert('asynchronous done!');
 						});<br/>
 						// Synchronous, which is the message you get first<br/>
 						alert('synchronous done!');
 					</code>
+					<h3>Deferred and resolve</h3>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
