@@ -473,13 +473,30 @@
 					<code>
 						$.get('https://api.openweathermap.org/data/2.5/weather?q={city},{country}&appid={AppId}');
 					</code>
-					<p>This line of code will create an asynchronous process that doesn't block the execution of the codes following it, as demosntrated in the following codes:</p>
+					<p>To deal with the data completely retrieved from the weather server after the process is <em>done</em>, we could add a <em>callback</em> function to <code>$.get()</code> as a second parameter, which receives the retrieved data as a single parameter as well:</p>
 					<code>
-						var getResults;<br/>
+						$.get(URL, function(result) {
+						<code>
+							alert('asynchronous done!');
+						</code>
+						});
+					</code>
+					<p>Or, more intuitively, perhaps, we can use the function <code>done()</code> of the object created using <code>$.get()</code>, which simply does a similar thing:</p>
+					<code>
+						$.get(URL).done(function(result) {
+						<code>
+							alert('asynchronous done!');
+						</code>
+						});
+					</code>
+					<p>This line of <code>$.get()</code> code doesn't block the execution of the codes following it, as demosntrated below:</p>
+					<code>
 						// Asynchronous<br/>
-						getResults = $.get('https://api.openweathermap.org/data/2.5/weather?q={city},{country}&appid={AppId}');<br/>
-						// You get 'undefined'<br/>
-						console.log(getResult);
+						$.get(URL).done(function(result) {
+							alert('asynchronous done!');
+						});<br/>
+						// Synchronous, which is the message you get first<br/>
+						alert('synchronous done!');
 					</code>
 				</section>
 				<section>
