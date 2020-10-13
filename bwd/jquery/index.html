@@ -464,8 +464,23 @@
 						retrieving external info; // Extremely slow connection...<br/>
 						animation codes; // Wait for years to run...
 					</code>
-					<p>To avoid such an issue, the process of retrieving the external information is made <em>asynchronous</em> so it can take as long as it needs to complete the process, and the rest of the codes can keep running at the same time (which confusingly matches another definition of synchrony...). This is great because now the codes that animate HTML elements won't have to be delayed. </p>
-					<p> has to retrieve any information that is <em>not</em> from the current page. For example, perhaps you want to be thoughtfully provide weather information in your websites, and you have to load this weather information from some weather service so your websites are able to present the information. How is this process asynchronous? When your website requests some external information, it takes time for data transmission to complete, and an efficient computer program will simply keep running because maybe other part  waiting for the transmission to be done is independent of other synchronous processes, which could be executed Accordingly, then, you must <em class="extra">wait</em> for the data to be able to present</p>
+					<p>To avoid such an issue, the process of retrieving the external information is made <em>asynchronous</em> so it can take as long as it needs to complete the process, and the rest of the codes can keep running at the same time (which confusingly matches another definition of synchrony...). This is great because now the codes that animate HTML elements won't have to be delayed. Okay, so asynchrony is great from a computational perspective, but what about the data retrieved from the external server? How can we deal with it asynchronously? This is crucial because sometimes it is the content of your website that is determined by the external information, so your asynchronous process needs to take actions to present the information when the process is <em>done</em>, and this is exactly what you have to learn in this section.</p>
+					<p>Now, let's assume that you hope to thoughtfully provide weather information retrieved from an external weather server in your website. Then you can  sign up for a free account at <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap.org</a> first, which allows you to get some basic current weather information using the following URL. We can try to get the current weather of Hsinchu City by replacing <code>{city}</code> with <code>hsinchu</code> and <code>{country}</code> with <code>tw</code>. You will also to replace <code>{AppId}</code> I provide in my lecture or from your account.</p>
+					<code>
+						https://api.openweathermap.org/data/2.5/weather?q={city},{country}&appid={AppId}
+					</code>
+					<p>By pasting this URL to your browser window, you will see almost immediately an object-like data (which is called a JSON object) returned from their weather server. If you need to usue this information in your jQuery codes, you could enclose the URL in <code>$.get()</code> (which is equivalent to <code>jQuery.get()</code>):</p>
+					<code>
+						$.get('https://api.openweathermap.org/data/2.5/weather?q={city},{country}&appid={AppId}');
+					</code>
+					<p>This line of code will create an asynchronous process that doesn't block the execution of the codes following it, as demosntrated in the following codes:</p>
+					<code>
+						var getResults;<br/>
+						// Asynchronous<br/>
+						getResults = $.get('https://api.openweathermap.org/data/2.5/weather?q={city},{country}&appid={AppId}');<br/>
+						// You get 'undefined'<br/>
+						console.log(getResult);
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
