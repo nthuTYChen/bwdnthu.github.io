@@ -292,10 +292,6 @@
 					</code>
 					<p>It is just this easy to change the appearance of an element with this second use of <code>css()</code> in jQuery! Well, you still can retrieve one CSS property at a time with the first use of <code>css()</code> - bummer. But again, we should not take everything for granted, and this is the best we can get so far.</p>
 					<h3>Making changes to more attributes</h3>
-					<picture>
-						<img src="./img/fang.png" style="height: auto; width: 35%;" />
-						<sub>Source: 九品芝麻官 the movie</sub>
-					</picture>
 					<p>So far we've seen some jQuery functions that allow you to retrieve/change the <em>attributes</em> of an element. The <em>value</em> attribute could be accessed with <code>val()</code>, and the <code>style</code> attribute could be accessed with <code>css()</code>. You can keep playing around with <code>css()</code> especially when you need to create an interactive Web interface that changes the appearance HTML elements based on users' actions - that is, when an action is detected, an event is fired to apply the <code>css()</code> function to a specific element.</p>
 					<p>But here we will learn another more elegant way of changing how a specific element looks like using the jQuery functions <code>addClass()</code> and <code>removeClass()</code>. As smart as you are, you might already know what these two functions mean, right? That is, to add and remove a specific label from the <code>class</code> attribute of HTML elements. Thus, the idea is that you can define the CSS properties for a particular <em>class</em> in your CSS file. Then, you only need to add the name of this class to HTML elements when necessary. And this approach opens up more possibilities in our Web design.</p>
 					<p>Let's wind back to our previous HTML example repeated below without the two buttons and the inline style. In this old example, we need the buttons combined with the <code>css()</code> function to change the appearance of one or all of the <code>&lt;div&gt;</code> elements. But now, we can define a class in our CSS file, and add this class to a clicked <code>&lt;div&gt;</code> element to change its size and color.</p>
@@ -363,6 +359,10 @@
 						});
 					</code>
 					<h3>DOM insertion and removal</h3>
+					<picture>
+						<img src="./img/fang.png" style="height: auto; width: 35%;" />
+						<sub>Source: 九品芝麻官 the movie</sub>
+					</picture>
 					<p>While the contents of your personal websites would very likely stay intact, your might need to work on webpages in which elements could be added and deleted. Of course, JavaScript is ready for this need, let along jQuery - these three functions <code>append()</code>, <code>prepend()</code>, and remove() would do the job for you.</p>
 					<ul>
 						<li><code>append()</code> - Add an HTML element to be the <em class="extra">last</em> child of one or all selected elements.</li>
@@ -377,7 +377,7 @@
 							<code>
 								&lt;tr&gt;&lt;td&gt;Date&lt;/td&gt;&lt;td&gt;Content&lt;/td&gt;&lt;/tr&gt;
 							</code>
-							&lt;/thead&gt;
+							&lt;/thead&gt;<br/>
 							&lt;tbody&gt;
 							<code>
 								&lt;tr id="item1"&gt;&lt;td&gt;2020-10-25&lt;/td&gt;&lt;td&gt;Create a to-do list &lt;a href=""&gt;X&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;<br/>
