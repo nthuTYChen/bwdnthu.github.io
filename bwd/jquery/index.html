@@ -528,7 +528,7 @@
 						</code>
 						});
 					</code>
-					<h3>Deferred and resolve</h3>
+					<h3>"When" to "resolve" a "Deferred" process</h3>
 					<p>Alright, here's just one asynchronous process to deal with. But what if there are more? If we also hope to get some weather forecast data from the weather server, you need another request using the following URL template, which results in another asynchronous process:</p>
 					<code>
 						https://api.openweathermap.org/data/2.5/forecast?q={city},{country}&appid={AppId}
@@ -584,6 +584,15 @@
 								dfpForecast.resolve();
 							</code>
 							});
+						</code>
+						});
+					</code>
+					<p>We have one more step to make everything work, which is to build a monitoring process for all these asynchronous processes using <code>$.when()</code>. You can pass all the created deferred processes to this function, and attach a <code>done()</code> to it to take some actions after <code>resolve()</code> is called for every deferred process passed to <code>$.when()</code>:</p>
+					<code>
+						// Pass deferred processes<br/>
+						$.when(dfpCurrent, dfpForecast).done(function() {
+						<code>
+							// Do something after all processes are "resolved"
 						</code>
 						});
 					</code>
