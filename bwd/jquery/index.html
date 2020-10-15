@@ -504,9 +504,18 @@
 						// Synchronous, which is the message you get first<br/>
 						alert('synchronous done!');
 					</code>
-					<p>With a general understanding of how <code>$.get()</code> works, let's try to design a webpage that shows the current temperature in Hsinchu.</p>
+					<p>With a general understanding of how <code>$.get()</code> works, let's try to design a webpage that shows the current temperature in Hsinchu. In the following HTML codes, we have a "loading" text span, which appears by default. We also have a hidden text span that will be made visible after the content is filled with the weather data retrieved from the weather server.</p>
 					<code>
 						&lt;h3&gt;Current Temerature in Hsinchu&lt;/h3&gt;
+						&lt;p&gt;
+						<code>
+							&lt;span id="loading"&gt;Loading...&lt;/span&gt;
+							&lt;span id="temp" style="display: none;"&gt;&lt;/span&gt;
+						</code>
+						&lt;/p&gt;
+					</code>
+					<p></p>
+					<code>
 						
 					</code>
 					<h3>Deferred and resolve</h3>
