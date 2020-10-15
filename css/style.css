@@ -172,6 +172,10 @@ a.examples:hover {
 	color: black;
 }
 
+q {
+	font-style: italic;
+}
+
 button {
 	padding: 0.5vh;
 	border: 1px solid #b30000;
