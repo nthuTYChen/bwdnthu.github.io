@@ -529,6 +529,23 @@
 						});
 					</code>
 					<h3>Deferred and resolve</h3>
+					<p>Alright, here's just one asynchronous process to deal with. But what if there are more? If we also hope to get some weather forecast data from the weather server, you need another request using the following URL template, which results in another asynchronous process:</p>
+					<code>
+						https://api.openweathermap.org/data/2.5/forecast?q={city},{country}&appid={AppId}
+					</code>
+					<p>How do we make sure that an action is taken after <em class="extra">both</em> asynchronous processes are done? One way that you could think of is to run one <code>$.get()</code> function after another <code>$.get()</code> is <em>done</em>:</p>
+					<code>
+						$.get(currentURL).done(function(current) {
+						<code>
+							$get(forecastURL).done(function(forecase) {
+							<code>
+								console.log('both are done!');
+							</code>
+							});<br/>
+							console.log('Got current data!'); // You get this message first
+						</code>
+						});
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
