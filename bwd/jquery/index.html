@@ -514,9 +514,22 @@
 						</code>
 						&lt;/p&gt;
 					</code>
-					<p></p>
+					<p>In our JS codes, we will attempt to get the weather data in <code>window.onload</code> with <code>$.get()</code>, fill the hidden text span with the temperature information with the jQuery function <code>html()</code>, hide the "loading" text using <code>css()</code>, and then make the hidden text span visible.</p>
 					<code>
-						
+						$.get(URL).done(function(result) {
+						<code>
+							// Get the current temperature<br/>
+							let currentTemp = result.main.temp;<br/>
+							// Put the temperature into the hidden text span<br/>
+							$('#temp').html(temperature + ' C');<br/>
+							// Hide the "loading" text AND make the hidden span visible<br/>
+							$('#loading').css('display', 'none', function() {
+							<code>
+								$('#temp').css('display', 'inline');
+							</code>
+							});
+						</code>
+						});
 					</code>
 					<h3>Deferred and resolve</h3>
 				</section>
