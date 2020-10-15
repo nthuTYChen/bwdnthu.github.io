@@ -462,8 +462,8 @@
 						</div>
 					</div>
 					<script>
-						function openMenu() {
-							var targetMenu = 'sub'+$(this).attr('id');
+						function openMenu(event) {
+							var targetMenu = 'sub'+event.currentTarget.id;
 							alert(targetMenu);
 							$('#'+targetMenu).css('display', 'block');
 							return false;
