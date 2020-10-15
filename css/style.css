@@ -176,6 +176,10 @@ q {
 	font-style: italic;
 }
 
+s {
+	color: #383838;
+}
+
 button {
 	padding: 0.5vh;
 	border: 1px solid #b30000;
