@@ -473,7 +473,7 @@
 					<code>
 						https://api.openweathermap.org/data/2.5/weather?q={city},{country}&appid={AppId}
 					</code>
-					<p>By pasting this URL to your browser window, you will see almost immediately an object-like data (which is called a JSON object) returned from their weather server. If you need to usue this information in your jQuery codes, you could enclose the URL in <code>$.get()</code> (which is equivalent to <code>jQuery.get()</code>):</p>
+					<p>By pasting this URL to your browser window, you will see almost immediately an object-like data (which is called a JSON object) returned from their weather server. You are referred to <a href="https://openweathermap.org/current" target="_blank">their API docs</a> for the data represented by each field. If you need to use this information in your jQuery codes, you could enclose the URL in <code>$.get()</code> (which is equivalent to <code>jQuery.get()</code>):</p>
 					<code>
 						$.get('https://api.openweathermap.org/data/2.5/weather?q={city},{country}&appid={AppId}');
 					</code>
@@ -497,10 +497,17 @@
 					<code>
 						// Asynchronous<br/>
 						$.get(URL).done(function(result) {<br/>
+						<code>
 							alert('asynchronous done!');
+						</code>
 						});<br/>
 						// Synchronous, which is the message you get first<br/>
 						alert('synchronous done!');
+					</code>
+					<p>With a general understanding of how <code>$.get()</code> works, let's try to design a webpage that shows the current temperature in Hsinchu.</p>
+					<code>
+						&lt;h3&gt;Current Temerature in Hsinchu&lt;/h3&gt;
+						
 					</code>
 					<h3>Deferred and resolve</h3>
 				</section>
