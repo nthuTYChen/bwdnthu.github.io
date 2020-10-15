@@ -518,16 +518,13 @@
 					<code>
 						$.get(URL).done(function(result) {
 						<code>
-							// Get the current temperature<br/>
-							let currentTemp = result.main.temp;<br/>
+							// Get the current temperature (round to the first decimal)<br/>
+							let currentTemp = Math.round(result.main.temp * 10)/10;<br/>
 							// Put the temperature into the hidden text span<br/>
-							$('#temp').html(temperature + ' C');<br/>
-							// Hide the "loading" text AND make the hidden span visible<br/>
-							$('#loading').css('display', 'none', function() {
-							<code>
-								$('#temp').css('display', 'inline');
-							</code>
-							});
+							$('#temp').html(currentTemp + ' C');<br/>
+							// Hide the "loading" text and make the hidden span visible<br/>
+							$('#loading').css('display', 'none');<br/>
+							$('#temp').css('display', 'inline');
 						</code>
 						});
 					</code>
