@@ -537,7 +537,7 @@
 					<code>
 						$.get(currentURL).done(function(current) {
 						<code>
-							$get(forecastURL).done(function(forecase) {
+							$.get(forecastURL).done(function(forecase) {
 							<code>
 								console.log('both are done!');
 							</code>
@@ -547,6 +547,46 @@
 						});
 					</code>
 					<p>But this is just for two asynchronous processes. If there are more, you'll have to keep embeddeing each <code>$.get()</code> in another, and your JS codes would just look crazy. So, more intuitively, you would naturally think if there's anything you can do in jQuery to monitor every individual asynchronous process, and take some actions when all processes are complete. This is the case where you need <code>Deferred()</code>, <code>resolve()</code>, and <code>when()</code>.</p>
+					<p>First of all, you can use <code>$.Deferred()</code> to create an object linked to an asynchronous process as follows:</p>
+					<code>
+						// dfp = Deferred Process<br/>
+						var dfp = $.Deferred(function() {});
+					</code>
+					<p>With an asynchronous process created this way, you can decide when to send a signal to tell the process that monitors all asynchronous processes that this particular process is done, and you can do it with <code>resolve()</code>:</p>
+					<code>
+						var dfp = $.Deferred(function() {
+						<code>
+							dfp.resolve(); // Send a "done" signal
+						</code>
+						});
+					</code>
+					<p>Following this idea, we can logically create two independent asynchronic processes for the two weather data requests:</p>
+					<code>
+						// Request the current weather data<br/>
+						var dfpCurrent = $.Deferred(function() {
+						<code>
+							// Send you request here<br/>
+							$.get(currentURL).done(function(result) {
+							<code>
+								// Do something after complete data transmission<br/>
+								// Then send a "done" signal
+								dfpCurrent.resolve();
+							</code>
+							});
+						</code>
+						});<br/>
+						// Request the weather forecast data<br/>
+						var dfpForecast = $.Deferred(function() {
+						<code>
+							$.get(forecastURL).done(function(result) {
+							<code>
+								// Send a "done" signal after complete data transmission<br/>
+								dfpForecast.resolve();
+							</code>
+							});
+						</code>
+						});
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
