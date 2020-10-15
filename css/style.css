@@ -172,7 +172,7 @@ a.examples:hover {
 	color: black;
 }
 
-q {
+q, q > em {
 	font-style: italic;
 }
 
