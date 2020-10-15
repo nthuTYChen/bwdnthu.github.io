@@ -453,6 +453,7 @@
 					<div id="sampleTopMenu" style="position: relative; width: 100%; height: 4vh; padding: 0 1vw; background-color: red;">
 						<a id="topMenu1" href="/" style="padding: 0 0.5vw; line-height: 4vh;" onclick="function(event) {
 							event.preventDefault();
+							alert($('#subMenu1').css('display') === 'none');
 							var left = $('#topMenu1').offset().left;
 							$('#subMenu1').css('left', left);
 							$('#subMenu1').css('display', 'block');
