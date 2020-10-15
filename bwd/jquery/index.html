@@ -546,6 +546,7 @@
 						</code>
 						});
 					</code>
+					<p>But this is just for two asynchronous processes. If there are more, you'll have to keep embeddeing each <code>$.get()</code> in another, and your JS codes would just look crazy. So, more intuitively, you would naturally think if there's anything you can do in jQuery to monitor every individual asynchronous process, and take some actions when all processes are complete. This is the case where you need <code>Deferred()</code>, <code>resolve()</code>, and <code>when()</code>.</p>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
