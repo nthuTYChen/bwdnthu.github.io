@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&family=Piazzolla&display=swap');
+
+h1 {
+	font-family: Commissioner, sans-serif;
+}
+
+p {
+	font-family: Piazzolla, serif;
+}
