@@ -577,7 +577,6 @@
 						<li><code>::first-letter</code> - the first letter of selected elements</li>
 						<li><code>::before</code> - before selected elements</li>
 						<li><code>::after</code> - after selected elements (with the <code>content</code> property)</li>
-						<li><code>:nth-last-child(n)</code> - the nth child of an element counting from the last child (n = nth)</li>
 					</ul>
 					<p>Let me give you a small test here: What does the following style do? (select the line below the CSS style to find the answer)</p>
 					<code>
@@ -585,7 +584,7 @@
 						<code>content: '[link]';</code>
 						}
 					</code>
-					<p><code style="color: #e68a00;">/* Add texts '[link]' after every &lt;a&gt; that is the immediate child of a &lt;section&gt; that is not the last child of its ancestor &lt;body&gt;. */</code></p>
+					<p><code style="color: #f2f2f2;">/* Add texts '[link]' after every &lt;a&gt; that is the immediate child of a &lt;section&gt; that is not the last child of its ancestor &lt;body&gt;. */</code></p>
 					<p>The full list of <em>pseudo-classes</em> could be found on this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="blank">MDN Web Docs page</a>. Note that some of these pseudo-classes are still experimental and are not supported by all Web browsers. Check compatibility before using them in your own webpage.</p>
 					<h3>Priority/Specificity</h3>
 					<p>When elements are selected by <em>multiple selectors</em> in a CSS file and the properties in these styles are the same, one of these styles would have a higher <em>priority</em> to be applied to the selected elements. Let's start with the simpler case. Suppose that you carelessly style the background color of <code>&lt;body&gt;</code> twice in your CSS file, the last style <em>overrides</em> the first one:</p>
