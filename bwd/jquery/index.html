@@ -485,6 +485,7 @@
 
 						function showSideSubMenu () {
 							$('p.subMenu').css('display', 'none');
+							console.log($(this).siblings('p'));
 							$(this).siblings('p').css('display', 'block');
 							//return (confirm('yes?'));
 							return false;
