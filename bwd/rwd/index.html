@@ -44,13 +44,13 @@
 					<h3>Media query</h3>
 					<p>After you set up the metadata for a responsive webpage properly, you can then define different layout in a CSS file with <em class="extra">media queries</em> using <code>@media</code> rules as in the following example:</p>
 					<code>
-						@media screen and (min-width: 800px) {
+						@media screen and (max-width: 800px) {
 						<code>
 							/* some CSS styles */
 						</code>
 						}
 					</code>
-					<p>The above example defines a block of CSS styles that applies only when the media, which is set to be the device screen, has a minimal width of 800 pixels. Following this logic, we can have CSS styles that apply by default except in some cases:</p>
+					<p>The above example defines a block of CSS styles that applies only when the media, which is set to be the device screen, has a width of 800 pixels at maximum. Following this logic, we can have CSS styles that apply by default except in some cases:</p>
 					<code>
 						/* Default DIV style */<br/>
 						div {
@@ -59,7 +59,7 @@
 							width: 30%;
 						</code>
 						}<br/>
-						@media screen and (min-width: 800px) {
+						@media screen and (max-width: 800px) {
 						<code>
 							/* DIV style applied in a narrower device */<br/>
 							div {
@@ -70,6 +70,7 @@
 						</code>
 						}
 					</code>
+					<p>In this example, the width of a <code>&lt;div&gt;</code> element is by default 30% of the width of its immediate ancestor, but is adjusted into 100% in a device with a screen width of 800 pixels or lower. Since the property <code>background-color</code> is not set to a different value in the block inside the media query, it would remain unchanged and still embellish a <code>&lt;div&gt;</code> element with a red background color.</p>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
