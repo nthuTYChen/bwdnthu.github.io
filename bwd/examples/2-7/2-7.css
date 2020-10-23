@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/*font-family: serif;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: small-caps;
+	font-size: 2.4vh;
+	line-height: 3.6vh;*/
+	font: normal small-caps 400 2.4vh/3.6vh serif;
+}
+
+article {
+	background-color: black;
+	color: white;
+	margin: 5px 0;
+	padding: 10px 5px;
+}
+
+h1 {
+	font-size: 4.8vh;
+	line-height: 7.2vh;
+	color: yellow;
+}
+
+h2 {
+	font-size: 3.6vh;
+	line-height: 5.4vh;
+	font-style: initial;
+	color: orange;
+}
+
+h1, h2 {
+	font-family: sans-serif;
+}
+
+section {
+	margin: 3px 0;
+}
