@@ -145,6 +145,44 @@
 						$(this).siblings().css('display', 'block');
 					</code>
 					<p>Now only do <code>&lt;a&gt;</code> elements appear automatically below the menu bar, these elements also take up the full viewport width. Why? Once an inline element is turned into a block element, it takes width and height settings, which, in the current case, are <em>cascaded</em> from their parent <code>&lt;nav&gt;</code>.</p>
+					<p>OK, it seems like we have had a great start. Now, how can we hide the menu items by clicking the hamburger symbol again? Easy. We can get it done with the <code>if...else...</code> statement - if the items are hidden, show them, or hide them if they are present. In this first line inside the event listener below, we first check if the first sibling <code>&lt;a&gt;</code> element has a <code>none</code> value for its <code>display</code> property, and store the <em class="extra">boolean</em> value into the variable <code>hidden</code>. The presentation of all sibling <code>&lt;a&gt;</code> elements is then determined by this variable.</p>
+					<code>
+						$('nav > span').on('click', function() {
+						<code>
+							//Check if the first &lt;a&gt; is hidden<br/>
+							var hidden = ($('nav > span').siblings().eq(0).css('display') === 'none');<br/>
+							if(hidden) {
+							<code>
+								$(this).siblings().css('display', 'block');
+							</code>
+							}<br/>
+							else {
+							<code>
+								$(this).siblings().css('display', 'none');
+							</code>
+							}
+						</code>
+						});
+					</code>
+					<p>It's time to transform this drop-down menu to the one with a horizontal layout with media queries. Let's also set the <em>break point</em> to a viewport width of <em>1,200 pixels</em> in the CSS file, and our first change is to hide the hamburger symbol. Once the symbol is hidden, you don't need to be worried about clicking the symbol and trigger unexpected actions by accident. Second, let's set the <code>&lt;a&gt;</code> siblings to be <em>inline-block</em> elements. The reason is that we want the elements to be treated like a normal text flow but at the time made flexible in terms of their height and width.</p>
+					<code>
+						@media screen and (min-width: 1200px) {
+						<code>
+							nav > span {
+							<code>
+								display: none;
+							</code>
+							}<br/><br/>
+							nav a {
+							<code>
+								display: inline-block;<br/>
+								height: 5vh;<br/>
+								width: 10%;
+							</code>
+							}
+						</code>
+						}
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
