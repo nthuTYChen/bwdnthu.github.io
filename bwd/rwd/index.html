@@ -184,6 +184,52 @@
 						}
 					</code>
 					<h3>The hide-and-seek approach</h3>
+					<p>As mentioned above, when you adopt a hide-and-seek approach, you need to have two <code>&lt;nav&gt;</code> elements in your HTML document, which are styled differently and displayed in different contexts. Let's start with the HTML part first:</p>
+					<code>
+						&lt;nav id="desktopMenu"&gt;
+						<code>
+							&lt;a href="#"&gt;Item 1&gt;/a&gt;<br/>
+							&lt;a href="#"&gt;Item 1&gt;/a&gt;
+						</code>
+						&lt;/nav&gt;<br/>
+						&lt;nav id="mobileMenu"&gt;
+						<code>
+							&lt;span&gt;&#9776;&lt;/span&gt;<br/>
+							&lt;a href="#"&gt;Item 1&gt;/a&gt;<br/>
+							&lt;a href="#"&gt;Item 1&gt;/a&gt;
+						</code>
+						&lt;/nav&gt;
+					</code>
+					<p>With two <code>&lt;nav&gt;</code> elements that are specified with a different <code>id</code> attribute, their appearance can be made very distinct, and one could be hidden when the other is present:</p>
+					<code>
+						/* All &lt;a&gt; in &lt;nav&gt; share the same text styles and layout */
+						nav > a {
+						<code>
+							display: block;<br/>
+							background-color: grey;<br/>
+							color: black;<br/>
+							text-align: center;
+						</code>
+						}<br/>
+						/* Mobile first - mobile menu is visible by default */<br/>
+						nav#mobileMenu {
+						<code>
+							display: block;
+							background-color: black;<br/>
+							color: white;<br/>
+							height: 5vh;<br/>
+							width: 100%;<br/>
+							line-height: 5vh;<br/>
+							text-align: center;
+						</code>
+						}<br/>
+						/* Desktop menu is hidden by default */<br/>
+						nav#desktopMenu {
+						<code>
+							display: none;	
+						</code>
+						}
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
