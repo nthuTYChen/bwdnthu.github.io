@@ -24,7 +24,7 @@
 			<article>
 				<h1>6. Responsive Web Design</h1>
 				<p>Who's still using a computer? And your websites should respond to this question.</p>
-				<p><a href="#overview">Overview</a> / <a href="#prepwork">Preparation work</a> / <a href="#rwdmenu">Responsive menu</a> / <a href="#flexbox">CSS flex box</a> / <a href="#touchevent">Touch events</a> / <a href="#forthenextunit">For the next unit...</a></p>
+				<p><a href="#overview">Overview</a> / <a href="#prepwork">Preparation work</a> / <a href="#rwdmenu">Responsive menus</a> / <a href="#flexbox">CSS flex box</a> / <a href="#touchevent">Touch events</a> / <a href="#forthenextunit">For the next unit...</a></p>
 				<section>
 					<h2 id="overview">Overview</h2>
 					<picture>
@@ -93,9 +93,54 @@
 				</section>
 				<section>
 					<h2 id="rwdmenu">Responsive menus</h2>
-					<p>With media queries, there are two ways to present different navigation panes in different contexts. One is to have only one <code>&lt;nav&gt;</code> in your HTML document, which is <em>transformed</em> by different CSS styles in various browsers. The other is to have two <code>&lt;nav&gt;</code> elements that are organized and styled differently in a CSS file, and simply use media queries to decide when to display which one. The first transforming approach is more complicated on the CSS side, as you need to try hard to make sure the CSS styles applied in different contexts can adjust same navigation pane properly, but it is useful if your menu has a huge number of items so duplicating the entire menu may increase the size of a webpage unnecessarily. The second hide-and-seek approach is easier to implement, but only when your menu has only a few item. I'll do a very simple demonstration below, and it's up to you to choose the one that is most appropriate in your case.</p>
+					<p>With media queries, there are two ways to present different navigation panes in different contexts. One is to have only one <code>&lt;nav&gt;</code> in your HTML document, which is <em>transformed</em> by different CSS styles in various browsers. The other is to have two <code>&lt;nav&gt;</code> elements that are organized and styled differently in a CSS file, and simply use media queries to decide when to display which one. The first transforming approach is more complicated on the CSS side, as you need to try hard to make sure the CSS styles applied in different contexts can adjust same navigation pane properly, but it is useful if your menu has a huge number of items so duplicating the entire menu may increase the size of a webpage unnecessarily. The second hide-and-seek approach is easier to implement, but only when your menu has only a few item. I'll do a very simple demonstration below, and it's up to you to choose the one that is most appropriate in your case. You can also create just one mobile-based drop-down menu for all contexts, although it could confuse the users a little bit when they are using their laptop or desktop computer.</p>
 					<h3>The transforming approach</h3>
-					<p></p>
+					<p>Let's first create a navigation pane with just two items with a <em class="extra">hamburger menu</em> Unicode symbol:</p>
+					<code>
+						&lt;nav&gt;
+						<code>
+							&lt;span&gt;&#9776;&lt;/span&gt;<br/>
+							&lt;a href="#"&gt;Item 1&gt;/a&gt;<br/>
+							&lt;a href="#"&gt;Item 1&gt;/a&gt;
+						</code>
+						&lt;/nav&gt;
+					</code>
+					<p>Now let's give the nagivation pane a decent look in a mobile-browsing context (remember the <em class="extra">mobile first</em> principle?). The main aspects in the following CSS styles are as follows. First, the <code>&lt;nav&gt;</code> element is set to take the full width of the viewport, and it is fixed to the top of the viewport. Second, the height of the menu is set to the 5% of the viewport height, which is also the line height of the element to help align texts vertically. Since this mobile-based menu is created as a drop-down menu, its items are hidden by default, and they will only be presented when the hamburger icon is clicked.</p>
+					<code>
+						nav {
+						<code>
+							position: fixed;<br/>
+							top: 0;<br/>
+							width: 100%;<br/>
+							padding: 0 1vw;<br/>
+							background-color: black;<br/>
+							color: white;<br/>
+							height: 5vh;<br/>
+							line-height: 5vh;<br/>
+							opacity: 0.95;
+						</code>
+						}<br/><br/>
+						nav > a {
+							<code>
+								display: none;<br/>
+								color: white;<br/>
+								text-align: center;<br/>
+								text-decoration: none;
+							</code>
+						}
+					</code>
+					<p>The rest of the tricks relies on jQuery - we add a listener to the hamburger menu, and show its <code>&lt;a&gt;</code> siblings when it's clicked.</p>
+					<code>
+						window.onload = function() {
+						<code>
+							$('nav > span').on('click', function() {
+							<code>
+								$(this).siblings().css('display', 'inline');
+							</code>
+							});
+						</code>
+						};
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
