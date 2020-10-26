@@ -112,7 +112,6 @@
 							position: fixed;<br/>
 							top: 0;<br/>
 							width: 100%;<br/>
-							padding: 0 1vw;<br/>
 							background-color: black;<br/>
 							color: white;<br/>
 							height: 5vh;<br/>
@@ -141,6 +140,11 @@
 						</code>
 						};
 					</code>
+					<p>The above codes help present <code>&lt;a&gt;</code> elements as they were - namely <em class="extra">inline</em> elements. But we need a drop-down menu, and this can be done by changing <code>inline</code> to <code>block</code> in the above JS codes. Do you know why?</p>
+					<code>
+						$(this).siblings().css('display', 'block');
+					</code>
+					<p>Now only do <code>&lt;a&gt;</code> elements appear automatically below the menu bar, these elements also take up the full viewport width. Why? Once an inline element is turned into a block element, it takes width and height settings, which, in the current case, are <em>cascaded</em> from their parent <code>&lt;nav&gt;</code>.</p>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
