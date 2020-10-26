@@ -24,7 +24,7 @@
 			<article>
 				<h1>6. Responsive Web Design</h1>
 				<p>Who's still using a computer? And your websites should respond to this question.</p>
-				<p><a href="#overview">Overview</a> / <a href="#prepwork">Preparation work</a> / <a href="#dropdown">Drop-down menu</a> / <a href="#flexbox">CSS flex box</a> / <a href="#touchevent">Touch events</a> / <a href="#forthenextunit">For the next unit...</a></p>
+				<p><a href="#overview">Overview</a> / <a href="#prepwork">Preparation work</a> / <a href="#rwdmenu">Responsive menu</a> / <a href="#flexbox">CSS flex box</a> / <a href="#touchevent">Touch events</a> / <a href="#forthenextunit">For the next unit...</a></p>
 				<section>
 					<h2 id="overview">Overview</h2>
 					<picture>
@@ -92,7 +92,10 @@
 					<p>As we proceed to develop a mobile-friendly website, we would try different things to make it easier to navigate via a Web browser. Then, at some point of time, you will almost necessarily blame mobile Safari for producing unexpected bugs in your website. Since there is a vast body of iPhone users, you don't really want to exclude this user base that would greatly contribute to the number of page views of your website, which can lead to a higher profit if you work on a commercial project. This means that you always need to look for solutions that are specific to mobile Safari, which is really agitating. But if profit is not your primary concern, maybe you could choose not to give a damn, just like me. I am not the only person whining about how poor mobile Safari is (see <a href="https://www.eventbrite.com/engineering/mobile-safari-why/" target="_blank">this page</a> or <a href="https://www.telerik.com/blogs/safari-is-not-the-new-ie-but" target="_blank">this one</a>, for example), and Apple has been ignoring this issue for years. Let's hope Apple can fix all the issues in the coming years, rather than just focus on how expensive a new iPhone should be.</p>
 				</section>
 				<section>
-					<h2 id="dropdown">Drop-down menu</h2>
+					<h2 id="rwdmenu">Responsive menus</h2>
+					<p>With media queries, there are two ways to present different navigation panes in different contexts. One is to have only one <code>&lt;nav&gt;</code> in your HTML document, which is <em>transformed</em> by different CSS styles in various browsers. The other is to have two <code>&lt;nav&gt;</code> elements that are organized and styled differently in a CSS file, and simply use media queries to decide when to display which one. The first transforming approach is more complicated on the CSS side, as you need to try hard to make sure the CSS styles applied in different contexts can adjust same navigation pane properly, but it is useful if your menu has a huge number of items so duplicating the entire menu may increase the size of a webpage unnecessarily. The second hide-and-seek approach is easier to implement, but only when your menu has only a few item. I'll do a very simple demonstration below, and it's up to you to choose the one that is most appropriate in your case.</p>
+					<h3>The transforming approach</h3>
+					<p></p>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
