@@ -219,14 +219,35 @@
 							color: white;<br/>
 							height: 5vh;<br/>
 							width: 100%;<br/>
-							line-height: 5vh;<br/>
-							text-align: center;
+							line-height: 5vh;
 						</code>
 						}<br/>
 						/* Desktop menu is hidden by default */<br/>
 						nav#desktopMenu {
 						<code>
 							display: none;	
+						</code>
+						}<br/>
+						/* Applied only when viewport width < 1200 px */<br/>
+						@media screen and (min-width: 1200px) {
+						<code>
+							nav#mobileMenu {
+							<code>
+								display: none;
+							</code>
+							}<br/>
+							/* Define the desktopMenu style here */
+							nav#desktopMenu {
+							<code>
+								display:block;<br/>
+								position: fixed;<br/>
+								top: 5vh;<br/>
+								left: 10vw;<br/>
+								height: 5vh;<br/>
+								width: 10vh;<br/>
+								line-height: 5vh;
+							</code>
+							}
 						</code>
 						}
 					</code>
