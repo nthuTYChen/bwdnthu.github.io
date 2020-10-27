@@ -228,7 +228,7 @@
 							display: none;	
 						</code>
 						}<br/>
-						/* Applied only when viewport width < 1200 px */<br/>
+						/* Applied only when viewport width > 1200 px */<br/>
 						@media screen and (min-width: 1200px) {
 						<code>
 							nav#mobileMenu {
@@ -255,7 +255,8 @@
 				</section>
 				<section>
 					<h2 id="flexbox">CSS flex box</h2>
-					<p>As noted earlier, you can't just keep being lazy and duplicate everything, let along the elements that includes the main contents of a website.</p>
+					<p>As noted earlier, you can't just keep being lazy and duplicate everything, let along the elements that includes the main contents of a website, since a Web browser will be loading too much trivial stuff. For instance, if someone is using a desktop computer, then there's little chance that s/he will turn the Web browser into a portrait view, and the duplicated parts for the portrait view are loaded for nothing and only slow your website down.</p>
+					<p>In this regard, it is almost necessary to adopt the <em class="extra">transforming</em> approach for the contents of a responsive website project, and you need an approach to swiftly interchange between the layouts for different contexts. No problem, <em>CSS flex(ible) box</em> is here at your disposal.</p>
 					<code>
 						display: flex;<br/>
 						flex-direction: row;<br/>
