@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+}
+
+div {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+}
+
+a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: orange;
+}
