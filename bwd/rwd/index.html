@@ -284,14 +284,14 @@
 						<li><code>flex-direction</code> - It can be <code>row</code>, <code>column</code>, <code>row-reverse</code>, or <code>column-reverse</code>, so you can display the block elements horizontally/vertically in their original/reversed order.</li>
 						<li><code>flex-wrap</code> - By default, all the block elements inside a flex box will be squeezed into the same line, but you can set the property as <code>wrap</code> so block elements that cannot fit into the current line (due to their wide dimension, for instance) will be thrown into a new line.</li>
 						<li><code>justify-content</code> - If this is set as <code>center</code>, then all the block elements are centered horizontally. The value <code>space-evenly</code> not only gives you the aforementioned centering effect, but also set the same spacing around the block elements, which thus fill the flex box evenly. There are also other values like <code>flex-start</code>, <code>flex-end</code>, <code>space-between</code>, and <code>space-around</code>, which you can play around yourself.</li>
-						<li><code>align-content</code> - While it is not entirely straightforward, this property controls how block elements in a flex box are aligned <em class="extra">vertically</em>. The value <code>center</code> gives you a perfect vertical alignment for the block elements. If you choose to use the value <code>space-around</code>, block elements are positioned with an even spacing between lines and edges. The value <code>strech</code> automatically adjusts the height of block elements to fill the flex box evenly on the vertical dimension.</li>
+						<li><code>align-content</code> - While it is not entirely straightforward, this property controls how each line in a flex box takes up the space in the box. The value <code>center</code> helps you juxtapose all the line at the center of a screen. If you choose to use the value <code>space-around</code>, an even space is inserted between lines and edges. The default value <code>strech</code> helps divide the entire space evenly based on the number of lines in the flex box.</li>
 					</ul>
 					<p>Because we want to start with the mobile-friendly interface, we would set <code>flex-direction</code> to be <code>column</code>, so <code>&lt;section&gt;</code> elements are ordered from top to bottom. We won't have to be worried about <code>flex-wrap</code> in this case, since it is common that our HTML document could be lengthened on the vertical axis for more contents (by explicitly setting <code>overflow-y</code> to <code>auto</code> for the entire HTML document), and the elements inside the flex box are always <em>in the same line</em>. Then, we need to set <code>align-content</code> to <code>stretch</code> so each <code>&lt;section&gt;</code> element could fill the space evenly.</p>
 					<code>
 						article {
 						<code>
 							display: flex;<br/>
-							align-content: stretch;
+							flex-direction: column;
 						</code>
 						}
 					</code>
