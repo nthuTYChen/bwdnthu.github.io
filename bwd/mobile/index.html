@@ -344,6 +344,13 @@
 						<img src="img/touchevents.png" style="width: 40%;" />
 						<sub>Source: <a href="https://girliemac.com/blog/2013/04/17/touchy-feely-with-dom-events-rethinking-cross-device-user-interaction/" target="_blank">Tomomi Imura</a></sub>
 					</picture>
+					<p>In the world of mobile-first Web design, you eventually will have the chance to deal with the events fired by interactions with the touchscreen. In this course, you're not asked to design a mobile Web app, so I will not pepper you with lots of techniques for it (well, let along the fact I am neither a master in this field). But we will talk about three events that you might need to further optimize your simple websites in mobile browsers:</p>
+					<ul>
+						<li><code>touchstart</code> - fired when the touchscreen detects a touching motion (e.g., a finger touches the touchscreen)</li>
+						<li><code>touchmove</code> - fired when the touching motion moves from one point to another point on the touchscreen without any interruption (e.g., a finger touches and moves across the touchscreen)</li>
+						<li><code>touchend</code> - fired when the touching motion ends (e.g., no finger touches the touchscreen)</li>
+					</ul>
+					<p>These are the three basic events involved in a mobile Web browsing content. A user might hit a button or a link in your website, which fires <code>touchstart</code> and then <code>touchend</code> in sequential order. The user might also scroll up and down in your website, which fires <code>touchstart</code>, <code>touchmove</code>, and eventually <code>touchend</code>.</p>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
