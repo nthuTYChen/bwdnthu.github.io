@@ -352,7 +352,18 @@
 					</ul>
 					<p>These are the three basic events involved in a mobile Web browsing content. A user might hit a button or a link in your website, which fires <code>touchstart</code> and then <code>touchend</code> in sequential order. The user might also scroll up and down in your website, which fires <code>touchstart</code>, <code>touchmove</code>, and eventually <code>touchend</code>. Wait, can't we just design our websites to listen to a <code>click</code> event in the former case? If you hit something on a touchscreen with your finger, how is it <em class="extra">essentially different</em> from clicking on something on a regular wide screen of your desktop computer with a mouse cursor? Well, most of mobile Web browser echo your question, and thus would fire a <code>click</code> event on an element even if the source is in fact a touching motion. But there's one Web browser doesn't agree with you. Guess what? It's our old pal <em class="extra">mobile Safari</em>!!! I cannot accuse Apple of being wrong here, though, because by definition touching and clicking are indeed different, but sometimes being so nit-picking doesn't really help, as I will explain below.</p>
 					<h3>touchmove vs. touchstart/touchend</h3>
-					<p>Now, to get elements listening to a <code>click</code> event working properly in mobile Safari as well, which force us to re-design the elements to listen to a touching event, too, such as <code>touchstart</code> or <code>touchend</code>. But as explained above, a touching event simulating a clicking event is confounded with a swiping event that involves <code>touchmove</code>. When you touch the screen and fire <code>touchstart</code>, it could be that you try to click on something or that you're about to scroll up/down. Likewise, when your fingers leave the screen and fire <code>touchend</code>, it could be that you complete clicking on something or that you are coming off a swiping event.</p>
+					<p>Now, to get elements listening to a <code>click</code> event working properly in mobile Safari as well, which force us to re-design the elements to listen to a touching event, too, such as <code>touchstart</code> or <code>touchend</code>. But as explained above, a touching event simulating a clicking event is confounded with a swiping event that involves <code>touchmove</code>. When you touch the screen and fire <code>touchstart</code>, it could be that you try to click on something or that you're about to scroll up/down. Likewise, when your fingers leave the screen and fire <code>touchend</code>, it could be that you complete clicking on something or that you are coming off a swiping event. The key to simulating a clicking event correctly thus lies in a successful distinction between a purely touching event and a swiping event. And this is how we are going to do in this section: Identify a <code>touchend</code> that does <em>NOT</em> follow a <code>touchmove</code> event as a parallel to a <code>clicking</code> event.</p>
+					<h3>Get in on an action</h3>
+					<p>Let's begin with the following HTML document. We have a vertically/horizontally centered <code>&lt;div&gt;</code> element serving as a button-like object. We also have another <code>&lt;div&gt;</code> element in which the fired event type will appear.</p>
+					<code>
+						&lt;div id="touchingEvent"&gt;Nothing's happening&lt;/div&gt;<br/>
+						&lt;div style="position: fixed; top: 50vh; left: 50vw;"&gt;
+						<code>
+							&lt;div style="position: relative; width: 200px; height: 200px; transform: translate(-100px, -100px);"&gt;<br/>
+							&lt;/div&gt;
+						</code>
+						&lt;/div&gt;
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
