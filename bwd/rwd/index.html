@@ -307,15 +307,39 @@
 						</code>
 						}
 					</code>
-					<p>Alternatively, you could leave out <code>justify-content</code> for the flexbox and <code>height</code> for its items and set <code>flex-grow</code> to <code>1</code> for all <code>&lt;section&gt;</code> elements to make it possible to distribute the space in the flexbox to each of them evenly. If you need some space between the elements and the edges, guess what? Just add some margins! Note that <em class="extra">margin collapsing</em> does not take place here, so adding both top and bottom margins gives you the effect similar to <code>space-around</code> of the <code>justify-content</code> property.</p>
+					<p>Alternatively, you could leave out <code>justify-content</code> for the flexbox and <code>height</code> for its items and set <code>flex-grow</code> to <code>1</code> for all <code>&lt;section&gt;</code> elements to make it possible to distribute the space in the flexbox to each of them evenly. However, if you don't set a limit on the height, an item will expand indefinitely as more contents are put into it. So, let's set a reasonable <code>max-height</code> of <code>33%</code>. If you need some space between the elements and the edges, guess what? Just add some margins! Note that <em class="extra">margin collapsing</em> does not take place here, so adding both top and bottom margins gives you the effect similar to <code>space-around</code> of the <code>justify-content</code> property. This approach would be superior to the previous one when the number of items in a flexbox is unknown, as in this approach the space distributed to each item depends on the number of items in the flexbox. In the previous approach, however, the height of an item must be set explicitly, and the position of these items in the flexbox could go wrong if you miscalculate the height.</p>
 					<code>
 						section {
 						<code>
 							flex-grow: 1;<br/>
+							max-height: 33%<br/>
 							margin: 1vh 0;
 						</code>
 						}
 					</code>
+					<p>We have now set the stage for transforming this mobile-based design into a desktop design. As usual, we set the break point to <code>1200 px</code> of the screen width in a media query. In this media query, we first re-define <code>flex-direction</code> of the <code>&lt;article&gt;</code> element from <code>column</code> to <code>row</code>. Again, we don't need to specify other CSS properties whose value does not change in different contexts. Then, instead of the top/bottom margins in the mobile-based design, we need the left/right margins in the desktop-based design. We also have to add a limit on the width of <code>&lt;section&gt;</code> for the same reason - to avoid over-expansion as more contents are put into the element. Finally, we also need to specify a different <code>max-width</code> of <code>100%</code>. Note that styles outside the media query are applied <em>by default</em>. This means that if you don't set a different <code>max-width</code> for the desktop-based design, you will get a <code>max-height</code> of <code>33%</code> here, too.</p>
+					<code>
+						@media screen and (min-width: 1200px) {
+						<code>
+							article {
+							<code>
+								flex-direction: row;
+							</code>
+							}<br/><br/>
+							section {
+							<code>
+								max-width: 33%;<br/>
+								max-height: 100%;<br/>
+								margin: 0 1vw; /* Note the change in the length unit as well*/
+							</code>
+							}
+						</code>
+						}
+					</code>
+					<p>We're done! Now change the size of your browser windows and see how the layout is switched between the two designs seamlessly! Mobile-first is never as difficult as you imagined.</p>
+				</section>
+				<section>
+					<h2 id="touchevent">Touch event</h2>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
