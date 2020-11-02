@@ -378,6 +378,35 @@
 						});				
 					</code>
 					<p>When you try to touch that large and big green square at the center of the screen and go, you should see <em>touchend</em> appearing at the top of your screen. However, if you start your touching motion somewhere else, swipe to that big green square, and release, you will also see the same message! This is what we expected - there's no distinction between a purely touching event and a swiping event.</p>
+					<p>To make this disction, we need to take two steps. First, we add a listener to the entire HTML document for a <code>touchmove</code> event and detect if there's a swiping motion. Second, if a swiping motion is detected before a <code>touchend</code> event is fired, when a <code>touchend</code> is fired on the big green square, nothing will happen. To achieve this goal, we need to first add a <em>global</em> boolean variable <code>swipeEvent</code> with a default value set to <code>false</code>. Then, we have to modify the event listener for the square to take actions only when <code>swipeEvent</code> is <code>false</code>.</p>
+					<code>
+						var swipeEvent = false;<br/>
+						...
+						<code>
+							if(!swipeEvent) { // TRUE only when swipeEvent = false
+								var eventType = event.type; // Get the event type, which should be 'touchend'<br/>
+								$('#touchingEvent').html(eventType); // Set the event type as the content of #touchingEvent
+							}
+						</code>
+					</code>
+					<p>Now, we need the following JS codes to allow for global swiping motion detection, so we make the entire HTML document to listen to the <code>touchmove</code> event and set the global <code>swipeEvent</code> variable as <code>true</code>. Therefore, even if you release your fingers on the big green square, it's event listener will do nothing. We can also set the message at the top of the page to indicate that the swiping event is happening.</p>
+					<code>
+						$(document).on('touchmove', function() {
+						<code>
+							swipeEvent = true; // Set the boolean 'detector' as true<br/>
+							$('#touchingEvent').html('Swiiiiiping!'); // Show the swiping message
+						</code>
+						});
+					</code>
+					<p>If we stop here, then we can do all these for just one time since from now on, <code>swipeEvent</code> is always <code>true</code> so you will never be able to get the big green square to work once again. So, we need another <em>resetting</em> event listener that reset <code>swipeEvent</code> back to <code>false</code> after the <code>touchmove</code> event is over and <code>touchend</code> is fired. We can add this event listener to the entire HTML document as well so it detects <code>touchend</code> anywhere on a touchscreen.</p>
+					<code>
+						$(document).on('touchend', function() {
+						<code>
+							swipeEvent = false; // Reset the boolean 'detector' as false<br/>
+							$('#touchingEvent').html('Nothing's happening.'); // Reset to the default message as well
+						</code>
+						});
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
