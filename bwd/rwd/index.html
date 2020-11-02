@@ -307,6 +307,15 @@
 						</code>
 						}
 					</code>
+					<p>Alternatively, you could leave out <code>justify-content</code> for the flexbox and <code>height</code> for its items and set <code>flex-grow</code> to <code>1</code> for all <code>&lt;section&gt;</code> elements to make it possible to distribute the space in the flexbox to each of them evenly. If you need some space between the elements and the edges, guess what? Just add some margins! Note that <em class="extra">margin collapsing</em> does not take place here, so adding both top and bottom margins gives you the effect similar to <code>space-around</code> of the <code>justify-content</code> property.</p>
+					<code>
+						section {
+						<code>
+							flex-grow: 1;<br/>
+							margin: 1vh 0;
+						</code>
+						}
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
