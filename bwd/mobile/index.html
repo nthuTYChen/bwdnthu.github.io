@@ -407,6 +407,12 @@
 						</code>
 						});
 					</code>
+					<p>Now, it should work, right? But you just found that clicking on the big green square no longer changes the default message! The culprit is <em class="extra">event propagation</em> we have discussed in previous units. Currently the entire HTML document is listening to a <code>touchend</code> event, and the big green square is also listening to the same event. Since the big green square is part of the HTML document, a <code>touchend</code> event fired on it also propagates to the entire HTML document, so the event listener we just added above is also executed to reset the message at the top back to its default message. Consequently, it looks like nothing has ever happened because the resetting part just keeps running whether the <code>touchend</code> event is fired on the big green square or not. To solve this issue, we need to stop the event fired on the big green square from propagating with the following code:</p>
+					<code>
+						event.stopPropagation();
+					</code>
+					<p>With this line, the <code>touchend</code> event fired on the big green square will only run the part checking if <code>swipeEvent</code> is <code>false</code>, which means a purely touching event.</p>
+					<p>Web design could have been a lot easier, but thanks to Apple, your life is made more challenging and...perhaps more meaningful. And look at you! You have never been so confident, right? Your effort in learning all these will help expand your knowledge in this field exponetially!</p>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
