@@ -364,6 +364,15 @@
 						</code>
 						&lt;/div&gt;
 					</code>
+					<p>Next, let's first write JS codes for the inner <code>&lt;div&gt;</code> to listen to a <code>touchend</code> event, which will change the content of the <code>&lt;div&gt;</code> with <code>touchingEvent</code> in the <code>id</code> attribute.</p>
+					<code>
+						$('div > div').on('touchend', function(event) {
+						<code>
+							var eventType = event.type; // Get the event type, which should be 'touchend'<br/>
+							$('#touchingEvent').html(eventType); // Set the event type as the content of #touchingEvent
+						</code>
+						});
+					</code>
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
