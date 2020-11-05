@@ -47,6 +47,27 @@
 					<code>
 						transition: property duration timing-function delay;
 					</code>
+					<p>Let's do a quick demonstration. Create a <code>&lt;div&gt;</code> in an HTML document and define the element's appearance with the following styles.</p>
+					<code>
+						body > div {
+						<code>
+							position: absolute;<br/>
+							top: 50%;<br/>
+							left: 50%;<br/>
+							transform: translate(-50%, -50%); /* aligned to the center */<br/>
+							width: 100px;<br/>
+							height: 100px;<br/>
+							background-color: orange;
+						</code>
+						}<br/><br/>
+						body > div:hover {
+						<code>
+							width: 150px;<br/>
+							height: 150px;<br/>
+							background-color: red;
+						</code>
+						}
+					</code>
 				</section>
 				<section>
 					<h2 id="keyframes">Keyframes</h2>
