@@ -47,7 +47,7 @@
 					<code>
 						transition: property duration timing-function delay;
 					</code>
-					<p>Let's do a quick demonstration. Create a <code>&lt;div&gt;</code> in an HTML document and define the element's appearance with the following styles.</p>
+					<p>Let's do a quick demonstration. Create a <code>&lt;div&gt;</code> in an HTML document and define the element's appearance with the following styles. With these styles, the block element will gradually enlarge when you move your mouse cursor over it, and at the same time the background color will also smoothly change from an orange color to a red color. And the whole process will take one second to complete.</p>
 					<code>
 						body > div {
 						<code>
@@ -64,7 +64,19 @@
 						<code>
 							width: 150px;<br/>
 							height: 150px;<br/>
-							background-color: red;
+							background-color: red;<br/>
+							transition: all 1s ease-in;
+						</code>
+						}
+					</code>
+					<p>Maybe you want the transition to be different for <code>background-color</code> and for <code>width</code> and <code>height</code>. Then, you could separate the transition for <code>background-color</code> from <code>all</code> transitions with a <em class="extra">comma</em> in the <code>transition</code> property:</p>
+					<code>
+						body > div:hover {
+						<code>
+							width: 150px;<br/>
+							height: 150px;<br/>
+							background-color: red;<br/>
+							transition: all 1s ease-in, background-color 10s ease-out; /* apply transitions separately */
 						</code>
 						}
 					</code>
