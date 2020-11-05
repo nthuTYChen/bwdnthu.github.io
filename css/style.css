@@ -92,7 +92,9 @@ h1 + p#animated {
 	background-color: #b30000;
 	color: #ffffff;
 	padding: 0.2vh 0.5vw;
-	transition: fancy 2s ease-out;
+	opacity: 0.5;
+	animation: 1s infinite alternate fancy;
+	animation-iteration-count: infinite;
 }
 
 h2 {
@@ -230,9 +232,6 @@ picture > sub {
 	left: 0;
 	padding: 0 1vw;
 	background-color: white;
-	opacity: 0.5;
-	animation: 1s infinite alternate fancy;
-	animation-iteration-count: infinite;
 }
 
 picture > sub:hover {
