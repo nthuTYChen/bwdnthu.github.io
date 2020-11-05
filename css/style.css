@@ -95,6 +95,7 @@ h1 + p#animated {
 	opacity: 0.5;
 	animation: 2s infinite alternate fancy;
 	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
 }
 
 h2 {
