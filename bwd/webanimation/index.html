@@ -43,6 +43,10 @@
 						<li><code>transition-timing-function</code> - By default, you might think of some <code>linear</code> gradual transition. That is, the speed of a transition remains <em>constant</em> from the beginning to the end. However, CSS3 offers you many different options, such as <code>ease-in</code> (slower at the beginning, faster toward the end) and <code>ease-out</code> (faster at the beginning, slower toward the end). A complete list of easing effect can be found <a href="https://easings.net/" target="_blank">here</a>, and you can choose whichever matches the presentation in your mind.</li>
 						<li><code>trainsition-delay</code> - By specifying this property with a time in second, you can delay the transition effect. Most of times we won't be using this property, but it can help create a <em>trailing tail</em> for a moving object and keep the end result of a transition bit longer.</li>
 					</ul>
+					<p>Since all of the above individual properties have a pretty long name, it is indeed more reasonable (if compared to <code>font</code>) to use the shorthand <code>transition</code> and specify the four properties in the same order:</p>
+					<code>
+						transition: property duration timing-function delay;
+					</code>
 				</section>
 				<section>
 					<h2 id="keyframes">Keyframes</h2>
