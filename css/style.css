@@ -87,6 +87,14 @@ h1 {
 	line-height: 9.6vh;
 }
 
+h1 > p#animated {
+	position: relative;
+	background-color: #b30000;
+	color: #ffffff;
+	padding: 0.2vh 0.5vw;
+	transition: fancy 2s ease-out;
+}
+
 h2 {
 	font-family: 'Dosis', sans-serif;
 	font-size: 4vh;
@@ -223,7 +231,8 @@ picture > sub {
 	padding: 0 1vw;
 	background-color: white;
 	opacity: 0.5;
-	transition: 1s all ease-out;
+	animation: 1s infinite alternate fancy;
+	animation-iteration-count: infinite;
 }
 
 picture > sub:hover {
@@ -238,4 +247,19 @@ img {
 div.container {
 	width: 80%;
 	margin-left: 20%;
+}
+
+@keyframes fancy {
+	0% {
+		left: 0;
+		background-color: #b30000;
+	}
+	50% {
+		left: 5%;
+		background-color: #ff0000;
+	}
+	100% {
+		left: 10%;
+		background-color: #b30000;
+	}
 }
