@@ -89,10 +89,10 @@ h1 {
 
 h1 + p#animated {
 	position: relative;
+	width: max-content;
 	background-color: #b30000;
 	color: #ffffff;
 	padding: 0.2vh 0.5vw;
-	opacity: 0.5;
 	animation: 2s infinite alternate fancy;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-out;
