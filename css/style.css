@@ -93,7 +93,7 @@ h1 + p#animated {
 	color: #ffffff;
 	padding: 0.2vh 0.5vw;
 	opacity: 0.5;
-	animation: 1s infinite alternate fancy;
+	animation: 2s infinite alternate fancy;
 	animation-iteration-count: infinite;
 }
 
