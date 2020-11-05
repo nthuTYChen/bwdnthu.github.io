@@ -236,6 +236,7 @@ picture > sub {
 	left: 0;
 	padding: 0 1vw;
 	background-color: white;
+	opacity: 0.9;
 }
 
 picture > sub:hover {
