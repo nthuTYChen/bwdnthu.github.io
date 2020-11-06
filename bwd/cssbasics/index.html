@@ -339,23 +339,24 @@
 					<h2 id="aesthetics">Aesthetics</h2>
 					<p>You might be eager to try other things to beautify your webpage, and here are some more tips for you. There are just too many of them, so it's not possible for me to answer all <em>How do you...</em> questions. But I'm pretty sure that once you feed Google with your questions, you will find the answers pretty soon. For example, if you google <q>How to animate background color in CSS?</q>, you will see many solutions.</p>
 					<h3>Body</h3>
-					<p>The first thing we would do here is to further style the <code>&lt;html&gt;</code> with the <code>width</code> and <code>height</code> properties and set their value to <code>100%</code>, so the entire HTML document takes up the entire viewport by default. The style will <em>cascade</em> to all of its children whose <code>height</code> or <code>width</code> property is unspecified. </p>
+					<p>The first thing we would do here is to further style the <code>&lt;html&gt;</code> with the <code>width</code> and <code>height</code> properties and set their value to <code>100%</code>, so the entire HTML document takes up the entire viewport by default. The style will <em>cascade</em> to all of its children whose <code>height</code> or <code>width</code> property is unspecified. Next, we add the <code>overflow-x</code> property and set it to <code>hidden</code> so the horizontal scroll bar does not appear. This will guarantee the display of your webpage to only take up the full width of the browser window. We also add and set the <code>overflow-y</code> property to <code>auto</code>, so the vertical scroll bar appears when the <em>height</em> of a webpage exceeds the height of a browser window.</p>
 					<code>
 						html {
 						<code>
 							height: 100%;<br/>
-							width: 100%;
+							width: 100%;<br/>
+							overflow-x: hidden;<br/>
+							overflow-y: auto;
 						</code>
 						}
 					</code>
-					<p>Then we set <code>&lt;body&lt;</code> element to have a <code>height</code> and a <code>min-height</code> of <code>100%</code>, which means that the height of the <code>&lt;body&gt;</code> element uses <em class="extra">at least</em> <code>100%</code> of its parent element, that is, <code>&lt;html&gt;</code>. The use of <code>min-height</code> allows for dynamic changes to the <code>&lt;body&gt;</code> when more contents are inserted to the HTML document.  Next, we add the <code>overflow-x</code> property and set it to <code>hidden</code> so the horizontal scroll bar does not appear. This will guarantee the display of your webpage to only take up the full width of the browser window. We also add and set the <code>overflow-y</code> property to <code>auto</code>, so the vertical scroll bar appears when the <em>height</em> of a webpage exceeds the height of a browser window. It's easier to both read and scroll from top to bottom than from left to right (or right to left).</p>
+					<p>Then we set <code>&lt;body&lt;</code> element to have a <code>height</code> and a <code>min-height</code> of <code>100%</code>, which means that the height of the <code>&lt;body&gt;</code> element uses <em class="extra">at least</em> <code>100%</code> of its parent element, that is, <code>&lt;html&gt;</code>. The use of <code>min-height</code> allows for dynamic changes to the <code>&lt;body&gt;</code> when more contents are inserted to the HTML document.   It's easier to both read and scroll from top to bottom than from left to right (or right to left).</p>
 					<code>
 						body {
 						<code>
 							height: 100%;<br/>
 							min-height: 100%;<br/>
-							overflow-x: hidden;<br/>
-							overflow-y: auto;<br/>
+							width: 100%;<br/>
 							font: 1.6vw/2.4vw Zilla Slab, serif;
 						</code>
 						}
