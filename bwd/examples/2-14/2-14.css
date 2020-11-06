@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+div {
+	width: 100px;
+	height: 100px;
+}
+
+/*div:first-child {
+	background-color: orange;
+}
+
+div:last-child {
+	background-color: green;
+}
+
+div:nth-of-type(3) {
+	background-color: brown;
+}*/
+
+article > div:not(:first-child) {
+	background-color: orange;
+}

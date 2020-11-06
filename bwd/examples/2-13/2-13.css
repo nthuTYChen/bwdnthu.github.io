@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 2.4vh;
+	font-family: serif;
+	line-height: 3.6vh;
+	padding: 0 2vw;
+}
+
+h1 {
+	font-size: 4.8vh;
+	line-height: 7.2vh;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 3.6vh;
+	line-height: 5.4vh;
+	font-style: italic;
+}
+
+section {
+	margin: 1vh 0;
+}
+
+p {
+	margin: 0.5vh 0;
+}
+
+p::first-letter {
+	font-size: 2.8vh;
+	font-weight: bold;
+}
+
+h2 ~ p {
+	font-family: sans-serif;
+}
+
+/*article p {
+	font-family: sans-serif;
+}*/
+
+/*article > p {
+	font-size: 3.2vh;
+	line-height: 4.8vh;
+	font-family: sans-serif;
+}*/
+
+/*h1 + p {
+	font-size: 3.2vh;
+	line-height: 4.8vh;
+	font-family: sans-serif;
+}
+
+section > p {
+	font-family: sans-serif;
+}*/
+
+/*p#summary {
+	font-size: 3.2vh;
+	line-height: 4.8vh;
+	font-family: sans-serif;
+}*/

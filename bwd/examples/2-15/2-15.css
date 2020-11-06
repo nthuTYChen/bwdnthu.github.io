@@ -5,36 +5,34 @@
 }
 
 html {
-	width: 100%;
 	height: 100%;
+	width: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
 
 body {
+	height: 100%;
 	width: 100%;
-	height: 100%;
-	font: 2.4vh/3.6vh serif;
-}
-
-div#container {
-	height: 100%;
-	width: 70%;
-	margin-left: 30%;
-	background-color: grey;
-	padding: 5px 10px;
 }
 
 nav {
 	position: fixed;
-	top: 2vh;
-	right: 70%;
-	padding: 5px 10px;
+	top: 10vh;
+	left: 20vw;
+	width: 70px;
 	background-color: purple;
 	color: white;
 	font-family: sans-serif;
 }
 
-a {
-	color: white;
+nav > div {
+	padding: 1vh 0;
+	text-align: center;
+}
+
+nav > div:hover {
+	background-color: white;
+	color: purple;
+	border-bottom: 4px solid red;
 }
