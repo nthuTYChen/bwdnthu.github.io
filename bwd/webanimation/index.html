@@ -205,19 +205,19 @@
 						<code>
 							position: fixed;<br/>
 							top: 5vh;<br/>
-							left: 5vh;<br/>
+							left: 5vw;<br/>
 							width: 100px;<br/>
 							height: 100px;<br/>
 							background-color: red;
 						</code>
 						}<br/><br/>
-						div:first-child { /* earlier = lower */
+						div:first-of-type { /* earlier = lower */
 						<code>
 							opacity: 0.5;<br/>
-							animation: moving 1s ease-in 0.5s infinite alternate;
+							animation: moving 1s ease-in 0.2s infinite alternate;
 						</code>
 						}<br/><br/>
-						div:last-child { /* later = higher */
+						div:last-of-type { /* later = higher */
 						<code>
 							animation: moving 1s ease-in infinite alternate; /* no delay */
 						</code>
@@ -227,6 +227,7 @@
 						</code>
 						}
 					</code>
+					<p>Do you want to know how to create an animation simulating a heartbeat? We'll do this in class, and we will need these CSS properties <code>offset-path</code>, <code>motion-distance</code>, and <code>offset-distance</code>. And we will need this <a href="https://editor.method.ac/" target="_blank">online tool</a>, too. Guess which Web browsers do not support these CSS properties just yet? <em>Safari</em>.</p>
 				</section>
 				<section>
 					<h2 id="jquery">jQuery animation</h2>
