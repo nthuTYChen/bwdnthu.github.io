@@ -239,40 +239,38 @@
 					<p>If you need to rotate an element, you should use the <code>rotate()</code> function for the <code>transform</code> property. Just google it! Now, do you have the solution? Or do you want to see how I deal with this case (select the section below)?</p>
 					<code style="color: #e68a00;">
 						@keyframes moveRotateBgChang {
-						<code>
+						<code style="color: #e68a00;">
 							0% {
-							<code>
+							<code style="color: #e68a00;">
 								/* Still need to define the initial position if you don't have it in the default style of the element */<br/>
 								left: 0; 
-							</code>
+							</code style="color: #e68a00;">
 							}<br/>
 							25% {
-							<code>
+							<code style="color: #e68a00;">
 								/* This is where the block starts to rotate, so set the initial appearance here */<br/>
 								transform: rotate(0deg);
 							</code>
 							}<br/>
-							<code>
 							50% {
-							<code>
+							<code style="color: #e68a00;">
 								background-color: orange;<br/>
 								animation-timing-function: linear; /* Set the easing function for each step */
 							</code>
 							}<br/>
 							75% {
-							<code>
+							<code style="color: #e68a00;">
 								transform: rotate(45deg); /* The point where the rotation should ends */<br/>
 								animation-timing-function: linear;
 							</code>
 							}<br/>
 							100% {
-							<code>
+							<code style="color: #e68a00;">
 								transform: rotate(45deg); /* The end result of rotation should hold */<br/>
 								left: 20vw; /* The end point, and the movement should end here */<br/>
 								animation-timing-function: ease-out;
 							</code>
 							}
-							</code>
 						</code>
 						}
 					</code>
