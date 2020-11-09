@@ -163,19 +163,20 @@
 						<img src="img/frames.gif" style="max-width: 35%;" />
 						<sub>Source: <a href="https://anime.stackexchange.com/questions/3768/why-is-it-hard-to-draw-people-running-in-animes/3770" target="_blank">Stack Exchange</a></sub>
 					</picture>
-					<p>In the previous section, we rely on the pseudo-class <code>:hover</code> and the <code>transition</code> CSS property to create some very simple Web animations when some interactions take place. But in some cases, you want to create Web animations even when there's no interaction at all as if some magician casts a spell on your website to make HTML elements do funny things, just like the texts moving back and forth above. Then you need to learn to use <code>@keyframes</code> in CSS, which allows you create animation frame by frame. Let's start with the basic syntax below:</p>
+					<p>In the previous section, we rely on the pseudo-class <code>:hover</code> and the <code>transition</code> CSS property to create some very simple Web animations when some interactions take place. But in some cases, you want to create Web animations even when there's no interaction at all as if some magician casts a spell on your website to make HTML elements do funny things, just like the texts moving back and forth above. Then you need to learn to use <code>@keyframes</code> in CSS, which allows you create animation frame by frame. Let's start with the basic syntax below. The keyword <code>@keyframes</code> tells a Web browser that a new Web animation is created, which is followed by the name of this particular animation. With the <em>customized</em> name, you can apply the same animation to different HTML elements, as we will demonstrate below.</p>
 					<code>
 						@keyframes namesOfAnimation {
 						<code>
-							from {
+							from { /* The very beginning */
 							<code>background-color: #000000;</code>
 							}<br/>
-							to {
+							to { /* The very end */
 							<code>background-color: #FFFFFF;</code>
 							}
 						</code>
 						}
 					</code>
+					<p>Inside a <code>@keyframes</code> scope, we can have the two basic <em class="extra">anchoring points</em> - <code>from</code> defines the styles at the very beginning of the animation, and <code>to</code> defines the styles at the end of the animation. The difference between the two points create a transition effect which we have seen in the previous section.</p>
 				</section>
 				<section>
 					<h2 id="jquery">jQuery animation</h2>
