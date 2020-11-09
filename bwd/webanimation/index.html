@@ -132,7 +132,7 @@
 						}
 					</code>
 					<p>This approach is convenient but you have to be sure that the transparent element doesn't overlap with other clickable contents because the transparent element would be an invisible wall.</p>
-					<p>In the second approach, we do not manipulate the opacity but the width (or the height) of the inner <code>&lt;div&gt;</code> element in the transitional process. In our example above, we can start by setting the inner <code>&lt;div&gt;</code> to have a <code>width</code> of <code>0</code> in its default setting, so it is made invisible because it has a zero width! To complete hiding everything in the inner <code>&lt;div&gt;</code>, we would have to add the <code>overflow</code> property and set it as <code>hidden</code>.</p>
+					<p>In the second approach, we do not manipulate the opacity but the width (or the height) of the inner <code>&lt;div&gt;</code> element in the transitional process. In our example above, we can start by setting the inner <code>&lt;div&gt;</code> to have a <code>width</code> of <code>0</code> in its default setting, so it is made invisible because it has a zero width! To complete hiding everything in the inner <code>&lt;div&gt;</code>, we would have to add the <code>overflow</code> property and set it as <code>hidden</code>. You will also need to have <code>white-space</code> set as <code>nowrap</code>. These properties and settings guarantees that the texts <em>stay in the same line</em> but are hidden when they go beyond the edge of their container.</p>
 					<code>
 						body > div > div {
 						<code>
@@ -141,6 +141,7 @@
 							width: 0; /* I'm still here, but too thin to be seen! */ <br/>
 							height: 100px;<br/>
 							overflow: hidden;<br/>
+							white-space: nowrap;<br/>
 							background-color: red;<br/>
 							color: white;
 						</code>
