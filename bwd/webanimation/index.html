@@ -80,6 +80,14 @@
 						</code>
 						}
 					</code>
+					<p>Currently, we only add the transition that takes place when the target <code>&lt;div&gt;</code> element is changed into the <code>:hover</code> pseudo-class, so when you move your mouse cursor away from the element, the style changes back to the default <em class="extra">abruptly</em>. To also make a gradual transition back to the element's default style, we also have to add <code>transition</code> to the default style as well:</p>
+					<code>
+						body > div {
+						<code>
+							/* old styles above... */<br/>
+							transition: all 1s ease-out; /* use ease-out here to reverse the ease-in effect */
+						</code>
+					</code>
 					<h3>Catch me if you can</h3>
 					<p>As mentioned earlier, it is not really possible to make a transition between <code>none</code> and other values for the <code>display</code> property, supposed that your goal is to make an element appear/disappear gradually. But there are other solutions, too. The first one is to make a gradual transition for the property <code>opacity</code>, and let's try this with the following HTML content, in which a <code>&lt;div&gt;</code> element is enclosed inside another <code>&lt;div&gt;</code> element. Our goal is to create the effect that when the mouse is over the outer <code>&lt;div&gt;</code>, the inner <code>&lt;div&gt;</code> appears gradually next to it.</p>
 					<code>
