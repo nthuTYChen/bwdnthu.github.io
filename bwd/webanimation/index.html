@@ -183,10 +183,11 @@
 						<code>
 							height: 100px;<br/>
 							width: 100px;<br/>
-							animation: bgChange 1s ease-in; /* name duration easingEffect */
+							animation: bgChange 1s ease-in; /* animation-name animation-duration animation-timing-function */
 						</code>
 						}
 					</code>
+					<p>The above settings of the <code>animation</code> property are a shorthand of the three properties of the <code>animation</code> family, including <code>animation-name</code>, <code>animation-duration</code>, and <code>animation-timing-function</code>. All these only give you a <em>one-time</em> effect, so you are certainly not satisfied. Don't worry, you have <code>animation-iteration-counts</code> and <code>animation-direction</code> at your disposal. The former decides how many times an animation should repeat, but you can certain let it go forever by setting it as <code>infinite</code>. The latter determines how individual frames are ordered in each iteration. By default, it is set as <code>forward</code>, so in each iteration it starts with <code>from</code> and ends with <code>to</code>. But you can change it to <code>reverse</code> to make an animation run backwards in each iteration. Or, you could choose to set it as <code>alternate</code> or <code>alternate-reverse</code>, so the animation is reversed when it reaches the end point, which may be <code>to</code> or <code>from</code> depending on the value of your choice.</p>
 				</section>
 				<section>
 					<h2 id="jquery">jQuery animation</h2>
