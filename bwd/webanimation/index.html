@@ -230,7 +230,52 @@
 					</code>
 					<p>Do you want to know how to create an animation simulating a heartbeat? We'll do this in class, and we will need these CSS properties <code>offset-path</code> and <code>offset-distance</code>. And we will need this <a href="https://editor.method.ac/" target="_blank">online tool</a>, too. Do you know which Web browsers do not support these fun CSS properties just yet? <em>Safari</em>. Oh, and Internet Explorer.</p>
 					<h3>Frame-by-frame design</h3>
-					<p>In the above demonstrations, we only created animations based on two anchor points. But you may have noticed that in the text bar that bounces around at the top of this page, the background color gradually changes to a red color toward the midpoint before reverting back to a crimson color on both edges. This is because in a <code>@keyframes</code> scope, we can certainly insert more anchor points between <code>from</code> and <code>to</code> with <code>%</code> - <code>0%</code> is equivalent to <code>from</code>, <code>100%</code> is the same as <code>to</code>, and <code>50%</code>, for instance, stands for the midpoint.</p>
+					<p>In the above demonstrations, we only created animations based on two anchor points. But you may have noticed that in the text bar that bounces around at the top of this page, the background color gradually changes to a red color toward the midpoint before reverting back to a crimson color on both edges. This is because in a <code>@keyframes</code> scope, we can certainly insert more anchor points between <code>from</code> and <code>to</code> with <code>%</code> - <code>0%</code> is equivalent to <code>from</code>, <code>100%</code> is the same as <code>to</code>, and <code>50%</code>, for instance, stands for the midpoint. So, let's create an animation for a block element with the following steps:</p>
+					<ul>
+						<li>The block moves from the left edge of an HTML document and reaches a distance of <code>20vw</code> from the left edge by the end of the animation.</li>
+						<li>Starting from 25% of the entire process, the block starts to rotate clockwise, and by 75% of the entire process, the block completes its rotation by 45 degrees.</li>
+						<li>Toward the midpoint of the entire process, the background color changes gradually from a red color to an orange color. After the midpoint, the background color gradually reverts back to a red color.</li>
+					</ul>
+					<p>If you need to rotate an element, you should use the <code>rotate()</code> function for the <code>transform</code> property. Just google it! Now, do you have the solution? Or do you want to see how I deal with this case (select the section below)?</p>
+					<code style="color: #e68a00;">
+						@keyframes moveRotateBgChang {
+						<code>
+							0% {
+							<code>
+								/* Still need to define the initial position if you don't have it in the default style of the element */<br/>
+								left: 0; 
+							</code>
+							}<br/>
+							25% {
+							<code>
+								/* This is where the block starts to rotate, so set the initial appearance here */<br/>
+								transform: rotate(0deg);
+							</code>
+							}<br/>
+							<code>
+							50% {
+							<code>
+								background-color: orange;<br/>
+								animation-timing-function: linear; /* Set the easing function for each step */
+							</code>
+							}<br/>
+							75% {
+							<code>
+								transform: rotate(45deg); /* The point where the rotation should ends */<br/>
+								animation-timing-function: linear;
+							</code>
+							}<br/>
+							100% {
+							<code>
+								transform: rotate(45deg); /* The end result of rotation should hold */<br/>
+								left: 20vw; /* The end point, and the movement should end here */<br/>
+								animation-timing-function: ease-out;
+							</code>
+							}
+							</code>
+						</code>
+						}
+					</code>
 				</section>
 				<section>
 					<h2 id="jquery">jQuery animation</h2>
