@@ -132,6 +132,29 @@
 						}
 					</code>
 					<p>This approach is convenient but you have to be sure that the transparent element doesn't overlap with other clickable contents because the transparent element would be an invisible wall.</p>
+					<p>In the second approach, we do not manipulate the opacity but the width (or the height) of the inner <code>&lt;div&gt;</code> element in the transitional process. In our example above, we can start by setting the inner <code>&lt;div&gt;</code> to have a <code>width</code> of <code>0</code> in its default setting, so it is made invisible because it has a zero width! To complete hiding everything in the inner <code>&lt;div&gt;</code>, we would have to add the <code>overflow</code> property and set it as <code>hidden</code>.</p>
+					<code>
+						body > div > div {
+						<code>
+							position: absolute;<br/>
+							left: 100%;<br/>
+							width: 0; /* I'm still here, but too thin to be seen! */ <br/>
+							height: 100px;<br/>
+							overflow: hidden;<br/>
+							background-color: red;<br/>
+							color: white;
+						</code>
+						}
+					</code>
+					<p>Now, it shouldn't be hard to see how to set the <code>transition</code> property to the style for the hovered outer <code>&lt;div&gt;</code>, right?</p>
+					<code>
+						body > div:hover > div {
+						<code>
+							width: 100px; /* I'm still here, but too thin to be seen! */ <br/>
+							transition: all 0.3s ease-out;
+						</code>
+						}
+					</code>
 				</section>
 				<section>
 					<h2 id="keyframes">Keyframes</h2>
