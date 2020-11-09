@@ -199,6 +199,34 @@
 						</code>
 						}
 					</code>
+					<p>One last <code>animation</code> family member that is used frequently is <code>animation-delay</code>. This property allows you to create an animation with a different start time for individual <em>layers</em> of your animation, thus a trailing shadow effect. Assuming that we have two <code>&lt;div&gt;</code> elements fixed to the same position. We can set the one in a lower layer to be slightly opaque than the one in an upper layer to serve as the shadow of the box. While the same moving animation is applied to both <code>&lt;div&gt;</code> element, the lower one is delayed by <code>0.5s</code>, and you see a trailing shadow.</p>
+					<code>
+						div { /* universal style for divs */
+						<code>
+							position: fixed;<br/>
+							top: 5vh;<br/>
+							left: 5vh;<br/>
+							width: 100px;<br/>
+							height: 100px;<br/>
+							background-color: red;
+						</code>
+						}<br/><br/>
+						div:first-child { /* earlier = lower */
+						<code>
+							opacity: 0.5;<br/>
+							animation: moving 1s ease-in 0.5s infinite alternate;
+						</code>
+						}<br/><br/>
+						div:last-child { /* later = higher */
+						<code>
+							animation: moving 1s ease-in infinite alternate; /* no delay */
+						</code>
+						@keyframes moving { /* a moving animation */
+						<code>
+							left: 10vh;
+						</code>
+						}
+					</code>
 				</section>
 				<section>
 					<h2 id="jquery">jQuery animation</h2>
