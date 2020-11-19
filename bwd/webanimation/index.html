@@ -291,6 +291,18 @@
 						<li><code>slideDown()</code> - Gradually slide down and hide selected elements.</li>
 						<li><code>slideToggle()</code> - Gradually slide up and hide selected elements or slide down and display selected elements.</li>
 					</ul>
+					<p>For each jQuery animation function above, you can pass over a <em>parameter</em> and control the pace of an animation. You can start by passing a string like <code>'slow'</code> or <code>'fast'</code>, which corresponds to <em>200 ms</em> and <em>600 ms</em> respectively. Alternatively, you could pass over a number in millisecond to specify the length of an animation directly:</p>
+					<code>
+						$(selector).hide('fast'); // complete hiding in 200 ms<br/>
+						$(selector).hide('slow'); // complete hiding in 600 ms<br/>
+						$(selector).hide(1000); // complete hiding in 1 sec
+					</code>
+					<p>One rare drawback in jQuery Web animation is that by default there are only two <em>easing functions</em> allowed in an animation function, which are <code>linear</code> and <code>swing</code> respectively. The latter corresponds to the <code>ease-in-out</code> value for the CSS properties <code>transition-timing-function</code> and <code>animation-timing-function</code> as demonstrated below. To have more easing functions at your disposal, you will have to incorporate the <a href="https://api.jqueryui.com/easings/" target="_blank">jQuery UI plug-ins</a> into your website (with benefits more than just a complete collection of easing functions).</p>
+					<code>
+						$(selector).hide('fast', 'linear'); // linear hiding animation;<br/>
+						$(selector).hide('fast', 'swing'); // ease-in-out hiding animation
+					</code>
+					<p></p>
 					<h3>animate()</h3>
 				</section>
 				<section>
