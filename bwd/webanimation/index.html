@@ -291,7 +291,7 @@
 						<li><code>slideDown()</code> - Gradually slide down and hide selected elements.</li>
 						<li><code>slideToggle()</code> - Gradually slide up and hide selected elements or slide down and display selected elements.</li>
 					</ul>
-					<p>For each jQuery animation function above, you can pass over a <em>parameter</em> and control the pace of an animation. You can start by passing a string like <code>'slow'</code> or <code>'fast'</code>, which corresponds to <em>200 ms</em> and <em>600 ms</em> respectively. Alternatively, you could pass over a number in millisecond to specify the length of an animation directly:</p>
+					<p>For each jQuery animation function above, the default length of an animation is <em>400 ms</em>. You can pass over a <em>parameter</em> and control the pace of an animation. You can start by passing a string like <code>'slow'</code> or <code>'fast'</code>, which corresponds to <em>200 ms</em> and <em>600 ms</em> respectively. Alternatively, you could pass over a number in millisecond to specify the length of an animation directly:</p>
 					<code>
 						$(selector).hide('fast'); // complete hiding in 200 ms<br/>
 						$(selector).hide('slow'); // complete hiding in 600 ms<br/>
@@ -302,11 +302,11 @@
 						$(selector).hide('fast', 'linear'); // linear hiding animation;<br/>
 						$(selector).hide('fast', 'swing'); // ease-in-out hiding animation
 					</code>
-					<p>If you want to make something happen after an animation is complete, you can also pass a <em class="extra">callback</em> function as a parameter to an animation function, which will be executed at the end of the animation. For instance, if you hope to show one element after another, you can add the <code>show()</code> function in a callback function passed to another <code>show()</code> function:</p>
+					<p>If you want to make something happen after an animation is complete, you can also pass a <em class="extra">callback</em> function (remember what it is?) as a parameter to an animation function, which will be executed at the end of the animation. For instance, if you hope to show one element after another, you can add the <code>show()</code> function in a callback function passed to another <code>show()</code> function:</p>
 					<code>
 						$('#firstLine').show(500, 'linear', function() {
 						<code>
-							$('#secondLine').show(500, 'linear');
+							$('#secondLine').show(500, 'linear'); // executed after the first animation is done.
 						</code>
 						});
 					</code>
