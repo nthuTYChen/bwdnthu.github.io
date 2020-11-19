@@ -297,12 +297,19 @@
 						$(selector).hide('slow'); // complete hiding in 600 ms<br/>
 						$(selector).hide(1000); // complete hiding in 1 sec
 					</code>
-					<p>One rare drawback in jQuery Web animation is that by default there are only two <em>easing functions</em> allowed in an animation function, which are <code>linear</code> and <code>swing</code> respectively. The latter corresponds to the <code>ease-in-out</code> value for the CSS properties <code>transition-timing-function</code> and <code>animation-timing-function</code> as demonstrated below. To have more easing functions at your disposal, you will have to incorporate the <a href="https://api.jqueryui.com/easings/" target="_blank">jQuery UI plug-ins</a> into your website (with benefits more than just a complete collection of easing functions).</p>
+					<p>One rare drawback in jQuery Web animation is that by default there are only two <em>easing functions</em> allowed in an animation function, which are <code>linear</code> and <code>swing</code> respectively. The latter is the default and corresponds to the <code>ease-in-out</code> value for the CSS properties <code>transition-timing-function</code> and <code>animation-timing-function</code> as demonstrated below. To have more easing functions at your disposal, you will have to incorporate the <a href="https://api.jqueryui.com/easings/" target="_blank">jQuery UI plug-ins</a> into your website (with benefits more than just a complete collection of easing functions).</p>
 					<code>
 						$(selector).hide('fast', 'linear'); // linear hiding animation;<br/>
 						$(selector).hide('fast', 'swing'); // ease-in-out hiding animation
 					</code>
-					<p></p>
+					<p>If you want to make something happen after an animation is complete, you can also pass a <em class="extra">callback</em> function as a parameter to an animation function, which will be executed at the end of the animation. For instance, if you hope to show one element after another, you can add the <code>show()</code> function in a callback function passed to another <code>show()</code> function:</p>
+					<code>
+						$('#firstLine').show(500, 'linear', function() {
+						<code>
+							$('#secondLine').show(500, 'linear');
+						</code>
+						});
+					</code>
 					<h3>animate()</h3>
 				</section>
 				<section>
