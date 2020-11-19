@@ -302,11 +302,11 @@
 						$(selector).hide('fast', 'linear'); // linear hiding animation;<br/>
 						$(selector).hide('fast', 'swing'); // ease-in-out hiding animation
 					</code>
-					<p>If you want to make something happen after an animation is complete, you can also pass a <em class="extra">callback</em> function as a parameter to an animation function, which will be executed at the end of the animation. For instance, if you hope to show one element after another, you can add the <code>show()</code> function in a callback function passed to another <code>show()</code> function:</p>
+					<p>If you want to make something happen after an animation is complete, you can also pass a <em class="extra">callback</em> function (remember what it is?) as a parameter to an animation function, which will be executed at the end of the animation. For instance, if you hope to show one element after another, you can add the <code>show()</code> function in a callback function passed to another <code>show()</code> function:</p>
 					<code>
 						$('#firstLine').show(500, 'linear', function() {
 						<code>
-							$('#secondLine').show(500, 'linear');
+							$('#secondLine').show(500, 'linear'); // executed after the first animation is done.
 						</code>
 						});
 					</code>
