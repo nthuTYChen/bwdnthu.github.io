@@ -532,7 +532,7 @@
 						var em = document.querySelector('section > p'); // Get the first 'p' element whose parent node is 'section'<br/>
 						em.style.color = 'white'; // Set the font color of the first element as 'white'
 					</code>
-					<p>One <em>potential setback</em> in the use of <code>querySelector()</code> or <code>querySelectorAll()</code> is that it's going to be a bit slower than other functions like <code>getElementById()</code>. So, if what you want to do is really to search for elements by their <code>id</code> attribute, for instance, just use <code>getElementById()</code>. But it's definitely not fatal if you use <code>querySelector()</code> or <code>querySelectorAll()</code> to do a complex search - One would feel something only if they use some outdated computers or Web browsers or you use too many <code>querySelector()</code> for too many complicated queries.</p>
+					<p>One <em>potential setback</em> in the use of <code>querySelector()</code> or <code>querySelectorAll()</code> is that it's going to be a bit slower than other functions like <code>getElementById()</code> if your selector is structurally complicated. So, if what you want to do is really to search for elements by their <code>id</code> attribute, for instance, just use <code>getElementById()</code>. But it's definitely not fatal if you use <code>querySelector()</code> or <code>querySelectorAll()</code> to do a complex search - One would feel something only if they use some outdated computers or Web browsers or you use too many <code>querySelector()</code> for too many complicated queries.</p>
 					<p>This is also not saying that adding the <code>class</code> or <code>id</code> attribute is a taboo in Web design, or they would have been abandoned for a very long time. For me, I add these attributes in two cases.</p>
 					<p>First, CSS selector can't do any further for me. You can see two different types of text emphasis in my webpage, such as <em>this</em> and <em class="extra">this</em>. For both types, I use the semantically meaningful element <code>&lt;em&gt;</code>, but since both types could be used inside a <code>&lt;p&gt;</code> element, selector is not helpful, and I have to add a <code>class</code> attribute to the type I need to highlight a bit more.</p>
 					<p>Second, a <code>class</code> or <code>id</code> value is semantically straightforward than a selector. Imaging that you have two buttons in your webpage. One changes the background color of all <code>&lt;div&gt;</code> elements, and the other resets the color. Wouldn't it make more sense to give these two buttons some <code>id</code> attribute specified with <em>changeAll</em> and <em>resetAll</em> respectively? If you use selector, it might be something like <q>the first button in a paragraph</q> and <q>the last button in a paragraph</q>, which is not as semantically transparent as the <code>id</code> attribute.</p>
@@ -586,7 +586,7 @@
 					</code>
 					<p>When you link an element to a <em>named</em> function in <code>addEventListener()</code>, you are able to remove this event listener later with <code>removeEventListener()</code>:</p>
 					<code>
-						// Remove the 'enteredMsg' listener of the 'mouseenter' event for em
+						// Remove the 'enteredMsg' listener of the 'mouseenter' event for em<br/>
 						em.removeEventListener('mouseenter', enteredMsg);
 					</code>
 					<h3>Styling the webpage with an interactive interface</h3>
