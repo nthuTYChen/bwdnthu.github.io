@@ -279,7 +279,7 @@
 						profile.name = 'Tsung-Ying Chen'; // Update an existing field;<br/>
 						profile.gender = 'Male'; // Add a new field called 'gender' with a value 'Male'
 					</code>
-					<p>As with the case of array, there is no constraint on the type of data in each field - it can be a numeric value, a string, an array, and even another object:</p>
+					<p>As with the case of array, there is no constraint on the type of data in each field - it can be a numeric value, a string, an array, and even another object:<a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-6" target="blank">Example 3-6</a></p>
 					<code>
 						var profile = {<br/>
 						<code>
@@ -389,7 +389,7 @@
 						popupMsg('Test!');<br/>
 						popupMsg('Victor', 'Hey!');
 					</code>
-					<p>Since you can submit some data to a fuction, a function can also return some data back to where it is called as well, and the keyword is exactly what you expect - <code>return</code>. In the following function <code>complexCalc</code>, it always does a complex calculation based on the two numeric values submitted to it:</p>
+					<p>Since you can submit some data to a fuction, a function can also return some data back to where it is called as well, and the keyword is exactly what you expect - <code>return</code>. In the following function <code>complexCalc</code>, it always does a complex calculation based on the two numeric values submitted to it: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-7" target="blank">Example 3-7</a></p>
 					<code>
 						function complexCalc (x, y) {
 						<code>
@@ -445,7 +445,7 @@
 						window.location.href = 'https://google.com'; // Change the current URL to Google<br/>
 						window.location.pathname = '/nosuchpath'; // Change to a path that does not exit
 					</code>
-					<p>We can also run some functions depending on the action executed in a browser window, such as popping up a message when a webpage is fully loaded in the browser window:</p>
+					<p>We can also run some functions depending on the action executed in a browser window, such as popping up a message when a webpage is fully loaded in the browser window: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-8" target="blank">Example 3-8</a></p>
 					<code>
 						window.onload = function() { // Initialized a function in the "onload" field of "window"
 						<code>
@@ -459,7 +459,7 @@
 						var siteTitle = document.title;<br/>
 						console.log(siteTitle);
 					</code>
-					<p>Since <code>document</code> allows JS codes to go through the DOM of an HTML document, it is certianly possible for us to retrieve some HTML elements from the DOM, with the functions like <code>getElement<em>s</em>ByTagName</code>, <code>getElement<em>s</em>ByClassName</code>, and <code>getElementById</code>. Note the emphasis put on the plural suffix <em>-s</em> of <em>Element</em> in the first two - It implies that the functions could get <em class="extra">one or more</em> HTML elements from an HTML documents. Let's start with <code>getElementsByTagName</code>, which retrieve all the elements with the same tag name for you:</p>
+					<p>Since <code>document</code> allows JS codes to go through the DOM of an HTML document, it is certianly possible for us to retrieve some HTML elements from the DOM, with the functions like <code>getElement<em>s</em>ByTagName</code>, <code>getElement<em>s</em>ByClassName</code>, and <code>getElementById</code>. Note the emphasis put on the plural suffix <em>-s</em> of <em>Element</em> in the first two - It implies that the functions could get <em class="extra">one or more</em> HTML elements from an HTML documents. Let's start with <code>getElementsByTagName</code>, which retrieve all the elements with the same tag name for you: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-9" target="blank">Example 3-9</a></p>
 					<code>
 						var allDivs = document.getElementsByTagName('div'); // Assign all "div" elements returned as an array to "allDivs"<br/>
 						console.log(allDivs[0]); // Examine the first "div" element as an object in the console tab<br/>
@@ -467,7 +467,7 @@
 						console.log(allAudios); // Probably "undefined" - nothing is found
 					</code>
 					<p>In the above example, we first use <code>getElementsByTagName</code> to retrieve all <code>&lt;div&gt;</code> elements. Since your HTML document is likely to have one or more <code>&lt;div&gt;</code> elements, each element would be collected as an object and stored in an <em>array</em> and finally returned to where <code>getElementsByTagName</code> is called. This is true even if there is only <em>one</em> element, which is stored in an array with just this element. If the function finds nothing in an HTML document, it returns a <code>null</code> value, which represents the absolute <em>emptiness</em> in the word of computer programming.</p>
-					<p>The other two functions trawl through an HTML document for elements that are given some specific <code>class</code> and <code>id</code> value, as their name suggests. As briefly discussed earlier, you could <em>group HTML elements together</em> with the <code>class</code> attribute with the <em>same</em> value, or make them <em>distinct from each other</em> with the <code>id</code> attribute assigned a <em>unique</em> value:</p>
+					<p>The other two functions trawl through an HTML document for elements that are given some specific <code>class</code> and <code>id</code> value, as their name suggests. As briefly discussed earlier, you could <em>group HTML elements together</em> with the <code>class</code> attribute with the <em>same</em> value, or make them <em>distinct from each other</em> with the <code>id</code> attribute assigned a <em>unique</em> value: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-10" target="blank">Example 3-10</a></p>
 					<code>
 						&lt;div class="group1" id="no1"&gt;Group 1 No 1&lt;/div&gt;<br/>
 						&lt;div class="group1" id="no2"&gt;Group 1 No 2&lt;/div&gt;<br/>
