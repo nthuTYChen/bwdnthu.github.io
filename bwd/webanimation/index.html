@@ -3,7 +3,34 @@
 	<head>
 		<title>Bilingual Web Design@DFLL NTHU; Tsung-Ying Chen</title>
 		<link rel="stylesheet" href="/css/style.css">
+		<style>
+			.slideAnimDemo {
+				position: relative;
+				top: 20px;
+				opacity: 0;
+			}
+		</style>
 		<script src="/js/jquery-3.2.1.min.js"></script>
+		<script>
+			function slideUpTargets () {
+				let divs = $('.slideAnimDemo'), vh = $(window).height(), scrollTop = $(window).scrollTop();
+				divs.each(function() {
+					let divTop = $(this).offset().top;
+					if(vh + scrollTop > divTop) {
+						$(this).animate({
+							top: 0,
+							opacity: 1
+						}, 500);
+					}
+				});
+			}
+			$(document).ready(function() {
+				slideUpTargets();
+				$(document).on('scroll', function() {
+					slideUpTargets();
+				});
+			});
+		</script>
 		<meta charset="UTF-8">
 	</head>
 	<body>
@@ -376,7 +403,7 @@
 						<li>In your JS file, add an event listener to <code>document</code> for a <code>scroll</code> event and execute the above function when the event is fired.</li>
 					</ul>
 					<p>Let's do this bit by bit, supposed that our target elements are a set of <code>div</code> blocks. To make them slightly lower than their default position, we need the CSS settings <code>position: relative;</code> and <code>top: 20px;</code>:</p>
-					<code>
+					<code class="slideAnimDemo">
 						div {
 						<code>
 							width: 50px;<br/>
@@ -390,7 +417,7 @@
 						}
 					</code>
 					<p>Now, let's build our animation function. To get the viewport height of a Web browser in jQuery, we can use <code>$(window).height();</code>. The distance between the top edge of the browser window and the top edge of the window viewport could be obtained by <code>$(window).scrollTop();</code> - that is, the distance <em>in pixel</em> by which the current viewport is scrolled down from the top edge of the entire browser window. Finally, the distance between the top edge of each target element and the top edge of entire document could be obtained with <code>offset()</code>. This function return an object including the distance <em>in pixel</em> from each of the four borders of an element to each of the four edges of the document. So, <code>offset().top</code> gives us the information we need. Now, with these numbers, we can use the <code>each()</code> function in jQuery to check if <em>every target</em> element enters the viewport in an <code>if</code> condition, and animate a target if the condition is true.</p>
-					<code>
+					<code class="slideAnimDemo">
 						function slideUpTarget () {
 						<code>
 							var divs = $('div'); // Get all target div elements<br/>
@@ -421,7 +448,7 @@
 						}
 					</code>
 					<p>The two functions have no effect because we haven't called them. The first time we need to call it is when the webpage is ready, as indicated by the <code>ready()</code> function in jQuery:</p>
-					<code>
+					<code class="slideAnimDemo">
 						$(document).ready(function() {
 						<code>
 							slideUpTarget(); // Animate qualified targets when the webpage is ready
