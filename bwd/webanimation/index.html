@@ -336,7 +336,28 @@
 						repeatAnimation();
 					</code>
 					<h3>animate()</h3>
-					<p>jQuery provides convenient functions to do simple animations, but they are mostly </p>
+					<p>jQuery provides convenient functions to do simple animations, but they are mostly about showing and hiding things. This is not surprising because we constantly need to show or hiding things (such as a navigation pane) in an interactive Web user interface, but we frequently need something else, too, such as re-positioning an element or changing the apearance of an element. In these cases, you use the (almost) mighty <code>animate()</code> function.</p>
+					<p>Earlier in this unit, we saw that an element can have a transition between two CSS styles depending on its <em>hovering</em> state. The logic is similar when it comes to the <code>animate()</code> function - you pass a CSS style <em>as an object</em> into the function and specify the length for an element to gradually make a transition from its style specified in a CSS stylesheet to the CSS style passed to the function. The main difference is that <code>animate()</code> need not be attached to a <code>mouseenter</code> event (that is, hovering). It can runs actively when it is attached directly to an element, or it can be enclosed inside an event listener of all different kinds of events, not just hovering:</p>
+					<code>
+						// Change the opacity to 1 and the distance to the left edge to 50vw in 1000 ms<br/>
+						$(selector).animate({
+						<code>
+							opacity: 1,
+							left: '50vw'
+						</code>
+						}, 1000);<br/><br/>
+						// Do the same thing, but only when the selected element is clicked<br/>
+						$(selector).on('click', function() {
+						<code>
+							$(this).animate({
+							<code>
+								opacity: 1,
+								left: '50vw'
+							</code>
+							}, 1000);
+						</code>
+						});
+					</code>
 				</section>
 				<section>
 					<h2 id="conclusion">Concluding remarks</h2>
