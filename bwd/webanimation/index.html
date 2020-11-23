@@ -314,6 +314,11 @@
 					<code>
 						$('#thirdLine').hide(1000).slideDown(2000);
 					</code>
+					<p>Also, you could insert a <code>delay()</code> function between every two animation functions to delay one animation after another animation:</p>
+					<code>
+						// slideDown() delayed by 1000 ms after hide()<br/>
+						$('#thirdLine').hide(1000).delay(1000).slideDown(2000);
+					</code>
 					<h3>animate()</h3>
 				</section>
 				<section>
