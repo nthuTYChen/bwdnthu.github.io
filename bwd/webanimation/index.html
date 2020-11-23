@@ -319,6 +319,22 @@
 						// slideDown() delayed by 1000 ms after hide()<br/>
 						$('#thirdLine').hide(1000).delay(1000).slideDown(2000);
 					</code>
+					<p>So far, we have learned how to run a series of animations that terminate after the last one is done. In the next section, we will learn how to repeat the same animation sequence very easily using jQuery. But is it possible to achieve this with what we know up to this point? The answer is <em>yes</em>, and you need to write a <em class="extra">recursive</em> function that runs itself. Put differently, inside a function, you attach multiple animation functions to an element, and after the last animation is done, you use a <em>callback</em> function in which calls the main function itself. I've provided some keywords here, so you can try to do it...or just select the following block for my solution.</p>
+					<code style="color: #e68a00;">
+						// Create the function that runs animations<br/>
+						function repeatAnimation () {
+						<code style="color: #e68a00;">
+							$('#target').hide(1000).delay(500).slideDown(2000, ()=>{
+							<code style="color: #e68a00;">
+								// Call the function itself in the callback of the last animation function, so it's recursive<br/>
+								repeatAnimation();
+							</code>
+							});
+						</code>
+						}<br/>
+						// Call the function for the first time<br/>
+						repeatAnimation();
+					</code>
 					<h3>animate()</h3>
 				</section>
 				<section>
