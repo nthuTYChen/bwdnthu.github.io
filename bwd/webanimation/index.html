@@ -342,7 +342,7 @@
 						// Change the opacity to 1 and the distance to the left edge to 50vw in 1000 ms<br/>
 						$(selector).animate({
 						<code>
-							opacity: 1,
+							opacity: 1,<br/>
 							left: '50vw'
 						</code>
 						}, 1000);<br/><br/>
@@ -351,13 +351,20 @@
 						<code>
 							$(this).animate({
 							<code>
-								opacity: 1,
+								opacity: 1,<br/>
 								left: '50vw'
 							</code>
 							}, 1000);
 						</code>
 						});
 					</code>
+					<p>The <code>animate()</code> is so powerful that it could do almost everything you need to animate an element, and you can always check the <a href="https://api.jquery.com/animate/" target="_blank">official document</a> to master its use. But maybe it's useful to summarize some important points here for you:</p>
+					<ul>
+						<li>You cannot use it to animate a CSS property that has a <em class="extra">non-numeric</em> value, such as <code>background-color</code> (it could be made possible with the <a href="https://github.com/jquery/jquery-color" target="_blank">jQuery Color</a> plug-in, though!) or <code>display</code> (again, animating <code>opacity</code> is a workaround, or see the official document for a slightly more complex solution).</li>
+						<li>The function cannot be applied to CSS shorthands that require <em class="extra">multiple values</em> to be specified, such as <code>font</code> and <code>border</code>.</li>
+						<li>When you refer to a CSS property that comes with a dash, such as <code>font-size</code>, the name of the key in the object passed to <code>animate()</code> should get rid of the dash (e.g., <code>fontSize</code>) or be enclosed inside a pair of quotation marks (e.g., <code>'font-size'</code>).</li>
+						<li>Finally, if you directly specify a numeric value without any unit for a CSS property in the object passed to <code>animate()</code>, the value will be treated as <code>pixels</code>. You can provide the unit as well, but with the number the entire value should be enclosed inside a pair of quotation marks as in the above example (e.g., <code>'50%'</code> or <code>'50vw'</code>).</li>
+					</ul>
 				</section>
 				<section>
 					<h2 id="conclusion">Concluding remarks</h2>
