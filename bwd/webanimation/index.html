@@ -288,7 +288,7 @@
 						<li><code>show()</code> - Gradually expand and display selected elements.</li>
 						<li><code>toggle()</code> - Gradually shrink and hide visible elements or expand and display hidden elements.</li>
 						<li><code>slideUp()</code> - Gradually slide up and hide selected elements.</li>
-						<li><code>slideDown()</code> - Gradually slide down and hide selected elements.</li>
+						<li><code>slideDown()</code> - Gradually slide down and show selected elements.</li>
 						<li><code>slideToggle()</code> - Gradually slide up and hide selected elements or slide down and display selected elements.</li>
 					</ul>
 					<p>For each jQuery animation function above, the default length of an animation is <em>400 ms</em>. You can pass over a <em>parameter</em> and control the pace of an animation. You can start by passing a string like <code>'slow'</code> or <code>'fast'</code>, which corresponds to <em>200 ms</em> and <em>600 ms</em> respectively. Alternatively, you could pass over a number in millisecond to specify the length of an animation directly:</p>
@@ -309,6 +309,10 @@
 							$('#secondLine').show(500, 'linear'); // executed after the first animation is done.
 						</code>
 						});
+					</code>
+					<p>Alternatively, if you need an element to animate continuously, you could add animation functions one after another without using any callbacks at all, so the next animation applies after the previous is done. Here I use <code>hide()</code> and <code>slideDown()</code> to demonstrate how an element is shrinked and hidden in 1000 ms and then gradually appears with a sliding-down effect in 2000 ms:</p>
+					<code>
+						$('#thirdLine').hide(1000).slideDown(2000);
 					</code>
 					<h3>animate()</h3>
 				</section>
