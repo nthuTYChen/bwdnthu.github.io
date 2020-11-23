@@ -365,6 +365,83 @@
 						<li>When you refer to a CSS property that comes with a dash, such as <code>font-size</code>, the name of the key in the object passed to <code>animate()</code> should get rid of the dash (e.g., <code>fontSize</code>) or be enclosed inside a pair of quotation marks (e.g., <code>'font-size'</code>).</li>
 						<li>Finally, if you directly specify a numeric value without any unit for a CSS property in the object passed to <code>animate()</code>, the value will be treated as <code>pixels</code>. You can provide the unit as well, but with the number the entire value should be enclosed inside a pair of quotation marks as in the above example (e.g., <code>'50%'</code> or <code>'50vw'</code>).</li>
 					</ul>
+					<h3>Case study</h3>
+					<p>With these tips in mind, you can explore the function's potential by yourself, but here we can practice doing an animation that has become fairly common in recent years. That is, as you scroll down a Web page, when en element enters the viewport of a Web browser, it slightly slides up and fade in at the same time (check this <a href="https://codepen.io/chriscoyier/full/DjmJe" target="_blank">Codepen.io example</a>). To do this, we need to achieve the following goals using both CSS and jQuery:</p>
+					<ul>
+						<li>In your CSS file, set the targets of the animation to be fully transparent and slightly lower from it's default position.</li>
+						<li>Inside a function in your JS file, obtain three types of information - 1. The height of the viewport, 2. The distance from the top of the viewport to the top of the entire document, and 3. The distance from the top edge of a target element to the top edge of the entire document.</li>
+						<li>With the above information, calculate if the sum of the viewport height and the distance between the viewport top edge and the document top edge is higher than the distance from a target element top edge to the document top edge.</li>
+						<li>If yes, it means the top edge of a target element enters the viewport, so you can animate the target element back to its original position.</li>
+						<li>In your JS file, run the above function right at the beginning, because some target elements might be in the viewport already when the webpage is fully loaded.</li>
+						<li>In your JS file, add an event listener to <code>document</code> for a <code>scroll</code> event and execute the above function when the event is fired.</li>
+					</ul>
+					<p>Let's do this bit by bit, supposed that our target elements are a set of <code>div</code> blocks. To make them slightly lower than their default position, we need the CSS settings <code>position: relative;</code> and <code>top: 20px;</code>:</p>
+					<code>
+						div {
+						<code>
+							width: 50px;<br/>
+							height: 50px;<br/>
+							background-color: red;<br/>
+							margin: 10px 0; /* To separate blocks from each other */<br/>
+							position: relative;<br/>
+							top: 20px; /* Lower from its default position by 20 px */<br/>
+							opacity: 0; /* Fully transparent by default */
+						</code>
+						}
+					</code>
+					<p>Now, let's build our animation function. To get the viewport height of a Web browser in jQuery, we can use <code>$(window).height();</code>. The distance between the top edge of the browser window and the top edge of the window viewport could be obtained by <code>$(window).scrollTop();</code> - that is, the distance <em>in pixel</em> by which the current viewport is scrolled down from the top edge of the entire browser window. Finally, the distance between the top edge of each target element and the top edge of entire document could be obtained with <code>offset()</code>. This function return an object including the distance <em>in pixel</em> from each of the four borders of an element to each of the four edges of the document. So, <code>offset().top</code> gives us the information we need. Now, with these numbers, we can use the <code>each()</code> function in jQuery to check if <em>every target</em> element enters the viewport in an <code>if</code> condition, and animate a target if the condition is true.</p>
+					<code>
+						function slideUpTarget () {
+						<code>
+							var divs = $('div'); // Get all target div elements<br/>
+							var vh = $(window).height(); // Get viewport height<br/>
+							var scrollTop = $(window).scrollTop(); // Get the scrolling distance<br/>
+							divs.each(function() { // A function runs for each element in divs
+							<code>
+								// 'this' means the current element from divs<br/>
+								var divTop = $(this).offset().top; // Get the element distance<br/>
+								// Use a separate function to run the animation because of the limited layout of this course website...<br/>
+								// Pass over necessary data<br/>
+								sliding(this, vh, scrollTop, divTop);
+							</code>
+							});
+						</code>
+						}<br/><br/>
+						function sliding (target, vh, scrollTop, divTop) {
+						<code>
+							/* Run animation only when the current viewport height plus the scrollTop<br/>
+							 is heigher than divTop */<br/>
+							if(vh + scrollTop > divTop) {
+							<code>
+								// Change top back to 0 (default position) and make it fully opaque<br/>
+								target.animate({top: 0, opacity: 1}, 1000);
+							</code>
+							}
+						</code>
+						}
+					</code>
+					<p>The two functions have no effect because we haven't called them. The first time we need to call it is when the webpage is ready, as indicated by the <code>ready()</code> function in jQuery:</p>
+					<code>
+						$(document).ready(function() {
+						<code>
+							slideUpTarget(); // Animate qualified targets when the webpage is ready
+						</code>
+						});
+					</code>
+					<p>Then, we can call it in an event listener attached to the entire document for the <code>scroll</code> event:</p>
+					<code>
+						$(document).ready(function() {
+						<code>
+							slideUpTarget(); // Animate qualified targets when the webpage is ready<br/>
+							$(document).on('scroll', function() {
+							<code>
+								slideUpTarget(); // Run every time you scroll the webpage
+							</code>
+							});
+						</code>
+						});
+					</code>
+					<p></p>
 				</section>
 				<section>
 					<h2 id="conclusion">Concluding remarks</h2>
