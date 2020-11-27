@@ -490,7 +490,7 @@
 						idEm.innerHTML = 'Group 2 No 5 (Changed)'; // Change the content of the element
 					</code>
 					<h3>JS styling</h3>
-					<p>Not only can we change the content of an element, we can also style a particular element in JS, which is probably the most important thing in Web design. For each element object, there is a field named <code>style</code>...and it's clear what it does, right? In this field, you can find and set CSS properties with their name, such as:</p>
+					<p>Not only can we change the content of an element, we can also style a particular element in JS, which is probably the most important thing in Web design. For each element object, there is a field named <code>style</code>...and it's clear what it does, right? In this field, you can find and set CSS properties with their name, such as: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-10" target="blank">Example 3-10</a></p>
 					<code>
 						idEm.style.color = 'red'; // Set the font color
 					</code>
@@ -512,7 +512,7 @@
 					<p>Since the styles set in JS are viewed as <em>inline styles</em>, they would be <em class="extra">more specific</em> than the styles set in a CSS file for the target elements when same CSS properties are involved. This make sense because you can have some <em>default</em> styles for some elements, whose properties are changed by JS in some contexts.</p>
 					<p>You can also set <em>inline styles</em> with the function <code>setAttribute()</code> for an element object, as demonstrated on this <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style" target="blank">MDN Web Docs page</a>, but I won't go through it here.</p>
 					<h3>Query selector</h3>
-					<p>You are now probably very excited, because it's so convenient to refer to the <code>class</code> and <code>id</code> attributes when you need to set the style for a specific element, so you start to think about grouping elements together or making them distinct from each other with these attributes. That's the first mistake I made as an amateur Web designer - I used <em>semantically-free</em> <code>&lt;div&gt;</code> only, and gave them different <code>class</code> and <code>id</code> attribute value so I could locate them in my JS codes very easily. But as I said in the previous unit, this is not the best practice. When you use <em>semantically meaningful</em> elements and have a clear structure for your HTML document, you shouldn't need the <code>class</code> and <code>id</code> attributes most of the time. For example, the <code>&lt;p&gt;</code> elements inside <code>&lt;article&gt;</code> and <code>&lt;section&gt;</code> in the following example might represent different types of information in your webpage. But you don't need different <code>id</code> values for the two paragraphs, because you can use different <em class="extra">selectors</em> to refer to each paragraph: <code>article > p</code> and <code>section > p</code>.</p>
+					<p>You are now probably very excited, because it's so convenient to refer to the <code>class</code> and <code>id</code> attributes when you need to set the style for a specific element, so you start to think about grouping elements together or making them distinct from each other with these attributes. That's the first mistake I made as an amateur Web designer - I used <em>semantically-free</em> <code>&lt;div&gt;</code> only, and gave them different <code>class</code> and <code>id</code> attribute value so I could locate them in my JS codes very easily. But as I said in the previous unit, this is not the best practice. When you use <em>semantically meaningful</em> elements and have a clear structure for your HTML document, you shouldn't need the <code>class</code> and <code>id</code> attributes most of the time. For example, the <code>&lt;p&gt;</code> elements inside <code>&lt;article&gt;</code> and <code>&lt;section&gt;</code> in the following example might represent different types of information in your webpage. But you don't need different <code>id</code> values for the two paragraphs, because you can use different <em class="extra">selectors</em> to refer to each paragraph: <code>article > p</code> and <code>section > p</code>. <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-12" target="blank">Example 3-12</a></p>
 					<code>
 						&lt;article&gt;<br/>
 						<code>
@@ -596,7 +596,7 @@
 						<li>style both <code>&lt;div&gt;</code> elements using <em>inline styles</em>, specify a width and a height of <code>5vh</code> to make them a square, and</li>
 						<li>add two event listeners to each <code>&lt;div&gt;</code> - one changes the background color to any color of your choice when you move your mouse cursor over it, and the other changes the background color back to the default white backgroud.</li>
 					</ol>
-					<p>Select the following section to find a <em>complicated</em> solution:</p>
+					<p>Select the following section to find a <em>complicated</em> solution: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-13" target="blank">Example 3-13</a></p>
 					<code style="color: #e68a00;">
 						var div = document.getElementByTagName('div');<br/>
 						var div1 = div[0], div2 = div[1];<br/>
@@ -636,7 +636,7 @@
 							</code>
 						});
 					</code>
-					<p>So, how can <code>this</code> help simplify our codes in the complicated solution? We can directly set the style of the target <code>&lt;div&gt;</code> element directly with <code>this</code> - we don't even need two functions to reset the background color since the default color is the same:</p>
+					<p>So, how can <code>this</code> help simplify our codes in the complicated solution? We can directly set the style of the target <code>&lt;div&gt;</code> element directly with <code>this</code> - we don't even need two functions to reset the background color since the default color is the same: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-14" target="blank">Example 3-14</a></p>
 					<code>
 						var div = document.getElementByTagName('div');<br/>
 						var div1 = div[0], div2 = div[1];<br/>

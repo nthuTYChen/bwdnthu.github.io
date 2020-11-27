@@ -9,5 +9,7 @@ window.onload = function() {
 	});
 	em.addEventListener('mouseenter', mouseEventMsg);
 	em.addEventListener('mouseleave', mouseEventMsg);
-	em.removeEventListener('mouseleave');
+	// When you remove an event listener, you need to provide the specific event to remove
+	// as well as the name of the function originally bounded to the event
+	em.removeEventListener('mouseleave', mouseEventMsg);
 };
