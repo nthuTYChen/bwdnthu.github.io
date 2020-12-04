@@ -804,7 +804,7 @@
 						console.log('5' === 5); // You get a "false"
 					</code>
 					<p>In the first comparison, you get a <code>true</code> value when a character 5 is compared to a numerical 5 using <code>==</code> - since the two values are compared with no regard to their data type, <em>automatical type conversion</em> applies to make the two values equivalent to each other. By contrast, when the same values are compared using <code>===</code>, the type conversion does not apply, and the result is a <code>false</code> since they are of different data types. In other words, comparisons using <code>===</code> are more conservative than those using <code>==</code>. I personally always choose the more conservative option since it lowers the risk of having <em>bugs</em> in your codes. If I need to convert strings into numerical values, I would do it myself manually using the <code>Number()</code> or <code>parseInt()</code> function.</p>
-					<p>Now back to our <code>if...else...</code> statements. We use the previous example with three <code>&lt;div&gt;</code> elements, and three corresponding <code>&lt;button&gt;</code> elements sharing the same <code>id</code> attribute with the <code>&lt;div&gt;</code> elements:</p>
+					<p>Now back to our <code>if...else...</code> statements. We use the previous example with three <code>&lt;div&gt;</code> elements, and three corresponding <code>&lt;button&gt;</code> elements sharing the same <code>id</code> attribute with the <code>&lt;div&gt;</code> elements: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-15" target="blank">Example 3-15</a></p>
 					<code>
 						&lt;div id="block1" style="width: 5vh; height: ...<br/>
 						&lt;div id="block2" style="width: 5vh; height: ...<br/>
@@ -994,7 +994,7 @@
 						<li>These elements will be stored in an array return by the aforementioned functions.</li>
 						<li>You loop through this array and style each element until the end of this array (your loop condition).</li>
 					</ul>
-					<p>Let's now have three <code>&lt;div&gt;</code> siblings, and use a <code>&lt;button&gt;</code> element that listen to a <code>click</code> event to style all three elements:</p>
+					<p>Let's now have three <code>&lt;div&gt;</code> siblings, and use a <code>&lt;button&gt;</code> element that listen to a <code>click</code> event to style all three elements: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-16" target="blank">Example 3-16</a></p>
 					<code>
 						var button = document.getElementsByTagName('button')[0]; // Get one and the only 'button' element<br/>
 						button.addEventListener('click', function()) {
@@ -1012,7 +1012,7 @@
 						};
 					</code>
 					<p>In the above example, we usually name the counter variable something like <code>i</code> since it represents the <em>index</em> number in an array, and it starts with <em>0</em> because it represents the first data entry in an array. Since we need to loop through the end of the array, we need to know how many data entries there are in the array, which can be obtained with the <code>length</code> property of an array object. In the condition, we need the operator <code>&lt;</code> rather than <code>=</code> since the index of the last data entry in an array is always <em>arrary length minus 1</em>.</p>
-					<p>If we include <code>if...else...</code> statements in a <code>for</code> loop, it will be possible to make our styling function more flexible to deal with subgroups of elements in the <em>same</em>. For example, perhaps we don't want to change the background color of the second <code>&lt;div&gt;</code> element of the three <code>&lt;div&gt;</code> elements we had above, so we add an <code>id</code> attribute to it with a value <code>nostyle</code>:</p>
+					<p>If we include <code>if...else...</code> statements in a <code>for</code> loop, it will be possible to make our styling function more flexible to deal with subgroups of elements in the <em>same</em>. For example, perhaps we don't want to change the background color of the second <code>&lt;div&gt;</code> element of the three <code>&lt;div&gt;</code> elements we had above, so we add an <code>id</code> attribute to it with a value <code>nostyle</code>: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-17" target="blank">Example 3-17</a></p>
 					<code>
 						&lt;div id="nostyle"&gt;Div 2&lt;/div&gt;
 					</code>
