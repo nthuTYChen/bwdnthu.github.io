@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+div {
+	margin: 10vh 0;
+	text-align: center;
+}
+
+img {
+	display: inline-block;
+	position: relative;
+}
+
+p {
+	margin: 2vh 0;
+}
+
+button {
+	padding: 1vw;
+}
