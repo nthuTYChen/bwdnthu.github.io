@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+nav {
+	width: 100vw;
+	height: 30px;
+	background-color: grey;
+	font-family: sans-serif;
+	padding: 0 10px;
+}
+
+nav > div {
+	display: inline-block;
+	margin: 0 5px;
+	height: 30px;
+	padding: 0 3px;
+	background-color: red;
+	color: white;
+	line-height: 30px;
+}
+
+nav > div:hover {
+	cursor: pointer;
+	background-color: white;
+	color: red;
+}
