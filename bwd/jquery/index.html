@@ -102,7 +102,7 @@
 						<li>The second <code>&lt;p&gt;</code> element of the class <code>special</code>.</li>
 					</ol>
 					<h3>eq() and html()</h3>
-					<p>The way you completed the above task may still involve some old thinking with the idea of array, which is absolutely nothing wrong. For instance, you might use the following code to retrieve the first <code>&lt;p&gt;</code> element, where the square brackets are used to indicate the first element of the array returned by <code>$()</code>:</p>
+					<p>The way you completed the above task may still involve some old thinking with the idea of array, which is absolutely nothing wrong. For instance, you might use the following code to retrieve the first <code>&lt;p&gt;</code> element, where the square brackets are used to indicate the first element of the array returned by <code>$()</code>:<a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/4-1" target="blank">Example 4-1</a></p>
 					<code>
 						$('p')[0]; // The first of all &lt;p&gt; elements
 					</code>
@@ -151,7 +151,7 @@
 						}
 					</code>
 					<h3>on() and off()</h3>
-					<p>Remember the <code>addEventListener()</code> function of an HTML object accessed in a JS file to create some interactive interface for your website? There's of couse an equivalent function in jQuery as well, which is <code>on()</code>. This function requires two types of data: The first one is event type (as a <em>string</em>), and the second one is a <em class="extra">callback</em> function executed when an event is <em>fired</em>. Let's try the <code>click</code> event first:</p>
+					<p>Remember the <code>addEventListener()</code> function of an HTML object accessed in a JS file to create some interactive interface for your website? There's of couse an equivalent function in jQuery as well, which is <code>on()</code>. This function requires two types of data: The first one is event type (as a <em>string</em>), and the second one is a <em class="extra">callback</em> function executed when an event is <em>fired</em>. Let's try the <code>click</code> event first:<a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/4-2" target="blank">Example 4-2</a></p>
 					<code>
 						window.onload = function() { // Make sure the document is fully loaded
 						<code>
@@ -251,7 +251,7 @@
 					<code>
 						document.body.style.backgroundColor = 'black';
 					</code>
-					<p>Imagine how many lines you need to write to set multiple CSS properties, and even for a group of HTML elements. Here in jQuery, you can do it all at once with the function <code>css()</code>, which also adds <em class="extra">inline</em> CSS properties to an element or a set of elements. Let's try this function with the following blocks inside <code>&lt;body&gt;&lt;/body&gt;</code>.</p>
+					<p>Imagine how many lines you need to write to set multiple CSS properties, and even for a group of HTML elements. Here in jQuery, you can do it all at once with the function <code>css()</code>, which also adds <em class="extra">inline</em> CSS properties to an element or a set of elements. Let's try this function with the following blocks inside <code>&lt;body&gt;&lt;/body&gt;</code>.<a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/4-3" target="blank">Example 4-3</a></p>
 					<code>
 						&lt;div style="height: 50px; width: 50px; background-color: yellow;"&gt;&lt;/div&gt;<br/>
 						&lt;div style="height: 50px; width: 50px; background-color: yellow;"&gt;&lt;/div&gt;<br/>
@@ -294,7 +294,7 @@
 					<h3>Making changes to more attributes</h3>
 					<p>So far we've seen some jQuery functions that allow you to retrieve/change the <em>attributes</em> of an element. The <em>value</em> attribute could be accessed with <code>val()</code>, and the <code>style</code> attribute could be accessed with <code>css()</code>. You can keep playing around with <code>css()</code> especially when you need to create an interactive Web interface that changes the appearance HTML elements based on users' actions - that is, when an action is detected, an event is fired to apply the <code>css()</code> function to a specific element.</p>
 					<p>But here we will learn another more elegant way of changing how a specific element looks like using the jQuery functions <code>addClass()</code> and <code>removeClass()</code>. As smart as you are, you might already know what these two functions mean, right? That is, to add and remove a specific label from the <code>class</code> attribute of HTML elements. Thus, the idea is that you can define the CSS properties for a particular <em>class</em> in your CSS file. Then, you only need to add the name of this class to HTML elements when necessary. And this approach opens up more possibilities in our Web design.</p>
-					<p>Let's wind back to our previous HTML example repeated below without the two buttons and the inline style. In this old example, we need the buttons combined with the <code>css()</code> function to change the appearance of one or all of the <code>&lt;div&gt;</code> elements. But now, we can define a class in our CSS file, and add this class to a clicked <code>&lt;div&gt;</code> element to change its size and color.</p>
+					<p>Let's wind back to our previous HTML example repeated below without the two buttons and the inline style. In this old example, we need the buttons combined with the <code>css()</code> function to change the appearance of one or all of the <code>&lt;div&gt;</code> elements. But now, we can define a class in our CSS file, and add this class to a clicked <code>&lt;div&gt;</code> element to change its size and color.<a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/4-4" target="blank">Example 4-4</a></p>
 					<code>
 						&lt;div&gt;&lt;/div&gt;<br/>
 						&lt;div&gt;&lt;/div&gt;<br/>
