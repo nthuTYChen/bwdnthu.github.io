@@ -1,0 +1,41 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 10px;
+}
+
+table {
+	font-family: sans-serif;
+	color: white;
+}
+
+thead {
+	font-weight: bold;
+}
+
+thead > tr {
+	background-color: crimson;
+}
+
+tbody > tr {
+	background-color: red;
+}
+
+td {
+	padding: 2px 5px;
+}
+
+td > a {
+	color: orange;
+}
+
+td > a:visited {
+	color: white;
+}
+
+td > a:hover {
+	font-weight: bold;
+}
