@@ -1,0 +1,57 @@
+/* Feel free to make the interface better by yourself */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 1.6vh;
+}
+
+article {
+	position: fixed;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%); /* Move left/up from the original position by 50% of the height and the width of this element */
+	text-align: center;
+}
+
+h1, h2 {
+	margin: 2vh 0;
+}
+
+h1 {
+	font-family: sans-serif;
+	font-size: 300%;
+}
+
+h2 {
+	font-family: sans-serif;
+	font-size: 200%;
+}
+
+table {
+	display: none; /* Weather info shows up after the data is retrieved from the server */
+	width: 100%; /* Fill the entire width of its parent (article) */
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+th {
+	background-color: orange;
+	color: white;
+}
+
+td { 
+	font-size: 150%;
+	background-color: lightgrey;
+}
+
+td > img {
+	max-height: 2.4vh; /* The weather icon should not be taller than the font size (150% of 1.6vh), so the icon is perfectly aligned with the texts in the same row */
+}
+
+
+
