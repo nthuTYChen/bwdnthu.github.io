@@ -59,7 +59,7 @@
 							width: 30%;
 						</code>
 						}<br/>
-						@media screen and (max-width: 800px) {
+						@media only screen and (max-width: 800px) {
 						<code>
 							/* DIV style applied in a narrower device */<br/>
 							div {
@@ -78,7 +78,7 @@
 					</picture>
 					<p>Mobile devices are dominating the world. Period. So when you start a responsive website project, the first thing you need to think is the layout optimized for mobile devices by default, and then adjust this mobile-based layout for some desktop devices. Thus, you should set media query rules specifically for the desktop devices, rather than for mobile devices. As in the following example, we would define CSS styles that apply only to devices with a screen width of 1,200 pixels or higher (using <code>min-width</code>). The number 1,200 is going to be a safe <em>break point</em>, as most mobile devices have a viewport width shorter than 1,200 pixels (see <a href="https://docs.adobe.com/content/help/en/target/using/experiences/vec/mobile-viewports.html" target="_blank">this Adobe page</a>). About twenty five years ago, a desktop computer screen with a 1024 x 768 resolution would be considered a "large" screen, but I guess most of them are dead by now, so we should be fine.</p>
 					<code>
-						@media screen and (min-width: 1200px) {
+						@media only screen and (min-width: 1200px) {
 						<code>
 							/* CSS styles applied in a wider device */<br/>
 						</code>
@@ -166,7 +166,7 @@
 					</code>
 					<p>It's time to transform this drop-down menu to the one with a horizontal layout with media queries. Let's also set the <em>break point</em> to a viewport width of <em>1,200 pixels</em> in the CSS file, and our first change is to hide the hamburger symbol. Once the symbol is hidden, you don't need to be worried about clicking the symbol and trigger unexpected actions by accident. Second, let's set the <code>&lt;a&gt;</code> siblings to be <em>inline-block</em> elements. The reason is that we want the elements to be treated like a normal text flow but at the time made flexible in terms of their height and width. Now adjust the width of your Web browser, and see how the website <em>responds</em> to the change!</p>
 					<code>
-						@media screen and (min-width: 1200px) {
+						@media only screen and (min-width: 1200px) {
 						<code>
 							nav > span {
 							<code>
@@ -229,7 +229,7 @@
 						</code>
 						}<br/>
 						/* Applied only when viewport width > 1200 px */<br/>
-						@media screen and (min-width: 1200px) {
+						@media only screen and (min-width: 1200px) {
 						<code>
 							nav#mobileMenu {
 							<code>
@@ -319,7 +319,7 @@
 					</code>
 					<p>We have now set the stage for transforming this mobile-based design into a desktop design. As usual, we set the break point to <code>1200 px</code> of the screen width in a media query. In this media query, we first re-define <code>flex-direction</code> of the <code>&lt;article&gt;</code> element from <code>column</code> to <code>row</code>. Again, we don't need to specify other CSS properties whose value does not change in different contexts. Then, instead of the top/bottom margins in the mobile-based design, we need the left/right margins in the desktop-based design. We also have to add a limit on the width of <code>&lt;section&gt;</code> for the same reason - to avoid over-expansion as more contents are put into the element. Finally, we also need to specify a different <code>max-width</code> of <code>100%</code>. Note that styles outside the media query are applied <em>by default</em>. This means that if you don't set a different <code>max-width</code> for the desktop-based design, you will get a <code>max-height</code> of <code>33%</code> here, too.</p>
 					<code>
-						@media screen and (min-width: 1200px) {
+						@media only screen and (min-width: 1200px) {
 						<code>
 							article {
 							<code>
