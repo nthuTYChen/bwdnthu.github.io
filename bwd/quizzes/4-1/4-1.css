@@ -1,0 +1,13 @@
+/* :nth-of-type */
+
+div {
+	width: 50px;
+	height: 50px;
+	margin: 5px 0;
+	background-color: orange;
+}
+
+div.selected {
+	width: 100px;
+	height: 100px;
+}

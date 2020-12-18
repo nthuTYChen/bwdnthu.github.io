@@ -19,6 +19,8 @@ nav > div {
 	padding: 0 3px;
 	background-color: red;
 	color: white;
+	text-align: center;
+	vertical-align: text-top;
 	line-height: 30px;
 }
 
@@ -27,3 +29,17 @@ nav > div:hover {
 	background-color: white;
 	color: red;
 }
+
+nav > div > div {
+	display: none;
+	margin: 0 -3px;
+	border: 1px solid red;
+	background-color: white;
+	color: red;
+}
+
+/* Pure hovering effect */
+
+/*nav > div:hover > div {
+	display: block;
+}*/

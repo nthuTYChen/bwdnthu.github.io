@@ -1,0 +1,27 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+nav {
+	width: 100px;
+	background-color: red;
+	color: white;
+	text-align: center;
+}
+
+nav > div > div {
+	padding: 5px 0;
+}
+
+nav > div > div:first-of-type {
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+nav > div > div:not(:first-of-type) {
+	display: none;
+	background-color: white;
+	color: red;
+}
