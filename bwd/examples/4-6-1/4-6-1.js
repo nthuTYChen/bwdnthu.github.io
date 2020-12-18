@@ -10,7 +10,9 @@ $(document).ready(function () {
 
 		// The temperature of the current weather could be obtained from main.temp of the result object.
 		// Do some simple calculation to round to the first decimal.
-		var currentTemp = Math.round(result.main.temp * 10) / 10;
+		// Somehow I could only get the temperature in Kelvin Unit from the server, so the number should minus 273.15
+		// to get you Celsius
+		var currentTemp = Math.round((result.main.temp - 273.15) * 10) / 10;
 		// Put the temperature (plus the unit C) to the first td cell of the tbody row.
 		$('td').eq(0).html(currentTemp + 'C');
 		// Get the file name of the icon from the result object (check the structure by yourself)
