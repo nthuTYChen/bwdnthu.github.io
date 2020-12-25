@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	background-color: #ca3d3f;
+}
+
+article {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+article > section {
+	margin: 0 5px;
+	padding: 5px;
+	background-color: #386641;
+	color: white;
+	font-size: 2.4vh;
+}
+
+article > section:nth-of-type(odd) {
+	flex-grow: 1;
+}
+
+article > section:nth-of-type(even) {
+	flex-grow: 2;
+}
+
+@media only screen and (min-width: 1200px) {
+	article {
+		flex-direction: row;
+	}
+}
