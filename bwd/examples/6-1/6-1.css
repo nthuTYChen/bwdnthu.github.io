@@ -1,0 +1,28 @@
+div {
+	width: 50px;
+	height: 50px;
+	background-color: red;
+	margin: 5px 0;
+	transition: all 0.5s linear;
+}
+
+div:first-of-type:hover {
+	background-color: orange;
+	width: 150px;
+	height: 150px;
+	transition: all 2s linear;
+}
+
+div:nth-of-type(2):hover {
+	background-color: purple;
+	width: 150px;
+	height: 150px;
+	transition: all 2s cubic-bezier(.18,1.07,.74,-0.73);
+}
+
+div:last-of-type:hover {
+	background-color: yellow;
+	width: 150px;
+	height: 150px;
+	transition: background-color 2s ease-out, width 4s linear, height 0.5s ease-in;
+}

@@ -1,0 +1,21 @@
+div {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	background-color: red;
+}
+
+div > div {
+	position: relative;
+	z-index: -1;
+	left: 0;
+	width: 100px;
+	background-color: orange;
+	opacity: 0;
+}
+
+div:hover > div {
+	opacity: 1;
+	left: 100%;
+	transition: left 0.5s ease-out, opacity 1s ease-out;
+}

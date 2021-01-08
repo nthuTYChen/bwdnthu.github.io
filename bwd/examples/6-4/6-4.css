@@ -1,0 +1,15 @@
+div {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	animation: bgChange 1s ease-in infinite alternate;
+}
+
+@keyframes bgChange {
+	from {
+		background-color: red;
+	}
+	to {
+		background-color: orange;
+	}
+}

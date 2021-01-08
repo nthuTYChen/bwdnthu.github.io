@@ -1,0 +1,58 @@
+div {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 100px;
+	width: 100px;
+	background-color: red;
+	animation: moving 1s ease-out infinite alternate;
+}
+
+div:nth-of-type(8) {
+	opacity: 0.9;
+	animation-delay: 0.1s;
+}
+
+div:nth-of-type(7) {
+	opacity: 0.8;
+	animation-delay: 0.2s;
+}
+
+div:nth-of-type(6) {
+	opacity: 0.7;
+	animation-delay: 0.3s;
+}
+
+div:nth-of-type(5) {
+	opacity: 0.6;
+	animation-delay: 0.4s;
+}
+
+div:nth-of-type(4) {
+	opacity: 0.5;
+	animation-delay: 0.5s;
+}
+
+div:nth-of-type(3) {
+	opacity: 0.4;
+	animation-delay: 0.6s;
+}
+
+div:nth-of-type(2) {
+	opacity: 0.3;
+	animation-delay: 0.7s;
+}
+
+div:nth-of-type(1) {
+	opacity: 0.2;
+	animation-delay: 0.8s;
+}
+
+@keyframes moving {
+	from {
+		left: 10px;
+	}
+	to {
+		left: 200px;
+	}
+}

@@ -1,0 +1,22 @@
+div {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	background-color: red;
+}
+
+div > div {
+	position: relative;
+	left: 100%;
+	width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	background-color: orange;
+	/* opacity: 0; */
+}
+
+div:hover > div {
+	/* opacity: 1; */
+	width: 100px;
+	transition: all 0.5s ease-out;
+}

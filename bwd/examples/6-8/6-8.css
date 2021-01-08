@@ -1,0 +1,9 @@
+div {
+	position: relative;
+	top: 50px;
+	width: 300px;
+	height: 300px;
+	margin: 10px 0;
+	background-color: red;
+	opacity: 0;
+}
