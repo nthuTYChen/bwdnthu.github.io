@@ -1,0 +1,11 @@
+div {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	background-color: red;
+	color: white;
+	border-radius: 5px;
+	font-family: sans-serif;
+	text-align: center;
+	line-height: 100px;
+}
