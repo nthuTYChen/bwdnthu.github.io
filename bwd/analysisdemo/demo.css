@@ -51,8 +51,32 @@ p {
 
 nav {
 	position: fixed;
-	top: 0;
-	left: 0;
+	top: 10px;
+	left: 10px;
+	text-align: center;
+	background-color: #323232;
+	color: white;
+	font-family: Poppins, sans-serif;
+	font-size: 1vh;
+	opacity: 0.95;
+	transition: all 0.3s ease-out;
+}
+
+nav > a {
+	display: block;
+	width: 100%;
+	padding: 2px 4px;
+}
+
+nav > a:not(:last-of-type) {
+	border-bottom: solid 2px white;
+}
+
+nav > a:hover {
+	background-color: white;
+	color: #000a16;
+	cursor: pointer;
+	transition: all 0.5s ease-out;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -78,5 +102,9 @@ nav {
 
 	p {
 
+	}
+
+	nav {
+		font-size: 1vw;
 	}
 }
