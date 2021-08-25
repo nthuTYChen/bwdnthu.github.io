@@ -60,9 +60,9 @@ nav {
 	position: fixed;
 	top: 10px;
 	left: 10px;
+	display: flex;
+	flex-direction: column;
 	text-align: center;
-	background-color: #323232;
-	color: white;
 	font-family: Poppins, sans-serif;
 	font-size: 1vh;
 	opacity: 0.95;
@@ -70,18 +70,28 @@ nav {
 }
 
 nav > a {
-	display: block;
+	background-color: #323232;
+	color: white;
 	width: 100%;
 	padding: 2px 4px;
 }
 
+nav > a:first-of-type {
+	width: 2.4vh;
+}
+
 nav > a:not(:last-of-type) {
+	border-right: 0;
 	border-bottom: solid 2px white;
 }
 
+nav > a:not(:first-of-type) {
+	display: none;
+	opacity: 0;
+}
+
 nav > a:hover {
-	background-color: white;
-	color: #000a16;
+	opacity: 0.5 !important;
 	cursor: pointer;
 	transition: all 0.5s ease-out;
 }
@@ -112,6 +122,21 @@ nav > a:hover {
 	}
 
 	nav {
+		flex-direction: row;
+		align-items: stretch;
 		font-size: 1vw;
+	}
+
+	nav > a {
+		width: fit-content;
+	}
+
+	nav > a:first-of-type {
+		width: 2.4vw;
+	}
+
+	nav > a:not(:last-of-type) {
+		border-right: solid 2px white;
+		border-bottom: 0;
 	}
 }
