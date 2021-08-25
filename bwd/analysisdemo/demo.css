@@ -64,7 +64,7 @@ nav {
 	flex-direction: column;
 	text-align: center;
 	font-family: Poppins, sans-serif;
-	font-size: 1vh;
+	font-size: 2vh;
 	opacity: 0.95;
 	transition: all 0.3s ease-out;
 }
@@ -77,7 +77,7 @@ nav > a {
 }
 
 nav > a:first-of-type {
-	width: 2.4vh;
+	width: 4.8vh;
 }
 
 nav > a:not(:last-of-type) {
