@@ -4,20 +4,24 @@ $(document).ready(()=>{
 	$('nav > a:first-of-type').on('click touchend', (event)=>{
 		event.stopPropagation();
 		let menuItems = $('nav > a').not(':first-of-type');
-		menuItems.each((index)=>{
-			let delay = 0;
-			setTimeout(()=>{
-				if(!menuOpen) {
+		let delay = 0;
+		if(!menuOpen) {
+			menuItems.each((index)=>{
+				setTimeout(()=>{
 					menuItems.eq(index).css('display', 'grid');
 					menuItems.eq(index).animate({opacity: 0.95}, 300);
-				}
-				else {
+				}, delay + (50 * index));
+			});
+		}
+		else {
+			menuItems.each((index)=>{
+				setTimeout(()=>{
 					menuItems.eq(index).animate({opacity: 0}, 300, ()=>{
 						menuItems.eq(index).css('display', 'none');
 					});
-				}
-			}, delay + (50 * index));
-		});
+				}, delay + (50 * index));
+			});
+		}
 		menuOpen = !menuOpen;
 	});
 });
