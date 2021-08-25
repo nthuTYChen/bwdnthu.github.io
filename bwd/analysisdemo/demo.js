@@ -1,7 +1,8 @@
 var menuOpen = false;
 
 $(document).ready(()=>{
-	$('nav > a:first-of-type').on('click touchend', ()=>{
+	$('nav > a:first-of-type').on('click touchend', (event)=>{
+		event.stopPropagation();
 		let menuItems = $('nav > a').not(':first-of-type');
 		menuItems.each((index)=>{
 			let delay = 0;
