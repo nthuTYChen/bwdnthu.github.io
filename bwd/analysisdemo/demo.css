@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins&family=Source+Sans+Pro&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: white;
+	color: #000a16;
+	font-family: Lora, serif;
+	font-size: 1.2vh;
+	line-height: 1.8vh;
+}
+
+h1, h2, h3 {
+	font-family: Poppins, sans-serif;
+}
+
+h1 {
+	font-size: 2.4vh;
+	line-height: 3.6vh;
+	margin: 1vh 0;
+}
+
+h2 {
+	font-size: 2vh;
+	line-height: 3vh;
+	margin: 0.8vh 0;
+}
+
+h3 {
+	font-size: 1.5vh;
+	line-height: 1.8vh;
+	margin: 0.5vh 0;
+}
+
+p {
+	margin: 0.2vh 0;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+	body {
+		font-size: 1.2vw;
+		line-height: 1.8vw;
+	}
+
+	h1 {
+		font-size: 2.4vw;
+		line-height: 3.6vw;
+	}
+
+	h2 {
+		font-size: 2vw;
+		line-height: 3vw;
+	}
+
+	h3 {
+		font-size: 1.5vw;
+		line-height: 1.8vw;
+	}
+
+	p {
+
+	}
+}

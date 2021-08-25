@@ -16,6 +16,7 @@
 				<a href="/bwd/jquery/">jQuery</a>
 				<a href="/bwd/mobile/">Mobile First</a>
 				<a href="/bwd/webanimation/">Web Animation</a>
+				<a href="/bwd/analysisdemo/">Analysis Demo</a>
 				<a href="/bwd/engissues/">English Issues</a>
 				<a href="/bwd/students/">Students</a>
 			</h2>
@@ -124,7 +125,7 @@
 					<p>This would be useful when you have some styles that are only applicable to the elements in a webpage. But I personally wouldn't recommend it. If later you decide to extend these styles to other webpages, you still need to move them to a CSS file so you don't have to repeat these styles again and again in different HTML files.</p>
 					<p>Alternatively, you could put CSS properties in the value of the <em>style</em> attribute of an HTML element (namely, <em class="extra">inline styling</em>) to style that particular element, as in the following example:</p>
 					<code>&lt;body style="background-color: pink;"&gt;</code>
-					<p>This technique would be useful if you need some special presentation for just <em>one</em> element, and you're pretty sure that you won't use it anywhere else. In this course website, I need to present some special examples from time to time, which requires some CSS styles just for these examples. This is the case where I choose to just use inline styling, because the styles are not going to be reused again. However, if you have lots of properties to specified even just for a single element, you'd better define this style in a CSS file since it would be easier to read in the source code. We will return to inline styling later in this unit. <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-1" target="blank">Example 2-1</a></p>
+					<p>This technique would be useful if you need some special presentation for just <em>one</em> element, and you're pretty sure that you won't use it anywhere else. In this course website, I need to present some special examples from time to time, which requires some CSS styles just for these examples. This is the case where I choose to just use inline styling, because the styles are not going to be reused again. However, if you have lots of properties to specified even just for a single element, you'd better define this style in a CSS file since it would be easier to read in the source code. We will return to inline styling later in this unit.</p>
 					<h3>Vendor prefix</h3>
 					<p>This is just a side note, but one special thing about CSS property you need to pay attention to is called <em>vendor prefix</em>. Sometimes a CSS property is just introduced and being experimented, so different Web browsers have their own ways of applying these properties and you need to add the proper vendor prefix to get the expected CSS effects across different Web browsers (for instance, <code>-webkit-transition</code>). Here is the list from this <a href="https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix" target="blank">MDN Web Docs page</a>:</p>
 					<ul>
@@ -163,7 +164,7 @@
 					<picture>
 						<img src="img/popularpairings.png"/>
 					</picture>
-					<p>After you make your decision and embedded the essential codes into your website to load the fonts, you should also <em>add some notes</em> to your CSS file to remind yourself which font is for which part of texts in your website, just like what I do for mine, too: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-2" target="blank">Example 2-2</a></p>
+					<p>After you make your decision and embedded the essential codes into your website to load the fonts, you should also <em>add some notes</em> to your CSS file to remind yourself which font is for which part of texts in your website, just like what I do for mine, too:</p>
 					<code>
 						/*
 						<code>
@@ -181,7 +182,7 @@
 					<p>Now, take some time to get the font part done. You can surely change your mind later, but your initial attempt might not be bad at all!</p>
 					<h3>A colorful world</h3>
 					<p>There are more decisions to make, and this time it's about the colors in your website. Colors undoubtedly have their visual/emotional impacts, you need to choose them wisely. Again, I'm not expert, but the keywords for you to google would be <em class="extra">psychology of colors</em>. For this course website, I just followed my instinct to use the combination of red, organge, green, and black colors. Red and organge stand out because I use them to put an emphasis on various elements, so they become the theme of my website - McDonald's uses this color combination, too, so don't judge!</p>
-					<p>You don't use colors just to make your website look fancier than others. Colors are just like fonts, which would help convey <em class="extra">systematic messages</em> of your website, such as <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-3" target="blank">Example 2-3</a>:</p>
+					<p>You don't use colors just to make your website look fancier than others. Colors are just like fonts, which would help convey <em class="extra">systematic messages</em> of your website:</p>
 					<ul>
 						<li>The theme of a webpage.</li>
 						<li>The highlights in a webpage.</li>
@@ -219,7 +220,7 @@
 						<li><code>pt</code> - points (1pt = 1/72 of 1in)</li>
 						<li><code>pc</code> - picas (1pc = 12pt = 1/6 of 1in)</li>
 					</ul>
-					<p>Many things could be either <em class="extra">absolute</em> or <em class="extra">relative</em>, just like the path to a file that we have discussed previously, so it's natural that we have <em class="extra">relative length units</em> as in the following list, too. When you use a relative length unit, the actual length is relative to some other length. For instance, if the font size of a <code>&lt;div&gt;</code> element is set to <code>16px</code>, and you want emphasized texts in the element are twice larger, then you could set the font size of the emphasized texts to <code>2em</code>.Well, you could simply use <code>32px</code>, too, but soon you will find this strategy very inefficient because every time you change the base font size, you need to change all associated font sizes. <em class="extra">systematic messages</em> of your website, such as <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-4" target="blank">Example 2-4</a></p>
+					<p>Many things could be either <em class="extra">absolute</em> or <em class="extra">relative</em>, just like the path to a file that we have discussed previously, so it's natural that we have <em class="extra">relative length units</em> as in the following list, too. When you use a relative length unit, the actual length is relative to some other length. For instance, if the font size of a <code>&lt;div&gt;</code> element is set to <code>16px</code>, and you want emphasized texts in the element are twice larger, then you could set the font size of the emphasized texts to <code>2em</code>.Well, you could simply use <code>32px</code>, too, but soon you will find this strategy very inefficient because every time you change the base font size, you need to change all associated font sizes. <em class="extra">systematic messages</em> of your website.</p>
 					<ul>
 						<li><code>em</code> - relative to the font size of the current element</li>
 						<li><code>rem</code> - relative to the font size of the <em>root</em> element</li>
@@ -234,7 +235,7 @@
 					<div style="height: 10vw; width: 10vw; border: 5px solid blue; background-color: red;">
 					</div>
 					<h3>Border-box or content-box?</h3>
-					<p>It might be more logical to adopt <em>border-box</em> as a default, since normally you wouldn't evaluate the dimension of an element by excluding its borders. For instance, when you want to clear an area on your wall to hang a beautful <em>framed</em> picture, you wouldn't just think about the dimension of the picture itself, but also the borders created with the frame, right? This would be mostly irrelevant because not many elements need borders, and the edge of an element could be made distinct in many different ways (by setting a background color, for example). But for now, let's make <em>border-box</em> as the default for <em>all</em> elements in your webpage by setting following style in your CSS file (the selector <code>*</code> is a <a href="https://en.wikipedia.org/wiki/Wildcard_character" target+"blank">wild card character</a> that means <em class="extra">any character</em>, which thus selects <em>every</em> elements): <em class="extra">systematic messages</em> of your website, such as <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-5" target="blank">Example 2-5</a></p>
+					<p>It might be more logical to adopt <em>border-box</em> as a default, since normally you wouldn't evaluate the dimension of an element by excluding its borders. For instance, when you want to clear an area on your wall to hang a beautful <em>framed</em> picture, you wouldn't just think about the dimension of the picture itself, but also the borders created with the frame, right? This would be mostly irrelevant because not many elements need borders, and the edge of an element could be made distinct in many different ways (by setting a background color, for example). But for now, let's make <em>border-box</em> as the default for <em>all</em> elements in your webpage by setting following style in your CSS file (the selector <code>*</code> is a <a href="https://en.wikipedia.org/wiki/Wildcard_character" target+"blank">wild card character</a> that means <em class="extra">any character</em>, which thus selects <em>every</em> elements): <em class="extra">systematic messages</em> of your website.</p>
 					<code>
 						* {
 							<code>
@@ -256,7 +257,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<p>Alternatively, you can define the spacing in general using the property <code>margin</code> and <code>padding</code>. Depending on the number of values you specify for these two properties, the spacing is set <em class="extra">clockwise</em> around or within an element: <em class="extra">systematic messages</em> of your website, such as <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-6" target="blank">Example 2-6</a></p>
+					<p>Alternatively, you can define the spacing in general using the property <code>margin</code> and <code>padding</code>. Depending on the number of values you specify for these two properties, the spacing is set <em class="extra">clockwise</em> around or within an element: <em class="extra">systematic messages</em> of your website.</p>
 					<code>
 						margin: 0; /* zero margin on all four sides */<br/>
 						margin: 0 0 0 0; /* as above */<br/>
@@ -310,8 +311,7 @@
 						</code>
 						}
 					</code>
-					<p>Note two things here. First, I adopt the <em>more radical</em> approach by using the <em>relative length unit</em> for my font size and line height, because I want the two properties to adapt to different screen resolutions. Second, the values assigned to the <code>font</code> property here are for the body texts; the font size is appropriate for large amount of texts, and the font type is a <em>serif</em> font. This makes sense because we are styling <code>&lt;body&gt;</code>, rather than other elements, and everything we do has to be <em class="extra">semantically</em> meaningful. Also note that I prefer to set the line height to be <em>150%</em> of the font size in an element, which in general makes texts easier to read. You can also define the font color for body texts using the property <code>color</code> and assign an RGB or HEX value to it. <em class="extra">systematic messages</em> of your website, such as <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-7" target="blank">Example 2-7</a></p>
-					<p>Now, try to define the font style for <code>&lt;h1&gt;-&lt;h6&gt;</code> by yourself. Since you already have a <em class="extra">root element</em>, which is <code>&lt;body&gt;</code>, you can use another relative length unit for the font size and line height. Do you still remember which one it is? (select the following blank section to find out!) </p>
+					<p>Note two things here. First, I adopt the <em>more radical</em> approach by using the <em>relative length unit</em> for my font size and line height, because I want the two properties to adapt to different screen resolutions. Second, the values assigned to the <code>font</code> property here are for the body texts; the font size is appropriate for large amount of texts, and the font type is a <em>serif</em> font. This makes sense because we are styling <code>&lt;body&gt;</code>, rather than other elements, and everything we do has to be <em class="extra">semantically</em> meaningful. Also note that I prefer to set the line height to be <em>150%</em> of the font size in an element, which in general makes texts easier to read. You can also define the font color for body texts using the property <code>color</code> and assign an RGB or HEX value to it. <em class="extra">systematic messages</em> of your website. Since you already have a <em class="extra">root element</em>, which is <code>&lt;body&gt;</code>, you can use another relative length unit for the font size and line height. Do you still remember which one it is? (select the following blank section to find out!) </p>
 					<code style="color: #e68a00;">
 						h1 {
 						<code style="color: #e68a00;">
@@ -362,7 +362,7 @@
 						}
 					</code>
 					<h3>Hyperlink</h3>
-					<p>Most Web designer would also choose to style hyperlinks marked up by <code>&lt;a&gt;</code> since the default style in a Web browser doesn't look decent. Hyperlinks usually are underlined by default, but you can change this by set the <code>text-decoration</code> property to <em>none</em> (or you can play with the property to adopt <a href="https://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="blank">different kinds of text decoration</a>). But you still need to make hyperlinks distinct from other normal texts, so you probably want to use a different font color for <code>&lt;a&gt;</code>. You can further differentiate hyperlinks by making them <em>bold</em>. Again, try many different things, and find the style you prefer. <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-8" target="blank">Example 2-8</a></p>
+					<p>Most Web designer would also choose to style hyperlinks marked up by <code>&lt;a&gt;</code> since the default style in a Web browser doesn't look decent. Hyperlinks usually are underlined by default, but you can change this by set the <code>text-decoration</code> property to <em>none</em> (or you can play with the property to adopt <a href="https://www.w3schools.com/cssref/pr_text_text-decoration.asp" target="blank">different kinds of text decoration</a>). But you still need to make hyperlinks distinct from other normal texts, so you probably want to use a different font color for <code>&lt;a&gt;</code>. You can further differentiate hyperlinks by making them <em>bold</em>. Again, try many different things, and find the style you prefer.</p>
 					<code>
 						a {
 						<code>
@@ -390,7 +390,7 @@
 						<img src="img/puzzles.png"/>
 						<sub>Credit: <a href="https://www.flickr.com/photos/sightrays/4054093512/" target="blank">Electric-Eyes</a></sub>
 					</picture>
-					<p>You really, really, really want to juggle things around, so you need to know how to <em class="extra">position elements in a webpage</em>, with the <code>position</code> CSS property, of course. There are four common position settings in CSS: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-9" target="blank">Example 2-9</a></p>
+					<p>You really, really, really want to juggle things around, so you need to know how to <em class="extra">position elements in a webpage</em>, with the <code>position</code> CSS property, of course. There are four common position settings in CSS:</p>
 					<ul>
 						<li><code>static</code> - the default position</li>
 						<li><code>relative</code> - relative to the original (static) position</li>
@@ -451,7 +451,7 @@
 						<li><code>inline vs. inline-block</code> - the only difference is that height and width only work for inline-block elements</li>
 						<li><code>inline-block vs. block</code> - the only difference is that inline-block elements do not come with a line break, so they do not break the text flow.</li>
 					</ul>
-					<p>One very common use of <code>inline-block</code>, following the topic of <em>position</em> of this section, is to make it possible to juxtapose block-level elements in the same line and use the CSS property <code>text-align</code> to adjust their horizontal position. This is convenient especially when you try to align these block-level elements to the center of their parent: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-10" target="blank">Example 2-10</a></p>
+					<p>One very common use of <code>inline-block</code>, following the topic of <em>position</em> of this section, is to make it possible to juxtapose block-level elements in the same line and use the CSS property <code>text-align</code> to adjust their horizontal position. This is convenient especially when you try to align these block-level elements to the center of their parent:</p>
 					<div style="text-align: center; font-size: 0;">
 						<div style="display: inline-block; height: 3vw; width: 3vw; background-color: red;"></div>
 						<div style="display: inline-block; height: 3vw; width: 3vw; background-color: blue;"></div>
@@ -478,7 +478,7 @@
 						}
 					</code>
 					<p>In the above style example, the hashtag <code>#</code> is used to identify an element with an <code>id</code> of a specific value. The selector can thus be translated as <q>find a <code>&lt;div&gt;</code> element that has an <code>id</code> set to <code>container</code></q>. Then, the <code>width</code> of <code>70%</code> refers to the width of the parent of the container, which is <code>&lt;body&gt;</code>. Since <code>&lt;body&gt;</code> is styled to have a width of 100% (the full browser window width), the container with a width of 70% occupies 70% of the browser window horizontally. Since I want to align the container to the right edge of the browser window, I set the left margin of the container to 30% - a gap of 30% browser window width to the left, and an element of 70% browser window width to the right...see the logic?</p>
-					<p>The empty space on the left is for the <em>navigation pane</em>, and I have a few goals here. First, I want it to occupy that 30% of the browser window width as well as the full browser window height. Second, I want it to fix to its position, so it is always aligned to the <em>top</em> and <em>left</em> edges of the browser window regardless of the scrolling action. I list the CSS properties you need for this styling below, and try it yourself first: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-11" target="blank">Example 2-11</a></p>
+					<p>The empty space on the left is for the <em>navigation pane</em>, and I have a few goals here. First, I want it to occupy that 30% of the browser window width as well as the full browser window height. Second, I want it to fix to its position, so it is always aligned to the <em>top</em> and <em>left</em> edges of the browser window regardless of the scrolling action. I list the CSS properties you need for this styling below, and try it yourself first:</p>
 					<ul>
 						<li><code>position</code></li>
 						<li><code>top</code></li>
@@ -502,7 +502,7 @@
 				</section>
 				<section>
 					<h2 id="moreonselector">More on selector</h2>
-					<p>In the previous section, I add an <code>id</code> attribute to the container element so I can specifically select this element when trying to style it. However, this is actually not the best practice in Web design. The CSS selector allows an element to be identified from DOM in many different ways, and most of times you do not need any <code>id</code> (or <code>class</code>) attribute when you just try to style an element or a set of elements. Before I had learned more about how to use selectors and semantic HTML elements efficiently, I once made mistakes by only using <code>&lt;div&gt;</code> elements and giving them specific ids just in order to style them, which is something you need to avoid. <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-12" target="blank">Example 2-11</a></p>
+					<p>In the previous section, I add an <code>id</code> attribute to the container element so I can specifically select this element when trying to style it. However, this is actually not the best practice in Web design. The CSS selector allows an element to be identified from DOM in many different ways, and most of times you do not need any <code>id</code> (or <code>class</code>) attribute when you just try to style an element or a set of elements. Before I had learned more about how to use selectors and semantic HTML elements efficiently, I once made mistakes by only using <code>&lt;div&gt;</code> elements and giving them specific ids just in order to style them, which is something you need to avoid.</p>
 					<h3>(Adjacent) Siblings</h3>
 					<p>For instance, you might have <code>&lt;p&gt;</code> elements that are <em>siblings</em> of an either <code>&lt;h2&gt;</code> or <code>&lt;h3&gt;</code> heading as in the following example, and you want these <code>&lt;p&gt;</code> elements to be styled differently.</p>
 					<code>
@@ -515,7 +515,7 @@
 						&lt;p&gt;<br/>
 						&lt;/p&gt;
 					</code>
-					<p>Since the headings and the paragraphs are adjacent to each other, you can use the <code>+</code> <em>operator</em> to denote the sibling relationship, and you don't need to give any specific id to the paragraphs immediately next to different headings: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-13" target="blank">Example 2-13</a></p>
+					<p>Since the headings and the paragraphs are adjacent to each other, you can use the <code>+</code> <em>operator</em> to denote the sibling relationship, and you don't need to give any specific id to the paragraphs immediately next to different headings:</p>
 					<code>
 						h2 + p {
 						<code>
@@ -572,7 +572,7 @@
 						}
 					</code>
 					<h3>Pseudo-class and pseudo-elements</h3>
-					<p>In CSS, there are various <em class="extra">pseudo-class</em> and <em class="extra">pseudo-elements</em> that you can use in the selector to style classes and elements that are not defined by HTML tags and attributes (and that's why they have a <em>pseudo-</em> prefix). Here are some frequently used pseudo-classes that are denoted using <code>:</code> (for instance, <code>selector:pseudo-class</code>):<a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-13" target="blank">Example 2-13</a> <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-14" target="blank">Example 2-14</a></p>
+					<p>In CSS, there are various <em class="extra">pseudo-class</em> and <em class="extra">pseudo-elements</em> that you can use in the selector to style classes and elements that are not defined by HTML tags and attributes (and that's why they have a <em>pseudo-</em> prefix). Here are some frequently used pseudo-classes that are denoted using <code>:</code> (for instance, <code>selector:pseudo-class</code>):</p>
 					<ul>
 						<li><code>:hover</code> - elements with the mouse cursor hovering over them</li>
 						<li><code>:first-child</code> - the first immediate child of an element</li>
@@ -581,7 +581,7 @@
 						<li><code>:nth-last-child(n)</code> - the nth child of an element counting from the last child (n = nth)</li>
 						<li><code>:not(selector)</code> - all elements that do not match (selector)</li>
 					</ul>
-					<p>Pseudo-elements are very useful for <em>styling the texts</em> of an elements, which are denoted using <code>::</code> as listed below: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/2-15" target="blank">Example 2-15</a></p>
+					<p>Pseudo-elements are very useful for <em>styling the texts</em> of an elements, which are denoted using <code>::</code> as listed below:</p>
 					<ul>
 						<li><code>::first-line</code> - the first line of selected elements</li>
 						<li><code>::first-letter</code> - the first letter of selected elements</li>

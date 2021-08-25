@@ -16,6 +16,7 @@
 				<a href="/bwd/jquery/">jQuery</a>
 				<a class="selected" href="/bwd/mobile/">Mobile First</a>
 				<a href="/bwd/webanimation/">Web Animation</a>
+				<a href="/bwd/analysisdemo/">Analysis Demo</a>
 				<a href="/bwd/engissues/">English Issues</a>
 				<a href="/bwd/students/">Students</a>
 			</h2>
@@ -76,7 +77,7 @@
 						<img src="img/mobile-dominate.png" style="width: 40%; max-width: 600px;" />
 						<sub>Source: <a href="https://www.flickr.com/photos/gunman47/49929221131" target="_blank">Dickson Phua</a></sub>
 					</picture>
-					<p>Mobile devices are dominating the world. Period. So when you start a responsive website project, the first thing you need to think is the layout optimized for mobile devices by default, and then adjust this mobile-based layout for some desktop devices. Thus, you should set media query rules specifically for the desktop devices, rather than for mobile devices. As in the following example, we would define CSS styles that apply only to devices with a screen width of 1,200 pixels or higher (using <code>min-width</code>). The number 1,200 is going to be a safe <em>break point</em>, as most mobile devices have a viewport width shorter than 1,200 pixels (see <a href="https://docs.adobe.com/content/help/en/target/using/experiences/vec/mobile-viewports.html" target="_blank">this Adobe page</a>). About twenty five years ago, a desktop computer screen with a 1024 x 768 resolution would be considered a "large" screen, but I guess most of them are dead by now, so we should be fine. <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/5-1" target="blank">Example 5-1</a></p>
+					<p>Mobile devices are dominating the world. Period. So when you start a responsive website project, the first thing you need to think is the layout optimized for mobile devices by default, and then adjust this mobile-based layout for some desktop devices. Thus, you should set media query rules specifically for the desktop devices, rather than for mobile devices. As in the following example, we would define CSS styles that apply only to devices with a screen width of 1,200 pixels or higher (using <code>min-width</code>). The number 1,200 is going to be a safe <em>break point</em>, as most mobile devices have a viewport width shorter than 1,200 pixels (see <a href="https://docs.adobe.com/content/help/en/target/using/experiences/vec/mobile-viewports.html" target="_blank">this Adobe page</a>). About twenty five years ago, a desktop computer screen with a 1024 x 768 resolution would be considered a "large" screen, but I guess most of them are dead by now, so we should be fine.</p>
 					<code>
 						@media only screen and (min-width: 1200px) {
 						<code>
@@ -105,7 +106,7 @@
 						</code>
 						&lt;/nav&gt;
 					</code>
-					<p>Now let's give the nagivation pane a decent look in a mobile-browsing context (remember the <em class="extra">mobile first</em> principle?). The main aspects in the following CSS styles are as follows. First, the <code>&lt;nav&gt;</code> element is set to take the full width of the viewport, and it is fixed to the top of the viewport. Second, the height of the menu is set to the 5% of the viewport height, which is also the line height of the element to help align texts vertically. Since this mobile-based menu is created as a drop-down menu, its items are hidden by default, and they will only be presented when the hamburger icon is clicked. <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/5-3" target="blank">Example 5-3</a></p>
+					<p>Now let's give the nagivation pane a decent look in a mobile-browsing context (remember the <em class="extra">mobile first</em> principle?). The main aspects in the following CSS styles are as follows. First, the <code>&lt;nav&gt;</code> element is set to take the full width of the viewport, and it is fixed to the top of the viewport. Second, the height of the menu is set to the 5% of the viewport height, which is also the line height of the element to help align texts vertically. Since this mobile-based menu is created as a drop-down menu, its items are hidden by default, and they will only be presented when the hamburger icon is clicked.</p>
 					<code>
 						nav {
 						<code>
@@ -184,7 +185,7 @@
 						}
 					</code>
 					<h3>The hide-and-seek approach</h3>
-					<p>As mentioned above, when you adopt a hide-and-seek approach, you need to have two <code>&lt;nav&gt;</code> elements in your HTML document, which are styled differently and displayed in different contexts. Let's start with the HTML part first:  <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/5-2" target="blank">Example 5-2</a></p>
+					<p>As mentioned above, when you adopt a hide-and-seek approach, you need to have two <code>&lt;nav&gt;</code> elements in your HTML document, which are styled differently and displayed in different contexts. Let's start with the HTML part first:</p>
 					<code>
 						&lt;nav id="desktopMenu"&gt;
 						<code>
@@ -261,7 +262,7 @@
 					</picture>
 					<p>As noted earlier, you can't just keep being lazy and duplicate everything, let along the elements that includes the main contents of a website, since a Web browser will be loading too much trivial stuff. For instance, if someone is using a desktop computer, then there's little chance that s/he will turn the Web browser into a portrait view, and the duplicated parts for the portrait view are loaded for nothing and only slow your website down.</p>
 					<p>In this regard, it is almost necessary to adopt the <em class="extra">transforming</em> approach for the contents of a responsive website project, and you need an approach to swiftly interchange between the layouts for different contexts. No problem, <em>CSS flex(ible) box</em> is here at your disposal. CSS flex box is a powerful tool that allows you to align and order <em class="extra">block</em> elements in a container designed to be a flex box. We will go through a simple demonstration, and apply the idea to responsive Web design.</p>
-					<p>We can start with the following HTML content, in which the <code>&lt;article&gt;</code> block is set as a flexbox, and the three <code>&lt;section&gt;</code> elements are the content boxes to be arranged vertically inside the flex box and takes the full width of the viewport (mobile first, remember?). <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/5-4" target="blank">Example 5-4</a> <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/5-5" target="blank">Example 5-5</a></p>
+					<p>We can start with the following HTML content, in which the <code>&lt;article&gt;</code> block is set as a flexbox, and the three <code>&lt;section&gt;</code> elements are the content boxes to be arranged vertically inside the flex box and takes the full width of the viewport (mobile first, remember?).</p>
 					<code>
 						&lt;article&gt;
 						<code>
@@ -336,7 +337,7 @@
 						</code>
 						}
 					</code>
-					<p>We're done! Now change the size of your browser windows and see how the layout is switched between the two designs seamlessly! Mobile-first is never as difficult as you imagined. <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/5-6" target="blank">Example 5-6</a></p>
+					<p>We're done! Now change the size of your browser windows and see how the layout is switched between the two designs seamlessly! Mobile-first is never as difficult as you imagined.</p>
 				</section>
 				<section>
 					<h2 id="touchevent">Touch events</h2>

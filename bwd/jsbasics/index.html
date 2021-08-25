@@ -16,6 +16,7 @@
 				<a href="/bwd/jquery/">jQuery</a>
 				<a href="/bwd/mobile/">Mobile First</a>
 				<a href="/bwd/webanimation/">Web Animation</a>
+				<a href="/bwd/analysisdemo/">Analysis Demo</a>
 				<a href="/bwd/engissues/">English Issues</a>
 				<a href="/bwd/students/">Students</a>
 			</h2>
@@ -51,7 +52,7 @@
 					</picture>
 					<p>When we try to <em class="extra">debug</em> your JS codes, you will be using this part of the tools a lot. I mean, <em>A LOT</em>. Let's see how it works. Now, add the following line to your <em>demo.js</em>:</p>
 					<code>console.log('logged!');</code>
-					<p>Again, update your website and reload the index page - in addition to the same pop-up message, you should see the new message in the Console tab of your Developer Tools. <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-1" target="blank">Example 3-1</a></p>
+					<p>Again, update your website and reload the index page - in addition to the same pop-up message, you should see the new message in the Console tab of your Developer Tools.</p>
 					<p>If everything goes as expected, then you are ready for your journey of JS programming!</p>
 				</section>
 				<section>
@@ -62,7 +63,7 @@
 					<p>A good example showing the importance of semi-colon in a statement is to put the two statements we used above in the same line as:</p>
 					<code>alert('embedded!'); console.log('logged!');</code>
 					<p>Not only will you see the same pop-up message again, you will also see the text message in the console tab of your Developer Tools. This means that statements are processed based on the ending indicated by semi-colons, rather than by separate lines - of course, we still put individual statements in separate lines for <em>a better readibility</em>. So, <em>always</em> add a semi-colons at the end of a statement.</p>
-					<p>A <em>code block</em> is just a collection of statements represented with a pair of curved brackets <code>{ }</code>. We have seen the adoption of this concept in the CSS tutorials, in which curved brackets include a collection of CSS properties, and we will extend this concept to <em>objects</em> when we get to <a href="#variable">Variable</a> part. In the following example, we have a code block containing the two statements introduced previously: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-3" target="blank">Example 3-3</a></p>
+					<p>A <em>code block</em> is just a collection of statements represented with a pair of curved brackets <code>{ }</code>. We have seen the adoption of this concept in the CSS tutorials, in which curved brackets include a collection of CSS properties, and we will extend this concept to <em>objects</em> when we get to <a href="#variable">Variable</a> part. In the following example, we have a code block containing the two statements introduced previously:</p>
 					<code>
 						{
 							<code>
@@ -91,7 +92,7 @@
 						<sub>Credit: <a href="https://www.flickr.com/photos/polycart/5395209587/" target="blank">Polycart</a></sub>
 					</picture>
 					<p>When you do grocery shopping, you don't go back and forth between shelves and the casher. Instead, you get a basket or a cart with you. You grab goods on the shelves and put them into your basket/cart. Later, you would simply check your container to see the number of things there, and you don't have to go back to every corner in the grocery store to count how many times you grab things from the shelves. Of course, you could change the things in your container freely, but still, you only need to count the number of things in that container.</p>
-					<p>All programming languagues have such a container for storing information, from which you can re-use the information easily - it's called <em class="extra">variable</em>. In JS, you can use the keyword <code>var</code> to declare a variable, as in the following example: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-2" target="blank">Example 3-2</a></p>
+					<p>All programming languagues have such a container for storing information, from which you can re-use the information easily - it's called <em class="extra">variable</em>. In JS, you can use the keyword <code>var</code> to declare a variable, as in the following example:</p>
 					<code><p>var num; // Declare a variable named "num"</p></code>
 					<p>And we can put things into the container (I mean, variable) with the <code>=</code> operator introduced in the previous section:</p>
 					<code><p>var num = 5; // Declare a variable named "num" equal to a numeric value of 5</p></code>
@@ -152,7 +153,7 @@
 						console.log(Num); // It's impossible to be 5
 					</code>
 					<h3>Number, string, and operators</h3>
-					<p>In the above examples, we see how to assign a value to a variable via the operator <code>=</code>, but the assigned value could also be the result of some mathematical calculations using the operators <code>+</code>, <code>-</code>, <code>*</code> (multiply), and <code>/</code> (divide), as in the following cases: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-4" target="blank">Example 3-4</a></p>
+					<p>In the above examples, we see how to assign a value to a variable via the operator <code>=</code>, but the assigned value could also be the result of some mathematical calculations using the operators <code>+</code>, <code>-</code>, <code>*</code> (multiply), and <code>/</code> (divide), as in the following cases:</p>
 					<code>
 						var math1 = 2 + 5;<br/>
 						var math2 = 3 * 4.5;<br/>
@@ -207,7 +208,7 @@
 					</picture>
 					<p>Now let's move on to some more advanced data types - <em>array</em> and <em>object</em>. You could imagine an array of data to be a train, and each carriage is stored with their own data. Maybe just look at the code directly:</p>
 					<code>var numArray = [1, 5, 2, 11, 7]; // An array of five numeric values</code>
-					<p>In the above example, you see a train of data defined by a pair of <em>square brackets</em> <code>[ ]</code>, in which every two carriages are seperated from each other with a <em>comma</em>. Each carriage has its own value, and the entire train is assigned to the variable <code>numArray</code>. The value in each carriage can be accessed or replaced by specifying the number of the carriage (or more precisely, the <em>index</em> of an array position) in <code>[ ]</code>, starting with <code>0</code> (thus the picture you saw above): <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-5" target="blank">Example 3-5</a></p>
+					<p>In the above example, you see a train of data defined by a pair of <em>square brackets</em> <code>[ ]</code>, in which every two carriages are seperated from each other with a <em>comma</em>. Each carriage has its own value, and the entire train is assigned to the variable <code>numArray</code>. The value in each carriage can be accessed or replaced by specifying the number of the carriage (or more precisely, the <em>index</em> of an array position) in <code>[ ]</code>, starting with <code>0</code> (thus the picture you saw above):</p>
 					<code>
 						var anArrayValue = numArray[0]; // Get the first value of an array<br/>
 						console.log(anArrayValue); // Output = 1<br/>
@@ -279,7 +280,7 @@
 						profile.name = 'Tsung-Ying Chen'; // Update an existing field;<br/>
 						profile.gender = 'Male'; // Add a new field called 'gender' with a value 'Male'
 					</code>
-					<p>As with the case of array, there is no constraint on the type of data in each field - it can be a numeric value, a string, an array, and even another object:<a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-6" target="blank">Example 3-6</a></p>
+					<p>As with the case of array, there is no constraint on the type of data in each field - it can be a numeric value, a string, an array, and even another object:</p>
 					<code>
 						var profile = {<br/>
 						<code>
@@ -389,7 +390,7 @@
 						popupMsg('Test!');<br/>
 						popupMsg('Victor', 'Hey!');
 					</code>
-					<p>Since you can submit some data to a fuction, a function can also return some data back to where it is called as well, and the keyword is exactly what you expect - <code>return</code>. In the following function <code>complexCalc</code>, it always does a complex calculation based on the two numeric values submitted to it: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-7" target="blank">Example 3-7</a></p>
+					<p>Since you can submit some data to a fuction, a function can also return some data back to where it is called as well, and the keyword is exactly what you expect - <code>return</code>. In the following function <code>complexCalc</code>, it always does a complex calculation based on the two numeric values submitted to it:</p>
 					<code>
 						function complexCalc (x, y) {
 						<code>
@@ -445,7 +446,7 @@
 						window.location.href = 'https://google.com'; // Change the current URL to Google<br/>
 						window.location.pathname = '/nosuchpath'; // Change to a path that does not exit
 					</code>
-					<p>We can also run some functions depending on the action executed in a browser window, such as popping up a message when a webpage is fully loaded in the browser window: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-8" target="blank">Example 3-8</a></p>
+					<p>We can also run some functions depending on the action executed in a browser window, such as popping up a message when a webpage is fully loaded in the browser window:</p>
 					<code>
 						window.onload = function() { // Initialized a function in the "onload" field of "window"
 						<code>
@@ -459,7 +460,7 @@
 						var siteTitle = document.title;<br/>
 						console.log(siteTitle);
 					</code>
-					<p>Since <code>document</code> allows JS codes to go through the DOM of an HTML document, it is certianly possible for us to retrieve some HTML elements from the DOM, with the functions like <code>getElement<em>s</em>ByTagName</code>, <code>getElement<em>s</em>ByClassName</code>, and <code>getElementById</code>. Note the emphasis put on the plural suffix <em>-s</em> of <em>Element</em> in the first two - It implies that the functions could get <em class="extra">one or more</em> HTML elements from an HTML documents. Let's start with <code>getElementsByTagName</code>, which retrieve all the elements with the same tag name for you: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-9" target="blank">Example 3-9</a></p>
+					<p>Since <code>document</code> allows JS codes to go through the DOM of an HTML document, it is certianly possible for us to retrieve some HTML elements from the DOM, with the functions like <code>getElement<em>s</em>ByTagName</code>, <code>getElement<em>s</em>ByClassName</code>, and <code>getElementById</code>. Note the emphasis put on the plural suffix <em>-s</em> of <em>Element</em> in the first two - It implies that the functions could get <em class="extra">one or more</em> HTML elements from an HTML documents. Let's start with <code>getElementsByTagName</code>, which retrieve all the elements with the same tag name for you:</p>
 					<code>
 						var allDivs = document.getElementsByTagName('div'); // Assign all "div" elements returned as an array to "allDivs"<br/>
 						console.log(allDivs[0]); // Examine the first "div" element as an object in the console tab<br/>
@@ -467,7 +468,7 @@
 						console.log(allAudios); // Probably "undefined" - nothing is found
 					</code>
 					<p>In the above example, we first use <code>getElementsByTagName</code> to retrieve all <code>&lt;div&gt;</code> elements. Since your HTML document is likely to have one or more <code>&lt;div&gt;</code> elements, each element would be collected as an object and stored in an <em>array</em> and finally returned to where <code>getElementsByTagName</code> is called. This is true even if there is only <em>one</em> element, which is stored in an array with just this element. If the function finds nothing in an HTML document, it returns a <code>null</code> value, which represents the absolute <em>emptiness</em> in the word of computer programming.</p>
-					<p>The other two functions trawl through an HTML document for elements that are given some specific <code>class</code> and <code>id</code> value, as their name suggests. As briefly discussed earlier, you could <em>group HTML elements together</em> with the <code>class</code> attribute with the <em>same</em> value, or make them <em>distinct from each other</em> with the <code>id</code> attribute assigned a <em>unique</em> value: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-10" target="blank">Example 3-10</a></p>
+					<p>The other two functions trawl through an HTML document for elements that are given some specific <code>class</code> and <code>id</code> value, as their name suggests. As briefly discussed earlier, you could <em>group HTML elements together</em> with the <code>class</code> attribute with the <em>same</em> value, or make them <em>distinct from each other</em> with the <code>id</code> attribute assigned a <em>unique</em> value:</p>
 					<code>
 						&lt;div class="group1" id="no1"&gt;Group 1 No 1&lt;/div&gt;<br/>
 						&lt;div class="group1" id="no2"&gt;Group 1 No 2&lt;/div&gt;<br/>
@@ -490,7 +491,7 @@
 						idEm.innerHTML = 'Group 2 No 5 (Changed)'; // Change the content of the element
 					</code>
 					<h3>JS styling</h3>
-					<p>Not only can we change the content of an element, we can also style a particular element in JS, which is probably the most important thing in Web design. For each element object, there is a field named <code>style</code>...and it's clear what it does, right? In this field, you can find and set CSS properties with their name, such as: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-10" target="blank">Example 3-10</a></p>
+					<p>Not only can we change the content of an element, we can also style a particular element in JS, which is probably the most important thing in Web design. For each element object, there is a field named <code>style</code>...and it's clear what it does, right? In this field, you can find and set CSS properties with their name, such as:</p>
 					<code>
 						idEm.style.color = 'red'; // Set the font color
 					</code>
@@ -512,7 +513,7 @@
 					<p>Since the styles set in JS are viewed as <em>inline styles</em>, they would be <em class="extra">more specific</em> than the styles set in a CSS file for the target elements when same CSS properties are involved. This make sense because you can have some <em>default</em> styles for some elements, whose properties are changed by JS in some contexts.</p>
 					<p>You can also set <em>inline styles</em> with the function <code>setAttribute()</code> for an element object, as demonstrated on this <a href="https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style" target="blank">MDN Web Docs page</a>, but I won't go through it here.</p>
 					<h3>Query selector</h3>
-					<p>You are now probably very excited, because it's so convenient to refer to the <code>class</code> and <code>id</code> attributes when you need to set the style for a specific element, so you start to think about grouping elements together or making them distinct from each other with these attributes. That's the first mistake I made as an amateur Web designer - I used <em>semantically-free</em> <code>&lt;div&gt;</code> only, and gave them different <code>class</code> and <code>id</code> attribute value so I could locate them in my JS codes very easily. But as I said in the previous unit, this is not the best practice. When you use <em>semantically meaningful</em> elements and have a clear structure for your HTML document, you shouldn't need the <code>class</code> and <code>id</code> attributes most of the time. For example, the <code>&lt;p&gt;</code> elements inside <code>&lt;article&gt;</code> and <code>&lt;section&gt;</code> in the following example might represent different types of information in your webpage. But you don't need different <code>id</code> values for the two paragraphs, because you can use different <em class="extra">selectors</em> to refer to each paragraph: <code>article > p</code> and <code>section > p</code>. <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-12" target="blank">Example 3-12</a></p>
+					<p>You are now probably very excited, because it's so convenient to refer to the <code>class</code> and <code>id</code> attributes when you need to set the style for a specific element, so you start to think about grouping elements together or making them distinct from each other with these attributes. That's the first mistake I made as an amateur Web designer - I used <em>semantically-free</em> <code>&lt;div&gt;</code> only, and gave them different <code>class</code> and <code>id</code> attribute value so I could locate them in my JS codes very easily. But as I said in the previous unit, this is not the best practice. When you use <em>semantically meaningful</em> elements and have a clear structure for your HTML document, you shouldn't need the <code>class</code> and <code>id</code> attributes most of the time. For example, the <code>&lt;p&gt;</code> elements inside <code>&lt;article&gt;</code> and <code>&lt;section&gt;</code> in the following example might represent different types of information in your webpage. But you don't need different <code>id</code> values for the two paragraphs, because you can use different <em class="extra">selectors</em> to refer to each paragraph: <code>article > p</code> and <code>section > p</code>.</p>
 					<code>
 						&lt;article&gt;<br/>
 						<code>
@@ -596,7 +597,7 @@
 						<li>style both <code>&lt;div&gt;</code> elements using <em>inline styles</em>, specify a width and a height of <code>5vh</code> to make them a square, and</li>
 						<li>add two event listeners to each <code>&lt;div&gt;</code> - one changes the background color to any color of your choice when you move your mouse cursor over it, and the other changes the background color back to the default white backgroud.</li>
 					</ol>
-					<p>Select the following section to find a <em>complicated</em> solution: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-13" target="blank">Example 3-13</a></p>
+					<p>Select the following section to find a <em>complicated</em> solution:</p>
 					<code style="color: #e68a00;">
 						var div = document.getElementByTagName('div');<br/>
 						var div1 = div[0], div2 = div[1];<br/>
@@ -636,7 +637,7 @@
 							</code>
 						});
 					</code>
-					<p>So, how can <code>this</code> help simplify our codes in the complicated solution? We can directly set the style of the target <code>&lt;div&gt;</code> element directly with <code>this</code> - we don't even need two functions to reset the background color since the default color is the same: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-14" target="blank">Example 3-14</a></p>
+					<p>So, how can <code>this</code> help simplify our codes in the complicated solution? We can directly set the style of the target <code>&lt;div&gt;</code> element directly with <code>this</code> - we don't even need two functions to reset the background color since the default color is the same:</p>
 					<code>
 						var div = document.getElementByTagName('div');<br/>
 						var div1 = div[0], div2 = div[1];<br/>
@@ -804,7 +805,7 @@
 						console.log('5' === 5); // You get a "false"
 					</code>
 					<p>In the first comparison, you get a <code>true</code> value when a character 5 is compared to a numerical 5 using <code>==</code> - since the two values are compared with no regard to their data type, <em>automatical type conversion</em> applies to make the two values equivalent to each other. By contrast, when the same values are compared using <code>===</code>, the type conversion does not apply, and the result is a <code>false</code> since they are of different data types. In other words, comparisons using <code>===</code> are more conservative than those using <code>==</code>. I personally always choose the more conservative option since it lowers the risk of having <em>bugs</em> in your codes. If I need to convert strings into numerical values, I would do it myself manually using the <code>Number()</code> or <code>parseInt()</code> function.</p>
-					<p>Now back to our <code>if...else...</code> statements. We use the previous example with three <code>&lt;div&gt;</code> elements, and three corresponding <code>&lt;button&gt;</code> elements sharing the same <code>id</code> attribute with the <code>&lt;div&gt;</code> elements: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-15" target="blank">Example 3-15</a></p>
+					<p>Now back to our <code>if...else...</code> statements. We use the previous example with three <code>&lt;div&gt;</code> elements, and three corresponding <code>&lt;button&gt;</code> elements sharing the same <code>id</code> attribute with the <code>&lt;div&gt;</code> elements:</p>
 					<code>
 						&lt;div id="block1" style="width: 5vh; height: ...<br/>
 						&lt;div id="block2" style="width: 5vh; height: ...<br/>
@@ -994,7 +995,7 @@
 						<li>These elements will be stored in an array return by the aforementioned functions.</li>
 						<li>You loop through this array and style each element until the end of this array (your loop condition).</li>
 					</ul>
-					<p>Let's now have three <code>&lt;div&gt;</code> siblings, and use a <code>&lt;button&gt;</code> element that listen to a <code>click</code> event to style all three elements: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-16" target="blank">Example 3-16</a></p>
+					<p>Let's now have three <code>&lt;div&gt;</code> siblings, and use a <code>&lt;button&gt;</code> element that listen to a <code>click</code> event to style all three elements:</p>
 					<code>
 						var button = document.getElementsByTagName('button')[0]; // Get one and the only 'button' element<br/>
 						button.addEventListener('click', function()) {
@@ -1012,7 +1013,7 @@
 						};
 					</code>
 					<p>In the above example, we usually name the counter variable something like <code>i</code> since it represents the <em>index</em> number in an array, and it starts with <em>0</em> because it represents the first data entry in an array. Since we need to loop through the end of the array, we need to know how many data entries there are in the array, which can be obtained with the <code>length</code> property of an array object. In the condition, we need the operator <code>&lt;</code> rather than <code>=</code> since the index of the last data entry in an array is always <em>arrary length minus 1</em>.</p>
-					<p>If we include <code>if...else...</code> statements in a <code>for</code> loop, it will be possible to make our styling function more flexible to deal with subgroups of elements in the <em>same</em>. For example, perhaps we don't want to change the background color of the second <code>&lt;div&gt;</code> element of the three <code>&lt;div&gt;</code> elements we had above, so we add an <code>id</code> attribute to it with a value <code>nostyle</code>: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-17" target="blank">Example 3-17</a></p>
+					<p>If we include <code>if...else...</code> statements in a <code>for</code> loop, it will be possible to make our styling function more flexible to deal with subgroups of elements in the <em>same</em>. For example, perhaps we don't want to change the background color of the second <code>&lt;div&gt;</code> element of the three <code>&lt;div&gt;</code> elements we had above, so we add an <code>id</code> attribute to it with a value <code>nostyle</code>:</p>
 					<code>
 						&lt;div id="nostyle"&gt;Div 2&lt;/div&gt;
 					</code>
@@ -1058,7 +1059,7 @@
 						...
 					</code>
 					<p>The Web browser in your modern computer won't be overwhelmed by a simple loop even if it is unnecesary to complete it. But our goal is always to create an efficient program that saves as much computation resources as possible. When your program grows further, every redundancy would matter. Speaking of efficient, there's in fact an even much simpler solution using <code>querySelector()</code>, but I'll leave this to you, since my point is to demonstrate the use of <code>break</code> in the <code>for</code> loop.</p>
-					<p>A <code>for</code> loop can also be used to iterate through an object, mostly for retrieving the keys of the object: <a class="examples" href="https://github.com/nthuTYChen/nthutychen.github.io/tree/master/bwd/examples/3-16" target="blank">Example 3-16</a></p>
+					<p>A <code>for</code> loop can also be used to iterate through an object, mostly for retrieving the keys of the object:</p>
 					<code>
 						var div = document.getElementsByTagName('div')[0]; // The first div element of the document<br/>
 						for(var key in div) { // Declare a variable "key" for each key string of the object in each iteration
