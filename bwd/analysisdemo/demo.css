@@ -65,7 +65,7 @@ section > p {
 	text-indent: 5%;
 }
 
-figure {
+figure, p.quote {
 	margin: 1vh 0;
 }
 
@@ -75,6 +75,10 @@ p {
 
 p.insNote {
 	font-family: Source Sans Pro, sans-serif;
+}
+
+p.quote {
+
 }
 
 nav {
