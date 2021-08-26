@@ -78,7 +78,8 @@ p.insNote {
 }
 
 p.quote {
-
+	text-indent: unset;
+	padding: 0 5vw;
 }
 
 nav {
