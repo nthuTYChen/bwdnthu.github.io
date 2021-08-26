@@ -87,7 +87,7 @@ nav {
 	font-family: Poppins, sans-serif;
 	font-size: 2vh;
 	line-height: 3vh;
-	opacity: 0.95;
+	opacity: 0.5;
 	transition: all 0.3s ease-out;
 }
 
@@ -111,7 +111,7 @@ nav > a:not(:first-of-type) {
 }
 
 nav > a:hover {
-	opacity: 0.5 !important;
+	opacity: 0.95 !important;
 	cursor: pointer;
 	transition: all 0.5s ease-out;
 }
