@@ -41,7 +41,32 @@
 				opacity: 0.9;
 				transition: all 0.3s ease-out;
 			}
+
+			article > section {
+				position: relative;
+				top: 50px;
+				opacity: 0;
+			}
 		</style>
+		<script>
+			$(document).ready(()=>{
+				animateSection();
+				$(document).on('scroll', animateSection);
+			});
+
+			function animateSection() {
+				let allSections = $('article > section');
+				let screenHeight = $(window).height(), scrollTop = $(document).scrollTop();
+				allSections.each(()=>{
+					if(screenHeight + scrollTop - 50 > $(this).offset().top) {
+						$(this).animate({top: '0', opacity: 1}, 300);
+					}
+					else {
+						$(this).css({top: '50px', opacity: 0});
+					}
+				});
+			};
+		</script>
 	</head>
 	<body>
 		<nav>
