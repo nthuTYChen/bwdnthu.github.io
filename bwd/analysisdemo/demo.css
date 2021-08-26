@@ -87,8 +87,6 @@ nav {
 	font-family: Poppins, sans-serif;
 	font-size: 2vh;
 	line-height: 3vh;
-	opacity: 0.5;
-	transition: all 0.3s ease-out;
 }
 
 nav > a {
@@ -97,6 +95,8 @@ nav > a {
 	width: 100%;
 	padding: 2px 4px;
 	text-decoration: none;
+	opacity: 0.5;
+	transition: all 0.3s ease-out;
 }
 
 nav > a:first-of-type {
