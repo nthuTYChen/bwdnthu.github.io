@@ -52,8 +52,29 @@ h3 {
 	margin: 0.5vh 0;
 }
 
+article {
+	margin: 1vh 0;
+	padding: 1vh 5vw;
+}
+
+section {
+	margin: 0.8vh 0;
+}
+
+section > p {
+	text-indent: 5%;
+}
+
+figure {
+	margin: 1vh 0;
+}
+
 p {
 	margin: 0.2vh 0;
+}
+
+p.insNote {
+	font-family: Source Sans Pro, sans-serif;
 }
 
 nav {
@@ -75,6 +96,7 @@ nav > a {
 	color: white !important;
 	width: 100%;
 	padding: 2px 4px;
+	text-decoration: none;
 }
 
 nav > a:first-of-type {
@@ -98,7 +120,8 @@ nav > a:hover {
 }
 
 a, a:visited {
-	text-decoration: none;
+	color: #323232;
+	text-decoration: underline;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -120,6 +143,14 @@ a, a:visited {
 	h3 {
 		font-size: 1.5vw;
 		line-height: 1.8vw;
+	}
+
+	article {
+		margin: 2vh 0;
+	}
+
+	section {
+		margin: 1.5vh 0;
 	}
 
 	p {
