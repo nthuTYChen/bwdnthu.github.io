@@ -8,7 +8,7 @@ $(document).ready(()=>{
 		}, 500);
 	});
 
-	$('nav > a:first-of-type').on('click touchend', (event)=>{
+	$('nav > a:first-of-type').on('mousedown touchend', (event)=>{
 		event.stopPropagation();
 		if(!touchMove) {
 			let menuItems = $('nav > a').not(':first-of-type');
