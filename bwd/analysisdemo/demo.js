@@ -8,8 +8,26 @@ $(document).ready(()=>{
 		}, 500);
 	});
 
+	$(document).on('touchend click', (event, selector)=>{
+		event.stopPropagation();
+		if(event.type === 'touchend') {
+			selector.off('click');
+		}
+		if(menuOpen) {
+			let menuItems = $('nav > a').not(':first-of-type'), delay = 0;
+			menuItems.each((index)=>{
+				setTimeout(()=>{
+					menuItems.eq(index).animate({opacity: 0}, 300, ()=>{
+						menuItems.eq(index).css('display', 'none');
+					});
+				}, delay + (50 * index));
+			});
+			menuOpen = false;
+		}
+	});
+
 	$('nav > a:first-of-type').on('touchend click', (event, selector)=>{
-		//event.stopPropagation();
+		event.stopPropagation();
 		if(event.type === 'touchend') {
 			selector.off('click');
 		}
@@ -20,7 +38,12 @@ $(document).ready(()=>{
 				menuItems.each((index)=>{
 					setTimeout(()=>{
 						menuItems.eq(index).css('display', 'grid');
-						menuItems.eq(index).animate({opacity: 0.5}, 300);
+						if($(document).width() < 1024) {
+							menuItems.eq(index).animate({opacity: 0.95}, 300);
+						}
+						else {
+							menuItems.eq(index).animate({opacity: 0.5}, 300);
+						}
 					}, delay + (50 * index));
 				});
 			}
