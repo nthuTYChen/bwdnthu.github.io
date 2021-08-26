@@ -8,8 +8,11 @@ $(document).ready(()=>{
 		}, 500);
 	});
 
-	$('nav > a:first-of-type').on('mousedown touchend', (event)=>{
-		event.stopPropagation();
+	$('nav > a:first-of-type').on('touchend click', (event, selector)=>{
+		//event.stopPropagation();
+		if(event.type === 'touchend') {
+			selector.off('click');
+		}
 		if(!touchMove) {
 			let menuItems = $('nav > a').not(':first-of-type');
 			let delay = 0;

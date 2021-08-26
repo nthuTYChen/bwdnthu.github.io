@@ -103,13 +103,10 @@ nav > a:first-of-type {
 	width: 4.8vh;
 }
 
-nav > a:not(:last-of-type) {
-	border-right: 0;
-	border-bottom: solid 2px white;
-}
-
 nav > a:not(:first-of-type) {
 	display: none;
+	border-right: 0;
+	border-top: solid 2px white;
 	opacity: 0;
 }
 
@@ -171,8 +168,8 @@ a, a:visited {
 		width: 2.4vw;
 	}
 
-	nav > a:not(:last-of-type) {
-		border-right: solid 2px white;
-		border-bottom: 0;
+	nav > a:not(:first-of-type) {
+		border-left: solid 2px white;
+		border-top: 0;
 	}
 }
