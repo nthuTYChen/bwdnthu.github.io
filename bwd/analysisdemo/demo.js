@@ -22,6 +22,7 @@ $(document).ready(()=>{
 					});
 				}, delay + (50 * index));
 			});
+			$('nav > a:first-of-type').removeClass('rotate');
 			menuOpen = false;
 		}
 	});
@@ -46,6 +47,7 @@ $(document).ready(()=>{
 						}
 					}, delay + (50 * index));
 				});
+				$('nav > a:first-of-type').addClass('rotate');
 			}
 			else {
 				menuItems.each((index)=>{
@@ -55,6 +57,7 @@ $(document).ready(()=>{
 						});
 					}, delay + (50 * index));
 				});
+				$('nav > a:first-of-type').removeClass('rotate');
 			}
 			menuOpen = !menuOpen;
 		}

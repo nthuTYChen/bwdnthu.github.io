@@ -53,12 +53,12 @@ h3 {
 }
 
 article {
-	margin: 1vh 0;
+	margin: 1.5vh 0;
 	padding: 1vh 5vw;
 }
 
 section {
-	margin: 0.8vh 0;
+	margin: 1.2vh 0;
 }
 
 section > p {
@@ -116,6 +116,17 @@ nav > a:hover {
 	transition: all 0.5s ease-out;
 }
 
+nav > a > span {
+	display: inline-block;
+	transform: rotate(0deg);
+	transition: all 0.2s linear;
+}
+
+nav > a.rotate > span {
+	transform: rotate(45deg);
+	transition: all 0.2s linear;
+}
+
 a, a:visited {
 	color: #323232;
 	text-decoration: underline;
@@ -143,11 +154,11 @@ a, a:visited {
 	}
 
 	article {
-		margin: 2vh 0;
+		margin: 3vh 0;
 	}
 
 	section {
-		margin: 1.5vh 0;
+		margin: 2vh 0;
 	}
 
 	p {
