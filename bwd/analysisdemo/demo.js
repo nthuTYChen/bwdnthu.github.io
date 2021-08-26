@@ -20,7 +20,7 @@ $(document).ready(()=>{
 				menuItems.each((index)=>{
 					setTimeout(()=>{
 						menuItems.eq(index).css('display', 'grid');
-						menuItems.eq(index).animate({opacity: 0.95}, 300);
+						menuItems.eq(index).animate({opacity: 0.5}, 300);
 					}, delay + (50 * index));
 				});
 			}
