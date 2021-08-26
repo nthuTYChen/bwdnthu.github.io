@@ -57,12 +57,13 @@
 			function animateSection() {
 				let allSections = $('article > section');
 				let screenHeight = $(window).height(), scrollTop = $(window).scrollTop();
-				allSections.each(()=>{
-					if(screenHeight + scrollTop - 50 > $(this).offset().top) {
-						$(this).animate({top: 0, opacity: 1}, 300);
+				allSections.each((index)=>{
+					let section = allSections.eq(index);
+					if(screenHeight + scrollTop - 50 > section.offset().top) {
+						section.animate({top: 0, opacity: 1}, 500);
 					}
 					else {
-						$(this).css({top: '50px', opacity: 0});
+						section.css({top: '50px', opacity: 0});
 					}
 				});
 			};
