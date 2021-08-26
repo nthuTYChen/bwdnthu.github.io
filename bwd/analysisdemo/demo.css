@@ -143,6 +143,10 @@ q {
 	border-radius: 2px;
 }
 
+ul {
+	list-style-position: inside;
+}
+
 @media only screen and (min-width: 1024px) {
 	body {
 		font-size: 1.2vw;
