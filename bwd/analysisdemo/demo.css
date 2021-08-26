@@ -144,6 +144,7 @@ q {
 }
 
 ul {
+	margin: 1vh 0;
 	list-style-position: inside;
 }
 
