@@ -89,6 +89,7 @@ p.quote {
 
 nav {
 	position: fixed;
+	z-index: 3;
 	top: 10px;
 	left: 10px;
 	display: flex;
