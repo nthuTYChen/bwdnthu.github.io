@@ -73,6 +73,10 @@ p {
 	margin: 0.2vh 0;
 }
 
+p.cc {
+	text-indent: unset;
+}
+
 p.insNote {
 	font-family: Source Sans Pro, sans-serif;
 	text-indent: unset;
