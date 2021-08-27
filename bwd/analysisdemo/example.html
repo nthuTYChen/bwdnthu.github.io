@@ -53,7 +53,7 @@
 				$(document).on('scroll', animateSection);
 			});
 
-			$(document).load(animateSection());
+			$(window).on("load", animateSection());
 
 			function animateSection() {
 				let allSections = $('article > section');
