@@ -43,7 +43,7 @@ $(document).ready(()=>{
 							menuItems.eq(index).animate({opacity: 0.95}, 300);
 						}
 						else {
-							menuItems.eq(index).animate({opacity: 0.5}, 300);
+							menuItems.eq(index).animate({opacity: 0.6}, 300);
 						}
 					}, delay + (50 * index));
 				});
