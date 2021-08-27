@@ -75,6 +75,7 @@ p {
 
 p.insNote {
 	font-family: Source Sans Pro, sans-serif;
+	text-indent: unset;
 }
 
 p.quote {
