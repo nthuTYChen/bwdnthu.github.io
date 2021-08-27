@@ -50,9 +50,10 @@
 		</style>
 		<script>
 			$(document).ready(()=>{
-				animateSection();
 				$(document).on('scroll', animateSection);
 			});
+
+			$(document).load(animateSection());
 
 			function animateSection() {
 				let allSections = $('article > section');
