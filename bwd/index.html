@@ -111,21 +111,23 @@
 						<img src="img/mess.jpg"/>
 						<sub>Credit: <a href="https://www.flickr.com/photos/knobil/4521285655" target="blank">Mark Knobil</a></sub>
 					</picture>
-					<p>First of all, the local folder (xxxxxxx.github.io) for your repository in your computer is the <em class="extra">root directory</em> of the repository. The <em>index.html</em> file in this root directory would always be the default webpage loaded to a Web browser when someone visits your website at https://xxxxxxx.github.io/ (which is thus in fact equivalent to https://xxxxxxx.github.io/index.html).</p>
-					<p>If you create another folder in the root directory of your repository, such as <em>analysisdemo</em>, the folder could be accessed via <em>https://xxxxxxx.github.io/analysisdemo/</em>, and the default webpage that will be loaded in this folder will still be <em>index.html</em>. Now, you have the following file structure in your repository:</p>
+					<p>First of all, the local folder (xxxxxxx.github.io) for your repository in your computer is the <em class="extra">root directory</em> of the repository. The <em>index.html</em> file in this root directory would always be the default webpage loaded to a Web browser when someone visits your website at https://xxxxxxx.github.io/ (which is thus in fact equivalent to https://xxxxxxx.github.io/index.html). This root directory should be used for your personal website project.</p>
+					<p>If you create another folder in the root directory of your repository, such as <code>analysisdemo</code> for your , the folder could be accessed via <em>https://xxxxxxx.github.io/analysisdemo/</em>, and the default webpage that will be loaded in this folder will still be <em>index.html</em>. Now, you have the following file structure in your repository:</p>
 					<table>
 						<tr>
 							<td>xxxxxxx.github.io/</td><td>─ index.html (default webpage in the root directory)</td><td></td>
 						</tr>
 						<tr>
-							<td></td><td>┕ /analysisdemo (for your Essay Analysis project)</td><td></td>
+							<td></td><td>┕ /analysisdemo/ (for your Essay Analysis project)</td><td>─ index.html</td>
 						</tr>
 					</table>
-					<p>You may eventually include some images/videos in your website, and for this course you will certainly need a place for your CSS and JS files. Thus, let's create the following directories right inside your <em>root directory</em>: <em class="extra">img</em>, <em class="extra">js</em>, and <em class="extra">css</em>. Note that since the <em>js</em> and <em>css</em> are located in the <em>root</em> directory, the js and css files in these sub-directories are logically assumed to be <em class="extra">global</em> (namely, for the <em class="extra">entire</em> website), not just for the HTML documents in the root directory. We will get back to this in the next unit.</p>
-					<p>Sometimes your website is not just for one project, but two or three, just like what you need to do for this course. In this case, feel free to add different sub-directories in the root directory for individual projects. For example, in this website, I have this Bilingual Web Design course project, so I add a <em>bwd</em> directory in the root directory. Inside the <em>bwd</em> directory, I also create an <em>index.html</em> file, which is loaded into a Web browser by default when someone visits https://nthutychen.github.io/bwd/. I would also add an <em>img</em> directory inside the <em>bwd</em>, to which the images specifically used in this course project are uploaded. The file structure of my website is therefore like this:</p>
+					<p>Eventually, you will have to style your website and add interactive functions to it, so you will need folders for these files for styling and interactive functions, which we call <code>css</code> and <code>js</code> for now. The location of these directories has different implications with regard to how they will be accessed in the entire website. First, let's create the two folders inside your <em>root directory</em>, which implies that the files in these two directories will be used <em class="extra">globally</em>, rather than by any specific webpage in a specific folder.</p>
 					<table>
 						<tr>
-							<td>/ (root)</td><td>─ index.html (default homepage)</td><td></td>
+							<td>xxxxxxx.github.io/ (root)</td><td>─ index.html (default homepage)</td><td></td>
+						</tr>
+						<tr>
+							<td></td><td>┕ /analysisdemo</td><td>─ index.html</td>
 						</tr>
 						<tr>
 							<td></td><td>┕ /css (global css files)</td><td></td>
@@ -133,20 +135,26 @@
 						<tr>
 							<td></td><td>┕ /js (global js files)</td><td></td>
 						</tr>
+					</table>
+					<p>If you have any specific styles for your Essay Analysis website, you should then create another <code>css</code> folder inside the <code>analysisdemo</code> folder:</p>
+					<table>
 						<tr>
-							<td></td><td>┕ /img (root image files)</td><td></td>
+							<td>xxxxxxx.github.io/ (root)</td><td>─ index.html (default homepage)</td><td></td>
 						</tr>
 						<tr>
-							<td></td><td>┕ /bwd (course project folder)</td><td>─ index.html (course default homepage)</td>
+							<td></td><td>┕ /analysisdemo</td><td>─ index.html</td>
 						</tr>
 						<tr>
-							<td></td><td></td><td>┕ /img (course project image files)</td>
+							<td></td><td></td><td>┕ /css (for analysisdemo)</td>
+						</tr>
+						<tr>
+							<td></td><td>┕ /css (global css files)</td><td></td>
+						</tr>
+						<tr>
+							<td></td><td>┕ /js (global js files)</td><td></td>
 						</tr>
 					</table>
-					<p>
-						With this logic in mind, you should be able to have the file structure of your website clearly organized - whenever you need to make changes or update the contents, you know where to look at. Now, let's use the root directory for your personal website project, and then create a directory called <em class="extra">thematic</em> under the root directory, and put an <em>index.html</em> into it. The name of directories and files are <em class="extra">case-sensitive</em>, so make sure that you have the correct case for the spellings.
-					</p>
-					<p>Every student should have the same file structure in their website for their course projects, and <em class="extra">I will only assess the contents in the root directory and the "thematic" directory</em>.</p>
+					<p>Every student should have the same file structure in their website for their course projects, and <em class="extra">I will only assess the contents in the root directory and the "analysisdemo" directory</em>.</p>
 				</section>
 				<section>
 					<h2 id="timetoexplore">It's time to explore!</h2>
