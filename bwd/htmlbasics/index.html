@@ -25,7 +25,7 @@
 			<article>
 				<h1>2. HTML Basics</h1>
 				<p><em>HyperText Markup Language</em> - that's what HTML stands for. It builds the fundamental structure of a webpage for you, just like the bones in your body.</p>
-				<p><a href="#beforewestart">Before we start...</a> / <a href="#firstindexhtml">Your first index.html</a> / <a href="#addsomespice">Add some spices</a> / <a href="#formattingsourcecodes">Formatting source codes</a> / <a href="#htmlw3c">HTML and W3C Standards</a> / <a href="#thebuildingblocks">The building blocks</a> / <a href="#inlineelements">Inline elements</a> / <a href="#webstructure">The file structure of your website</a> / <a href="#blueprint">Making a blueprint</a> / <a href="#finalizethedraft">Finalize the draft</a> / <a href="#forthenextunit">For the next unit...</a></p>
+				<p><a href="#beforewestart">Before we start...</a> / <a href="#firstindexhtml">Your first index.html</a> / <a href="#addsomespice">Add some spices</a> / <a href="#formattingsourcecodes">Formatting source codes</a> / <a href="#htmlw3c">HTML and W3C Standards</a> / <a href="#thebuildingblocks">The building blocks</a> / <a href="#inlineelements">Inline elements</a> / <a href="#blueprint">Making a blueprint</a> / <a href="#finalizethedraft">Finalize the draft</a> / <a href="#forthenextunit">For the next unit...</a></p>
 				<section>
 					<h2 id="#beforewestart">Before we start...</h2>
 					<ul>
@@ -35,6 +35,10 @@
 				</section>
 				<section>
 					<h2>HTML elements</h2>
+					<picture>
+						<img src="img/braincloth.jpg"/>
+						<sub>Credit: <a href="https://www.reddit.com/r/ProgrammerHumor/comments/p7c9je/html/" target="blank">Reddit</a></sub>
+					</picture>
 					<p>Every webpage is composed of a bunch of HTML elements <em>translated</em> by your Web browser properly into the layout you see on a computer screen.</p>
 					<p>An HTML element is like <code>&lt;html&gt;</code>, with the name of the element enclosed in two angle brackets <code><</code> and <code>></code>. In an HTML file, you usually see two types of HTML elements. One marks up a <em class="extra">scope</em> of contents, which determines how these contents are represented in a webpage; for instance:</p>
 					<code>&lt;html&gt;some contents&lt;/html&gt;</code>
@@ -131,41 +135,6 @@
 						<li><code>&lt;input/&gt;</code> - Insert an input field.</li>
 					</ol>
 					<p>See this <a href="https://www.w3schools.com/htmL/html_blocks.asp" target="blank">W3CSchool page</a> for a more complete list of block-level and inline elements. Note that this default <em>block</em> vs. <em>inline</em> contrast from the elements is not absolute. We'll learn how to change this property when it comes to CSS.</p>
-				</section>
-				<section>
-					<h2 id="webstructure">The file structure of your website</h2>
-					<p>Now that we know some block-level and inline elements, you could start designing your own website right away...or take a moment first to think about the file structure of your website. People can be lazy, and they would choose to put everything in the same place. They would then later suffer the mess and I do not feel sympathetic for them :-).</p>
-					<picture>
-						<img src="img/mess.jpg"/>
-						<sub>Credit: <a href="https://www.flickr.com/photos/knobil/4521285655" target="blank">Mark Knobil</a></sub>
-					</picture>
-					<p>First of all, the local folder for your website in your computer is called the <em class="extra">root directory</em>. The <em>index.html</em> file in this directory would be the default webpage loaded to a Web browser when someone visits your website at, for instance, https://xxxxxxx.github.io/ (which is thus in fact equivalent to https://xxxxxxx.github.io/index.html).</p>
-					<p>You may eventually include some images/videos in your website, and for this course you will certainly need a place for your CSS and JS files. Thus, let's create the following directories right inside your <em>root directory</em>: <em class="extra">img</em>, <em class="extra">js</em>, and <em class="extra">css</em>. Note that since the <em>js</em> and <em>css</em> are located in the <em>root</em> directory, the js and css files in these sub-directories are logically assumed to be <em class="extra">global</em> (namely, for the <em class="extra">entire</em> website), not just for the HTML documents in the root directory. We will get back to this in the next unit.</p>
-					<p>Sometimes your website is not just for one project, but two or three, just like what you need to do for this course. In this case, feel free to add different sub-directories in the root directory for individual projects. For example, in this website, I have this Bilingual Web Design course project, so I add a <em>bwd</em> directory in the root directory. Inside the <em>bwd</em> directory, I also create an <em>index.html</em> file, which is loaded into a Web browser by default when someone visits https://nthutychen.github.io/bwd/. I would also add an <em>img</em> directory inside the <em>bwd</em>, to which the images specifically used in this course project are uploaded. The file structure of my website is therefore like this:</p>
-					<table>
-						<tr>
-							<td>/ (root)</td><td>─ index.html (default homepage)</td><td></td>
-						</tr>
-						<tr>
-							<td></td><td>┕ /css (global css files)</td><td></td>
-						</tr>
-						<tr>
-							<td></td><td>┕ /js (global js files)</td><td></td>
-						</tr>
-						<tr>
-							<td></td><td>┕ /img (root image files)</td><td></td>
-						</tr>
-						<tr>
-							<td></td><td>┕ /bwd (course project folder)</td><td>─ index.html (course default homepage)</td>
-						</tr>
-						<tr>
-							<td></td><td></td><td>┕ /img (course project image files)</td>
-						</tr>
-					</table>
-					<p>
-						With this logic in mind, you should be able to have the file structure of your website clearly organized - whenever you need to make changes or update the contents, you know where to look at. Now, let's use the root directory for your personal website project, and then create a directory called <em class="extra">thematic</em> under the root directory, and put an <em>index.html</em> into it. The name of directories and files are <em class="extra">case-sensitive</em>, so make sure that you have the correct case for the spellings.
-					</p>
-					<p>Every student should have the same file structure in their website for their course projects, and <em class="extra">I will only assess the contents in the root directory and the "thematic" directory</em>.</p>
 				</section>
 				<section>
 					<h2 id="blueprint">Making a blueprint</h2>
