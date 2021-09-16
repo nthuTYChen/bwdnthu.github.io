@@ -25,7 +25,7 @@
 			<article>
 				<h1>2. HTML Basics</h1>
 				<p><em>HyperText Markup Language</em> - that's what HTML stands for. It builds the fundamental structure of a webpage for you, just like the bones in your body.</p>
-				<p><a href="#beforewestart">Before we start...</a> / <a href="#htmltags">HTML tags/elements</a> / <a href="#firstindexhtml">Revisite your first index.html</a> / <a href="#addsomespice">Add some spices</a> / <a href="#htmlw3c">HTML and W3C Standards</a> / <a href="#thebuildingblocks">The building blocks</a> / <a href="#formattingsourcecodes">Formatting source codes</a> / <a href="#inlineelements">Inline elements</a> / <a href="#blueprint">Making a blueprint</a> / <a href="#finalizethedraft">Finalize the draft</a> / <a href="#forthenextunit">For the next unit...</a></p>
+				<p><a href="#beforewestart">Before we start...</a> / <a href="#htmltags">HTML tags/elements</a> / <a href="#firstindexhtml">Revisite your first index.html</a> / <a href="#addsomespice">Add some spices</a> / <a href="#thebuildingblocks">The building blocks</a> / <a href="#formattingsourcecodes">Formatting source codes</a> / <a href="#inlineelements">Inline elements</a> / <a href="#htmlw3c">HTML and W3C Standards</a> / <a href="#blueprint">Making a blueprint</a> / <a href="#finalizethedraft">Finalize the draft</a> / <a href="#forthenextunit">For the next unit...</a></p>
 				<section>
 					<h2 id="#beforewestart">Before we start...</h2>
 					<ul>
@@ -68,16 +68,6 @@
 					<p>Next, inside <code>&lt;head&gt;&lt;/head&gt;</code>, let's add the following line after <code>&lt;/title&gt;</code>:</p>
 					<code>&lt;meta charset="UTF-8"&gt;</code>
 					<p>This  <code>&lt;meta&gt;</code> element is obviously adding some metadata to our HTML document, and the attribute <em>charset</em> is specified with <em>UTF-8</em>, which tells a Web browser to treat the contents as Unicode texts, so texts could be encoded properly even if they are from different languages. You can't imagine how hard it was to get foreign websites encoded properly 20 years ago. Most of modern Web browsers set UTF-8 encoding as their default, but it doesn't hurt to always have this by default just in case.</p>
-				</section>
-				<section>
-					<h2 id="htmlw3c">HTML and W3C standards</h2>
-					<p>The most updated version of HTML is HTML5, which has been developed following the W3C (World Wide Web Consortium) standards. With the standards, same HTML tags should be compatible to different browsers - but you have to be careful! Some old HTML tags might have become <em class="extra">deprecated/obsolete</em>, while newly introduced HTML tags might be more or less <em class="extra">experimental</em> and are thus not fully supported by all mainstream browsers.</p>
-					<p>If you want to use a tag that you have never seen before and it seems useful, check some reliable sources to see if it support the majority of Web browsers, such as <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="blank">MDN web docs.</a> In this course, we will just check our webpage using Google Chrome, but in reality, you should test your webpage in all different kinds of Web browsers.</p>
-					<p>In this course, we will try not to go wild, but use some common HTML tags to construct our websites. Neither will I go through old and new <em>browser wars</em> - google it if you're interested.</p>
-					<picture>
-						<img src="img/browserwar.png"/>
-						<sub>Credit: <a href="https://shoze.blogspot.com/2011/06/brorwser-wars.html" target="blank">Shoze</a></sub>
-					</picture>
 				</section>
 				<section>
 					<h2 id="thebuildingblocks">The Building Blocks</h2>
@@ -137,6 +127,16 @@
 					<p>See this <a href="https://www.w3schools.com/htmL/html_blocks.asp" target="blank">W3CSchool page</a> for a more complete list of block-level and inline elements. Note that this default <em>block</em> vs. <em>inline</em> contrast from the elements is not absolute. We'll learn how to change this property when it comes to CSS.</p>
 				</section>
 				<section>
+					<h2 id="htmlw3c">HTML and W3C standards</h2>
+					<p>The most updated version of HTML is HTML5, which has been developed following the W3C (World Wide Web Consortium) standards. With the standards, same HTML tags should be compatible to different browsers - but you have to be careful! Some old HTML tags might have become <em class="extra">deprecated/obsolete</em>, while newly introduced HTML tags might be more or less <em class="extra">experimental</em> and are thus not fully supported by all mainstream browsers.</p>
+					<p>If you want to use a tag that you have never seen before and it seems useful, check some reliable sources to see if it support the majority of Web browsers, such as <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="blank">MDN web docs.</a> In this course, we will just check our webpage using Google Chrome, but in reality, you should test your webpage in all different kinds of Web browsers.</p>
+					<p>In this course, we will try not to go wild, but use some common HTML tags to construct our websites. Neither will I go through old and new <em>browser wars</em> - google it if you're interested.</p>
+					<picture>
+						<img src="img/browserwar.png"/>
+						<sub>Credit: <a href="https://shoze.blogspot.com/2011/06/brorwser-wars.html" target="blank">Shoze</a></sub>
+					</picture>
+				</section>
+				<section>
 					<h2 id="blueprint">Making a blueprint</h2>
 					<p>OK. I know you've been waiting for this moment. But let's do something real to help develop your personal website, and we would start with its layout. When you make slides for your presentation, you also need to choose a template, don't you?</p>
 					<p>We need to consider the layout of two basic <em>blocks</em> in your website: a <code>&lt;nav&gt;</code> block and a container of the main contents, perhaps inside a <code>&lt;div&gt;</code> block, and there are two options.</p>
@@ -157,12 +157,12 @@
 						</tr>
 					</table>
 					<p>The benefit of this layout is rather obvious: The navigation pane would be more spacious for menu items (as if we have lots to say in our personal website!), and the presentation of the navigation pane do not interfere with that of the main contents. The drawback is also obvious; the space for the main contents would be much narrower.</p>
-					<p>We also have the third option: To create a <em>dropdown menu</em> - We won't do it now since you need to be more familiar with CSS/JavaScript, but we'll get there. Alright! Let's add these two blocks into <code>&lt;body&gt;</code> of the <em>index.html</em> in your project directory!</p>
+					<p>We also have the third option: To create a <em>hidden menu</em> as in the demo website - We won't do it now since you need to be more familiar with CSS/JavaScript, but we'll get there. Alright! Let's add these two blocks into <code>&lt;body&gt;</code> of the <em>index.html</em> in your project directory!</p>
 				</section>
 				<section>
 					<h2 id="finalizethedraft">Finalize the draft</h2>
 					<p>Hold on! You just added the two blocks, but they were always presented vertically following their order in <code>&lt;body&gt;</code>! This is exactly the way how HTML elements are presented by default in a Web browser. We have not yet learned how to position an element, which will come next in the CSS tutorial. For now, we live with the default presentation.</p>
-					<p>Now, supposed that you already have some items in your navigation pane, how can someone use them to walk through your website? Easy - just mark up each individual item as a hyperlink using <code>&lt;a&gt;</code>, as if a item is linked to one of the webpages in the website. Crucially, we need the <em class="extra">href</em> attribute for this element to specify the <em class="extra">path</em> of the hyperlink, as in:</p>
+					<p>Now, supposed that you already have some items in your navigation pane, how can someone use them to walk through your website? Easy - just mark up each individual item as a hyperlink using <code>&lt;a&gt;</code>, as if a item is linked to one of the webpages in the website. Crucially, we need the <em class="extra">href</em> <em>attribute</em> for this element to specify the <em class="extra">path</em> of the hyperlink, as in:</p>
 					<code>This is a &lt;a href="/somepath/"&gt;hyperlink&lt;/a&gt;!</code>
 					<p>With the path specified in the above example, the hyperlink will direct a Web browser to the <em>somepath</em> directory under the <em>root directory</em> (because the path begins with <code>/</code>). You can also specify a complete Web address for this attribute for an <em>external</em> link. Although you probably do not have the webpage that the individual menu items should be linked to, it's not a bad idea to think about the path to each webpage in advance, and then use the path as the name of the directory for each webpage later.</p>
 					<p>We have our menu ready, and it's time to add some general personal info to the container! We will need <code>&lt;article&gt;</code> (since it's an article about your personal info), <code>&lt;section&gt;</code> (since there could be different categories of your personal info), and <code>&lt;p&gt;</code> (since different entries of the same type of info may need an indepent paragraph). Remember, the Web browser expects a heading for every <code>&lt;article&gt;</code> and <code>&lt;section&gt;</code>!</p>
@@ -192,14 +192,11 @@
 				</section>
 				<section>
 					<h2 id="forthenextunit">For the next unit...</h2>
-					For the next unit, you will have to complete the following tasks:
+					For the next unit, you will have to complete the following task:
 					<ol>
-						<li>Add a <em>bio</em> directory to your personal website project directory.</li>
-						<li>Add a menu item with a hyperlink specified to a path <code>/bio</code>.</li>
-						<li>Add an <em>index.html</em> file to the <em>bio</em> directory.</li>
-						<li>Add a paragraph of English autobiography no longer than 300 words in the <em>index.html</em> file.</li>
+						<li>Modify the <em>index.html</em> inside your <code>personal</code> directory to have necessary HTML elements and add an English autobiography no longer than 250 words.</li>
+						<li>Please complete it before Oct 1, 2021. It's not an assignment, but it will be taken into consideration in my assessment of your personal website project.</li>
 					</ol>
-					<p>I'll check your website on Sep XX, 2020. <em class="extra">Missing the deadline will lead to deduction of final project credit.</em></p>
 					<p><button onclick="cssbasics()">>> CSS Basics</button></p>
 					<script>
 						function cssbasics() {
@@ -207,7 +204,7 @@
 						}
 					</script>
 				</section>
-				<sub>All Copyright Reserved; Tsung-Ying Chen 2020</sub>
+				<sub>All Copyright Reserved; Tsung-Ying Chen 2021</sub>
 			</article>
 		</div>
 	</body>
