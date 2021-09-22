@@ -108,9 +108,9 @@ nav > a {
 	transition: all 0.3s ease-out;
 }
 
-nav > a:visited {
+/*nav > a:visited {
 	color: white;
-}
+}*/
 
 nav > a:first-of-type {
 	width: 4.8vh;
