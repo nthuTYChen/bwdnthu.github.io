@@ -64,16 +64,16 @@
 							<td></td><td>┕ /css (global css files)</td><td></td>
 						</tr>
 						<tr>
-							<td></td><td>┕ /bwd (bwd project folder)</td><td>─ index.html (course default homepage)</td>
+							<td></td><td>┕ /analysis</td><td>─ index.html (course default homepage)</td>
 						</tr>
 						<tr>
-							<td></td><td></td><td>┕ /css (bwd css files)</td>
+							<td></td><td></td><td>┕ /css (analysis site css files)</td>
 						</tr>
 						<tr>
-							<td></td><td>┕ /meteor (meteor project folder)</td><td>─ index.html (course default homepage)</td>
+							<td></td><td>┕ /personal</td><td>─ index.html</td>
 						</tr>
 						<tr>
-							<td></td><td></td><td>┕ /css (meteor css files)</td>
+							<td></td><td></td><td>┕ /css (personal css files)</td>
 						</tr>
 					</table>
 					<h3>Are these manipulations crucial?</h3>
@@ -99,7 +99,7 @@
 						</code>
 						}
 					</code>
-					<p>Now link the CSS file to <em>index.html</em> by adding the following line into <code>&lt;head&gt;&lt;/head&gt;</code>so the default homepage would be styled based on the CSS file. Note that in our case, the path in this link does not begin with <code>/</code>, because the CSS file is not located in a <em>css</em> directory under the <em>root</em> directory. Instead, the CSS file is located in the <em>css</em> directory in your <em>cv</em> directory, along with the <em>index.html</em> file it styles. This type of paths is called <em class="extra">relative</em> path, because the path to the linked CSS file is <em>relative</em> to the HTML file.</p>
+					<p>Now link the CSS file to <em>index.html</em> by adding the following line into <code>&lt;head&gt;&lt;/head&gt;</code>so the default homepage would be styled based on the CSS file. Note that in our case, the path in this link does not begin with <code>/</code>, because the CSS file is not located in a <em>css</em> directory under the <em>root</em> directory. Instead, the CSS file is located in the <em>css</em> directory in your <em>analysis</em> directory, along with the <em>index.html</em> file it styles. This type of paths is called <em class="extra">relative</em> path, because the path to the linked CSS file is <em>relative</em> to the HTML file.</p>
 					<code>&lt;link rel="stylesheet" href="css/style.css"&gt;</code>
 					<p>If you've done everything correctly, you should see the fancy pink color in the background of the homepage of your personal website. And you would observe the <em class="extra">cascading effect</em>, too; every element inside <code>&lt;body&gt;</code> has a pink backgroud. Let's try to stop this cascading effect by specifying a different background color for the <em>children</em> of <code>&lt;body&gt;</code>...say, <code>&lt;section&gt;</code>...? Add the following style to the <em>style.css</em> file, and you will see the contrast. Most of the elements inside <code>&lt;body&gt;</code> still has a pink background, except for every single <code>&lt;section&gt;</code> element (and it's children), which now has a white background.</p>
 					<code>
@@ -126,6 +126,13 @@
 					<p>Alternatively, you could put CSS properties in the value of the <em>style</em> attribute of an HTML element (namely, <em class="extra">inline styling</em>) to style that particular element, as in the following example:</p>
 					<code>&lt;body style="background-color: pink;"&gt;</code>
 					<p>This technique would be useful if you need some special presentation for just <em>one</em> element, and you're pretty sure that you won't use it anywhere else. In this course website, I need to present some special examples from time to time, which requires some CSS styles just for these examples. This is the case where I choose to just use inline styling, because the styles are not going to be reused again. However, if you have lots of properties to specified even just for a single element, you'd better define this style in a CSS file since it would be easier to read in the source code. We will return to inline styling later in this unit.</p>
+					<p>In general, you can follow the tips below to decide where a style settles in:</p>
+					<ul>
+						<li>If a style applies to every single page in your website, put it inside <code>/css/style.css</code> and import it to every webpage.</li>
+						<li>If a style applies only to every single page in a sub-project in your website, put it inside <code>project/css/style.css</code>.</li>
+						<li>If a style applies only to one webpage, put the style in <code>&lt;style&gt;&lt;/style&gt;</code> of the HTML document.</li>
+						<li>If a style applies only one element of a webpage, use the <code>style</code> attribute of that element to specify the style.</li>
+					</ul>
 					<h3>Vendor prefix</h3>
 					<p>This is just a side note, but one special thing about CSS property you need to pay attention to is called <em>vendor prefix</em>. Sometimes a CSS property is just introduced and being experimented, so different Web browsers have their own ways of applying these properties and you need to add the proper vendor prefix to get the expected CSS effects across different Web browsers (for instance, <code>-webkit-transition</code>). Here is the list from this <a href="https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix" target="blank">MDN Web Docs page</a>:</p>
 					<ul>
