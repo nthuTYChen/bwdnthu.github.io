@@ -1,22 +1,22 @@
 var menuOpen = false, touchMove = false;
 
-$(document).ready(()=>{
-	$(document).on('touchmove', ()=>{
+$(document).ready(function () {
+	$(document).on('touchmove', function () {
 		touchMove = true;
-		setTimeout(()=>{
+		setTimeout(function () {
 			touchMove = false;
 		}, 500);
 	});
 
-	$(document).on('touchend click', (event, selector)=>{
+	$(document).on('touchend click', function (event, selector) {
 		event.stopPropagation();
 		if(event.type === 'touchend') {
 			selector.off('click');
 		}
 		if(menuOpen) {
 			let menuItems = $('nav > a').not(':first-of-type'), delay = 0;
-			menuItems.each((index)=>{
-				setTimeout(()=>{
+			menuItems.each(function (index) {
+				setTimeout(function () {
 					menuItems.eq(index).animate({opacity: 0}, 300, ()=>{
 						menuItems.eq(index).css('display', 'none');
 					});
@@ -27,7 +27,7 @@ $(document).ready(()=>{
 		}
 	});
 
-	$('nav > a:first-of-type').on('touchend click', (event, selector)=>{
+	$('nav > a:first-of-type').on('touchend click', function (event, selector) {
 		event.stopPropagation();
 		if(event.type === 'touchend') {
 			selector.off('click');
@@ -36,8 +36,8 @@ $(document).ready(()=>{
 			let menuItems = $('nav > a').not(':first-of-type');
 			let delay = 0;
 			if(!menuOpen) {
-				menuItems.each((index)=>{
-					setTimeout(()=>{
+				menuItems.each(function (index) {
+					setTimeout(function () {
 						menuItems.eq(index).css('display', 'grid');
 						if($(document).width() < 1024) {
 							menuItems.eq(index).animate({opacity: 0.95}, 300);
@@ -50,8 +50,8 @@ $(document).ready(()=>{
 				$('nav > a:first-of-type').addClass('rotate');
 			}
 			else {
-				menuItems.each((index)=>{
-					setTimeout(()=>{
+				menuItems.each(function (index) {
+					setTimeout(function () {
 						menuItems.eq(index).animate({opacity: 0}, 300, ()=>{
 							menuItems.eq(index).css('display', 'none');
 						});
