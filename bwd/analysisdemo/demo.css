@@ -100,12 +100,16 @@ nav {
 
 nav > a {
 	background-color: #323232;
-	color: white !important;
+	color: white;
 	width: 100%;
 	padding: 2px 4px;
 	text-decoration: none;
 	opacity: 0.6;
 	transition: all 0.3s ease-out;
+}
+
+nav > a:visited {
+	color: white;
 }
 
 nav > a:first-of-type {
