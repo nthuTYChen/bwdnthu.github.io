@@ -647,6 +647,21 @@
 					</code>
 					<p>Finally, <em>inline styling</em> with the <code>style</code> attribute could override the value of the same CSS properties specified for the selected element, but it doesn't cascade to its children that are specified with the same property:</p>
 					<p><code>&lt;p style="background-color: red;"&gt; &lt;!-- more specific than the two styles above --&gt;</code></p>
+					<h3>!important</h3>
+					<p>When you need to override every more specific and conflicting style, just add <code>!important</code> right after the value of a CSS property. However, this is not a recommended practice, because most of the time, you need to style your HTML elements based on their hierarchy, rather than blindly prioritize a CSS setting. But later, we will see that sometimes, we need <code>!important</code> to allow CSS styles set by JavaScript to be overriden by the CSS styles set in CSS files.</p>
+					<code>
+						p {
+						<code>
+							background-color: white !important; 
+						</code>
+						}<br/>
+						...<br/>
+						section > p {
+						<code>
+							background-color: grey; /* more specific, but is overriden */
+						</code>
+						}
+					</code>
 					<p>If you have multiple selectors as complex as the one you were just tested, then you should refer to the full system of how specificity is calculated on this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" target="blank">MDN Web Docs page</a>. Selectors in most small to medium website projects would be straightforward, I think.</p>
 				</section>
 				<section>
