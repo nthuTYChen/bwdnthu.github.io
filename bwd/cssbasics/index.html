@@ -39,7 +39,7 @@
 						<img src="img/waterfall.jpg"/>
 						<sub>Elakala Waterfall, Credit: <a href="https://commons.wikimedia.org/wiki/User:ForestWander" target="blank">ForestWander</a></sub>
 					</picture>
-					<p>Remember that in the <em>Document Object Model (DOM)</em>, we can define the relationship between HTML elements. In a style sheet, when you specify the style of a parent, the style would <em>cascade down</em>, <em>flow downwards</em>, or <em>pass on</em> to its children, until the <em>flow</em> encounters a different style (that is, you specify a different style for the children). Alternatively, we can say that the child <em class="extra">inherits</em> a style from its parent/ancestor.</p>
+					<p>Remember that in the <em>Document Object Model (DOM)</em>, we can define the relationship between HTML elements. In a style sheet, when you specify the style of a parent/ancestor, the style would <em>cascade down</em>, <em>flow downwards</em>, or <em>pass on</em> to its children, until the <em>flow</em> encounters a different style (that is, you specify a different style for the children). Alternatively, we can say that the child <em class="extra">inherits</em> a style from its parent/ancestor.</p>
 					<p>In the following HTML document, for instance, if <code>&lt;html&gt;</code> is specified to display texts in Times New Roman, it's <em>child</em> <code>&lt;div&gt;</code> will also <em>inherit</em> this font style, unless you specify a different font type (e.g., Calibri) for it - the style <em>flow</em> is then stopped.</p>
 					<code>
 						&lt;body&gt;
@@ -550,7 +550,7 @@
 						}
 					</code>
 					<h3>(Immediate) Child</h3>
-					<p>In a similar vein, you and identify the parent-child relation in a CSS selector. In the following example, we have different <code>&lt;p&gt;</code> elements inside <code>&lt;body&gt;</code> and <code>&lt;section&gt;</code>, which are thus immediate children of <code>&lt;body&gt;</code> and <code>&lt;section&gt;</code>:</p>
+					<p>In a similar vein, you and identify the ancestor-child relation in a CSS selector. In the following example, we have different <code>&lt;p&gt;</code> elements inside <code>&lt;body&gt;</code> and <code>&lt;section&gt;</code>, which are thus immediate children of <code>&lt;body&gt;</code> and <code>&lt;section&gt;</code>:</p>
 					<code>
 						&lt;body&gt;
 						<code>
